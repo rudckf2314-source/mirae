@@ -1,0 +1,614 @@
+{
+  "metadata": {
+    "name": "Pension Agent live regression",
+    "entrypoint": "PensionLangGraphAgent.respond == FastAPI POST /api/search",
+    "gold_status": "DIAGNOSTIC_NOT_GOLD"
+  },
+  "cases": [
+    {
+      "id": "T001",
+      "category": "general_concept",
+      "turns": [
+        {
+          "user": "IRP 계좌가 뭐야?",
+          "expect": {
+            "intent": ["GENERAL_EDUCATION", "GENERAL_CONCEPT"],
+            "preferred_sources": ["enterprise_rag", "enterprise_document"],
+            "forbidden_sources": [],
+            "must_not_contain": [
+              "요청을 완료하기 전에 근거 검증을 통과하지 못했습니다",
+              "source_versions",
+              "document_evidence",
+              "경로: -"
+            ],
+            "answer_required": true,
+            "preferred_routes": ["document"],
+            "postgres_must_not_be_primary": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "T002",
+      "category": "recommendation",
+      "turns": [
+        {
+          "user": "IRP 상품 추천해줘",
+          "expect": {
+            "intent": ["PRODUCT_RECOMMENDATION"],
+            "preferred_sources": ["product"],
+            "forbidden_sources": [],
+            "must_not_contain": [
+              "source_versions",
+              "document_evidence",
+              "경로: -"
+            ],
+            "answer_required": true,
+            "require_clarify": true,
+            "preferred_routes": ["product"]
+          }
+        },
+        {
+          "user": "예시 샘플을 줘봐",
+          "expect": {
+            "intent": ["EXAMPLE_RESPONSE", "CLARIFY_EXAMPLE"],
+            "preferred_sources": [],
+            "forbidden_sources": [],
+            "must_not_contain": [
+              "요청을 완료하기 전에 근거 검증을 통과하지 못했습니다",
+              "source_versions",
+              "document_evidence",
+              "경로: -"
+            ],
+            "must_contain_any": ["위험", "년", "중간", "15년", "10년", "5년"],
+            "answer_required": true,
+            "keep_session": true,
+            "evidence_fail_forbidden": true,
+            "preferred_routes": ["conversation"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T003",
+      "category": "recommendation",
+      "turns": [
+        {
+          "user": "IRP 상품 추천해줘",
+          "expect": {
+            "intent": ["PRODUCT_RECOMMENDATION"],
+            "preferred_sources": ["product"],
+            "forbidden_sources": [],
+            "must_not_contain": ["source_versions", "document_evidence", "경로: -"],
+            "answer_required": true,
+            "require_clarify": true,
+            "preferred_routes": ["product"]
+          }
+        },
+        {
+          "user": "나는 위험은 중간 정도, 10년 정도 투자할 거야",
+          "expect": {
+            "intent": ["PRODUCT_RECOMMENDATION"],
+            "preferred_sources": ["product", "postgres"],
+            "forbidden_sources": [],
+            "must_not_contain": ["source_versions", "document_evidence", "경로: -"],
+            "answer_required": true,
+            "keep_session": true,
+            "require_postgres": true,
+            "fill_slots": ["risk_tolerance", "investment_horizon"],
+            "must_return_product": true,
+            "minimum_products": 1,
+            "safe_stop_forbidden": true,
+            "requested_result_required": true,
+            "minimum_result_count": 1,
+            "preferred_routes": ["product"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T004",
+      "category": "recommendation",
+      "turns": [
+        {
+          "user": "IRP 상품 추천해줘",
+          "expect": {
+            "intent": ["PRODUCT_RECOMMENDATION"],
+            "preferred_sources": ["product"],
+            "forbidden_sources": [],
+            "must_not_contain": ["source_versions", "document_evidence", "경로: -"],
+            "answer_required": true,
+            "require_clarify": true,
+            "preferred_routes": ["product"]
+          }
+        },
+        {
+          "user": "위험은 중간 정도, 10년",
+          "expect": {
+            "intent": ["PRODUCT_RECOMMENDATION"],
+            "preferred_sources": ["product", "postgres"],
+            "forbidden_sources": [],
+            "must_not_contain": ["source_versions", "document_evidence", "경로: -"],
+            "answer_required": true,
+            "keep_session": true,
+            "require_postgres": true,
+            "must_return_product": true,
+            "minimum_products": 1,
+            "safe_stop_forbidden": true,
+            "requested_result_required": true,
+            "minimum_result_count": 1,
+            "preferred_routes": ["product"]
+          }
+        },
+        {
+          "user": "그중에서 보수가 가장 낮은 상품은?",
+          "expect": {
+            "intent": ["PRODUCT_RECOMMENDATION", "PRODUCT_FEE_FILTER"],
+            "preferred_sources": ["product", "postgres"],
+            "forbidden_sources": [],
+            "must_not_contain": ["source_versions", "document_evidence", "경로: -"],
+            "answer_required": true,
+            "keep_session": true,
+            "require_postgres": true,
+            "retain_candidate_set": true,
+            "must_use_previous_candidates": true,
+            "must_return_selected_product": true,
+            "must_answer_fee_comparison": true,
+            "safe_stop_forbidden": true,
+            "requested_result_required": true,
+            "minimum_result_count": 1,
+            "preferred_routes": ["product"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T005",
+      "category": "recommendation",
+      "turns": [
+        {
+          "user": "IRP 상품 추천해줘",
+          "expect": {
+            "intent": ["PRODUCT_RECOMMENDATION"],
+            "preferred_sources": ["product"],
+            "forbidden_sources": [],
+            "must_not_contain": ["source_versions", "document_evidence", "경로: -"],
+            "answer_required": true,
+            "require_clarify": true,
+            "preferred_routes": ["product"]
+          }
+        },
+        {
+          "user": "위험은 중간 정도, 10년",
+          "expect": {
+            "intent": ["PRODUCT_RECOMMENDATION"],
+            "preferred_sources": ["product", "postgres"],
+            "forbidden_sources": [],
+            "must_not_contain": ["source_versions", "document_evidence", "경로: -"],
+            "answer_required": true,
+            "keep_session": true,
+            "require_postgres": true,
+            "must_return_product": true,
+            "minimum_products": 1,
+            "safe_stop_forbidden": true,
+            "requested_result_required": true,
+            "minimum_result_count": 1,
+            "preferred_routes": ["product"]
+          }
+        },
+        {
+          "user": "그 상품 위험은?",
+          "expect": {
+            "intent": ["PRODUCT_RISK_LOOKUP"],
+            "preferred_sources": ["product", "enterprise_document"],
+            "forbidden_sources": [],
+            "must_not_contain": ["source_versions", "document_evidence", "경로: -"],
+            "answer_required": true,
+            "keep_session": true,
+            "resolve_pronoun": true,
+            "must_resolve_selected_product": true,
+            "must_answer_product_risk": true,
+            "safe_stop_forbidden": true,
+            "preferred_routes": ["product"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T006",
+      "category": "procedure",
+      "turns": [
+        {
+          "user": "IRP에 가입하고 싶은데 어떻게 해?",
+          "expect": {
+            "intent": ["ACCOUNT_PROCEDURE"],
+            "preferred_sources": ["enterprise_rag", "enterprise_document"],
+            "forbidden_sources": [],
+            "must_not_contain": [
+              "요청을 완료하기 전에 근거 검증을 통과하지 못했습니다",
+              "source_versions",
+              "document_evidence",
+              "경로: -"
+            ],
+            "answer_required": true,
+            "preferred_routes": ["document", "document+law"],
+            "postgres_must_not_be_primary": true,
+            "internal_fail_forbidden": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "T007",
+      "category": "general_concept",
+      "turns": [
+        {
+          "user": "TDF가 뭐야?",
+          "expect": {
+            "intent": ["GENERAL_EDUCATION", "GENERAL_CONCEPT"],
+            "preferred_sources": ["enterprise_rag", "enterprise_document"],
+            "forbidden_sources": [],
+            "must_not_contain": [
+              "요청을 완료하기 전에 근거 검증을 통과하지 못했습니다",
+              "source_versions",
+              "document_evidence",
+              "경로: -"
+            ],
+            "answer_required": true,
+            "preferred_routes": ["document"],
+            "postgres_must_not_be_primary": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "T008",
+      "category": "product_query",
+      "turns": [
+        {
+          "user": "최근 1년 수익률이 높은 상품 5개 보여줘",
+          "expect": {
+            "intent": ["PRODUCT_PERFORMANCE_LOOKUP"],
+            "preferred_sources": ["product", "postgres"],
+            "forbidden_sources": [],
+            "must_not_contain": ["source_versions", "document_evidence", "경로: -"],
+            "answer_required": true,
+            "require_postgres": true,
+            "max_products": 5,
+            "performance_period": "1Y",
+            "requested_result_required": true,
+            "minimum_result_count": 1,
+            "safe_stop_forbidden_if_matching_db_rows_exist": true,
+            "preferred_routes": ["product"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T009",
+      "category": "product_query",
+      "turns": [
+        {
+          "user": "위험등급 3등급 이하 상품만 보여줘",
+          "expect": {
+            "intent": ["PRODUCT_RISK_FILTER"],
+            "preferred_sources": ["product", "postgres"],
+            "forbidden_sources": [],
+            "must_not_contain": ["source_versions", "document_evidence", "경로: -"],
+            "answer_required": true,
+            "require_postgres": true,
+            "risk_grade_max": 3,
+            "preferred_routes": ["product"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T010",
+      "category": "product_query",
+      "turns": [
+        {
+          "user": "TDF 상품 중 총보수가 낮은 순서대로 보여줘",
+          "expect": {
+            "intent": ["PRODUCT_FEE_SORT"],
+            "preferred_sources": ["product", "postgres"],
+            "forbidden_sources": [],
+            "must_not_contain": ["source_versions", "document_evidence", "경로: -"],
+            "answer_required": true,
+            "require_postgres": true,
+            "fee_sort_asc": true,
+            "requested_result_required": true,
+            "minimum_result_count": 1,
+            "minimum_products": 1,
+            "sort_field": "total_fee",
+            "sort_order": "asc",
+            "safe_stop_forbidden": true,
+            "safe_stop_forbidden_if_matching_db_rows_exist": true,
+            "preferred_routes": ["product"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T011",
+      "category": "product_query",
+      "turns": [
+        {
+          "user": "이 상품의 1년, 3년, 5년 수익률을 보여줘",
+          "expect": {
+            "intent": ["PRODUCT_PERFORMANCE_LOOKUP", "CLARIFY"],
+            "preferred_sources": [],
+            "forbidden_sources": [],
+            "must_not_contain": ["source_versions", "document_evidence", "경로: -"],
+            "answer_required": true,
+            "require_clarify": true,
+            "no_arbitrary_product": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "T012",
+      "category": "legal_procedure",
+      "turns": [
+        {
+          "user": "IRP에서 중도인출은 언제 가능해?",
+          "expect": {
+            "intent": ["ACCOUNT_PROCEDURE", "LEGAL_CONDITION"],
+            "preferred_sources": ["enterprise_rag", "enterprise_document", "law"],
+            "forbidden_sources": [],
+            "must_not_contain": ["source_versions", "document_evidence", "경로: -"],
+            "answer_required": true,
+            "preferred_routes": ["document", "document+law", "law"],
+            "postgres_must_not_be_primary": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "T013",
+      "category": "hypothetical",
+      "turns": [
+        {
+          "user": "그냥 예시로 안정형 투자자라면 어떻게 추천해?",
+          "expect": {
+            "intent": ["HYPOTHETICAL_EXAMPLE"],
+            "preferred_sources": [],
+            "forbidden_sources": [],
+            "must_not_contain": [
+              "요청을 완료하기 전에 근거 검증을 통과하지 못했습니다",
+              "source_versions",
+              "document_evidence",
+              "경로: -"
+            ],
+            "answer_required": true,
+            "evidence_fail_forbidden": true,
+            "hypothetical": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "T014",
+      "category": "evidence_followup",
+      "turns": [
+        {
+          "user": "근거 문장을 보여줘",
+          "expect": {
+            "intent": ["EVIDENCE_REQUEST"],
+            "preferred_sources": [],
+            "forbidden_sources": [],
+            "must_not_contain": ["source_versions", "document_evidence", "경로: -"],
+            "answer_required": true,
+            "no_invented_evidence": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "T015",
+      "category": "source_coverage",
+      "turns": [
+        {
+          "user": "기업이 준 자료에 없는 내용이면 알려줘",
+          "expect": {
+            "intent": ["SOURCE_COVERAGE"],
+            "preferred_sources": [],
+            "forbidden_sources": [],
+            "must_not_contain": [
+              "source_versions",
+              "document_evidence",
+              "경로: -"
+            ],
+            "answer_required": true,
+            "no_false_enterprise_claim": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "T016",
+      "category": "official_p0",
+      "turns": [
+        {
+          "user": "DC와 DB, 퇴직금이 정해지는 방식이랑 운용 주체가 어떻게 다른가요?",
+          "expect": {
+            "intent": ["GENERAL_EDUCATION", "GENERAL_CONCEPT"],
+            "preferred_sources": ["enterprise_rag", "enterprise_document"],
+            "forbidden_sources": [],
+            "must_not_contain": [
+              "요청을 완료하기 전에 근거 검증을 통과하지 못했습니다",
+              "source_versions",
+              "document_evidence",
+              "경로: -"
+            ],
+            "must_contain_any": ["DC", "DB", "운용", "퇴직"],
+            "answer_required": true,
+            "preferred_routes": ["document"],
+            "postgres_must_not_be_primary": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "T017",
+      "category": "official_p0",
+      "turns": [
+        {
+          "user": "연금저축이랑 IRP에 넣으면 세액공제 얼마까지 되나요? 다 합쳐서요.",
+          "expect": {
+            "intent": ["GENERAL_EDUCATION", "LEGAL_CONDITION"],
+            "preferred_sources": ["calculation", "enterprise_rag", "enterprise_document", "law"],
+            "forbidden_sources": [],
+            "must_not_contain": [
+              "요청을 완료하기 전에 근거 검증을 통과하지 못했습니다",
+              "source_versions",
+              "document_evidence",
+              "경로: -"
+            ],
+            "must_contain_any": ["900", "600", "한도", "세액공제", "만원"],
+            "answer_required": true,
+            "preferred_routes": ["calculation", "document", "document+law"],
+            "postgres_must_not_be_primary": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "T018",
+      "category": "official_p0",
+      "turns": [
+        {
+          "user": "명퇴하는 교사예요. 퇴직금을 어떻게 받으면 좋은지 절세법만 알려주세요.",
+          "expect": {
+            "intent": ["ACCOUNT_PROCEDURE", "LEGAL_CONDITION", "GENERAL_EDUCATION"],
+            "preferred_sources": ["enterprise_rag", "enterprise_document", "law"],
+            "forbidden_sources": [],
+            "must_not_contain": [
+              "요청을 완료하기 전에 근거 검증을 통과하지 못했습니다",
+              "source_versions",
+              "document_evidence",
+              "경로: -"
+            ],
+            "must_contain_any": ["과세이연", "IRP", "퇴직", "절세", "세금"],
+            "answer_required": true,
+            "preferred_routes": ["document", "document+law", "law"],
+            "postgres_must_not_be_primary": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "T019",
+      "category": "official_p0",
+      "turns": [
+        {
+          "user": "솔로몬 국공채 단기·중장기·장기, 뭐가 달라요? 안정적인 걸 원해요.",
+          "expect": {
+            "intent": ["PRODUCT_LOOKUP", "PRODUCT_RISK_LOOKUP"],
+            "preferred_sources": ["product", "postgres", "enterprise_document"],
+            "forbidden_sources": [],
+            "must_not_contain": ["source_versions", "document_evidence", "경로: -"],
+            "must_contain_any": ["솔로몬", "단기", "장기", "위험"],
+            "answer_required": true,
+            "require_postgres": true,
+            "requested_result_required": true,
+            "minimum_result_count": 1,
+            "forbidden_product_names": ["DB다같이"],
+            "expected_product_family": "솔로몬 국공채",
+            "expected_variants": ["단기", "중장기", "장기"],
+            "unrelated_substitute_forbidden": true,
+            "minimum_result_count": 3,
+            "safe_stop_forbidden": true,
+            "preferred_routes": ["product"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T020",
+      "category": "official_p0",
+      "turns": [
+        {
+          "user": "좋은 연금 상품 하나 추천해 주세요.",
+          "expect": {
+            "intent": ["PRODUCT_RECOMMENDATION", "CLARIFY"],
+            "preferred_sources": ["product"],
+            "forbidden_sources": [],
+            "must_not_contain": ["source_versions", "document_evidence", "경로: -"],
+            "answer_required": true,
+            "require_clarify": true,
+            "no_arbitrary_product": true,
+            "preferred_routes": ["product"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T021",
+      "category": "official_multiturn",
+      "turns": [
+        {
+          "user": "DC와 DB, 퇴직금이 정해지는 방식이랑 운용 주체가 어떻게 다른가요?",
+          "expect": {
+            "intent": ["GENERAL_EDUCATION", "GENERAL_CONCEPT"],
+            "preferred_sources": ["enterprise_rag", "enterprise_document"],
+            "forbidden_sources": [],
+            "must_not_contain": [
+              "요청을 완료하기 전에 근거 검증을 통과하지 못했습니다",
+              "source_versions",
+              "document_evidence",
+              "경로: -"
+            ],
+            "answer_required": true,
+            "preferred_routes": ["document"],
+            "postgres_must_not_be_primary": true
+          }
+        },
+        {
+          "user": "그럼 IRP는 운용 주체가 어느 쪽에 가깝나요?",
+          "expect": {
+            "intent": ["GENERAL_EDUCATION", "GENERAL_CONCEPT"],
+            "preferred_sources": ["enterprise_rag", "enterprise_document"],
+            "forbidden_sources": [],
+            "must_not_contain": [
+              "요청을 완료하기 전에 근거 검증을 통과하지 못했습니다",
+              "source_versions",
+              "document_evidence",
+              "경로: -"
+            ],
+            "must_contain_any": ["IRP", "DC", "운용"],
+            "answer_required": true,
+            "keep_session": true,
+            "preferred_routes": ["document"],
+            "postgres_must_not_be_primary": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "T022",
+      "category": "official_compound",
+      "turns": [
+        {
+          "user": "연금저축이랑 IRP에 넣으면 세액공제 얼마까지 되나요? 다 합쳐서요. 그리고 한도를 넘기면 이월도 되나요?",
+          "expect": {
+            "intent": ["GENERAL_EDUCATION", "LEGAL_CONDITION", "ACCOUNT_PROCEDURE"],
+            "preferred_sources": ["calculation", "enterprise_rag", "enterprise_document", "law"],
+            "forbidden_sources": [],
+            "must_not_contain": [
+              "요청을 완료하기 전에 근거 검증을 통과하지 못했습니다",
+              "source_versions",
+              "document_evidence",
+              "경로: -"
+            ],
+            "must_contain_any": ["세액공제", "한도", "이월", "900", "만원"],
+            "answer_required": true,
+            "preferred_routes": ["calculation", "document", "document+law", "calculation+document"],
+            "postgres_must_not_be_primary": true
+          }
+        }
+      ]
+    }
+  ]
+}

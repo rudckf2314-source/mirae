@@ -1,0 +1,19 @@
+{
+  "input_records": 6654,
+  "searchable_records": 6570,
+  "skipped_records": 84,
+  "documents_with_chunks": 150,
+  "chunks_created": 12589,
+  "target_chars": 1000,
+  "overlap_chars": 150,
+  "by_source_group": {
+    "docs": 296,
+    "investment": 12293
+  },
+  "by_extraction_status": {
+    "short": 135,
+    "ok": 12426,
+    "ocr": 28
+  },
+  "output": "C:\\Users\\danie\\Desktop\\pension-chatbot\\data\\chunks\\chunks.jsonl"
+}

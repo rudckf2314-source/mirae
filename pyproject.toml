@@ -1,0 +1,5 @@
+[project]
+name = "mirae-pension"
+version = "0.1.0"
+description = "Prospectus extraction pipeline and pension chatbot"
+requires-python = ">=3.11"

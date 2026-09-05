@@ -1,0 +1,99 @@
+{
+  "product_record_count": 461,
+  "fund_return_1y_count": 162,
+  "performance_status_counts": {
+    "VERIFIED": 114,
+    "SOURCE_CONFLICT": 42,
+    "UNVERIFIED": 6
+  },
+  "t008_top5": [
+    {
+      "product_name": "삼성퇴직연금KOSPI200증권자투자신탁 제1호[주식]",
+      "class_name": "수수료미징구-오프라인-퇴직연금(C)",
+      "raw_db_value": 99.84,
+      "unit": "PERCENT",
+      "status": "VERIFIED",
+      "reason": "value_and_percent_unit_consistent_with_source",
+      "display": "99.84%"
+    },
+    {
+      "product_name": "한국투자인덱스플러스증권투자신탁1호(주식-파생형)",
+      "class_name": "수수료미징구(C)",
+      "raw_db_value": 74.0,
+      "unit": "PERCENT",
+      "status": "VERIFIED",
+      "reason": "value_and_percent_unit_consistent_with_source",
+      "display": "74%"
+    },
+    {
+      "product_name": "미래에셋코어밸류연금저축증권전환형자투자신탁1호(주식)",
+      "class_name": "수수료미징구-온라인-개인연금(C-e)",
+      "raw_db_value": 68.88,
+      "unit": "PERCENT",
+      "status": "VERIFIED",
+      "reason": "value_and_percent_unit_consistent_with_source",
+      "display": "68.88%"
+    },
+    {
+      "product_name": "미래에셋코어밸류연금저축증권전환형자투자신탁1호(주식)",
+      "class_name": "수수료미징구-오프라인-개인연금(C)",
+      "raw_db_value": 68.12,
+      "unit": "PERCENT",
+      "status": "VERIFIED",
+      "reason": "value_and_percent_unit_consistent_with_source",
+      "display": "68.12%"
+    },
+    {
+      "product_name": "미래에셋고배당포커스연금저축증권전환형자투자신탁1호(주식)",
+      "class_name": "수수료미징구-온라인-개인연금(C-e)",
+      "raw_db_value": 42.77,
+      "unit": "PERCENT",
+      "status": "VERIFIED",
+      "reason": "value_and_percent_unit_consistent_with_source",
+      "display": "42.77%"
+    }
+  ],
+  "unit_samples": [
+    {
+      "raw_value": 0.71,
+      "raw_unit": "PERCENT_PER_YEAR",
+      "metric": "fee",
+      "display": "연 0.71%"
+    },
+    {
+      "raw_value": 1.57,
+      "raw_unit": "PERCENT_PER_YEAR",
+      "metric": "fee",
+      "display": "연 1.57%"
+    },
+    {
+      "raw_value": 3.2,
+      "raw_unit": "PERCENT",
+      "metric": "fund_return",
+      "display": "3.2%"
+    },
+    {
+      "raw_value": 98776.0,
+      "raw_unit": "PERCENT",
+      "metric": "fund_return",
+      "display": "수익률 값의 단위/스케일 확인이 필요합니다"
+    },
+    {
+      "raw_value": 100,
+      "raw_unit": "BASIS_POINT",
+      "metric": "spread",
+      "display": "100bp"
+    },
+    {
+      "raw_value": 1000000,
+      "raw_unit": "KRW",
+      "metric": "amount",
+      "display": "1000000원"
+    }
+  ],
+  "notes": [
+    "No arithmetic rescale is applied to performance values.",
+    "SOURCE_CONFLICT often indicates fund-code table contamination in extraction.",
+    "Display layer formats units; raw DB values remain unchanged."
+  ]
+}

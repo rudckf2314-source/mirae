@@ -1,0 +1,2100 @@
+{
+  "$defs": {
+    "CapitalFlow": {
+      "additionalProperties": false,
+      "properties": {
+        "class_key": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Class Key"
+        },
+        "period_start": {
+          "format": "date",
+          "title": "Period Start",
+          "type": "string"
+        },
+        "period_end": {
+          "format": "date",
+          "title": "Period End",
+          "type": "string"
+        },
+        "opening_units": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Opening Units"
+        },
+        "opening_amount": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Opening Amount"
+        },
+        "subscription_units": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Subscription Units"
+        },
+        "subscription_amount": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Subscription Amount"
+        },
+        "redemption_units": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Redemption Units"
+        },
+        "redemption_amount": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Redemption Amount"
+        },
+        "ending_units": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ending Units"
+        },
+        "ending_amount": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ending Amount"
+        },
+        "unit_scale": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unit Scale"
+        },
+        "units_scale": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Units Scale"
+        },
+        "amount_scale": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Amount Scale"
+        },
+        "currency": {
+          "default": "KRW",
+          "title": "Currency",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "period_start",
+        "period_end"
+      ],
+      "title": "CapitalFlow",
+      "type": "object"
+    },
+    "ClassTransitionRule": {
+      "additionalProperties": false,
+      "properties": {
+        "from_class": {
+          "title": "From Class",
+          "type": "string"
+        },
+        "to_class": {
+          "title": "To Class",
+          "type": "string"
+        },
+        "automatic": {
+          "title": "Automatic",
+          "type": "boolean"
+        },
+        "trigger_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Trigger Type"
+        },
+        "minimum_holding_months": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Minimum Holding Months"
+        },
+        "condition_text": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Condition Text"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "from_class",
+        "to_class",
+        "automatic"
+      ],
+      "title": "ClassTransitionRule",
+      "type": "object"
+    },
+    "DocumentType": {
+      "enum": [
+        "INVESTMENT_PROSPECTUS"
+      ],
+      "title": "DocumentType",
+      "type": "string"
+    },
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_id": {
+          "minLength": 1,
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "field_path": {
+          "minLength": 1,
+          "title": "Field Path",
+          "type": "string"
+        },
+        "page": {
+          "minimum": 1,
+          "title": "Page",
+          "type": "integer"
+        },
+        "section": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Section"
+        },
+        "source_text": {
+          "minLength": 1,
+          "title": "Source Text",
+          "type": "string"
+        },
+        "table_markdown": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Table Markdown"
+        },
+        "source_hash": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Hash"
+        },
+        "row_index": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Row Index"
+        },
+        "column_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Column Name"
+        },
+        "raw_cell_text": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Raw Cell Text"
+        },
+        "extraction_method": {
+          "$ref": "#/$defs/EvidenceExtractionMethod"
+        },
+        "confidence": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confidence"
+        }
+      },
+      "required": [
+        "evidence_id",
+        "field_path",
+        "page",
+        "source_text",
+        "extraction_method"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "EvidenceExtractionMethod": {
+      "enum": [
+        "TEXT",
+        "TABLE",
+        "REGEX",
+        "LLM",
+        "MANUAL"
+      ],
+      "title": "EvidenceExtractionMethod",
+      "type": "string"
+    },
+    "ExtractionIssue": {
+      "additionalProperties": false,
+      "properties": {
+        "field_path": {
+          "title": "Field Path",
+          "type": "string"
+        },
+        "issue_type": {
+          "$ref": "#/$defs/ExtractionStatus"
+        },
+        "severity": {
+          "default": "WARNING",
+          "title": "Severity",
+          "type": "string"
+        },
+        "message": {
+          "title": "Message",
+          "type": "string"
+        },
+        "page": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Page"
+        }
+      },
+      "required": [
+        "field_path",
+        "issue_type",
+        "message"
+      ],
+      "title": "ExtractionIssue",
+      "type": "object"
+    },
+    "ExtractionStatus": {
+      "enum": [
+        "FOUND",
+        "NOT_FOUND",
+        "NOT_APPLICABLE",
+        "AMBIGUOUS",
+        "CONFLICT",
+        "PARSE_FAILED"
+      ],
+      "title": "ExtractionStatus",
+      "type": "string"
+    },
+    "Fee": {
+      "additionalProperties": false,
+      "properties": {
+        "class_key": {
+          "title": "Class Key",
+          "type": "string"
+        },
+        "fee_type": {
+          "title": "Fee Type",
+          "type": "string"
+        },
+        "rate": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rate"
+        },
+        "unit": {
+          "default": "PERCENT_PER_YEAR",
+          "title": "Unit",
+          "type": "string"
+        },
+        "as_of_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "As Of Date"
+        },
+        "effective_from": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Effective From"
+        },
+        "effective_to": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Effective To"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "class_key",
+        "fee_type"
+      ],
+      "title": "Fee",
+      "type": "object"
+    },
+    "FinancialMetric": {
+      "additionalProperties": false,
+      "properties": {
+        "class_key": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Class Key"
+        },
+        "metric_type": {
+          "title": "Metric Type",
+          "type": "string"
+        },
+        "raw_value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Raw Value"
+        },
+        "raw_unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Raw Unit"
+        },
+        "normalized_value_krw": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Normalized Value Krw"
+        },
+        "as_of_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "As Of Date"
+        },
+        "period_start": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Period Start"
+        },
+        "period_end": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Period End"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "metric_type"
+      ],
+      "title": "FinancialMetric",
+      "type": "object"
+    },
+    "FundConversionRule": {
+      "additionalProperties": false,
+      "properties": {
+        "source_class": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Class"
+        },
+        "target_product_name": {
+          "title": "Target Product Name",
+          "type": "string"
+        },
+        "target_class": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Target Class"
+        },
+        "conversion_allowed": {
+          "default": true,
+          "title": "Conversion Allowed",
+          "type": "boolean"
+        },
+        "conversion_fee_rate": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Conversion Fee Rate"
+        },
+        "conversion_count_limit": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Conversion Count Limit"
+        },
+        "condition_text": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Condition Text"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "target_product_name"
+      ],
+      "title": "FundConversionRule",
+      "type": "object"
+    },
+    "HedgingPolicy": {
+      "additionalProperties": false,
+      "properties": {
+        "subject": {
+          "$ref": "#/$defs/HedgingSubject"
+        },
+        "fund_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Fund Name"
+        },
+        "is_hedged": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Is Hedged"
+        },
+        "hedge_ratio_min_pct": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Hedge Ratio Min Pct"
+        },
+        "hedge_ratio_max_pct": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Hedge Ratio Max Pct"
+        },
+        "hedge_from_currency": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Hedge From Currency"
+        },
+        "hedge_to_currency": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Hedge To Currency"
+        },
+        "residual_fx_exposure": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Residual Fx Exposure"
+        },
+        "policy_text": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Policy Text"
+        },
+        "as_of_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "As Of Date"
+        },
+        "status": {
+          "$ref": "#/$defs/ExtractionStatus",
+          "default": "FOUND"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "subject"
+      ],
+      "title": "HedgingPolicy",
+      "type": "object"
+    },
+    "HedgingSubject": {
+      "enum": [
+        "feeder_fund",
+        "master_fund",
+        "current_fund",
+        "other_fund"
+      ],
+      "title": "HedgingSubject",
+      "type": "string"
+    },
+    "InvestmentProfile": {
+      "additionalProperties": false,
+      "description": "Source-grounded search facets; null means no verified PDF fact.",
+      "properties": {
+        "primary_asset": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Primary Asset"
+        },
+        "investment_regions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Investment Regions",
+          "type": "array"
+        },
+        "investment_countries": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Investment Countries",
+          "type": "array"
+        },
+        "investment_sectors": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Investment Sectors",
+          "type": "array"
+        },
+        "investment_styles": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Investment Styles",
+          "type": "array"
+        },
+        "benchmark_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Benchmark Name"
+        },
+        "equity_ratio_min": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Equity Ratio Min"
+        },
+        "equity_ratio_max": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Equity Ratio Max"
+        },
+        "bond_ratio_min": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Bond Ratio Min"
+        },
+        "bond_ratio_max": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Bond Ratio Max"
+        },
+        "overseas_asset_ratio_min": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Overseas Asset Ratio Min"
+        },
+        "overseas_asset_ratio_max": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Overseas Asset Ratio Max"
+        },
+        "derivative_usage": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Derivative Usage"
+        },
+        "recommended_horizon": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Recommended Horizon"
+        },
+        "principal_loss_possible": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Principal Loss Possible"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        }
+      },
+      "title": "InvestmentProfile",
+      "type": "object"
+    },
+    "LiquidityRule": {
+      "additionalProperties": false,
+      "properties": {
+        "class_key": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Class Key"
+        },
+        "transaction_type": {
+          "$ref": "#/$defs/TransactionType"
+        },
+        "cutoff_time": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cutoff Time"
+        },
+        "pricing_day_offset": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Pricing Day Offset"
+        },
+        "payment_day_offset": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Payment Day Offset"
+        },
+        "redemption_fee": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Redemption Fee"
+        },
+        "restriction_text": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Restriction Text"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "transaction_type"
+      ],
+      "title": "LiquidityRule",
+      "type": "object"
+    },
+    "MasterFeederRelation": {
+      "additionalProperties": false,
+      "properties": {
+        "master_product_name": {
+          "title": "Master Product Name",
+          "type": "string"
+        },
+        "minimum_investment_ratio": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Minimum Investment Ratio"
+        },
+        "maximum_investment_ratio": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Maximum Investment Ratio"
+        },
+        "ratio_unit": {
+          "default": "PERCENT",
+          "title": "Ratio Unit",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "master_product_name"
+      ],
+      "title": "MasterFeederRelation",
+      "type": "object"
+    },
+    "Narrative": {
+      "additionalProperties": false,
+      "properties": {
+        "narrative_type": {
+          "$ref": "#/$defs/NarrativeType"
+        },
+        "subject": {
+          "default": "current_fund",
+          "title": "Subject",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "narrative_type",
+        "text"
+      ],
+      "title": "Narrative",
+      "type": "object"
+    },
+    "NarrativeType": {
+      "enum": [
+        "INVESTMENT_OBJECTIVE",
+        "INVESTMENT_STRATEGY",
+        "INVESTMENT_RISK",
+        "SPECIFIC_RISK",
+        "HEDGING_POLICY",
+        "REDEMPTION_RESTRICTION",
+        "ELIGIBILITY",
+        "TAX_CONSIDERATION",
+        "OTHER_MATERIAL_INFORMATION"
+      ],
+      "title": "NarrativeType",
+      "type": "string"
+    },
+    "PerformanceRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "class_key": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Class Key"
+        },
+        "metric": {
+          "title": "Metric",
+          "type": "string"
+        },
+        "period": {
+          "title": "Period",
+          "type": "string"
+        },
+        "return_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Return Type"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "unit": {
+          "default": "PERCENT",
+          "title": "Unit",
+          "type": "string"
+        },
+        "as_of_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "As Of Date"
+        },
+        "period_start": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Period Start"
+        },
+        "period_end": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Period End"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "metric",
+        "period"
+      ],
+      "title": "PerformanceRecord",
+      "type": "object"
+    },
+    "Product": {
+      "additionalProperties": false,
+      "properties": {
+        "product_key": {
+          "title": "Product Key",
+          "type": "string"
+        },
+        "official_name": {
+          "title": "Official Name",
+          "type": "string"
+        },
+        "kofia_fund_code": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Kofia Fund Code"
+        },
+        "manager_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Manager Name"
+        },
+        "legal_form": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Legal Form"
+        },
+        "asset_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Asset Type"
+        },
+        "is_open_end": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Is Open End"
+        },
+        "is_additional": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Is Additional"
+        },
+        "is_class_type": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Is Class Type"
+        },
+        "is_master_feeder": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Is Master Feeder"
+        },
+        "is_convertible": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Is Convertible"
+        },
+        "is_high_complexity_product": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Is High Complexity Product"
+        },
+        "inception_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Inception Date"
+        }
+      },
+      "required": [
+        "product_key",
+        "official_name"
+      ],
+      "title": "Product",
+      "type": "object"
+    },
+    "ProductClass": {
+      "additionalProperties": false,
+      "properties": {
+        "class_key": {
+          "title": "Class Key",
+          "type": "string"
+        },
+        "class_name": {
+          "title": "Class Name",
+          "type": "string"
+        },
+        "kofia_fund_code": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Kofia Fund Code"
+        },
+        "sales_charge_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sales Charge Type"
+        },
+        "channel": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Channel"
+        },
+        "pension_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Pension Type"
+        },
+        "eligibility_text": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Eligibility Text"
+        },
+        "is_online": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Is Online"
+        },
+        "is_cdsc_class": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Is Cdsc Class"
+        },
+        "is_conversion_enabled": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Is Conversion Enabled"
+        },
+        "inception_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Inception Date"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "class_key",
+        "class_name"
+      ],
+      "title": "ProductClass",
+      "type": "object"
+    },
+    "QualityControl": {
+      "additionalProperties": false,
+      "properties": {
+        "verification_status": {
+          "default": "PASS",
+          "title": "Verification Status",
+          "type": "string"
+        },
+        "verification_fail_count": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Verification Fail Count",
+          "type": "integer"
+        },
+        "contradicted_fields": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Contradicted Fields",
+          "type": "array"
+        },
+        "review_required": {
+          "default": false,
+          "title": "Review Required",
+          "type": "boolean"
+        }
+      },
+      "title": "QualityControl",
+      "type": "object"
+    },
+    "RateCondition": {
+      "enum": [
+        "EXACT",
+        "MAX",
+        "MIN",
+        "RANGE",
+        "UNKNOWN"
+      ],
+      "title": "RateCondition",
+      "type": "string"
+    },
+    "RiskRating": {
+      "additionalProperties": false,
+      "properties": {
+        "grade": {
+          "description": "Korean fund risk scale: 1 is the highest risk and 6 is the lowest risk.",
+          "maximum": 6,
+          "minimum": 1,
+          "title": "Grade",
+          "type": "integer"
+        },
+        "label": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Label"
+        },
+        "method": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Method"
+        },
+        "as_of_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "As Of Date"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "grade"
+      ],
+      "title": "RiskRating",
+      "type": "object"
+    },
+    "SalesCharge": {
+      "additionalProperties": false,
+      "properties": {
+        "class_key": {
+          "title": "Class Key",
+          "type": "string"
+        },
+        "charge_type": {
+          "title": "Charge Type",
+          "type": "string"
+        },
+        "rate": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rate"
+        },
+        "rate_min": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rate Min"
+        },
+        "rate_max": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rate Max"
+        },
+        "rate_unit": {
+          "default": "PERCENT",
+          "title": "Rate Unit",
+          "type": "string"
+        },
+        "rate_condition": {
+          "$ref": "#/$defs/RateCondition",
+          "default": "UNKNOWN"
+        },
+        "base_amount": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Base Amount"
+        },
+        "timing": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Timing"
+        },
+        "condition_text": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Condition Text"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "class_key",
+        "charge_type"
+      ],
+      "title": "SalesCharge",
+      "type": "object"
+    },
+    "SourceDocument": {
+      "additionalProperties": false,
+      "properties": {
+        "document_id": {
+          "title": "Document Id",
+          "type": "string"
+        },
+        "filename": {
+          "title": "Filename",
+          "type": "string"
+        },
+        "document_type": {
+          "$ref": "#/$defs/DocumentType",
+          "default": "INVESTMENT_PROSPECTUS"
+        },
+        "as_of_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "As Of Date"
+        },
+        "effective_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Effective Date"
+        },
+        "revision_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Revision Date"
+        },
+        "page_count": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Page Count"
+        },
+        "file_hash": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "File Hash"
+        }
+      },
+      "required": [
+        "document_id",
+        "filename"
+      ],
+      "title": "SourceDocument",
+      "type": "object"
+    },
+    "TransactionType": {
+      "enum": [
+        "PURCHASE",
+        "REDEMPTION",
+        "CONVERSION"
+      ],
+      "title": "TransactionType",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Standard JSON v0.1 contract between:\n  PDF/parser/LLM extraction\n           ↓\n      Pydantic validation\n           ↓\n      deterministic DB loader",
+  "properties": {
+    "schema_version": {
+      "const": "0.1",
+      "default": "0.1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "source_document": {
+      "$ref": "#/$defs/SourceDocument"
+    },
+    "product": {
+      "$ref": "#/$defs/Product"
+    },
+    "investment_profile": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/InvestmentProfile"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "risk_ratings": {
+      "items": {
+        "$ref": "#/$defs/RiskRating"
+      },
+      "title": "Risk Ratings",
+      "type": "array"
+    },
+    "classes": {
+      "items": {
+        "$ref": "#/$defs/ProductClass"
+      },
+      "title": "Classes",
+      "type": "array"
+    },
+    "sales_charges": {
+      "items": {
+        "$ref": "#/$defs/SalesCharge"
+      },
+      "title": "Sales Charges",
+      "type": "array"
+    },
+    "fees": {
+      "items": {
+        "$ref": "#/$defs/Fee"
+      },
+      "title": "Fees",
+      "type": "array"
+    },
+    "class_transition_rules": {
+      "items": {
+        "$ref": "#/$defs/ClassTransitionRule"
+      },
+      "title": "Class Transition Rules",
+      "type": "array"
+    },
+    "fund_conversion_rules": {
+      "items": {
+        "$ref": "#/$defs/FundConversionRule"
+      },
+      "title": "Fund Conversion Rules",
+      "type": "array"
+    },
+    "master_feeder_relations": {
+      "items": {
+        "$ref": "#/$defs/MasterFeederRelation"
+      },
+      "title": "Master Feeder Relations",
+      "type": "array"
+    },
+    "hedging_policies": {
+      "items": {
+        "$ref": "#/$defs/HedgingPolicy"
+      },
+      "title": "Hedging Policies",
+      "type": "array"
+    },
+    "performance": {
+      "items": {
+        "$ref": "#/$defs/PerformanceRecord"
+      },
+      "title": "Performance",
+      "type": "array"
+    },
+    "capital_flows": {
+      "items": {
+        "$ref": "#/$defs/CapitalFlow"
+      },
+      "title": "Capital Flows",
+      "type": "array"
+    },
+    "financial_metrics": {
+      "items": {
+        "$ref": "#/$defs/FinancialMetric"
+      },
+      "title": "Financial Metrics",
+      "type": "array"
+    },
+    "liquidity_rules": {
+      "items": {
+        "$ref": "#/$defs/LiquidityRule"
+      },
+      "title": "Liquidity Rules",
+      "type": "array"
+    },
+    "narratives": {
+      "items": {
+        "$ref": "#/$defs/Narrative"
+      },
+      "title": "Narratives",
+      "type": "array"
+    },
+    "evidence": {
+      "items": {
+        "$ref": "#/$defs/Evidence"
+      },
+      "title": "Evidence",
+      "type": "array"
+    },
+    "field_status": {
+      "additionalProperties": {
+        "$ref": "#/$defs/ExtractionStatus"
+      },
+      "title": "Field Status",
+      "type": "object"
+    },
+    "extraction_issues": {
+      "items": {
+        "$ref": "#/$defs/ExtractionIssue"
+      },
+      "title": "Extraction Issues",
+      "type": "array"
+    },
+    "quality_control": {
+      "$ref": "#/$defs/QualityControl"
+    }
+  },
+  "required": [
+    "source_document",
+    "product"
+  ],
+  "title": "ProductExtraction",
+  "type": "object"
+}

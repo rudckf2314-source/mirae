@@ -1,0 +1,12 @@
+{
+  "min_reproducibility_rate": 1.0,
+  "min_metadata_match_rate": 1.0,
+  "min_classes_match_rate": 1.0,
+  "min_table_facts_match_rate": 1.0,
+  "min_objective_match_rate": 1.0,
+  "min_strategy_match_rate": 1.0,
+  "min_risks_match_rate": 1.0,
+  "max_fingerprint_conflicts": 0,
+  "max_document_errors": 0,
+  "min_checkpoint_cache_hits": 3
+}

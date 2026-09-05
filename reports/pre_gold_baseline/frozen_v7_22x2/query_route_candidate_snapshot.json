@@ -1,0 +1,922 @@
+{
+  "baseline": {
+    "run1": "22/22",
+    "run2": "22/22",
+    "average": 9.79,
+    "flip": 0
+  },
+  "turns": [
+    {
+      "run": "run1",
+      "test_id": "T001",
+      "turn_no": 1,
+      "route": "document",
+      "intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT"
+      ],
+      "product_names": [],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run1",
+      "test_id": "T002",
+      "turn_no": 1,
+      "route": "product",
+      "intent": [
+        "CLARIFY",
+        "PRODUCT_RECOMMENDATION"
+      ],
+      "product_names": [],
+      "response_status": "clarify",
+      "pass_fail": "PASS",
+      "total": 9
+    },
+    {
+      "run": "run1",
+      "test_id": "T002",
+      "turn_no": 2,
+      "route": "conversation",
+      "intent": [
+        "EXAMPLE_RESPONSE",
+        "CLARIFY_EXAMPLE",
+        "HYPOTHETICAL_EXAMPLE"
+      ],
+      "product_names": [],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run1",
+      "test_id": "T003",
+      "turn_no": 1,
+      "route": "product",
+      "intent": [
+        "CLARIFY",
+        "PRODUCT_RECOMMENDATION"
+      ],
+      "product_names": [],
+      "response_status": "clarify",
+      "pass_fail": "PASS",
+      "total": 9
+    },
+    {
+      "run": "run1",
+      "test_id": "T003",
+      "turn_no": 2,
+      "route": "product",
+      "intent": [
+        "PRODUCT_RECOMMENDATION",
+        "PRODUCT_RISK_LOOKUP",
+        "PRODUCT_RISK_FILTER"
+      ],
+      "product_names": [
+        "KCGI코리아증권투자신탁1호[주식]",
+        "미래에셋AI퀀트미국투자등급회사채증권자투자신탁(채권)",
+        "미래에셋그린뉴딜인덱스증권자투자신탁(주식)",
+        "미래에셋스마트롱숏70증권자투자신탁1호(주식)",
+        "미래에셋연금아시아퍼시픽소비성장증권자투자신탁1호(주식)"
+      ],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run1",
+      "test_id": "T004",
+      "turn_no": 1,
+      "route": "product",
+      "intent": [
+        "CLARIFY",
+        "PRODUCT_RECOMMENDATION"
+      ],
+      "product_names": [],
+      "response_status": "clarify",
+      "pass_fail": "PASS",
+      "total": 9
+    },
+    {
+      "run": "run1",
+      "test_id": "T004",
+      "turn_no": 2,
+      "route": "product",
+      "intent": [
+        "PRODUCT_RECOMMENDATION",
+        "PRODUCT_RISK_LOOKUP",
+        "PRODUCT_RISK_FILTER"
+      ],
+      "product_names": [
+        "KCGI코리아증권투자신탁1호[주식]",
+        "미래에셋AI퀀트미국투자등급회사채증권자투자신탁(채권)",
+        "미래에셋그린뉴딜인덱스증권자투자신탁(주식)",
+        "미래에셋스마트롱숏70증권자투자신탁1호(주식)",
+        "미래에셋연금아시아퍼시픽소비성장증권자투자신탁1호(주식)"
+      ],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run1",
+      "test_id": "T004",
+      "turn_no": 3,
+      "route": "product",
+      "intent": [
+        "PRODUCT_RECOMMENDATION",
+        "PRODUCT_FEE_FILTER",
+        "PRODUCT_FEE_SORT"
+      ],
+      "product_names": [
+        "미래에셋AI퀀트미국투자등급회사채증권자투자신탁(채권)",
+        "미래에셋그린뉴딜인덱스증권자투자신탁(주식)",
+        "미래에셋스마트롱숏70증권자투자신탁1호(주식)",
+        "미래에셋연금아시아퍼시픽소비성장증권자투자신탁1호(주식)"
+      ],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run1",
+      "test_id": "T005",
+      "turn_no": 1,
+      "route": "product",
+      "intent": [
+        "CLARIFY",
+        "PRODUCT_RECOMMENDATION"
+      ],
+      "product_names": [],
+      "response_status": "clarify",
+      "pass_fail": "PASS",
+      "total": 9
+    },
+    {
+      "run": "run1",
+      "test_id": "T005",
+      "turn_no": 2,
+      "route": "product",
+      "intent": [
+        "PRODUCT_RECOMMENDATION",
+        "PRODUCT_RISK_LOOKUP",
+        "PRODUCT_RISK_FILTER"
+      ],
+      "product_names": [
+        "KCGI코리아증권투자신탁1호[주식]",
+        "미래에셋AI퀀트미국투자등급회사채증권자투자신탁(채권)",
+        "미래에셋그린뉴딜인덱스증권자투자신탁(주식)",
+        "미래에셋스마트롱숏70증권자투자신탁1호(주식)",
+        "미래에셋연금아시아퍼시픽소비성장증권자투자신탁1호(주식)"
+      ],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run1",
+      "test_id": "T005",
+      "turn_no": 3,
+      "route": "product",
+      "intent": [
+        "PRODUCT_RECOMMENDATION",
+        "PRODUCT_RISK_LOOKUP",
+        "PRODUCT_RISK_FILTER"
+      ],
+      "product_names": [
+        "KCGI코리아증권투자신탁1호[주식]"
+      ],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run1",
+      "test_id": "T006",
+      "turn_no": 1,
+      "route": "document",
+      "intent": [
+        "ACCOUNT_PROCEDURE"
+      ],
+      "product_names": [],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run1",
+      "test_id": "T007",
+      "turn_no": 1,
+      "route": "document",
+      "intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT"
+      ],
+      "product_names": [],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run1",
+      "test_id": "T008",
+      "turn_no": 1,
+      "route": "product",
+      "intent": [
+        "PRODUCT_PERFORMANCE_LOOKUP"
+      ],
+      "product_names": [
+        "교보악사 Tomorrow 장기우량 증권투자신탁 K-1호(채권)",
+        "교보악사 파워인덱스 증권 자투자신탁 1 호 (주식)",
+        "교보악사 파워인덱스 증권 자투자신탁 1 호 (주식)",
+        "교보악사 파워인덱스 증권 자투자신탁 1 호 (주식)",
+        "교보악사 파워인덱스 증권 자투자신탁 1 호 (주식)"
+      ],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run1",
+      "test_id": "T009",
+      "turn_no": 1,
+      "route": "product",
+      "intent": [
+        "PRODUCT_RISK_LOOKUP",
+        "PRODUCT_RISK_FILTER"
+      ],
+      "product_names": [
+        "KB 그로스 포커스 증권 자투자신탁(주식)",
+        "KB 그로스 포커스 증권 자투자신탁(주식)",
+        "KB 그로스 포커스 증권 자투자신탁(주식)",
+        "KB 그로스 포커스 증권 자투자신탁(주식)",
+        "KB 코리아 밸류업 액티브 증권 자투자신탁(주식)"
+      ],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run1",
+      "test_id": "T010",
+      "turn_no": 1,
+      "route": "product",
+      "intent": [
+        "PRODUCT_FEE_FILTER",
+        "PRODUCT_FEE_SORT"
+      ],
+      "product_names": [
+        "미래에셋라이프사이클7090연금증권전환형자투자신탁1호(채권)",
+        "미래에셋라이프사이클2030연금증권전환형자투자신탁1호(주식)"
+      ],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run1",
+      "test_id": "T011",
+      "turn_no": 1,
+      "route": "product",
+      "intent": [
+        "CLARIFY",
+        "PRODUCT_PERFORMANCE_LOOKUP"
+      ],
+      "product_names": [],
+      "response_status": "clarify",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run1",
+      "test_id": "T012",
+      "turn_no": 1,
+      "route": "document+law",
+      "intent": [
+        "ACCOUNT_PROCEDURE",
+        "LEGAL_CONDITION"
+      ],
+      "product_names": [],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run1",
+      "test_id": "T013",
+      "turn_no": 1,
+      "route": "conversation",
+      "intent": [
+        "EXAMPLE_RESPONSE",
+        "CLARIFY_EXAMPLE",
+        "HYPOTHETICAL_EXAMPLE"
+      ],
+      "product_names": [],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run1",
+      "test_id": "T014",
+      "turn_no": 1,
+      "route": "document",
+      "intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT",
+        "EVIDENCE_REQUEST"
+      ],
+      "product_names": [],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run1",
+      "test_id": "T015",
+      "turn_no": 1,
+      "route": "document",
+      "intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT",
+        "SOURCE_COVERAGE"
+      ],
+      "product_names": [],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run1",
+      "test_id": "T016",
+      "turn_no": 1,
+      "route": "document",
+      "intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT"
+      ],
+      "product_names": [],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run1",
+      "test_id": "T017",
+      "turn_no": 1,
+      "route": "calculation",
+      "intent": [
+        "LEGAL_CONDITION",
+        "GENERAL_EDUCATION"
+      ],
+      "product_names": [],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run1",
+      "test_id": "T018",
+      "turn_no": 1,
+      "route": "document",
+      "intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT"
+      ],
+      "product_names": [],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 9
+    },
+    {
+      "run": "run1",
+      "test_id": "T019",
+      "turn_no": 1,
+      "route": "product",
+      "intent": [
+        "PRODUCT_LOOKUP"
+      ],
+      "product_names": [
+        "미래에셋솔로몬단기국공채증권자투자신탁1호(채권)",
+        "미래에셋솔로몬장기국공채증권자투자신탁1호(채권)",
+        "미래에셋솔로몬중장기국공채증권자투자신탁1호(채권)"
+      ],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run1",
+      "test_id": "T020",
+      "turn_no": 1,
+      "route": "product",
+      "intent": [
+        "CLARIFY",
+        "PRODUCT_RECOMMENDATION"
+      ],
+      "product_names": [],
+      "response_status": "clarify",
+      "pass_fail": "PASS",
+      "total": 9
+    },
+    {
+      "run": "run1",
+      "test_id": "T021",
+      "turn_no": 1,
+      "route": "document",
+      "intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT"
+      ],
+      "product_names": [],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run1",
+      "test_id": "T021",
+      "turn_no": 2,
+      "route": "document",
+      "intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT"
+      ],
+      "product_names": [],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run1",
+      "test_id": "T022",
+      "turn_no": 1,
+      "route": "calculation",
+      "intent": [
+        "LEGAL_CONDITION",
+        "GENERAL_EDUCATION"
+      ],
+      "product_names": [],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run2",
+      "test_id": "T001",
+      "turn_no": 1,
+      "route": "document",
+      "intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT"
+      ],
+      "product_names": [],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run2",
+      "test_id": "T002",
+      "turn_no": 1,
+      "route": "product",
+      "intent": [
+        "CLARIFY",
+        "PRODUCT_RECOMMENDATION"
+      ],
+      "product_names": [],
+      "response_status": "clarify",
+      "pass_fail": "PASS",
+      "total": 9
+    },
+    {
+      "run": "run2",
+      "test_id": "T002",
+      "turn_no": 2,
+      "route": "conversation",
+      "intent": [
+        "EXAMPLE_RESPONSE",
+        "CLARIFY_EXAMPLE",
+        "HYPOTHETICAL_EXAMPLE"
+      ],
+      "product_names": [],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run2",
+      "test_id": "T003",
+      "turn_no": 1,
+      "route": "product",
+      "intent": [
+        "CLARIFY",
+        "PRODUCT_RECOMMENDATION"
+      ],
+      "product_names": [],
+      "response_status": "clarify",
+      "pass_fail": "PASS",
+      "total": 9
+    },
+    {
+      "run": "run2",
+      "test_id": "T003",
+      "turn_no": 2,
+      "route": "product",
+      "intent": [
+        "PRODUCT_RECOMMENDATION",
+        "PRODUCT_RISK_LOOKUP",
+        "PRODUCT_RISK_FILTER"
+      ],
+      "product_names": [
+        "KCGI코리아증권투자신탁1호[주식]",
+        "미래에셋AI퀀트미국투자등급회사채증권자투자신탁(채권)",
+        "미래에셋그린뉴딜인덱스증권자투자신탁(주식)",
+        "미래에셋스마트롱숏70증권자투자신탁1호(주식)",
+        "미래에셋연금아시아퍼시픽소비성장증권자투자신탁1호(주식)"
+      ],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run2",
+      "test_id": "T004",
+      "turn_no": 1,
+      "route": "product",
+      "intent": [
+        "CLARIFY",
+        "PRODUCT_RECOMMENDATION"
+      ],
+      "product_names": [],
+      "response_status": "clarify",
+      "pass_fail": "PASS",
+      "total": 9
+    },
+    {
+      "run": "run2",
+      "test_id": "T004",
+      "turn_no": 2,
+      "route": "product",
+      "intent": [
+        "PRODUCT_RECOMMENDATION",
+        "PRODUCT_RISK_LOOKUP",
+        "PRODUCT_RISK_FILTER"
+      ],
+      "product_names": [
+        "KCGI코리아증권투자신탁1호[주식]",
+        "미래에셋AI퀀트미국투자등급회사채증권자투자신탁(채권)",
+        "미래에셋그린뉴딜인덱스증권자투자신탁(주식)",
+        "미래에셋스마트롱숏70증권자투자신탁1호(주식)",
+        "미래에셋연금아시아퍼시픽소비성장증권자투자신탁1호(주식)"
+      ],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run2",
+      "test_id": "T004",
+      "turn_no": 3,
+      "route": "product",
+      "intent": [
+        "PRODUCT_RECOMMENDATION",
+        "PRODUCT_FEE_FILTER",
+        "PRODUCT_FEE_SORT"
+      ],
+      "product_names": [
+        "미래에셋AI퀀트미국투자등급회사채증권자투자신탁(채권)",
+        "미래에셋그린뉴딜인덱스증권자투자신탁(주식)",
+        "미래에셋스마트롱숏70증권자투자신탁1호(주식)",
+        "미래에셋연금아시아퍼시픽소비성장증권자투자신탁1호(주식)"
+      ],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run2",
+      "test_id": "T005",
+      "turn_no": 1,
+      "route": "product",
+      "intent": [
+        "CLARIFY",
+        "PRODUCT_RECOMMENDATION"
+      ],
+      "product_names": [],
+      "response_status": "clarify",
+      "pass_fail": "PASS",
+      "total": 9
+    },
+    {
+      "run": "run2",
+      "test_id": "T005",
+      "turn_no": 2,
+      "route": "product",
+      "intent": [
+        "PRODUCT_RECOMMENDATION",
+        "PRODUCT_RISK_LOOKUP",
+        "PRODUCT_RISK_FILTER"
+      ],
+      "product_names": [
+        "KCGI코리아증권투자신탁1호[주식]",
+        "미래에셋AI퀀트미국투자등급회사채증권자투자신탁(채권)",
+        "미래에셋그린뉴딜인덱스증권자투자신탁(주식)",
+        "미래에셋스마트롱숏70증권자투자신탁1호(주식)",
+        "미래에셋연금아시아퍼시픽소비성장증권자투자신탁1호(주식)"
+      ],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run2",
+      "test_id": "T005",
+      "turn_no": 3,
+      "route": "product",
+      "intent": [
+        "PRODUCT_RECOMMENDATION",
+        "PRODUCT_RISK_LOOKUP",
+        "PRODUCT_RISK_FILTER"
+      ],
+      "product_names": [
+        "KCGI코리아증권투자신탁1호[주식]"
+      ],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run2",
+      "test_id": "T006",
+      "turn_no": 1,
+      "route": "document",
+      "intent": [
+        "ACCOUNT_PROCEDURE"
+      ],
+      "product_names": [],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run2",
+      "test_id": "T007",
+      "turn_no": 1,
+      "route": "document",
+      "intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT"
+      ],
+      "product_names": [],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run2",
+      "test_id": "T008",
+      "turn_no": 1,
+      "route": "product",
+      "intent": [
+        "PRODUCT_PERFORMANCE_LOOKUP"
+      ],
+      "product_names": [
+        "교보악사 Tomorrow 장기우량 증권투자신탁 K-1호(채권)",
+        "교보악사 파워인덱스 증권 자투자신탁 1 호 (주식)",
+        "교보악사 파워인덱스 증권 자투자신탁 1 호 (주식)",
+        "교보악사 파워인덱스 증권 자투자신탁 1 호 (주식)",
+        "교보악사 파워인덱스 증권 자투자신탁 1 호 (주식)"
+      ],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run2",
+      "test_id": "T009",
+      "turn_no": 1,
+      "route": "product",
+      "intent": [
+        "PRODUCT_RISK_LOOKUP",
+        "PRODUCT_RISK_FILTER"
+      ],
+      "product_names": [
+        "KB 그로스 포커스 증권 자투자신탁(주식)",
+        "KB 그로스 포커스 증권 자투자신탁(주식)",
+        "KB 그로스 포커스 증권 자투자신탁(주식)",
+        "KB 그로스 포커스 증권 자투자신탁(주식)",
+        "KB 코리아 밸류업 액티브 증권 자투자신탁(주식)"
+      ],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run2",
+      "test_id": "T010",
+      "turn_no": 1,
+      "route": "product",
+      "intent": [
+        "PRODUCT_FEE_FILTER",
+        "PRODUCT_FEE_SORT"
+      ],
+      "product_names": [
+        "미래에셋라이프사이클7090연금증권전환형자투자신탁1호(채권)",
+        "미래에셋라이프사이클2030연금증권전환형자투자신탁1호(주식)"
+      ],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run2",
+      "test_id": "T011",
+      "turn_no": 1,
+      "route": "product",
+      "intent": [
+        "CLARIFY",
+        "PRODUCT_PERFORMANCE_LOOKUP"
+      ],
+      "product_names": [],
+      "response_status": "clarify",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run2",
+      "test_id": "T012",
+      "turn_no": 1,
+      "route": "document+law",
+      "intent": [
+        "ACCOUNT_PROCEDURE",
+        "LEGAL_CONDITION"
+      ],
+      "product_names": [],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run2",
+      "test_id": "T013",
+      "turn_no": 1,
+      "route": "conversation",
+      "intent": [
+        "EXAMPLE_RESPONSE",
+        "CLARIFY_EXAMPLE",
+        "HYPOTHETICAL_EXAMPLE"
+      ],
+      "product_names": [],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run2",
+      "test_id": "T014",
+      "turn_no": 1,
+      "route": "document",
+      "intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT",
+        "EVIDENCE_REQUEST"
+      ],
+      "product_names": [],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run2",
+      "test_id": "T015",
+      "turn_no": 1,
+      "route": "document",
+      "intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT",
+        "SOURCE_COVERAGE"
+      ],
+      "product_names": [],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run2",
+      "test_id": "T016",
+      "turn_no": 1,
+      "route": "document",
+      "intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT"
+      ],
+      "product_names": [],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run2",
+      "test_id": "T017",
+      "turn_no": 1,
+      "route": "calculation",
+      "intent": [
+        "LEGAL_CONDITION",
+        "GENERAL_EDUCATION"
+      ],
+      "product_names": [],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run2",
+      "test_id": "T018",
+      "turn_no": 1,
+      "route": "document",
+      "intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT"
+      ],
+      "product_names": [],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 9
+    },
+    {
+      "run": "run2",
+      "test_id": "T019",
+      "turn_no": 1,
+      "route": "product",
+      "intent": [
+        "PRODUCT_LOOKUP"
+      ],
+      "product_names": [
+        "미래에셋솔로몬단기국공채증권자투자신탁1호(채권)",
+        "미래에셋솔로몬장기국공채증권자투자신탁1호(채권)",
+        "미래에셋솔로몬중장기국공채증권자투자신탁1호(채권)"
+      ],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run2",
+      "test_id": "T020",
+      "turn_no": 1,
+      "route": "product",
+      "intent": [
+        "CLARIFY",
+        "PRODUCT_RECOMMENDATION"
+      ],
+      "product_names": [],
+      "response_status": "clarify",
+      "pass_fail": "PASS",
+      "total": 9
+    },
+    {
+      "run": "run2",
+      "test_id": "T021",
+      "turn_no": 1,
+      "route": "document",
+      "intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT"
+      ],
+      "product_names": [],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run2",
+      "test_id": "T021",
+      "turn_no": 2,
+      "route": "document",
+      "intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT"
+      ],
+      "product_names": [],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    },
+    {
+      "run": "run2",
+      "test_id": "T022",
+      "turn_no": 1,
+      "route": "calculation",
+      "intent": [
+        "LEGAL_CONDITION",
+        "GENERAL_EDUCATION"
+      ],
+      "product_names": [],
+      "response_status": "success",
+      "pass_fail": "PASS",
+      "total": 10
+    }
+  ]
+}

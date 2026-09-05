@@ -1,0 +1,1504 @@
+{
+  "schema_version": "0.1",
+  "source_document": {
+    "filename": "R2_KR5169950018.pdf",
+    "document_type": "INVESTMENT_PROSPECTUS",
+    "as_of_date": "2025-07-11",
+    "effective_date": "2025-07-30",
+    "page_count": 73,
+    "file_hash": "e97c3f7f02d2484f32e666f85aca1fbc5a9921fe79ed92022476b834beb2bd41"
+  },
+  "product": {
+    "official_name": "디에스Maestro증권자투자신탁[주식]",
+    "kofia_fund_code": "E4451",
+    "manager_name": "디에스자산운용㈜",
+    "legal_form": null,
+    "asset_type": "주식형",
+    "is_open_end": null,
+    "is_additional": null,
+    "is_class_type": true,
+    "is_master_feeder": null,
+    "is_convertible": null,
+    "is_high_complexity_product": null,
+    "inception_date": null
+  },
+  "risk_ratings": [
+    {
+      "grade": 2,
+      "label": "높은 위험",
+      "method": null,
+      "as_of_date": "2025-07-11",
+      "evidence_ids": [
+        "R2_KR5169950018_p001_product_c001__8b82e3fb7f"
+      ]
+    }
+  ],
+  "classes": [
+    {
+      "class_key": "C001",
+      "class_name": "수수료선취-오프라인(A)",
+      "kofia_fund_code": null,
+      "sales_charge_type": null,
+      "channel": null,
+      "pension_type": null,
+      "eligibility_text": null,
+      "is_online": null,
+      "is_cdsc_class": null,
+      "is_conversion_enabled": null,
+      "inception_date": null,
+      "evidence_ids": [
+        "R2_KR5169950018_p003_fees_t001__4b0803746e",
+        "R2_KR5169950018_p003_fees_c001__4b0803746e",
+        "R2_KR5169950018_p003_fees_c002__4b0803746e",
+        "R2_KR5169950018_p010_class_c001__4b0803746e",
+        "R2_KR5169950018_p015_class_c001__4b0803746e",
+        "R2_KR5169950018_p027_class_c001__4b0803746e",
+        "R2_KR5169950018_p032_fees_c001__4b0803746e",
+        "R2_KR5169950018_p035_fees_c001__4b0803746e",
+        "R2_KR5169950018_p036_fees_c001__4b0803746e",
+        "R2_KR5169950018_p045_fees_c001__4b0803746e"
+      ]
+    },
+    {
+      "class_key": "C002",
+      "class_name": "수수료선취-온라인(A-e)",
+      "kofia_fund_code": null,
+      "sales_charge_type": null,
+      "channel": null,
+      "pension_type": null,
+      "eligibility_text": null,
+      "is_online": null,
+      "is_cdsc_class": null,
+      "is_conversion_enabled": null,
+      "inception_date": null,
+      "evidence_ids": [
+        "R2_KR5169950018_p003_fees_t001__fe2a5f500a",
+        "R2_KR5169950018_p003_fees_c001__fe2a5f500a",
+        "R2_KR5169950018_p003_fees_c002__fe2a5f500a",
+        "R2_KR5169950018_p010_class_c001__fe2a5f500a",
+        "R2_KR5169950018_p027_class_c001__fe2a5f500a",
+        "R2_KR5169950018_p032_fees_c001__fe2a5f500a",
+        "R2_KR5169950018_p035_fees_c001__fe2a5f500a",
+        "R2_KR5169950018_p036_fees_c001__fe2a5f500a",
+        "R2_KR5169950018_p035_performance_t001__fe2a5f500a"
+      ]
+    },
+    {
+      "class_key": "C003",
+      "class_name": "수수료미징구-오프라인(C)",
+      "kofia_fund_code": null,
+      "sales_charge_type": null,
+      "channel": null,
+      "pension_type": null,
+      "eligibility_text": null,
+      "is_online": null,
+      "is_cdsc_class": null,
+      "is_conversion_enabled": null,
+      "inception_date": null,
+      "evidence_ids": [
+        "R2_KR5169950018_p003_fees_t001__276a4e5128",
+        "R2_KR5169950018_p003_fees_c001__276a4e5128",
+        "R2_KR5169950018_p003_fees_c002__276a4e5128",
+        "R2_KR5169950018_p010_class_c001__276a4e5128",
+        "R2_KR5169950018_p015_class_c001__276a4e5128",
+        "R2_KR5169950018_p027_class_c001__276a4e5128",
+        "R2_KR5169950018_p032_fees_c001__276a4e5128",
+        "R2_KR5169950018_p035_fees_c001__276a4e5128",
+        "R2_KR5169950018_p036_fees_c001__276a4e5128",
+        "R2_KR5169950018_p035_performance_t001__276a4e5128"
+      ]
+    },
+    {
+      "class_key": "C004",
+      "class_name": "수수료미징구-온라인(C-e)",
+      "kofia_fund_code": null,
+      "sales_charge_type": null,
+      "channel": null,
+      "pension_type": null,
+      "eligibility_text": null,
+      "is_online": null,
+      "is_cdsc_class": null,
+      "is_conversion_enabled": null,
+      "inception_date": null,
+      "evidence_ids": [
+        "R2_KR5169950018_p003_fees_t001__5fcd30290a",
+        "R2_KR5169950018_p004_performance_t001__5fcd30290a",
+        "R2_KR5169950018_p003_fees_c001__5fcd30290a",
+        "R2_KR5169950018_p003_fees_c002__5fcd30290a",
+        "R2_KR5169950018_p004_performance_c001__5fcd30290a",
+        "R2_KR5169950018_p010_class_c001__5fcd30290a",
+        "R2_KR5169950018_p027_class_c001__5fcd30290a",
+        "R2_KR5169950018_p032_fees_c001__5fcd30290a",
+        "R2_KR5169950018_p035_fees_c001__5fcd30290a",
+        "R2_KR5169950018_p036_fees_c001__5fcd30290a",
+        "R2_KR5169950018_p035_performance_t001__5fcd30290a"
+      ]
+    }
+  ],
+  "sales_charges": [
+    {
+      "class_key": "C001",
+      "charge_type": "sales_fee",
+      "rate": 1.0,
+      "rate_min": null,
+      "rate_max": null,
+      "rate_unit": "PERCENT",
+      "rate_condition": "MAX",
+      "base_amount": null,
+      "timing": null,
+      "condition_text": "납입금액의 1.0%이내",
+      "evidence_ids": [
+        "R2_KR5169950018_p003_fees_t001__da111ce5f3"
+      ]
+    },
+    {
+      "class_key": "C002",
+      "charge_type": "sales_fee",
+      "rate": 0.5,
+      "rate_min": null,
+      "rate_max": null,
+      "rate_unit": "PERCENT",
+      "rate_condition": "MAX",
+      "base_amount": null,
+      "timing": null,
+      "condition_text": "납입금액의 0.5%이내",
+      "evidence_ids": [
+        "R2_KR5169950018_p003_fees_t001__fa88bf1a36"
+      ]
+    },
+    {
+      "class_key": "C003",
+      "charge_type": "sales_fee",
+      "rate": null,
+      "rate_min": null,
+      "rate_max": null,
+      "rate_unit": "PERCENT",
+      "rate_condition": "EXACT",
+      "base_amount": null,
+      "timing": null,
+      "condition_text": "없음",
+      "evidence_ids": [
+        "R2_KR5169950018_p003_fees_t001__8e8e73622b"
+      ]
+    },
+    {
+      "class_key": "C004",
+      "charge_type": "sales_fee",
+      "rate": null,
+      "rate_min": null,
+      "rate_max": null,
+      "rate_unit": "PERCENT",
+      "rate_condition": "EXACT",
+      "base_amount": null,
+      "timing": null,
+      "condition_text": "없음",
+      "evidence_ids": [
+        "R2_KR5169950018_p003_fees_t001__d2acbcab64"
+      ]
+    }
+  ],
+  "fees": [
+    {
+      "class_key": "C001",
+      "fee_type": "total_fee",
+      "rate": 1.455,
+      "unit": "PERCENT_PER_YEAR",
+      "as_of_date": null,
+      "effective_from": null,
+      "effective_to": null,
+      "evidence_ids": [
+        "R2_KR5169950018_p003_fees_t001__674bb6c4f2"
+      ]
+    },
+    {
+      "class_key": "C001",
+      "fee_type": "sales_remuneration",
+      "rate": 0.6,
+      "unit": "PERCENT_PER_YEAR",
+      "as_of_date": null,
+      "effective_from": null,
+      "effective_to": null,
+      "evidence_ids": [
+        "R2_KR5169950018_p003_fees_t001__7f7d8a1e1e"
+      ]
+    },
+    {
+      "class_key": "C001",
+      "fee_type": "peer_group_total_fee",
+      "rate": 1.37,
+      "unit": "PERCENT_PER_YEAR",
+      "as_of_date": null,
+      "effective_from": null,
+      "effective_to": null,
+      "evidence_ids": [
+        "R2_KR5169950018_p003_fees_t001__c0e233135e"
+      ]
+    },
+    {
+      "class_key": "C001",
+      "fee_type": "total_fee_and_expenses",
+      "rate": 1.457,
+      "unit": "PERCENT_PER_YEAR",
+      "as_of_date": null,
+      "effective_from": null,
+      "effective_to": null,
+      "evidence_ids": [
+        "R2_KR5169950018_p003_fees_t001__95910f1e8b"
+      ]
+    },
+    {
+      "class_key": "C002",
+      "fee_type": "total_fee",
+      "rate": 1.155,
+      "unit": "PERCENT_PER_YEAR",
+      "as_of_date": null,
+      "effective_from": null,
+      "effective_to": null,
+      "evidence_ids": [
+        "R2_KR5169950018_p003_fees_t001__408d9ff58a"
+      ]
+    },
+    {
+      "class_key": "C002",
+      "fee_type": "sales_remuneration",
+      "rate": 0.3,
+      "unit": "PERCENT_PER_YEAR",
+      "as_of_date": null,
+      "effective_from": null,
+      "effective_to": null,
+      "evidence_ids": [
+        "R2_KR5169950018_p003_fees_t001__916aad6894"
+      ]
+    },
+    {
+      "class_key": "C002",
+      "fee_type": "peer_group_total_fee",
+      "rate": 1.03,
+      "unit": "PERCENT_PER_YEAR",
+      "as_of_date": null,
+      "effective_from": null,
+      "effective_to": null,
+      "evidence_ids": [
+        "R2_KR5169950018_p003_fees_t001__6911349e12"
+      ]
+    },
+    {
+      "class_key": "C002",
+      "fee_type": "total_fee_and_expenses",
+      "rate": 1.157,
+      "unit": "PERCENT_PER_YEAR",
+      "as_of_date": null,
+      "effective_from": null,
+      "effective_to": null,
+      "evidence_ids": [
+        "R2_KR5169950018_p003_fees_t001__a7208ba15a"
+      ]
+    },
+    {
+      "class_key": "C003",
+      "fee_type": "total_fee",
+      "rate": 1.805,
+      "unit": "PERCENT_PER_YEAR",
+      "as_of_date": null,
+      "effective_from": null,
+      "effective_to": null,
+      "evidence_ids": [
+        "R2_KR5169950018_p003_fees_t001__9252bbf3f0"
+      ]
+    },
+    {
+      "class_key": "C003",
+      "fee_type": "sales_remuneration",
+      "rate": 0.95,
+      "unit": "PERCENT_PER_YEAR",
+      "as_of_date": null,
+      "effective_from": null,
+      "effective_to": null,
+      "evidence_ids": [
+        "R2_KR5169950018_p003_fees_t001__9fd0dfa582"
+      ]
+    },
+    {
+      "class_key": "C003",
+      "fee_type": "peer_group_total_fee",
+      "rate": 1.58,
+      "unit": "PERCENT_PER_YEAR",
+      "as_of_date": null,
+      "effective_from": null,
+      "effective_to": null,
+      "evidence_ids": [
+        "R2_KR5169950018_p003_fees_t001__c80cbe2826"
+      ]
+    },
+    {
+      "class_key": "C003",
+      "fee_type": "total_fee_and_expenses",
+      "rate": 1.807,
+      "unit": "PERCENT_PER_YEAR",
+      "as_of_date": null,
+      "effective_from": null,
+      "effective_to": null,
+      "evidence_ids": [
+        "R2_KR5169950018_p003_fees_t001__fb9d431495"
+      ]
+    },
+    {
+      "class_key": "C004",
+      "fee_type": "total_fee",
+      "rate": 1.325,
+      "unit": "PERCENT_PER_YEAR",
+      "as_of_date": null,
+      "effective_from": null,
+      "effective_to": null,
+      "evidence_ids": [
+        "R2_KR5169950018_p003_fees_t001__3cd4aa231e"
+      ]
+    },
+    {
+      "class_key": "C004",
+      "fee_type": "sales_remuneration",
+      "rate": 0.47,
+      "unit": "PERCENT_PER_YEAR",
+      "as_of_date": null,
+      "effective_from": null,
+      "effective_to": null,
+      "evidence_ids": [
+        "R2_KR5169950018_p003_fees_t001__a8eed7ae82"
+      ]
+    },
+    {
+      "class_key": "C004",
+      "fee_type": "peer_group_total_fee",
+      "rate": 1.16,
+      "unit": "PERCENT_PER_YEAR",
+      "as_of_date": null,
+      "effective_from": null,
+      "effective_to": null,
+      "evidence_ids": [
+        "R2_KR5169950018_p003_fees_t001__cb3ba1c060"
+      ]
+    },
+    {
+      "class_key": "C004",
+      "fee_type": "total_fee_and_expenses",
+      "rate": 1.327,
+      "unit": "PERCENT_PER_YEAR",
+      "as_of_date": null,
+      "effective_from": null,
+      "effective_to": null,
+      "evidence_ids": [
+        "R2_KR5169950018_p003_fees_t001__d53fbe3621"
+      ]
+    }
+  ],
+  "class_transition_rules": [],
+  "fund_conversion_rules": [],
+  "master_feeder_relations": [],
+  "hedging_policies": [],
+  "performance": [
+    {
+      "class_key": "C004",
+      "metric": "fund_return",
+      "period": "1Y",
+      "return_type": null,
+      "value": 38.42,
+      "unit": "PERCENT",
+      "as_of_date": null,
+      "period_start": null,
+      "period_end": null,
+      "evidence_ids": [
+        "R2_KR5169950018_p004_performance_t001__f1ea97bca2"
+      ]
+    },
+    {
+      "class_key": "C004",
+      "metric": "fund_return",
+      "period": "2Y",
+      "return_type": null,
+      "value": 21.33,
+      "unit": "PERCENT",
+      "as_of_date": null,
+      "period_start": null,
+      "period_end": null,
+      "evidence_ids": [
+        "R2_KR5169950018_p004_performance_t001__6d3d305934"
+      ]
+    },
+    {
+      "class_key": "C004",
+      "metric": "fund_return",
+      "period": "3Y",
+      "return_type": null,
+      "value": 21.33,
+      "unit": "PERCENT",
+      "as_of_date": null,
+      "period_start": null,
+      "period_end": null,
+      "evidence_ids": [
+        "R2_KR5169950018_p004_performance_t001__46ff40ebfd"
+      ]
+    },
+    {
+      "class_key": null,
+      "metric": "benchmark_return",
+      "period": "1Y",
+      "return_type": null,
+      "value": 9.38,
+      "unit": "PERCENT",
+      "as_of_date": null,
+      "period_start": null,
+      "period_end": null,
+      "evidence_ids": [
+        "R2_KR5169950018_p004_performance_t001__b283aad226"
+      ]
+    },
+    {
+      "class_key": null,
+      "metric": "benchmark_return",
+      "period": "2Y",
+      "return_type": null,
+      "value": 10.67,
+      "unit": "PERCENT",
+      "as_of_date": null,
+      "period_start": null,
+      "period_end": null,
+      "evidence_ids": [
+        "R2_KR5169950018_p004_performance_t001__916fcb6bf7"
+      ]
+    },
+    {
+      "class_key": null,
+      "metric": "benchmark_return",
+      "period": "3Y",
+      "return_type": null,
+      "value": 10.67,
+      "unit": "PERCENT",
+      "as_of_date": null,
+      "period_start": null,
+      "period_end": null,
+      "evidence_ids": [
+        "R2_KR5169950018_p004_performance_t001__598f55bac5"
+      ]
+    },
+    {
+      "class_key": null,
+      "metric": "volatility",
+      "period": "1Y",
+      "return_type": null,
+      "value": 22.62,
+      "unit": "PERCENT",
+      "as_of_date": null,
+      "period_start": null,
+      "period_end": null,
+      "evidence_ids": [
+        "R2_KR5169950018_p004_performance_t001__a467ee0842"
+      ]
+    },
+    {
+      "class_key": null,
+      "metric": "volatility",
+      "period": "2Y",
+      "return_type": null,
+      "value": 18.4,
+      "unit": "PERCENT",
+      "as_of_date": null,
+      "period_start": null,
+      "period_end": null,
+      "evidence_ids": [
+        "R2_KR5169950018_p004_performance_t001__d058a9769a"
+      ]
+    },
+    {
+      "class_key": null,
+      "metric": "volatility",
+      "period": "3Y",
+      "return_type": null,
+      "value": 21.33,
+      "unit": "PERCENT",
+      "as_of_date": null,
+      "period_start": null,
+      "period_end": null,
+      "evidence_ids": [
+        "R2_KR5169950018_p004_performance_t001__8794f5bc36"
+      ]
+    }
+  ],
+  "capital_flows": [],
+  "financial_metrics": [],
+  "narratives": [
+    {
+      "narrative_type": "INVESTMENT_OBJECTIVE",
+      "subject": "current_fund",
+      "text": "이 투자신탁은 국내 주식에 주로 투자하는 모투자신탁을 법 시행령 제94조 제2항 제4호에서 규정하는 주된 투자대상자산으로 하며 수익을 추구하는 것을 목적으로 합니다.",
+      "evidence_ids": [
+        "R2_KR5169950018_p003_objective_c001__db210276c8",
+        "R2_KR5169950018_p003_objective_c002__db210276c8",
+        "R2_KR5169950018_p003_objective_c003__db210276c8"
+      ]
+    },
+    {
+      "narrative_type": "INVESTMENT_STRATEGY",
+      "subject": "current_fund",
+      "text": "이 투자신탁은 디에스Brave증권모투자신탁[주식]에 90% 이상 투자하는 자투자신탁으로서, 모투자신탁의 운용실적에 따라 이익 또는 손실이 발생합니다.",
+      "evidence_ids": [
+        "R2_KR5169950018_p003_strategy_c002__32f40c6089",
+        "R2_KR5169950018_p003_strategy_c003__32f40c6089"
+      ]
+    },
+    {
+      "narrative_type": "INVESTMENT_RISK",
+      "subject": "집중투자에따른 위험",
+      "text": "집중투자에따른 위험",
+      "evidence_ids": [
+        "R2_KR5169950018_p022_other_t002__ad241bba7c",
+        "R2_KR5169950018_p005_risks_t001__ad241bba7c"
+      ]
+    },
+    {
+      "narrative_type": "INVESTMENT_RISK",
+      "subject": "투자원본 손실위험",
+      "text": "이 투자신탁은 원본을 보장하지 않습니다. 투자신탁의 운용실적에 따라 손익이 결정되는 실 적배당상품으로 예금자보호법에 따라 보호되지 아니하며, 특히 예금자보호법의 적용을 받는 은행 등에서 집합투자증권을 매입하는 경우에도 은행 예금과 달리 예금자보호법에 따라 보호 되지 않습니다. 따라서 투자재산 가치변동에 따라 투자원본의 전부 또는 일부에 대한 손실의 위험이 존재하며 투자 금액의 손실 내지 감소의 위험은 전적으로 투자자가 부담하게 되고, 집합투자업자나 판매회사 등 어떤 당사자도 투자손실에 대하여 책임을 지지 아니합니다.",
+      "evidence_ids": [
+        "R2_KR5169950018_p022_other_t001__a9dae7a869"
+      ]
+    },
+    {
+      "narrative_type": "INVESTMENT_RISK",
+      "subject": "주식가격 변동위험",
+      "text": "이 투자신탁은 신탁재산을 주로 국내주식 등에 투자하기 때문에 국내 주식시장에 영향을 주 는 거시경제지표의 변화에 따른 주식의 가격이 변동될 위험에 노출됩니다. 또한 투자 대상 기업의 영업환경, 재무상황 변동에 따라 주식의 가치가 급격히 변동될 경우 손실이 크게 발 생할 수도 있습니다.",
+      "evidence_ids": [
+        "R2_KR5169950018_p022_other_t001__21500297b5"
+      ]
+    },
+    {
+      "narrative_type": "INVESTMENT_RISK",
+      "subject": "시장위험",
+      "text": "신탁재산을 국내주식, 채권 등에 투자함으로써 이 투자신탁은 국내 금융시장의 주가, 이자율 등 기타 거시경제지표의 변화에 따른 위험에 노출됩니다. 또한, 신탁재산의 운용에 있어 예 상치 못한 정치, 경제상황, 정부의 조치 및 세제의 변경 등은 당해 신탁재산의 운용에 영향을 미칠 수 있습니다.",
+      "evidence_ids": [
+        "R2_KR5169950018_p022_other_t001__a9ab9cc710"
+      ]
+    },
+    {
+      "narrative_type": "INVESTMENT_RISK",
+      "subject": "이자율 변동 에 따른 위 험",
+      "text": "채권의 가격은 이자율에 의해 결정됩니다. 일반적으로 이자율이 하락하면 채권가격 상승에 의한 자본이득이 발생하고 이자율이 상승하면 자본손실이 발생합니다. 따라서 채권을 만기까 지 보유하지 않고 중도에 매도하는 경우에는 시장상황에 따라 손실 또는 이득이 발생할 수 있습니다. 또한 채권의 잔존만기가 길어질 경우 해당 위험도 커질 수 있습니다.",
+      "evidence_ids": [
+        "R2_KR5169950018_p022_other_t001__65e9778a1e"
+      ]
+    },
+    {
+      "narrative_type": "INVESTMENT_RISK",
+      "subject": "신용위험",
+      "text": "이 투자신탁이 투자하는 투자대상 종목의 가치는 해당 종목 발행회사의 영업환경, 재무상황, 신용상태의 악화에 따라 급격히 변동될 수 있습니다. 따라서 주식뿐만 아니라 채권 등 비교 적 안전자산이라 할지라도 해당 종목의 가격변동에 따른 원금손실을 입게 될 수도 있습니다.",
+      "evidence_ids": [
+        "R2_KR5169950018_p022_other_t001__e6e1f9d2d4"
+      ]
+    },
+    {
+      "narrative_type": "INVESTMENT_RISK",
+      "subject": "파생상품 투자위험",
+      "text": "파생상품(선물, 옵션등)은 작은 증거금으로 거액의 결제가 가능한 지렛대 효과(레버리지 효과) 로 인하여 기초자산에 직접 투자하는 경우에 비하여 훨씬 높은 위험에 노출될 수 있습니다. 또한, 옵션매도에 따른 이론적인 손실범위는 무한대이므로 기초자산에 대한 투자나 옵션 매 수의 경우에 비하여 높은 위험에 노출될 수 있습니다.",
+      "evidence_ids": [
+        "R2_KR5169950018_p022_other_t001__35db616c90"
+      ]
+    },
+    {
+      "narrative_type": "INVESTMENT_RISK",
+      "subject": "유동성위험",
+      "text": "유동성위험",
+      "evidence_ids": [
+        "R2_KR5169950018_p023_other_t002__5f93fdc23e"
+      ]
+    },
+    {
+      "narrative_type": "INVESTMENT_RISK",
+      "subject": "따른 위험",
+      "text": "환매를 청구하시는 날과 환매대금을 결정하는 기준가격 적용일이 다르기 때문에 환매 시 환 매 청구일로부터 환매기준가격 적용일까지의 집합투자기구 재산의 가치변동에 따른 위험에 노출됩니다.",
+      "evidence_ids": [
+        "R2_KR5169950018_p023_other_t002__ca5f4a4ca0"
+      ]
+    },
+    {
+      "narrative_type": "INVESTMENT_RISK",
+      "subject": "동 위험",
+      "text": "집합투자업자는 이 투자신탁의 투자목적 달성을 위한 투자전략의 수행에 최선을 다할 것이 나, 이 투자신탁의 규모가 자산가치의 과도한 하락 또는 환매 등에 의해 적정규모 이하로 작 아지는 경우 원활한 투자전략의 수행 또는 충분한 분산투자가 불가능해질 수도 있습니다.",
+      "evidence_ids": [
+        "R2_KR5169950018_p023_other_t002__e49fe68de4"
+      ]
+    },
+    {
+      "narrative_type": "INVESTMENT_RISK",
+      "subject": "과세제도 변경위험",
+      "text": "과세제도 변경위험",
+      "evidence_ids": [
+        "R2_KR5169950018_p023_other_t002__0c2b8e3493"
+      ]
+    },
+    {
+      "narrative_type": "INVESTMENT_RISK",
+      "subject": "과세 위험",
+      "text": "과세당국에서 인식하는 투자에 따른 손익은 세금을 내야 하는 과세대상자산에서 발생한 손 익과 세금을 내지 않아도 되는 비과세대상자산에서 발생한 손익으로 구분할 수 있습니다. 여 기서 비과세손익은 수익이 있더라도 세금이 부과되지 않는다는 의미이기도 하지만 손해를 보 더라도 이를 손실로 인정하지 않는다는 의미이기도 합니다. 이에 따라 비과세대상자산에서 손실을 본 경우라도 과세대상자산에서는 발생 한 수익이 있다면 결과적으로 전체 투자결과가 손실이 발생한 경우라도 세금을 내야 하는 상황이 발생할 수 있습니다. * 과세대상자산의 예: 해외투자 환차손익 및 매매•평가손익, 채권투자 매매•평가손익 등 * 비과세대상자산의 예: 국내 상장주식 매매차익 등 - 이 집합투자기구에서 발생한 손익에 대한 과세 기준 및 과세 방법은 세법 등 관련 법령 및 제도에 따라 결정됩니다. 따라서, 과세에 관한 사항은 투자자 본인의 재산상태 등을 고려하시 어 세무전문가의 조언 등 추가적인 확인을 권장합니다.",
+      "evidence_ids": [
+        "R2_KR5169950018_p023_other_t002__fbbe97b205"
+      ]
+    },
+    {
+      "narrative_type": "INVESTMENT_RISK",
+      "subject": "예상배당 위험",
+      "text": "이 투자신탁이 보유하는 증권에 대하여 배당락 기준으로 각 종목별 예상배당액을 추정하여 당해 투자신탁의 기준가격에 반영합니다. 이 때 예상 배당금액은 추후 주주총회에서 확정되 는 실제 배당금액과 차이가 있을 수 있으며, 확정된 실제 배당금액이 예상 배당금액 보다 적 어질 경우 투자신탁의 가치하락이 있을 수 있습니다.",
+      "evidence_ids": [
+        "R2_KR5169950018_p023_other_t002__2720191d5a"
+      ]
+    },
+    {
+      "narrative_type": "INVESTMENT_RISK",
+      "subject": "투자신탁 해지위험",
+      "text": "투자신탁 해지위험",
+      "evidence_ids": [
+        "R2_KR5169950018_p023_other_t002__31bdd9ed13"
+      ]
+    },
+    {
+      "narrative_type": "INVESTMENT_RISK",
+      "subject": "규모 위험",
+      "text": "투자신탁의 설정금액이 소액이거나, 환매 등에 의해 투자신탁의 규모가 일정 규모 이하로 작 아지는 경우, 분산투자 등 원활한 펀드 운용에 장애가 발생할 수 있습니다.",
+      "evidence_ids": [
+        "R2_KR5169950018_p023_other_t002__61367d8511"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "R2_KR5169950018_p001_product_c001__8b82e3fb7f",
+      "field_path": "risk_ratings[0]",
+      "page": 1,
+      "section": "PRODUCT_INFO",
+      "source_text": "페이지 1 / 73 \n \n투자 위험 등급 \n2등급 (높은 위험) \n디에스자산운용㈜은 이 투자신탁의 투자대상 자산의 종류 \n및 \n위험도를 \n감안하여 \n2등급으로 \n분류하였습니다. \n집합투자기구의 위험등급은 운용실적, 시장상황 등에 따라 \n변경될 수 있다는 점을 유의하여 투자판단을 하시기 \n바랍니다. \n1 \n2 \n3 \n4 \n5 \n6 \n매우 \n높은 \n위험 \n높은 \n위험 \n다소 \n높은 \n위험 \n보통 \n위험 \n낮은 \n위험 \n매우 \n낮은 \n위험 \n \n \n \n \n이 투자설명서는 디에스Maestro증권자투자신탁[주식]에 대한 자세한 내용을 담고 있습니다. \n따라서 \n디에스Maestro증권자투자신탁[주식] \n수익증권을 \n매입하기 \n전에 \n이 \n투자설명서를 \n읽어보시기 바랍니다. \n1. 집합투자기구 명칭: \n디에스Maestro증권자투자신탁[주식] \n2. 집합투자업자 명칭: \n디에스자산운용㈜ \n3. 판매회사: \n판매회사에 대한 자세한 내용은 \n한국금융투자협회(www.kofia.or.kr) 및 집합투자업자의 인터넷 \n홈페이지(www.dsasset.com)을 참고하시기 바랍니다. \n4. 작성 기준일: \n2025년 7월 11일 \n5. 증권신고서 효력발생일: \n2025년 7월 30일 \n6. 모집(매출) 증권의 종류 및 수: \n투자신탁 수익증권 [모집(매출) 총액: 10조좌] (1좌당 1원) \n7. 모집(매출) 기간(판매기간) \n2023년 7월 12일부터 투자신탁 해지일까지 \n8. 집합투자증권신고서 및 \n투자설명서의 공시장소 \n가. 집합투자증권신고서 \n전자문서: 금융위(금감원)홈페이지 → dart.fss.or.kr \n나. 투자설명서 \n전자문서: 금융위(금감원)홈페이지 → dart.fss.or.kr \n서면문서: 금융위(금감원), 집합투자업자, 각 판매회사 \n \n※ 효력발생일까지 증권신고서의 기재사항 중 일부가 변경될 수 있으며, 개방형 집합투자증권인 \n겨우 효력발생일 이후에도 변경될 수 있음을 유의하시기 바랍니다. \n \n금융위원회가 투자설명서의 기재사항이 진실 또는 정확하다는 것을 인정하거나 그 \n증권의 가치를 보증 또는 승인하지 아니함을 유의하시기 바랍니다. 또한 이 \n집합투자증권은 \n『예금자보호법』에 \n의한 \n보호를 \n받지 \n않는 \n실적배당상품으로 \n투자원금의 손실이 발생할 수 있으므로 투자에 신중을 기하여 주시기 바랍니다. \n \n투자설명서",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_t001__4b0803746e",
+      "field_path": "classes[0]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "페이지 3 / 73 \n \n요 약 정 보\n \n투자 위험 등급 \n2등급 (높은 위험) \n디에스자산운용㈜은 이 투자신탁의 투자대상 자산의 종류 및 \n위험도를 감안하여 2등급으로 분류하였습니다. \n집합투자증권은 『예금자보호법』에 따라 보호되지 않는 실적 배당상품입니다. \n해당 집합투자기구는 국내 주식을 주된 투자대상으로 하는 모투자신탁에 \n신탁재산의 60% 이상을 투자하여, 국내 주식 투자에 따른 주식 등 \n가격변동위험, 특정주식 집중투자위험, 시장위험 등이 있으므로 투자에 \n신중을 기하여 주시기 바랍니다. \n1 \n2 \n3 \n4 \n5 \n6 \n매우 \n높은 \n위험 \n높은 \n위험 \n다소 \n높은 \n위험 \n보통 \n위험 \n낮은 \n위험 \n매우 \n낮은 \n위험 \n이 요약정보는 디에스Maestro증권자투자신탁[주식]의 투자설명서의 내용 중 중요사항을 발췌∙요약한 핵심정\n보를 담고 있습니다. 따라서 자세한 정보가 필요하신 경우에는 동 집합투자증권을 매입하기 이전에 투자설\n명서를 반드시 참고 하시기 바랍니다. \n투자목적 \n및 \n투자전략 \n1. 투자목적: 이 투자신탁은 국내 주식에 주로 투자하는 모투자신탁을 법 시행령 제94조 제2항 \n제4호에서 규정하는 주된 투자대상자산으로 하며 수익을 추구하는 것을 목적으로 합니다. \n그러나 상기의 투자목적이 반드시 달성된다는 보장은 없으며, 집합투자업자, 신탁업자, 판매회사 \n등 이 투자신탁과 관련된 어떠한 당사자도 투자원금의 보장 또는 투자목적의 달성을 보장하지 \n아니합니다. \n2. \n투자전략: \n이 \n투자신탁은 \n디에스Brave증권모투자신탁[주식]에 \n90% \n이상 \n투자하는 \n자투자신탁으로서, 모투자신탁의 운용실적에 따라 이익 또는 손실이 발생합니다. \n※ 자세한 내용은 투자설명서를 참조하시기 바랍니다. \n분류 \n투자신탁, 증권(주식형), 개방형(중도환매가능), 추가형(추가납입가능), 종류형, 모자형 \n투자비용 \n클래스 \n종류 \n투자자가 부담하는 \n수수료 및 총보수(단위:%) \n1,000 만원 투자시 투자자가 부담하는 \n투자기간별 총비용 예시 (단위: 천원) \n판매 \n수수료 \n \n \n동종 \n유형 \n총보수 \n총보수 \n·비용 \n1 년 \n2 년 \n3 년 \n5 년 \n10 년 \n총 \n보수 \n판매 \n보수 \n수수료선취- \n오프라인형(A) \n납입금액의 \n1.0%이내 \n1.455 \n0.600 \n1.370 \n1.457 \n246 \n398 \n556 \n888 \n1,831 \n수수료선취- \n온라인형(A-e) \n납입금액의 \n0.5%이내 \n1.155 \n0.300 \n1.030 \n1.157 \n167 \n289 \n416 \n684 \n1,453 \n수수료미징구- \n오프라인형(C) \n없음 \n1.805 \n0.950 \n1.580 \n1,807 \n184 \n373 \n568 \n979 \n2,127 \n수수료미징구- \n온라인형(C-e) \n없음 \n1.325 \n0.470 \n1.160 \n1,327 \n135 \n275 \n421 \n728 \n1,604 \n주1) 종류형집합투자기구의 구체적인 투자비용은 ‘투자설명서 제2부. 집합투자기구에 관한 사항 중 13. 보수 및 수수료에 \n관한 사항’을 참고하시기 바랍니다. \n주2) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투가기구 전체의 평균 총보수비용을 의미합니다. \n주3) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 \n제외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 \n투자수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. \n주4) 종류 A형과 종류 C형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-\ne형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 \n수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 \n작성기준일: 2025. 7. 11 \n디에스Maestro증권자투자신탁[주식] (펀드코드:E4451)",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_c001__4b0803746e",
+      "field_path": "classes[0]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "투자비용 \n클래스 \n종류 \n투자자가 부담하는 \n수수료 및 총보수(단위:%) \n1,000 만원 투자시 투자자가 부담하는 \n투자기간별 총비용 예시 (단위: 천원) \n판매 \n수수료 \n \n \n동종 \n유형 \n총보수 \n총보수 \n·비용 \n1 년 \n2 년 \n3 년 \n5 년 \n10 년 \n총 \n보수 \n판매 \n보수 \n수수료선취- \n오프라인형(A) \n납입금액의 \n1.0%이내 \n1.455 \n0.600 \n1.370 \n1.457 \n246 \n398 \n556 \n888 \n1,831 \n수수료선취- \n온라인형(A-e) \n납입금액의 \n0.5%이내 \n1.155 \n0.300 \n1.030 \n1.157 \n167 \n289 \n416 \n684 \n1,453 \n수수료미징구- \n오프라인형(C) \n없음 \n1.805 \n0.950 \n1.580 \n1,807 \n184 \n373 \n568 \n979 \n2,127 \n수수료미징구- \n온라인형(C-e) \n없음 \n1.325 \n0.470 \n1.160 \n1,327 \n135 \n275 \n421 \n728 \n1,604 \n주1) 종류형집합투자기구의 구체적인",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_c002__4b0803746e",
+      "field_path": "classes[0]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "투자비용은 ‘투자설명서 제2부. 집합투자기구에 관한 사항 중 13. 보수 및 수수료에 \n관한 사항’을 참고하시기 바랍니다. \n주2) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투가기구 전체의 평균 총보수비용을 의미합니다. \n주3) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 \n제외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 \n투자수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. \n주4) 종류 A형과 종류 C형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-\ne형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 \n수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 \n작성기준일: 2025. 7. 11 \n디에스Maestro증권자투자신탁[주식] (펀드코드:E4451)",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p010_class_c001__4b0803746e",
+      "field_path": "classes[0]",
+      "page": 10,
+      "section": "CLASS_INFO",
+      "source_text": "페이지 10 / 73 \n \n제 1부. 모집 또는 매출에 관한 사항 \n \n1. 집합투자기구의 명칭 \n집합투자기구 명칭 \n한국금융투자협회 펀드 코드 \n디에스Maestro증권자투자신탁[주식] \nE4451 \n수수료선취-오프라인형(A) \nE4452 \n수수료선취-온라인형(A-e) \nE4453 \n수수료선취-오프라인-무권유저비용형(AG) \nE4454 \n수수료미징구-오프라인형(C) \nE4455 \n수수료미징구-온라인형(C-e) \nE4456 \n수수료미징구-오프라인-무권유저비용형(CG) \nE4457 \n수수료미징구-오프라인-기관형(C-I) \nE4458 \n수수료후취-온라인슈퍼형(S) \nE4465 \n수수료미징구-오프라인-집합투자업자형(C-s) \nE4459 \n수수료미징구-오프라인-랩형(C-w) \nE4460 \n수수료미징구-오프라인-개인연금형(C-P) \nE4461 \n수수료미징구-온라인-개인연금형(C-Pe) \nE4462 \n수수료미징구-온라인슈퍼-개인연금형(S-P) \nE4466 \n수수료미징구-오프라인-퇴직연금형(C-P2) \nE4463 \n수수료미징구-온라인-퇴직연금형(C-P2e) \nE4464 \n수수료미징구-온라인슈퍼-퇴직연금형(S-P2) \nE4467 \n \n2. 집합투자기구의 종류 및 형태 \n가. 형태별 종류: 투자신탁 \n나. 운용자산별 종류: 증권(주식형) \n다. 개방형·폐쇄형 구분: 개방형(환매가 가능한 집합투자기구) \n라. 추가형·단위형 구분: 추가형(추가로 자금 납입이 가능한 집합투자기구) \n마. 특수형태: 모자형, 종류형 \n- 모자형: 모투자신탁이 발행하는 집합투자증권을 자투자신탁이 취득하는 구조의 투자신탁 \n- 종류형: 판매보수의 차이로 인하여 기준가격이 다르거나 판매보수가 다른 여러 종류의 집합투자증권을 발행\n하는 투자신탁 \n바. 고난도금융투자상품 해당 여부: 해당없음 \n주) 집합투자기구의 종류 및 형태에도 불구하고 투자대상은 여러 가지 다양한 자산에 투자될 수 있으며, 자세한 투자대상은 \n제2부 “투자대상”과 “투자전략” 부분을 참고하시기 바랍니다",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p015_class_c001__4b0803746e",
+      "field_path": "classes[0]",
+      "page": 15,
+      "section": "CLASS_INFO",
+      "source_text": "페이지 15 / 73 \n \n용전문인력의 평균운용성과는 해당 회사 근무기간 중 운용한 성과를 의미합니다. 동종 집합투자기구 연평균 수익률은 당사 \n공모펀드를 대상으로 하였으며, 운용펀드 기준으로 보수차감 전 수익률이며 모자형 구조의 펀드의 경우 모펀드만을 대상으\n로 계산되었음을 알려드립니다. \n주4) 운용중인 다른 집합투자기구 중 성과보수가 약정된 집합투자기구(사모펀드) : 김창진 18개 펀드 2,769억원 / 황현철 4\n개 펀드 1,105억원 \n \n(3) 운용전문인력 변경 내역(최근 3년) \n<책임운용전문인력> \n운용역 \n운용 기간 \n이재국 \n2023.07.12 ~ 2025.07.29 \n김창진 \n2025.07.30 ~ 현재 \n \n<부책임운용전문인력> \n운용역 \n운용 기간 \n박인혁 \n2023.07.12 ~ 2024.05.16 \n황현철 \n2024.05.17 ~ 현재 \n \n6. 집합투자기구의 구조 \n가. 집합투자기구의 종류 및 형태 \n투자신탁, 증권(주식형), 개방형(중도환매가능), 추가형(추가납입가능), 모자형, 종류형 \n \n나. 종류형 구조 \n이 집합투자기구는 종류형 집합투자기구입니다. 집합투자기구의 종류는 판매수수료 부과방식-판매경로-기타 펀\n드 특성에 따라 3단계로 구분되며, 본 집합투자기구의 종류 및 각 종류별 특징은 다음과 같습니다. \n종류(Class) \n집합투자기구의 특징 \n판매 \n수수료 \n수수료 \n선취(A) \n집합투자증권 \n매입시점에 \n판매수수료가 \n일시 \n징구되는 \n반면 \n판매보수가 \n판매수수료미징구형(C) 보다 상대적으로 낮게 책정되므로 총비용이 판매수수료 \n미징구형(C)과 일치 하는 시점은 약 2년 8개월이 경과되는 시점입니다. 따라서 \n2년 8개월 이전에 환매할 경우 판매수수료미징구형(C)보다 높은 총비용을 \n지불하게 되는 집합투자기구입니다. \n수수료 \n후취(S) \n집합투자증권 매입시점에 징구되는 판매수수료는 없는 반면 3년 이내에 환매시 \n환매금액에 대해 수수료가 징구되는 집합투자기구입니다. \n수수료 \n미징구(C) \n집합투자증권 매입 또는 환매시점에 일시 징구되는 판매수수료는 없는 반면 \n판매보수가 판매수수료선취형(A) 보다 상대적으로 높게 책정되므로 총비용이 \n판매수수료선취형(A)과 일치하는 시점은 약 2년 8개월이 경과되는 시점입니다. \n따라서 2년 8개월 이전에 환매할 경우 판매수수료선취형(A) 보다 낮은 총비용을 \n지불할 수 있는 집합투자기구입니다. \n판매 \n온라인 \n판매회사의 온라인전용으로 판매되는 집합투자기구로 오프라인으로 판매되는",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p027_class_c001__4b0803746e",
+      "field_path": "classes[0]",
+      "page": 27,
+      "section": "CLASS_INFO",
+      "source_text": "페이지 27 / 73 \n \n \n(2) 가입자격 \n종류 \n구분 \n판매수수료 \n부과여부 \n수수료선취-오프라인형(A) \n제한없음 \n납입금액의 \n1.0% 이내 \n수수료선취-온라인형(A-e) \n온라인 가입자 \n납입금액의 \n0.5% 이내 \n수수료선취-오프라인- \n무권유저비용형(AG) \n투자자문업자로부터 투자자문을 받고 그 결과에 따라 집합\n투자증권 매수를 요청하는 등 금융기관으로부터 별도의 투\n자권유 없이 집합투자증권을 매수하는 가입자 \n납입금액의 \n0.7% 이내 \n수수료미징구-오프라인형(C) \n제한없음 \n없음 \n수수료미징구-온라인형(C-e) \n온라인 가입자 \n없음 \n수수료미징구-오프라인-무권\n유저비용형(CG) \n투자자문업자로부터 투자자문을 받고 그 결과에 따라 집합\n투자증권 매수를 요청하는 등 금융기관으로부터 별도의 투\n자권유 없이 집합투자증권을 매수하는 가입자 \n없음 \n수수료미징구-오프라인-기관\n형(C-I) \n법에서 정하는 집합투자기구(외국 법령에 의한 것으로서 집\n합투자기구의 성질을 가진 것을 포함한다) \n법 시행령 제10조 제2항 및 금융투자업규정 제1-4조에서 정\n하는 기관투자자 또는 국가재정법에 따른 기금(외국의 법령\n상 이에 준하는 자를 포함한다) \n없음 \n수수료후취-온라인슈퍼형(S) \n자산운용사의 공동판매채널로서의 역할 수행을 위해 모든 \n공모 S클래스를 취급하고, 객관적 지표를 기준으로 상품을 \n노출 및 배열하는 온라인판매시스템에 가입한 자 (후취판매\n수수료 부과) \n3년 미만 환매\n시 환매금액 \n0.15% 이내 \n수수료미징구-오프라인-집합\n투자업자형(C-s) \n당해 집합투자기구의 집합투자업자 \n없음 \n수수료미징구-오프라인-랩형\n(C-w) \n랩어카운트, 특정금전신탁을 통해 가입하기 원하는 가입자 \n없음 \n수수료미징구-오프라인-개 \n인연금형(C-P) \n소득세법 제20조의3 및 소득세법 시행령 제40조의2에 따른 \n연금저축계좌를 통하여 가입한 자 \n없음 \n수수료미징구-온라인-개인 \n연금형(C-Pe) \n판매회사의 전자매체(온라인)를 통하여 가입한 자로서 소득\n세법 제20조의3 및 소득세법 시행령 제40조의2에 따른 연금\n저축계좌를 통하여 가입한 자 \n없음 \n수수료미징구-온라인슈퍼- \n개인연금형(S-P) \n자산운용사의 공동판매채널로서의 역할 수행을 위해 모든 \n공모 S클래스를 취급하고, 객관적 지표를 기준으로 상품을 \n노출 및 배열하는 온라인판매시스템에 가입한 자로서 소득\n세법 제20조의3 및 소득세법 시행령 제40조의2에 따른 연금\n저축계좌를 통하여 가입한 자 \n없음 \n수수료미징구-오프라인-퇴직\n연금형(C-P2) \n근로자퇴직급여보장법에 의한 \n퇴직연금 및 개인퇴직연금\n(IRP), 퇴직연금사업자 \n없음",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p032_fees_c001__4b0803746e",
+      "field_path": "classes[0]",
+      "page": 32,
+      "section": "FEES",
+      "source_text": "페이지 32 / 73 \n \n \n13. 보수 및 수수료에 관한 사항 \n이 투자신탁은 운용 및 판매 등의 대가로 수수료 및 보수를 지급하게 되며, 가입자격에 따라 아래와 같이 보수 \n및 수수료 등의 차이가 있습니다. 한편, 판매회사(투자매매업자 또는 투자중개업자)는 판매보수와 관련하여 집\n합투자증권의 해당 집합투자기구의 투자자에게 지속적으로 제공하는 용역의 대가에 관한 내용이 기재된 자료\n를 교부하고 설명하여야 합니다. \n \n가. 투자자에게 직접 부과되는 수수료 \n명칭 \n(클래스) \n가입자격 \n수수료율 \n선취 \n판매수수료 \n후취 \n판매수수료 \n환매 \n수수료 \n전환 \n수수료 \n(A) \n제한없음 \n납입금액의 \n1.0% 이내 \n \n \n \n \n \n \n(A-e) \n온라인 가입자 \n납입금액의 \n0.5% 이내 \n \n \n \n \n \n \n(AG) \n투자자문업자로부터 투자자문을 받고 그 \n결과에 따라 집합투자증권 매수를 요청\n하는 등 금융기관으로부터 별도의 투자\n권유 없이 집합투자증권을 매수하는 가\n입자 \n납입금액의 \n0.7% 이내 \n \n \n \n \n \n \n(C) \n제한없음 \n \n \n \n \n(C-e) \n온라인 가입자 \n \n \n \n \n(CG) \n투자자문업자로부터 투자자문을 받고 그 \n결과에 따라 집합투자증권 매수를 요청\n하는 등 금융기관으로부터 별도의 투자\n권유 없이 집합투자증권을 매수하는 가\n입자 \n \n \n \n \n(C-I) \n법에서 정하는 집합투자기구(외국 법령\n에 의한 것으로서 집합투자기구의 성질\n을 가진 것을 포함한다) \n법시행령 제10조 제2항 및 금융투자업규\n정 제1-4조에서 정하는 기관투자자 또는 \n국가재정법에 따른 기금(외국의 법령상 \n이에 준하는 자를 포함한다) \n \n \n \n \n(S) \n자산운용사의 공동판매채널로서의 역할 \n수행을 위해 모든 공모 S클래스를 취급\n하고, 객관적 지표를 기준으로 상품을 노\n출 및 배열하는 온라인판매시스템에 가\n입한 자 \n \n3년 미만 환매\n시 환매금액의 \n0.15% 이내 \n \n \n(C-s) \n당해 집합투자기구의 집합투자업자",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p035_fees_c001__4b0803746e",
+      "field_path": "classes[0]",
+      "page": 35,
+      "section": "FEES",
+      "source_text": "페이지 35 / 73 주4) ‘총보수·비용’ 비율은 집합투자기구에서 지출되는 보수와 기타비용 총액을 순자산연평잔액으로 나누어 산출합니다. 주5) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투자기구 전체의 평균 총보수비용을 의미합니다. 주6) 기타비용 및 증권거래비용에는 이 투자신탁이 해당 모투자신탁에 투자한 비율을 안분한 모투자신탁의 비용이 포함되 어 있습니다. <1,000만원 투자시 투자자가 부담하게 되는 수수료 및 보수 비용의 투자기간별 예시(단위: 천원)> 구분 1년후 2년후 3년후 5년후 10년후 (A) 판매수수료 및 보수 비용 246 398 556 888 1,831 판매수수료 및 합성 총보수 247 401 560 896 1,847 (A-e) 판매수수료 및 보수 비용 167 289 416 684 1,453 판매수수료 및 합성 총보수 172 299 431 710 1,509 (AG) 판매수수료 및 보수 비용 199 332 471 765 1,604 판매수수료 및 합성 총보수 199 332 471 765 1,604 (C) 판매수수료 및 보수 비용 183 373 568 979 2,127 판매수수료 및 합성 총보수 183 373 568 979 2,127 (C-e) 판매수수료 및 보수 비용 135 275 421 728 1,604 판매수수료 및 합성 총보수 137 280 427 740 1,627 (CG) 판매수수료 및 보수 비용 154 314 479 828 1,813 판매수수료 및 합성 총보수 154 314 479 828 1,813 (C-I) 판매수수료 및 보수 비용 91 185 283 493 1,098 판매수수료 및 합성 총보수 91 187 286 497 1,107 (S)* 판매수수료 및 보수 비용 117 238 365 632 1,399 판매수수료 및 합성 총보수 119 243 372 645 1,425 (C-s) 판매수수료 및 보수 비용 89 181 277 482 1,074 판매수수료 및 합성 총보수 89 182 279 486 1,083 (C-w) 판매수수료 및 보수 비용 87 178 273 475 1,060 판매수수료 및 합성 총보수 87 178 273 475 1,060 (C-P) 판매수수료 및 보수 비용 168 342 522 901 1,966 판매수수료 및 합성 총보수 173 352 537 925 2,016 (C-Pe) 판매수수료 및 보수 비용 128 261 399 691 1,524 판매수수료 및 합성 총보수 133 270 413 715 1,575 (S-P) 판매수수료 및 보수 비용 115 234 358 621 1,374 판매수수료 및 합성 총보수 116 237 362 628 1,390 (C-P2) 판매수수료 및 보수 비용 158 322 492 849 1,858 판매수수료 및 합성 총보수 167 340 518 894 1,951 (C-P2e) 판매수수료 및 보수 비용 123 251 384 665 1,468 판매수수료 및 합성 총보수 126 257 392 679 1,499 (S-P2) 판매수수료 및 보수 비용 111 226 345 599 1,328 판매수수료 및 합성 총보수 112 229 350 607 1,346 주) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 제",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p036_fees_c001__4b0803746e",
+      "field_path": "classes[0]",
+      "page": 36,
+      "section": "FEES",
+      "source_text": "페이지 36 / 73 \n \n외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 투자\n수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. 종류 A형과 종류 C형에 각각 투자할 경우 총비\n용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-e형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하\n는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용\n의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 있음에 유의하시기 바랍니다. \n* 종류 S는 후취판매수수료를 반영하지 않고 산출하였습니다. \n \n(2) 투자신탁 관련 비용 \n- 증권 및 파생상품 등의 매매수수료 \n- 증권 및 파생상품 등의 전자등록 및 결제비용 \n- 집합투자재산의 회계감사비용 \n- 수익자명부 관리비용 \n- 전체 수익자로 구성되는 수익자총회 관련비용 \n- 집합투자재산에 관한 소송비용(집합투자업자의 귀책사유로 인한 소송인 경우 제외) \n- 증권 및 파생상품 등 자산의 가격정보비용 \n- 집합투자재산의 운용에 필요한 지적재산권 비용 \n- 증권 및 파생상품 등 자산의 투자정보 비용 \n- 기타 이에 준하는 비용으로 집합투자재산의 운용 등에 소요되는 비용 \n \n다. 보수 및 지급내역에 관한 사항 \n다음 표는 『금융투자업규정』 제4-65조 제1항 제2호의 방식에 따라 성과연동형 운용보수를 수취하는 투자신탁\n인 경우에만 해당됩니다. 본 투자신탁은 해당 사항 없습니다. \n기준지표 \n보수 산정 \n방식 \n한도(%) \n산출 주기 \n지급시기 \n지급내역(직전 회계연도 기준, %) \n1분기 \n2분기 \n3분기 \n4분기 \n- \n- \n- \n- \n- \n- \n- \n- \n- \n \n14. 이익 분배 및 과세에 관한 사항 \n가. 이익 배분 \n(1) 이익분배 \n집합투자업자는 이 집합투자재산의 운용에 따라 발생한 당해 종류 수익증권별 이익금을 투자신탁회계 기간 종\n료일 익영업일에 분배합니다. 다만, 다음 각 호의 어느 하나에 해당하는 이익금은 분배를 유보 하며, 법 제242\n조에 따른 이익금이 0보다 적은 경우에도 분배를 유보 합니다. \n1. 법 제238조에 따라 평가한 집합투자재산의 평가이익 \n2. 법 제240조제1항의 회계처리기준에 따른 집합투자재산의 매매이익 \n※ 매년 결산 분배할 때 집합투자기구의 회계기간 동안 집합투자재산의 운용에 따라 발생한 이익금 중 집합투\n자 재산의 매매 및 평가 이익은 분배되지 않고 보유기간 동안의 손익을 합산하여 환매할 때 해당 환매분에 대",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p045_fees_c001__4b0803746e",
+      "field_path": "classes[0]",
+      "page": 45,
+      "section": "FEES",
+      "source_text": "페이지 45 / 73 \n \n \n다. 손익계산서 (단위: 원) \n과 목 \n제2기( 2024.07.12-2025.07.11 ) 제1기( 2023.07.12-2024.07.11 ) \n \n금 액 \n금 액 \n금 액 \n운용수익 \n \n \n \n \n \n투자수익 \n \n \n \n \n \n이자수익 \n \n \n \n \n \n배당금수익 \n \n \n \n \n \n수수료수익 \n \n \n \n \n \n임대료수익 \n \n \n \n \n \n \n \n \n \n \n \n매매차익과 평가차익 \n \n6,875,228,974 \n \n1,448,953,352 \n \n지분증권매매차익 \n \n \n \n \n \n채무증권매매/평가차익 \n \n \n \n \n \n파생상품매매/평가차익 \n \n \n \n \n \n지분증권평가차익 \n5,672,929,971 \n \n1,030,614,894 \n \n \n외환거래/평가차익 \n \n \n \n \n \n현금및대출채권매매/평가차익 \n \n \n \n \n \n기타거래차익 \n1,202,299,003 \n \n418,338,458 \n \n \n \n \n \n \n \n \n 매매차손과 평가차손 \n \n367,263,531 \n \n135,639,425 \n \n지분증권매매차손 \n \n \n \n \n \n채무증권매매/평가차손 \n \n \n \n \n파생상품매매/평가차손 \n \n \n \n \n지분증권평가차손 \n \n \n \n \n \n외환거래/평가차손 \n \n \n \n \n \n대손상각비 \n \n \n \n \n \n현금및대출채권매매차손 \n \n \n \n \n \n기타거래손실 \n367,263,531 \n135,639,425 \n \n \n \n \n \n \n \n \n \n \n \n \n운용비용 \n \n176,680,647 \n \n187,377,782 \n \n운용수수료 \n129,659,062 \n \n136,188,632 \n \n \n판매수수료 \n37,751,307 \n \n41,419,320 \n \n \n수탁수수료 \n6,481,489 \n \n6,807,989 \n \n \n투자자문수수료 \n \n \n \n \n \n임대자산관련비용 \n \n \n \n \n \n기타비용 \n2,788,789 \n \n2,961,841 \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n당기순이익(또는 당기순손실) \n \n6,331,284,796 \n \n1,125,936,145 \n \n \n \n \n \n \n \n좌당순이익(또는 좌당순손실) \n \n0.129515799 \n \n0.069745478 \n \n \n2. 연도별 설정 및 환매 현황 \n디에스Maestro증권자투자신탁[주식] 종류A \n (단위: 억좌, 억원) \n기간 \n기간초 잔고 \n회계기간 중 \n기간말 잔고 \n설정(발행) \n환매",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_t001__fe2a5f500a",
+      "field_path": "classes[1]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "페이지 3 / 73 \n \n요 약 정 보\n \n투자 위험 등급 \n2등급 (높은 위험) \n디에스자산운용㈜은 이 투자신탁의 투자대상 자산의 종류 및 \n위험도를 감안하여 2등급으로 분류하였습니다. \n집합투자증권은 『예금자보호법』에 따라 보호되지 않는 실적 배당상품입니다. \n해당 집합투자기구는 국내 주식을 주된 투자대상으로 하는 모투자신탁에 \n신탁재산의 60% 이상을 투자하여, 국내 주식 투자에 따른 주식 등 \n가격변동위험, 특정주식 집중투자위험, 시장위험 등이 있으므로 투자에 \n신중을 기하여 주시기 바랍니다. \n1 \n2 \n3 \n4 \n5 \n6 \n매우 \n높은 \n위험 \n높은 \n위험 \n다소 \n높은 \n위험 \n보통 \n위험 \n낮은 \n위험 \n매우 \n낮은 \n위험 \n이 요약정보는 디에스Maestro증권자투자신탁[주식]의 투자설명서의 내용 중 중요사항을 발췌∙요약한 핵심정\n보를 담고 있습니다. 따라서 자세한 정보가 필요하신 경우에는 동 집합투자증권을 매입하기 이전에 투자설\n명서를 반드시 참고 하시기 바랍니다. \n투자목적 \n및 \n투자전략 \n1. 투자목적: 이 투자신탁은 국내 주식에 주로 투자하는 모투자신탁을 법 시행령 제94조 제2항 \n제4호에서 규정하는 주된 투자대상자산으로 하며 수익을 추구하는 것을 목적으로 합니다. \n그러나 상기의 투자목적이 반드시 달성된다는 보장은 없으며, 집합투자업자, 신탁업자, 판매회사 \n등 이 투자신탁과 관련된 어떠한 당사자도 투자원금의 보장 또는 투자목적의 달성을 보장하지 \n아니합니다. \n2. \n투자전략: \n이 \n투자신탁은 \n디에스Brave증권모투자신탁[주식]에 \n90% \n이상 \n투자하는 \n자투자신탁으로서, 모투자신탁의 운용실적에 따라 이익 또는 손실이 발생합니다. \n※ 자세한 내용은 투자설명서를 참조하시기 바랍니다. \n분류 \n투자신탁, 증권(주식형), 개방형(중도환매가능), 추가형(추가납입가능), 종류형, 모자형 \n투자비용 \n클래스 \n종류 \n투자자가 부담하는 \n수수료 및 총보수(단위:%) \n1,000 만원 투자시 투자자가 부담하는 \n투자기간별 총비용 예시 (단위: 천원) \n판매 \n수수료 \n \n \n동종 \n유형 \n총보수 \n총보수 \n·비용 \n1 년 \n2 년 \n3 년 \n5 년 \n10 년 \n총 \n보수 \n판매 \n보수 \n수수료선취- \n오프라인형(A) \n납입금액의 \n1.0%이내 \n1.455 \n0.600 \n1.370 \n1.457 \n246 \n398 \n556 \n888 \n1,831 \n수수료선취- \n온라인형(A-e) \n납입금액의 \n0.5%이내 \n1.155 \n0.300 \n1.030 \n1.157 \n167 \n289 \n416 \n684 \n1,453 \n수수료미징구- \n오프라인형(C) \n없음 \n1.805 \n0.950 \n1.580 \n1,807 \n184 \n373 \n568 \n979 \n2,127 \n수수료미징구- \n온라인형(C-e) \n없음 \n1.325 \n0.470 \n1.160 \n1,327 \n135 \n275 \n421 \n728 \n1,604 \n주1) 종류형집합투자기구의 구체적인 투자비용은 ‘투자설명서 제2부. 집합투자기구에 관한 사항 중 13. 보수 및 수수료에 \n관한 사항’을 참고하시기 바랍니다. \n주2) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투가기구 전체의 평균 총보수비용을 의미합니다. \n주3) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 \n제외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 \n투자수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. \n주4) 종류 A형과 종류 C형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-\ne형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 \n수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 \n작성기준일: 2025. 7. 11 \n디에스Maestro증권자투자신탁[주식] (펀드코드:E4451)",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_c001__fe2a5f500a",
+      "field_path": "classes[1]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "투자비용 \n클래스 \n종류 \n투자자가 부담하는 \n수수료 및 총보수(단위:%) \n1,000 만원 투자시 투자자가 부담하는 \n투자기간별 총비용 예시 (단위: 천원) \n판매 \n수수료 \n \n \n동종 \n유형 \n총보수 \n총보수 \n·비용 \n1 년 \n2 년 \n3 년 \n5 년 \n10 년 \n총 \n보수 \n판매 \n보수 \n수수료선취- \n오프라인형(A) \n납입금액의 \n1.0%이내 \n1.455 \n0.600 \n1.370 \n1.457 \n246 \n398 \n556 \n888 \n1,831 \n수수료선취- \n온라인형(A-e) \n납입금액의 \n0.5%이내 \n1.155 \n0.300 \n1.030 \n1.157 \n167 \n289 \n416 \n684 \n1,453 \n수수료미징구- \n오프라인형(C) \n없음 \n1.805 \n0.950 \n1.580 \n1,807 \n184 \n373 \n568 \n979 \n2,127 \n수수료미징구- \n온라인형(C-e) \n없음 \n1.325 \n0.470 \n1.160 \n1,327 \n135 \n275 \n421 \n728 \n1,604 \n주1) 종류형집합투자기구의 구체적인",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_c002__fe2a5f500a",
+      "field_path": "classes[1]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "투자비용은 ‘투자설명서 제2부. 집합투자기구에 관한 사항 중 13. 보수 및 수수료에 \n관한 사항’을 참고하시기 바랍니다. \n주2) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투가기구 전체의 평균 총보수비용을 의미합니다. \n주3) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 \n제외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 \n투자수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. \n주4) 종류 A형과 종류 C형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-\ne형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 \n수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 \n작성기준일: 2025. 7. 11 \n디에스Maestro증권자투자신탁[주식] (펀드코드:E4451)",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p010_class_c001__fe2a5f500a",
+      "field_path": "classes[1]",
+      "page": 10,
+      "section": "CLASS_INFO",
+      "source_text": "페이지 10 / 73 \n \n제 1부. 모집 또는 매출에 관한 사항 \n \n1. 집합투자기구의 명칭 \n집합투자기구 명칭 \n한국금융투자협회 펀드 코드 \n디에스Maestro증권자투자신탁[주식] \nE4451 \n수수료선취-오프라인형(A) \nE4452 \n수수료선취-온라인형(A-e) \nE4453 \n수수료선취-오프라인-무권유저비용형(AG) \nE4454 \n수수료미징구-오프라인형(C) \nE4455 \n수수료미징구-온라인형(C-e) \nE4456 \n수수료미징구-오프라인-무권유저비용형(CG) \nE4457 \n수수료미징구-오프라인-기관형(C-I) \nE4458 \n수수료후취-온라인슈퍼형(S) \nE4465 \n수수료미징구-오프라인-집합투자업자형(C-s) \nE4459 \n수수료미징구-오프라인-랩형(C-w) \nE4460 \n수수료미징구-오프라인-개인연금형(C-P) \nE4461 \n수수료미징구-온라인-개인연금형(C-Pe) \nE4462 \n수수료미징구-온라인슈퍼-개인연금형(S-P) \nE4466 \n수수료미징구-오프라인-퇴직연금형(C-P2) \nE4463 \n수수료미징구-온라인-퇴직연금형(C-P2e) \nE4464 \n수수료미징구-온라인슈퍼-퇴직연금형(S-P2) \nE4467 \n \n2. 집합투자기구의 종류 및 형태 \n가. 형태별 종류: 투자신탁 \n나. 운용자산별 종류: 증권(주식형) \n다. 개방형·폐쇄형 구분: 개방형(환매가 가능한 집합투자기구) \n라. 추가형·단위형 구분: 추가형(추가로 자금 납입이 가능한 집합투자기구) \n마. 특수형태: 모자형, 종류형 \n- 모자형: 모투자신탁이 발행하는 집합투자증권을 자투자신탁이 취득하는 구조의 투자신탁 \n- 종류형: 판매보수의 차이로 인하여 기준가격이 다르거나 판매보수가 다른 여러 종류의 집합투자증권을 발행\n하는 투자신탁 \n바. 고난도금융투자상품 해당 여부: 해당없음 \n주) 집합투자기구의 종류 및 형태에도 불구하고 투자대상은 여러 가지 다양한 자산에 투자될 수 있으며, 자세한 투자대상은 \n제2부 “투자대상”과 “투자전략” 부분을 참고하시기 바랍니다",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p027_class_c001__fe2a5f500a",
+      "field_path": "classes[1]",
+      "page": 27,
+      "section": "CLASS_INFO",
+      "source_text": "페이지 27 / 73 \n \n \n(2) 가입자격 \n종류 \n구분 \n판매수수료 \n부과여부 \n수수료선취-오프라인형(A) \n제한없음 \n납입금액의 \n1.0% 이내 \n수수료선취-온라인형(A-e) \n온라인 가입자 \n납입금액의 \n0.5% 이내 \n수수료선취-오프라인- \n무권유저비용형(AG) \n투자자문업자로부터 투자자문을 받고 그 결과에 따라 집합\n투자증권 매수를 요청하는 등 금융기관으로부터 별도의 투\n자권유 없이 집합투자증권을 매수하는 가입자 \n납입금액의 \n0.7% 이내 \n수수료미징구-오프라인형(C) \n제한없음 \n없음 \n수수료미징구-온라인형(C-e) \n온라인 가입자 \n없음 \n수수료미징구-오프라인-무권\n유저비용형(CG) \n투자자문업자로부터 투자자문을 받고 그 결과에 따라 집합\n투자증권 매수를 요청하는 등 금융기관으로부터 별도의 투\n자권유 없이 집합투자증권을 매수하는 가입자 \n없음 \n수수료미징구-오프라인-기관\n형(C-I) \n법에서 정하는 집합투자기구(외국 법령에 의한 것으로서 집\n합투자기구의 성질을 가진 것을 포함한다) \n법 시행령 제10조 제2항 및 금융투자업규정 제1-4조에서 정\n하는 기관투자자 또는 국가재정법에 따른 기금(외국의 법령\n상 이에 준하는 자를 포함한다) \n없음 \n수수료후취-온라인슈퍼형(S) \n자산운용사의 공동판매채널로서의 역할 수행을 위해 모든 \n공모 S클래스를 취급하고, 객관적 지표를 기준으로 상품을 \n노출 및 배열하는 온라인판매시스템에 가입한 자 (후취판매\n수수료 부과) \n3년 미만 환매\n시 환매금액 \n0.15% 이내 \n수수료미징구-오프라인-집합\n투자업자형(C-s) \n당해 집합투자기구의 집합투자업자 \n없음 \n수수료미징구-오프라인-랩형\n(C-w) \n랩어카운트, 특정금전신탁을 통해 가입하기 원하는 가입자 \n없음 \n수수료미징구-오프라인-개 \n인연금형(C-P) \n소득세법 제20조의3 및 소득세법 시행령 제40조의2에 따른 \n연금저축계좌를 통하여 가입한 자 \n없음 \n수수료미징구-온라인-개인 \n연금형(C-Pe) \n판매회사의 전자매체(온라인)를 통하여 가입한 자로서 소득\n세법 제20조의3 및 소득세법 시행령 제40조의2에 따른 연금\n저축계좌를 통하여 가입한 자 \n없음 \n수수료미징구-온라인슈퍼- \n개인연금형(S-P) \n자산운용사의 공동판매채널로서의 역할 수행을 위해 모든 \n공모 S클래스를 취급하고, 객관적 지표를 기준으로 상품을 \n노출 및 배열하는 온라인판매시스템에 가입한 자로서 소득\n세법 제20조의3 및 소득세법 시행령 제40조의2에 따른 연금\n저축계좌를 통하여 가입한 자 \n없음 \n수수료미징구-오프라인-퇴직\n연금형(C-P2) \n근로자퇴직급여보장법에 의한 \n퇴직연금 및 개인퇴직연금\n(IRP), 퇴직연금사업자 \n없음",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p032_fees_c001__fe2a5f500a",
+      "field_path": "classes[1]",
+      "page": 32,
+      "section": "FEES",
+      "source_text": "페이지 32 / 73 \n \n \n13. 보수 및 수수료에 관한 사항 \n이 투자신탁은 운용 및 판매 등의 대가로 수수료 및 보수를 지급하게 되며, 가입자격에 따라 아래와 같이 보수 \n및 수수료 등의 차이가 있습니다. 한편, 판매회사(투자매매업자 또는 투자중개업자)는 판매보수와 관련하여 집\n합투자증권의 해당 집합투자기구의 투자자에게 지속적으로 제공하는 용역의 대가에 관한 내용이 기재된 자료\n를 교부하고 설명하여야 합니다. \n \n가. 투자자에게 직접 부과되는 수수료 \n명칭 \n(클래스) \n가입자격 \n수수료율 \n선취 \n판매수수료 \n후취 \n판매수수료 \n환매 \n수수료 \n전환 \n수수료 \n(A) \n제한없음 \n납입금액의 \n1.0% 이내 \n \n \n \n \n \n \n(A-e) \n온라인 가입자 \n납입금액의 \n0.5% 이내 \n \n \n \n \n \n \n(AG) \n투자자문업자로부터 투자자문을 받고 그 \n결과에 따라 집합투자증권 매수를 요청\n하는 등 금융기관으로부터 별도의 투자\n권유 없이 집합투자증권을 매수하는 가\n입자 \n납입금액의 \n0.7% 이내 \n \n \n \n \n \n \n(C) \n제한없음 \n \n \n \n \n(C-e) \n온라인 가입자 \n \n \n \n \n(CG) \n투자자문업자로부터 투자자문을 받고 그 \n결과에 따라 집합투자증권 매수를 요청\n하는 등 금융기관으로부터 별도의 투자\n권유 없이 집합투자증권을 매수하는 가\n입자 \n \n \n \n \n(C-I) \n법에서 정하는 집합투자기구(외국 법령\n에 의한 것으로서 집합투자기구의 성질\n을 가진 것을 포함한다) \n법시행령 제10조 제2항 및 금융투자업규\n정 제1-4조에서 정하는 기관투자자 또는 \n국가재정법에 따른 기금(외국의 법령상 \n이에 준하는 자를 포함한다) \n \n \n \n \n(S) \n자산운용사의 공동판매채널로서의 역할 \n수행을 위해 모든 공모 S클래스를 취급\n하고, 객관적 지표를 기준으로 상품을 노\n출 및 배열하는 온라인판매시스템에 가\n입한 자 \n \n3년 미만 환매\n시 환매금액의 \n0.15% 이내 \n \n \n(C-s) \n당해 집합투자기구의 집합투자업자",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p035_fees_c001__fe2a5f500a",
+      "field_path": "classes[1]",
+      "page": 35,
+      "section": "FEES",
+      "source_text": "페이지 35 / 73 주4) ‘총보수·비용’ 비율은 집합투자기구에서 지출되는 보수와 기타비용 총액을 순자산연평잔액으로 나누어 산출합니다. 주5) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투자기구 전체의 평균 총보수비용을 의미합니다. 주6) 기타비용 및 증권거래비용에는 이 투자신탁이 해당 모투자신탁에 투자한 비율을 안분한 모투자신탁의 비용이 포함되 어 있습니다. <1,000만원 투자시 투자자가 부담하게 되는 수수료 및 보수 비용의 투자기간별 예시(단위: 천원)> 구분 1년후 2년후 3년후 5년후 10년후 (A) 판매수수료 및 보수 비용 246 398 556 888 1,831 판매수수료 및 합성 총보수 247 401 560 896 1,847 (A-e) 판매수수료 및 보수 비용 167 289 416 684 1,453 판매수수료 및 합성 총보수 172 299 431 710 1,509 (AG) 판매수수료 및 보수 비용 199 332 471 765 1,604 판매수수료 및 합성 총보수 199 332 471 765 1,604 (C) 판매수수료 및 보수 비용 183 373 568 979 2,127 판매수수료 및 합성 총보수 183 373 568 979 2,127 (C-e) 판매수수료 및 보수 비용 135 275 421 728 1,604 판매수수료 및 합성 총보수 137 280 427 740 1,627 (CG) 판매수수료 및 보수 비용 154 314 479 828 1,813 판매수수료 및 합성 총보수 154 314 479 828 1,813 (C-I) 판매수수료 및 보수 비용 91 185 283 493 1,098 판매수수료 및 합성 총보수 91 187 286 497 1,107 (S)* 판매수수료 및 보수 비용 117 238 365 632 1,399 판매수수료 및 합성 총보수 119 243 372 645 1,425 (C-s) 판매수수료 및 보수 비용 89 181 277 482 1,074 판매수수료 및 합성 총보수 89 182 279 486 1,083 (C-w) 판매수수료 및 보수 비용 87 178 273 475 1,060 판매수수료 및 합성 총보수 87 178 273 475 1,060 (C-P) 판매수수료 및 보수 비용 168 342 522 901 1,966 판매수수료 및 합성 총보수 173 352 537 925 2,016 (C-Pe) 판매수수료 및 보수 비용 128 261 399 691 1,524 판매수수료 및 합성 총보수 133 270 413 715 1,575 (S-P) 판매수수료 및 보수 비용 115 234 358 621 1,374 판매수수료 및 합성 총보수 116 237 362 628 1,390 (C-P2) 판매수수료 및 보수 비용 158 322 492 849 1,858 판매수수료 및 합성 총보수 167 340 518 894 1,951 (C-P2e) 판매수수료 및 보수 비용 123 251 384 665 1,468 판매수수료 및 합성 총보수 126 257 392 679 1,499 (S-P2) 판매수수료 및 보수 비용 111 226 345 599 1,328 판매수수료 및 합성 총보수 112 229 350 607 1,346 주) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 제",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p036_fees_c001__fe2a5f500a",
+      "field_path": "classes[1]",
+      "page": 36,
+      "section": "FEES",
+      "source_text": "페이지 36 / 73 \n \n외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 투자\n수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. 종류 A형과 종류 C형에 각각 투자할 경우 총비\n용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-e형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하\n는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용\n의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 있음에 유의하시기 바랍니다. \n* 종류 S는 후취판매수수료를 반영하지 않고 산출하였습니다. \n \n(2) 투자신탁 관련 비용 \n- 증권 및 파생상품 등의 매매수수료 \n- 증권 및 파생상품 등의 전자등록 및 결제비용 \n- 집합투자재산의 회계감사비용 \n- 수익자명부 관리비용 \n- 전체 수익자로 구성되는 수익자총회 관련비용 \n- 집합투자재산에 관한 소송비용(집합투자업자의 귀책사유로 인한 소송인 경우 제외) \n- 증권 및 파생상품 등 자산의 가격정보비용 \n- 집합투자재산의 운용에 필요한 지적재산권 비용 \n- 증권 및 파생상품 등 자산의 투자정보 비용 \n- 기타 이에 준하는 비용으로 집합투자재산의 운용 등에 소요되는 비용 \n \n다. 보수 및 지급내역에 관한 사항 \n다음 표는 『금융투자업규정』 제4-65조 제1항 제2호의 방식에 따라 성과연동형 운용보수를 수취하는 투자신탁\n인 경우에만 해당됩니다. 본 투자신탁은 해당 사항 없습니다. \n기준지표 \n보수 산정 \n방식 \n한도(%) \n산출 주기 \n지급시기 \n지급내역(직전 회계연도 기준, %) \n1분기 \n2분기 \n3분기 \n4분기 \n- \n- \n- \n- \n- \n- \n- \n- \n- \n \n14. 이익 분배 및 과세에 관한 사항 \n가. 이익 배분 \n(1) 이익분배 \n집합투자업자는 이 집합투자재산의 운용에 따라 발생한 당해 종류 수익증권별 이익금을 투자신탁회계 기간 종\n료일 익영업일에 분배합니다. 다만, 다음 각 호의 어느 하나에 해당하는 이익금은 분배를 유보 하며, 법 제242\n조에 따른 이익금이 0보다 적은 경우에도 분배를 유보 합니다. \n1. 법 제238조에 따라 평가한 집합투자재산의 평가이익 \n2. 법 제240조제1항의 회계처리기준에 따른 집합투자재산의 매매이익 \n※ 매년 결산 분배할 때 집합투자기구의 회계기간 동안 집합투자재산의 운용에 따라 발생한 이익금 중 집합투\n자 재산의 매매 및 평가 이익은 분배되지 않고 보유기간 동안의 손익을 합산하여 환매할 때 해당 환매분에 대",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p035_performance_t001__fe2a5f500a",
+      "field_path": "classes[1]",
+      "page": 35,
+      "section": "PERFORMANCE",
+      "source_text": "페이지 35 / 73 주4) ‘총보수·비용’ 비율은 집합투자기구에서 지출되는 보수와 기타비용 총액을 순자산연평잔액으로 나누어 산출합니다. 주5) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투자기구 전체의 평균 총보수비용을 의미합니다. 주6) 기타비용 및 증권거래비용에는 이 투자신탁이 해당 모투자신탁에 투자한 비율을 안분한 모투자신탁의 비용이 포함되 어 있습니다. <1,000만원 투자시 투자자가 부담하게 되는 수수료 및 보수 비용의 투자기간별 예시(단위: 천원)> 구분 1년후 2년후 3년후 5년후 10년후 (A) 판매수수료 및 보수 비용 246 398 556 888 1,831 판매수수료 및 합성 총보수 247 401 560 896 1,847 (A-e) 판매수수료 및 보수 비용 167 289 416 684 1,453 판매수수료 및 합성 총보수 172 299 431 710 1,509 (AG) 판매수수료 및 보수 비용 199 332 471 765 1,604 판매수수료 및 합성 총보수 199 332 471 765 1,604 (C) 판매수수료 및 보수 비용 183 373 568 979 2,127 판매수수료 및 합성 총보수 183 373 568 979 2,127 (C-e) 판매수수료 및 보수 비용 135 275 421 728 1,604 판매수수료 및 합성 총보수 137 280 427 740 1,627 (CG) 판매수수료 및 보수 비용 154 314 479 828 1,813 판매수수료 및 합성 총보수 154 314 479 828 1,813 (C-I) 판매수수료 및 보수 비용 91 185 283 493 1,098 판매수수료 및 합성 총보수 91 187 286 497 1,107 (S)* 판매수수료 및 보수 비용 117 238 365 632 1,399 판매수수료 및 합성 총보수 119 243 372 645 1,425 (C-s) 판매수수료 및 보수 비용 89 181 277 482 1,074 판매수수료 및 합성 총보수 89 182 279 486 1,083 (C-w) 판매수수료 및 보수 비용 87 178 273 475 1,060 판매수수료 및 합성 총보수 87 178 273 475 1,060 (C-P) 판매수수료 및 보수 비용 168 342 522 901 1,966 판매수수료 및 합성 총보수 173 352 537 925 2,016 (C-Pe) 판매수수료 및 보수 비용 128 261 399 691 1,524 판매수수료 및 합성 총보수 133 270 413 715 1,575 (S-P) 판매수수료 및 보수 비용 115 234 358 621 1,374 판매수수료 및 합성 총보수 116 237 362 628 1,390 (C-P2) 판매수수료 및 보수 비용 158 322 492 849 1,858 판매수수료 및 합성 총보수 167 340 518 894 1,951 (C-P2e) 판매수수료 및 보수 비용 123 251 384 665 1,468 판매수수료 및 합성 총보수 126 257 392 679 1,499 (S-P2) 판매수수료 및 보수 비용 111 226 345 599 1,328 판매수수료 및 합성 총보수 112 229 350 607 1,346 주) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 제",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_t001__276a4e5128",
+      "field_path": "classes[2]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "페이지 3 / 73 \n \n요 약 정 보\n \n투자 위험 등급 \n2등급 (높은 위험) \n디에스자산운용㈜은 이 투자신탁의 투자대상 자산의 종류 및 \n위험도를 감안하여 2등급으로 분류하였습니다. \n집합투자증권은 『예금자보호법』에 따라 보호되지 않는 실적 배당상품입니다. \n해당 집합투자기구는 국내 주식을 주된 투자대상으로 하는 모투자신탁에 \n신탁재산의 60% 이상을 투자하여, 국내 주식 투자에 따른 주식 등 \n가격변동위험, 특정주식 집중투자위험, 시장위험 등이 있으므로 투자에 \n신중을 기하여 주시기 바랍니다. \n1 \n2 \n3 \n4 \n5 \n6 \n매우 \n높은 \n위험 \n높은 \n위험 \n다소 \n높은 \n위험 \n보통 \n위험 \n낮은 \n위험 \n매우 \n낮은 \n위험 \n이 요약정보는 디에스Maestro증권자투자신탁[주식]의 투자설명서의 내용 중 중요사항을 발췌∙요약한 핵심정\n보를 담고 있습니다. 따라서 자세한 정보가 필요하신 경우에는 동 집합투자증권을 매입하기 이전에 투자설\n명서를 반드시 참고 하시기 바랍니다. \n투자목적 \n및 \n투자전략 \n1. 투자목적: 이 투자신탁은 국내 주식에 주로 투자하는 모투자신탁을 법 시행령 제94조 제2항 \n제4호에서 규정하는 주된 투자대상자산으로 하며 수익을 추구하는 것을 목적으로 합니다. \n그러나 상기의 투자목적이 반드시 달성된다는 보장은 없으며, 집합투자업자, 신탁업자, 판매회사 \n등 이 투자신탁과 관련된 어떠한 당사자도 투자원금의 보장 또는 투자목적의 달성을 보장하지 \n아니합니다. \n2. \n투자전략: \n이 \n투자신탁은 \n디에스Brave증권모투자신탁[주식]에 \n90% \n이상 \n투자하는 \n자투자신탁으로서, 모투자신탁의 운용실적에 따라 이익 또는 손실이 발생합니다. \n※ 자세한 내용은 투자설명서를 참조하시기 바랍니다. \n분류 \n투자신탁, 증권(주식형), 개방형(중도환매가능), 추가형(추가납입가능), 종류형, 모자형 \n투자비용 \n클래스 \n종류 \n투자자가 부담하는 \n수수료 및 총보수(단위:%) \n1,000 만원 투자시 투자자가 부담하는 \n투자기간별 총비용 예시 (단위: 천원) \n판매 \n수수료 \n \n \n동종 \n유형 \n총보수 \n총보수 \n·비용 \n1 년 \n2 년 \n3 년 \n5 년 \n10 년 \n총 \n보수 \n판매 \n보수 \n수수료선취- \n오프라인형(A) \n납입금액의 \n1.0%이내 \n1.455 \n0.600 \n1.370 \n1.457 \n246 \n398 \n556 \n888 \n1,831 \n수수료선취- \n온라인형(A-e) \n납입금액의 \n0.5%이내 \n1.155 \n0.300 \n1.030 \n1.157 \n167 \n289 \n416 \n684 \n1,453 \n수수료미징구- \n오프라인형(C) \n없음 \n1.805 \n0.950 \n1.580 \n1,807 \n184 \n373 \n568 \n979 \n2,127 \n수수료미징구- \n온라인형(C-e) \n없음 \n1.325 \n0.470 \n1.160 \n1,327 \n135 \n275 \n421 \n728 \n1,604 \n주1) 종류형집합투자기구의 구체적인 투자비용은 ‘투자설명서 제2부. 집합투자기구에 관한 사항 중 13. 보수 및 수수료에 \n관한 사항’을 참고하시기 바랍니다. \n주2) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투가기구 전체의 평균 총보수비용을 의미합니다. \n주3) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 \n제외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 \n투자수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. \n주4) 종류 A형과 종류 C형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-\ne형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 \n수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 \n작성기준일: 2025. 7. 11 \n디에스Maestro증권자투자신탁[주식] (펀드코드:E4451)",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_c001__276a4e5128",
+      "field_path": "classes[2]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "투자비용 \n클래스 \n종류 \n투자자가 부담하는 \n수수료 및 총보수(단위:%) \n1,000 만원 투자시 투자자가 부담하는 \n투자기간별 총비용 예시 (단위: 천원) \n판매 \n수수료 \n \n \n동종 \n유형 \n총보수 \n총보수 \n·비용 \n1 년 \n2 년 \n3 년 \n5 년 \n10 년 \n총 \n보수 \n판매 \n보수 \n수수료선취- \n오프라인형(A) \n납입금액의 \n1.0%이내 \n1.455 \n0.600 \n1.370 \n1.457 \n246 \n398 \n556 \n888 \n1,831 \n수수료선취- \n온라인형(A-e) \n납입금액의 \n0.5%이내 \n1.155 \n0.300 \n1.030 \n1.157 \n167 \n289 \n416 \n684 \n1,453 \n수수료미징구- \n오프라인형(C) \n없음 \n1.805 \n0.950 \n1.580 \n1,807 \n184 \n373 \n568 \n979 \n2,127 \n수수료미징구- \n온라인형(C-e) \n없음 \n1.325 \n0.470 \n1.160 \n1,327 \n135 \n275 \n421 \n728 \n1,604 \n주1) 종류형집합투자기구의 구체적인",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_c002__276a4e5128",
+      "field_path": "classes[2]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "투자비용은 ‘투자설명서 제2부. 집합투자기구에 관한 사항 중 13. 보수 및 수수료에 \n관한 사항’을 참고하시기 바랍니다. \n주2) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투가기구 전체의 평균 총보수비용을 의미합니다. \n주3) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 \n제외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 \n투자수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. \n주4) 종류 A형과 종류 C형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-\ne형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 \n수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 \n작성기준일: 2025. 7. 11 \n디에스Maestro증권자투자신탁[주식] (펀드코드:E4451)",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p010_class_c001__276a4e5128",
+      "field_path": "classes[2]",
+      "page": 10,
+      "section": "CLASS_INFO",
+      "source_text": "페이지 10 / 73 \n \n제 1부. 모집 또는 매출에 관한 사항 \n \n1. 집합투자기구의 명칭 \n집합투자기구 명칭 \n한국금융투자협회 펀드 코드 \n디에스Maestro증권자투자신탁[주식] \nE4451 \n수수료선취-오프라인형(A) \nE4452 \n수수료선취-온라인형(A-e) \nE4453 \n수수료선취-오프라인-무권유저비용형(AG) \nE4454 \n수수료미징구-오프라인형(C) \nE4455 \n수수료미징구-온라인형(C-e) \nE4456 \n수수료미징구-오프라인-무권유저비용형(CG) \nE4457 \n수수료미징구-오프라인-기관형(C-I) \nE4458 \n수수료후취-온라인슈퍼형(S) \nE4465 \n수수료미징구-오프라인-집합투자업자형(C-s) \nE4459 \n수수료미징구-오프라인-랩형(C-w) \nE4460 \n수수료미징구-오프라인-개인연금형(C-P) \nE4461 \n수수료미징구-온라인-개인연금형(C-Pe) \nE4462 \n수수료미징구-온라인슈퍼-개인연금형(S-P) \nE4466 \n수수료미징구-오프라인-퇴직연금형(C-P2) \nE4463 \n수수료미징구-온라인-퇴직연금형(C-P2e) \nE4464 \n수수료미징구-온라인슈퍼-퇴직연금형(S-P2) \nE4467 \n \n2. 집합투자기구의 종류 및 형태 \n가. 형태별 종류: 투자신탁 \n나. 운용자산별 종류: 증권(주식형) \n다. 개방형·폐쇄형 구분: 개방형(환매가 가능한 집합투자기구) \n라. 추가형·단위형 구분: 추가형(추가로 자금 납입이 가능한 집합투자기구) \n마. 특수형태: 모자형, 종류형 \n- 모자형: 모투자신탁이 발행하는 집합투자증권을 자투자신탁이 취득하는 구조의 투자신탁 \n- 종류형: 판매보수의 차이로 인하여 기준가격이 다르거나 판매보수가 다른 여러 종류의 집합투자증권을 발행\n하는 투자신탁 \n바. 고난도금융투자상품 해당 여부: 해당없음 \n주) 집합투자기구의 종류 및 형태에도 불구하고 투자대상은 여러 가지 다양한 자산에 투자될 수 있으며, 자세한 투자대상은 \n제2부 “투자대상”과 “투자전략” 부분을 참고하시기 바랍니다",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p015_class_c001__276a4e5128",
+      "field_path": "classes[2]",
+      "page": 15,
+      "section": "CLASS_INFO",
+      "source_text": "페이지 15 / 73 \n \n용전문인력의 평균운용성과는 해당 회사 근무기간 중 운용한 성과를 의미합니다. 동종 집합투자기구 연평균 수익률은 당사 \n공모펀드를 대상으로 하였으며, 운용펀드 기준으로 보수차감 전 수익률이며 모자형 구조의 펀드의 경우 모펀드만을 대상으\n로 계산되었음을 알려드립니다. \n주4) 운용중인 다른 집합투자기구 중 성과보수가 약정된 집합투자기구(사모펀드) : 김창진 18개 펀드 2,769억원 / 황현철 4\n개 펀드 1,105억원 \n \n(3) 운용전문인력 변경 내역(최근 3년) \n<책임운용전문인력> \n운용역 \n운용 기간 \n이재국 \n2023.07.12 ~ 2025.07.29 \n김창진 \n2025.07.30 ~ 현재 \n \n<부책임운용전문인력> \n운용역 \n운용 기간 \n박인혁 \n2023.07.12 ~ 2024.05.16 \n황현철 \n2024.05.17 ~ 현재 \n \n6. 집합투자기구의 구조 \n가. 집합투자기구의 종류 및 형태 \n투자신탁, 증권(주식형), 개방형(중도환매가능), 추가형(추가납입가능), 모자형, 종류형 \n \n나. 종류형 구조 \n이 집합투자기구는 종류형 집합투자기구입니다. 집합투자기구의 종류는 판매수수료 부과방식-판매경로-기타 펀\n드 특성에 따라 3단계로 구분되며, 본 집합투자기구의 종류 및 각 종류별 특징은 다음과 같습니다. \n종류(Class) \n집합투자기구의 특징 \n판매 \n수수료 \n수수료 \n선취(A) \n집합투자증권 \n매입시점에 \n판매수수료가 \n일시 \n징구되는 \n반면 \n판매보수가 \n판매수수료미징구형(C) 보다 상대적으로 낮게 책정되므로 총비용이 판매수수료 \n미징구형(C)과 일치 하는 시점은 약 2년 8개월이 경과되는 시점입니다. 따라서 \n2년 8개월 이전에 환매할 경우 판매수수료미징구형(C)보다 높은 총비용을 \n지불하게 되는 집합투자기구입니다. \n수수료 \n후취(S) \n집합투자증권 매입시점에 징구되는 판매수수료는 없는 반면 3년 이내에 환매시 \n환매금액에 대해 수수료가 징구되는 집합투자기구입니다. \n수수료 \n미징구(C) \n집합투자증권 매입 또는 환매시점에 일시 징구되는 판매수수료는 없는 반면 \n판매보수가 판매수수료선취형(A) 보다 상대적으로 높게 책정되므로 총비용이 \n판매수수료선취형(A)과 일치하는 시점은 약 2년 8개월이 경과되는 시점입니다. \n따라서 2년 8개월 이전에 환매할 경우 판매수수료선취형(A) 보다 낮은 총비용을 \n지불할 수 있는 집합투자기구입니다. \n판매 \n온라인 \n판매회사의 온라인전용으로 판매되는 집합투자기구로 오프라인으로 판매되는",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p027_class_c001__276a4e5128",
+      "field_path": "classes[2]",
+      "page": 27,
+      "section": "CLASS_INFO",
+      "source_text": "페이지 27 / 73 \n \n \n(2) 가입자격 \n종류 \n구분 \n판매수수료 \n부과여부 \n수수료선취-오프라인형(A) \n제한없음 \n납입금액의 \n1.0% 이내 \n수수료선취-온라인형(A-e) \n온라인 가입자 \n납입금액의 \n0.5% 이내 \n수수료선취-오프라인- \n무권유저비용형(AG) \n투자자문업자로부터 투자자문을 받고 그 결과에 따라 집합\n투자증권 매수를 요청하는 등 금융기관으로부터 별도의 투\n자권유 없이 집합투자증권을 매수하는 가입자 \n납입금액의 \n0.7% 이내 \n수수료미징구-오프라인형(C) \n제한없음 \n없음 \n수수료미징구-온라인형(C-e) \n온라인 가입자 \n없음 \n수수료미징구-오프라인-무권\n유저비용형(CG) \n투자자문업자로부터 투자자문을 받고 그 결과에 따라 집합\n투자증권 매수를 요청하는 등 금융기관으로부터 별도의 투\n자권유 없이 집합투자증권을 매수하는 가입자 \n없음 \n수수료미징구-오프라인-기관\n형(C-I) \n법에서 정하는 집합투자기구(외국 법령에 의한 것으로서 집\n합투자기구의 성질을 가진 것을 포함한다) \n법 시행령 제10조 제2항 및 금융투자업규정 제1-4조에서 정\n하는 기관투자자 또는 국가재정법에 따른 기금(외국의 법령\n상 이에 준하는 자를 포함한다) \n없음 \n수수료후취-온라인슈퍼형(S) \n자산운용사의 공동판매채널로서의 역할 수행을 위해 모든 \n공모 S클래스를 취급하고, 객관적 지표를 기준으로 상품을 \n노출 및 배열하는 온라인판매시스템에 가입한 자 (후취판매\n수수료 부과) \n3년 미만 환매\n시 환매금액 \n0.15% 이내 \n수수료미징구-오프라인-집합\n투자업자형(C-s) \n당해 집합투자기구의 집합투자업자 \n없음 \n수수료미징구-오프라인-랩형\n(C-w) \n랩어카운트, 특정금전신탁을 통해 가입하기 원하는 가입자 \n없음 \n수수료미징구-오프라인-개 \n인연금형(C-P) \n소득세법 제20조의3 및 소득세법 시행령 제40조의2에 따른 \n연금저축계좌를 통하여 가입한 자 \n없음 \n수수료미징구-온라인-개인 \n연금형(C-Pe) \n판매회사의 전자매체(온라인)를 통하여 가입한 자로서 소득\n세법 제20조의3 및 소득세법 시행령 제40조의2에 따른 연금\n저축계좌를 통하여 가입한 자 \n없음 \n수수료미징구-온라인슈퍼- \n개인연금형(S-P) \n자산운용사의 공동판매채널로서의 역할 수행을 위해 모든 \n공모 S클래스를 취급하고, 객관적 지표를 기준으로 상품을 \n노출 및 배열하는 온라인판매시스템에 가입한 자로서 소득\n세법 제20조의3 및 소득세법 시행령 제40조의2에 따른 연금\n저축계좌를 통하여 가입한 자 \n없음 \n수수료미징구-오프라인-퇴직\n연금형(C-P2) \n근로자퇴직급여보장법에 의한 \n퇴직연금 및 개인퇴직연금\n(IRP), 퇴직연금사업자 \n없음",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p032_fees_c001__276a4e5128",
+      "field_path": "classes[2]",
+      "page": 32,
+      "section": "FEES",
+      "source_text": "페이지 32 / 73 \n \n \n13. 보수 및 수수료에 관한 사항 \n이 투자신탁은 운용 및 판매 등의 대가로 수수료 및 보수를 지급하게 되며, 가입자격에 따라 아래와 같이 보수 \n및 수수료 등의 차이가 있습니다. 한편, 판매회사(투자매매업자 또는 투자중개업자)는 판매보수와 관련하여 집\n합투자증권의 해당 집합투자기구의 투자자에게 지속적으로 제공하는 용역의 대가에 관한 내용이 기재된 자료\n를 교부하고 설명하여야 합니다. \n \n가. 투자자에게 직접 부과되는 수수료 \n명칭 \n(클래스) \n가입자격 \n수수료율 \n선취 \n판매수수료 \n후취 \n판매수수료 \n환매 \n수수료 \n전환 \n수수료 \n(A) \n제한없음 \n납입금액의 \n1.0% 이내 \n \n \n \n \n \n \n(A-e) \n온라인 가입자 \n납입금액의 \n0.5% 이내 \n \n \n \n \n \n \n(AG) \n투자자문업자로부터 투자자문을 받고 그 \n결과에 따라 집합투자증권 매수를 요청\n하는 등 금융기관으로부터 별도의 투자\n권유 없이 집합투자증권을 매수하는 가\n입자 \n납입금액의 \n0.7% 이내 \n \n \n \n \n \n \n(C) \n제한없음 \n \n \n \n \n(C-e) \n온라인 가입자 \n \n \n \n \n(CG) \n투자자문업자로부터 투자자문을 받고 그 \n결과에 따라 집합투자증권 매수를 요청\n하는 등 금융기관으로부터 별도의 투자\n권유 없이 집합투자증권을 매수하는 가\n입자 \n \n \n \n \n(C-I) \n법에서 정하는 집합투자기구(외국 법령\n에 의한 것으로서 집합투자기구의 성질\n을 가진 것을 포함한다) \n법시행령 제10조 제2항 및 금융투자업규\n정 제1-4조에서 정하는 기관투자자 또는 \n국가재정법에 따른 기금(외국의 법령상 \n이에 준하는 자를 포함한다) \n \n \n \n \n(S) \n자산운용사의 공동판매채널로서의 역할 \n수행을 위해 모든 공모 S클래스를 취급\n하고, 객관적 지표를 기준으로 상품을 노\n출 및 배열하는 온라인판매시스템에 가\n입한 자 \n \n3년 미만 환매\n시 환매금액의 \n0.15% 이내 \n \n \n(C-s) \n당해 집합투자기구의 집합투자업자",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p035_fees_c001__276a4e5128",
+      "field_path": "classes[2]",
+      "page": 35,
+      "section": "FEES",
+      "source_text": "페이지 35 / 73 주4) ‘총보수·비용’ 비율은 집합투자기구에서 지출되는 보수와 기타비용 총액을 순자산연평잔액으로 나누어 산출합니다. 주5) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투자기구 전체의 평균 총보수비용을 의미합니다. 주6) 기타비용 및 증권거래비용에는 이 투자신탁이 해당 모투자신탁에 투자한 비율을 안분한 모투자신탁의 비용이 포함되 어 있습니다. <1,000만원 투자시 투자자가 부담하게 되는 수수료 및 보수 비용의 투자기간별 예시(단위: 천원)> 구분 1년후 2년후 3년후 5년후 10년후 (A) 판매수수료 및 보수 비용 246 398 556 888 1,831 판매수수료 및 합성 총보수 247 401 560 896 1,847 (A-e) 판매수수료 및 보수 비용 167 289 416 684 1,453 판매수수료 및 합성 총보수 172 299 431 710 1,509 (AG) 판매수수료 및 보수 비용 199 332 471 765 1,604 판매수수료 및 합성 총보수 199 332 471 765 1,604 (C) 판매수수료 및 보수 비용 183 373 568 979 2,127 판매수수료 및 합성 총보수 183 373 568 979 2,127 (C-e) 판매수수료 및 보수 비용 135 275 421 728 1,604 판매수수료 및 합성 총보수 137 280 427 740 1,627 (CG) 판매수수료 및 보수 비용 154 314 479 828 1,813 판매수수료 및 합성 총보수 154 314 479 828 1,813 (C-I) 판매수수료 및 보수 비용 91 185 283 493 1,098 판매수수료 및 합성 총보수 91 187 286 497 1,107 (S)* 판매수수료 및 보수 비용 117 238 365 632 1,399 판매수수료 및 합성 총보수 119 243 372 645 1,425 (C-s) 판매수수료 및 보수 비용 89 181 277 482 1,074 판매수수료 및 합성 총보수 89 182 279 486 1,083 (C-w) 판매수수료 및 보수 비용 87 178 273 475 1,060 판매수수료 및 합성 총보수 87 178 273 475 1,060 (C-P) 판매수수료 및 보수 비용 168 342 522 901 1,966 판매수수료 및 합성 총보수 173 352 537 925 2,016 (C-Pe) 판매수수료 및 보수 비용 128 261 399 691 1,524 판매수수료 및 합성 총보수 133 270 413 715 1,575 (S-P) 판매수수료 및 보수 비용 115 234 358 621 1,374 판매수수료 및 합성 총보수 116 237 362 628 1,390 (C-P2) 판매수수료 및 보수 비용 158 322 492 849 1,858 판매수수료 및 합성 총보수 167 340 518 894 1,951 (C-P2e) 판매수수료 및 보수 비용 123 251 384 665 1,468 판매수수료 및 합성 총보수 126 257 392 679 1,499 (S-P2) 판매수수료 및 보수 비용 111 226 345 599 1,328 판매수수료 및 합성 총보수 112 229 350 607 1,346 주) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 제",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p036_fees_c001__276a4e5128",
+      "field_path": "classes[2]",
+      "page": 36,
+      "section": "FEES",
+      "source_text": "페이지 36 / 73 \n \n외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 투자\n수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. 종류 A형과 종류 C형에 각각 투자할 경우 총비\n용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-e형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하\n는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용\n의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 있음에 유의하시기 바랍니다. \n* 종류 S는 후취판매수수료를 반영하지 않고 산출하였습니다. \n \n(2) 투자신탁 관련 비용 \n- 증권 및 파생상품 등의 매매수수료 \n- 증권 및 파생상품 등의 전자등록 및 결제비용 \n- 집합투자재산의 회계감사비용 \n- 수익자명부 관리비용 \n- 전체 수익자로 구성되는 수익자총회 관련비용 \n- 집합투자재산에 관한 소송비용(집합투자업자의 귀책사유로 인한 소송인 경우 제외) \n- 증권 및 파생상품 등 자산의 가격정보비용 \n- 집합투자재산의 운용에 필요한 지적재산권 비용 \n- 증권 및 파생상품 등 자산의 투자정보 비용 \n- 기타 이에 준하는 비용으로 집합투자재산의 운용 등에 소요되는 비용 \n \n다. 보수 및 지급내역에 관한 사항 \n다음 표는 『금융투자업규정』 제4-65조 제1항 제2호의 방식에 따라 성과연동형 운용보수를 수취하는 투자신탁\n인 경우에만 해당됩니다. 본 투자신탁은 해당 사항 없습니다. \n기준지표 \n보수 산정 \n방식 \n한도(%) \n산출 주기 \n지급시기 \n지급내역(직전 회계연도 기준, %) \n1분기 \n2분기 \n3분기 \n4분기 \n- \n- \n- \n- \n- \n- \n- \n- \n- \n \n14. 이익 분배 및 과세에 관한 사항 \n가. 이익 배분 \n(1) 이익분배 \n집합투자업자는 이 집합투자재산의 운용에 따라 발생한 당해 종류 수익증권별 이익금을 투자신탁회계 기간 종\n료일 익영업일에 분배합니다. 다만, 다음 각 호의 어느 하나에 해당하는 이익금은 분배를 유보 하며, 법 제242\n조에 따른 이익금이 0보다 적은 경우에도 분배를 유보 합니다. \n1. 법 제238조에 따라 평가한 집합투자재산의 평가이익 \n2. 법 제240조제1항의 회계처리기준에 따른 집합투자재산의 매매이익 \n※ 매년 결산 분배할 때 집합투자기구의 회계기간 동안 집합투자재산의 운용에 따라 발생한 이익금 중 집합투\n자 재산의 매매 및 평가 이익은 분배되지 않고 보유기간 동안의 손익을 합산하여 환매할 때 해당 환매분에 대",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p035_performance_t001__276a4e5128",
+      "field_path": "classes[2]",
+      "page": 35,
+      "section": "PERFORMANCE",
+      "source_text": "페이지 35 / 73 주4) ‘총보수·비용’ 비율은 집합투자기구에서 지출되는 보수와 기타비용 총액을 순자산연평잔액으로 나누어 산출합니다. 주5) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투자기구 전체의 평균 총보수비용을 의미합니다. 주6) 기타비용 및 증권거래비용에는 이 투자신탁이 해당 모투자신탁에 투자한 비율을 안분한 모투자신탁의 비용이 포함되 어 있습니다. <1,000만원 투자시 투자자가 부담하게 되는 수수료 및 보수 비용의 투자기간별 예시(단위: 천원)> 구분 1년후 2년후 3년후 5년후 10년후 (A) 판매수수료 및 보수 비용 246 398 556 888 1,831 판매수수료 및 합성 총보수 247 401 560 896 1,847 (A-e) 판매수수료 및 보수 비용 167 289 416 684 1,453 판매수수료 및 합성 총보수 172 299 431 710 1,509 (AG) 판매수수료 및 보수 비용 199 332 471 765 1,604 판매수수료 및 합성 총보수 199 332 471 765 1,604 (C) 판매수수료 및 보수 비용 183 373 568 979 2,127 판매수수료 및 합성 총보수 183 373 568 979 2,127 (C-e) 판매수수료 및 보수 비용 135 275 421 728 1,604 판매수수료 및 합성 총보수 137 280 427 740 1,627 (CG) 판매수수료 및 보수 비용 154 314 479 828 1,813 판매수수료 및 합성 총보수 154 314 479 828 1,813 (C-I) 판매수수료 및 보수 비용 91 185 283 493 1,098 판매수수료 및 합성 총보수 91 187 286 497 1,107 (S)* 판매수수료 및 보수 비용 117 238 365 632 1,399 판매수수료 및 합성 총보수 119 243 372 645 1,425 (C-s) 판매수수료 및 보수 비용 89 181 277 482 1,074 판매수수료 및 합성 총보수 89 182 279 486 1,083 (C-w) 판매수수료 및 보수 비용 87 178 273 475 1,060 판매수수료 및 합성 총보수 87 178 273 475 1,060 (C-P) 판매수수료 및 보수 비용 168 342 522 901 1,966 판매수수료 및 합성 총보수 173 352 537 925 2,016 (C-Pe) 판매수수료 및 보수 비용 128 261 399 691 1,524 판매수수료 및 합성 총보수 133 270 413 715 1,575 (S-P) 판매수수료 및 보수 비용 115 234 358 621 1,374 판매수수료 및 합성 총보수 116 237 362 628 1,390 (C-P2) 판매수수료 및 보수 비용 158 322 492 849 1,858 판매수수료 및 합성 총보수 167 340 518 894 1,951 (C-P2e) 판매수수료 및 보수 비용 123 251 384 665 1,468 판매수수료 및 합성 총보수 126 257 392 679 1,499 (S-P2) 판매수수료 및 보수 비용 111 226 345 599 1,328 판매수수료 및 합성 총보수 112 229 350 607 1,346 주) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 제",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_t001__5fcd30290a",
+      "field_path": "classes[3]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "페이지 3 / 73 \n \n요 약 정 보\n \n투자 위험 등급 \n2등급 (높은 위험) \n디에스자산운용㈜은 이 투자신탁의 투자대상 자산의 종류 및 \n위험도를 감안하여 2등급으로 분류하였습니다. \n집합투자증권은 『예금자보호법』에 따라 보호되지 않는 실적 배당상품입니다. \n해당 집합투자기구는 국내 주식을 주된 투자대상으로 하는 모투자신탁에 \n신탁재산의 60% 이상을 투자하여, 국내 주식 투자에 따른 주식 등 \n가격변동위험, 특정주식 집중투자위험, 시장위험 등이 있으므로 투자에 \n신중을 기하여 주시기 바랍니다. \n1 \n2 \n3 \n4 \n5 \n6 \n매우 \n높은 \n위험 \n높은 \n위험 \n다소 \n높은 \n위험 \n보통 \n위험 \n낮은 \n위험 \n매우 \n낮은 \n위험 \n이 요약정보는 디에스Maestro증권자투자신탁[주식]의 투자설명서의 내용 중 중요사항을 발췌∙요약한 핵심정\n보를 담고 있습니다. 따라서 자세한 정보가 필요하신 경우에는 동 집합투자증권을 매입하기 이전에 투자설\n명서를 반드시 참고 하시기 바랍니다. \n투자목적 \n및 \n투자전략 \n1. 투자목적: 이 투자신탁은 국내 주식에 주로 투자하는 모투자신탁을 법 시행령 제94조 제2항 \n제4호에서 규정하는 주된 투자대상자산으로 하며 수익을 추구하는 것을 목적으로 합니다. \n그러나 상기의 투자목적이 반드시 달성된다는 보장은 없으며, 집합투자업자, 신탁업자, 판매회사 \n등 이 투자신탁과 관련된 어떠한 당사자도 투자원금의 보장 또는 투자목적의 달성을 보장하지 \n아니합니다. \n2. \n투자전략: \n이 \n투자신탁은 \n디에스Brave증권모투자신탁[주식]에 \n90% \n이상 \n투자하는 \n자투자신탁으로서, 모투자신탁의 운용실적에 따라 이익 또는 손실이 발생합니다. \n※ 자세한 내용은 투자설명서를 참조하시기 바랍니다. \n분류 \n투자신탁, 증권(주식형), 개방형(중도환매가능), 추가형(추가납입가능), 종류형, 모자형 \n투자비용 \n클래스 \n종류 \n투자자가 부담하는 \n수수료 및 총보수(단위:%) \n1,000 만원 투자시 투자자가 부담하는 \n투자기간별 총비용 예시 (단위: 천원) \n판매 \n수수료 \n \n \n동종 \n유형 \n총보수 \n총보수 \n·비용 \n1 년 \n2 년 \n3 년 \n5 년 \n10 년 \n총 \n보수 \n판매 \n보수 \n수수료선취- \n오프라인형(A) \n납입금액의 \n1.0%이내 \n1.455 \n0.600 \n1.370 \n1.457 \n246 \n398 \n556 \n888 \n1,831 \n수수료선취- \n온라인형(A-e) \n납입금액의 \n0.5%이내 \n1.155 \n0.300 \n1.030 \n1.157 \n167 \n289 \n416 \n684 \n1,453 \n수수료미징구- \n오프라인형(C) \n없음 \n1.805 \n0.950 \n1.580 \n1,807 \n184 \n373 \n568 \n979 \n2,127 \n수수료미징구- \n온라인형(C-e) \n없음 \n1.325 \n0.470 \n1.160 \n1,327 \n135 \n275 \n421 \n728 \n1,604 \n주1) 종류형집합투자기구의 구체적인 투자비용은 ‘투자설명서 제2부. 집합투자기구에 관한 사항 중 13. 보수 및 수수료에 \n관한 사항’을 참고하시기 바랍니다. \n주2) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투가기구 전체의 평균 총보수비용을 의미합니다. \n주3) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 \n제외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 \n투자수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. \n주4) 종류 A형과 종류 C형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-\ne형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 \n수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 \n작성기준일: 2025. 7. 11 \n디에스Maestro증권자투자신탁[주식] (펀드코드:E4451)",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p004_performance_t001__5fcd30290a",
+      "field_path": "classes[3]",
+      "page": 4,
+      "section": "PERFORMANCE",
+      "source_text": "페이지 4 / 73 \n \n있음에 유의하시기 바랍니다. \n투자실적 \n추이 \n(연평균 \n수익률, \n단위: %) \n종류 \n최초설정일 \n최근 1 년 \n최근 2 년 \n최근 3 년 \n최근 5 년 \n설정일 이후 \n24.07.12 \n~ 25.07.11 \n23.07.12 \n ~ 25.07.11 \n \n \n23.07.12 \n ~ 25.07.11 \n수수료미징구- \n온라인형(C-e) \n23.07.12 \n38.42 \n21.33 \n \n \n21.33 \n비교지수 \n9.38 \n10.67 \n \n \n10.67 \n수익률변동성(%) \n22.62 \n18.40 \n \n \n21.33 \n주1) 비교지수 : (0.9 * [KOSPI]) + (0.1 * [CALL금리]) \n주2) 비교지수의 수익률에는 운용보수 등 투자신탁에 부과되는 보수 및 비용이 반영되지 않았습니다. \n주3) 연평균 수익률은 해당 기간동안의 누적수익률을 기하평균방식으로 계산한 것으로 해당기간 동안의 평균 수익률을 \n나타내는 수치입니다. \n주4) 수익률 변동성(%)은 해당 기간 동안 집합투자기구의 연환산된 주간수익률의 표준편차입니다. \n주5) 기재가 생략된 종류 수익증권에 대해서는 투자설명서를 참고하시기 바랍니다. \n운용전문 \n인력 \n(1) 책임운용전문인력 \n성명 \n생년 \n직위 \n운용 현황 \n동종집합투자기구 \n연평균 수익률(주식형-공모-국내) \n운용 \n경력년수 \n집합투자 \n기구수 \n운용규모 \n운용역 \n운용사 \n최근 1 년 \n최근 2 년 \n최근 1 년 \n최근 2 년 \n김창진 \n1980 \n상무 \n19 개 \n2,926 억 \n- \n- \n41.61% \n- \n8년 3개월 \n \n(2) 부책임운용전문인력 \n성명 \n생년 \n직위 \n운용 현황 \n동종집합투자기구 \n연평균 수익률(주식형-공모-국내) \n운용 \n경력년수 \n집합투자 \n기구수 \n운용규모 \n운용역 \n운용사 \n최근 1 년 \n최근 2 년 \n최근 1 년 \n최근 2 년 \n황현철 \n1992 \n전임 \n5 개 \n1,823 억 \n41.61% \n- \n41.61% \n- \n7년 7개월 \n주1) “책임운용인력”이란 해당 집합투자기구의 투자전략 수립 및 투자의사결정 등에 주도적·핵심적 역할을 수행하는 자를 \n의미하며, “부책임운용전문인력”이란 “책임운용인력”이 아닌 자로서, 집합투자기구의 투자목적 및 운용전략 등에 중대한 영\n향을 미칠 수 있는 자산에 대한 운용권한을 가진 운용전문인력을 의미합니다. \n주2) 운용전문인력의 최근 과거 3년 이내에 운용한 집합투자기구의 명칭, 집합투자재산의 규모와 수익률 등은 한국금융투\n자협회 홈페이지(www.kofia.or.kr)에서 확인할 수 있습니다. \n주3) 동종집합투자기구 연평균 수익률은 해당 집합투자업자가 분류한 동일 유형 집합투자기구의 평균운용성과이며, 해당 \n운용전문인력의 평균운용성과는 해당 회사 근무기간 중 운용한 성과를 의미합니다. 동종 집합투자기구 연평균 수익률은 \n당사 공모펀드를 대상으로 하였으며, 운용펀드 기준으로 보수차감 전 수익률이며 모자형 구조의 펀드의 경우 모펀드만을 \n대상으로 계산되었음을 알려드립니다. \n주4) 운용중인 다른 집합투자기구 중 성과보수가 약정된 집합투자기구(사모펀드) : 김창진 18개 펀드 2,769억원 / 황현철 4\n개 펀드 1,105억원 \n투자자 \n유의사항 \n• 집합투자증권은 ｢예금자보호법｣에 따라 보호되지 않는 실적배당상품으로 투자원금의 손실이 발생할 \n수 있으므로 투자에 신중을 기하여 주시기 바랍니다. \n• 금융위원회가 투자설명서의 기재사항이 진실 또는 정확하다는 것을 인정하거나 그 증권의 가치를 \n보증 또는 승인하지 아니함을 유의하시기 바랍니다. \n• 간이투자설명서보다 자세한 내용이 필요하시어 투자설명서의 교부를 요청하시면 귀하의 집합투자 \n증권 매입 이전까지 교부하오니 참고하시기 바랍니다. \n• 간이투자설명서는 증권신고서 효력발생일까지 기재사항 중 일부가 변경될 수 있으며, 개방형 집합 \n투자증권인 경우 효력발생일 이후에도 변경될 수 있습니다. \n• 이 집합투자증권의 투자위험등급을 확인하시고, 귀하의 투자 경력이나 투자성향에 적합한 상품인지",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_c001__5fcd30290a",
+      "field_path": "classes[3]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "투자비용 \n클래스 \n종류 \n투자자가 부담하는 \n수수료 및 총보수(단위:%) \n1,000 만원 투자시 투자자가 부담하는 \n투자기간별 총비용 예시 (단위: 천원) \n판매 \n수수료 \n \n \n동종 \n유형 \n총보수 \n총보수 \n·비용 \n1 년 \n2 년 \n3 년 \n5 년 \n10 년 \n총 \n보수 \n판매 \n보수 \n수수료선취- \n오프라인형(A) \n납입금액의 \n1.0%이내 \n1.455 \n0.600 \n1.370 \n1.457 \n246 \n398 \n556 \n888 \n1,831 \n수수료선취- \n온라인형(A-e) \n납입금액의 \n0.5%이내 \n1.155 \n0.300 \n1.030 \n1.157 \n167 \n289 \n416 \n684 \n1,453 \n수수료미징구- \n오프라인형(C) \n없음 \n1.805 \n0.950 \n1.580 \n1,807 \n184 \n373 \n568 \n979 \n2,127 \n수수료미징구- \n온라인형(C-e) \n없음 \n1.325 \n0.470 \n1.160 \n1,327 \n135 \n275 \n421 \n728 \n1,604 \n주1) 종류형집합투자기구의 구체적인",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_c002__5fcd30290a",
+      "field_path": "classes[3]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "투자비용은 ‘투자설명서 제2부. 집합투자기구에 관한 사항 중 13. 보수 및 수수료에 \n관한 사항’을 참고하시기 바랍니다. \n주2) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투가기구 전체의 평균 총보수비용을 의미합니다. \n주3) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 \n제외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 \n투자수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. \n주4) 종류 A형과 종류 C형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-\ne형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 \n수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 \n작성기준일: 2025. 7. 11 \n디에스Maestro증권자투자신탁[주식] (펀드코드:E4451)",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p004_performance_c001__5fcd30290a",
+      "field_path": "classes[3]",
+      "page": 4,
+      "section": "PERFORMANCE",
+      "source_text": "투자실적 \n추이 \n(연평균 \n수익률, \n단위: %) \n종류 \n최초설정일 \n최근 1 년 \n최근 2 년 \n최근 3 년 \n최근 5 년 \n설정일 이후 \n24.07.12 \n~ 25.07.11 \n23.07.12 \n ~ 25.07.11 \n \n \n23.07.12 \n ~ 25.07.11 \n수수료미징구- \n온라인형(C-e) \n23.07.12 \n38.42 \n21.33 \n \n \n21.33 \n비교지수 \n9.38 \n10.67 \n \n \n10.67 \n수익률변동성(%) \n22.62 \n18.40 \n \n \n21.33 \n주1) 비교지수 : (0.9 * [KOSPI]) + (0.1 * [CALL금리]) \n주2) 비교지수의 수익률에는 운용보수 등 투자신탁에 부과되는 보수 및 비용이 반영되지 않았습니다. \n주3) 연평균 수익률은 해당 기간동안의 누적수익률을 기하평균방식으로 계산한 것으로 해당기간 동안의 평균 수익률을 \n나타내는 수치입니다. \n주4) 수익률 변동성(%)은 해당 기간 동안 집합투자기구의 연환산된 주간수익률의 표준편차입니다. \n주5) 기재가 생략된 종류 수익증권에 대해서는 투자설명서를 참고하시기 바랍니다. \n운용전문 \n인력 \n(1) 책임운용전문인력 \n성명 \n생년 \n직위 \n운용 현황 \n동종집합투자기구 \n연평균 수익률(주식형-공모-국내) \n운용 \n경력년수 \n집합투자 \n기구수 \n운용규모 \n운용역 \n운용사 \n최근 1 년 \n최근 2 년 \n최근 1 년 \n최근 2 년 \n김창진 \n1980 \n상무 \n19 개 \n2,926 억 \n- \n- \n41.61% \n- \n8년 3개월 \n \n(2) 부책임운용전문인력 \n성명 \n생년 \n직위 \n운용 현황 \n동종집합투자기구 \n연평균 수익률(주식형-공모-국내) \n운용 \n경력년수 \n집합투자 \n기구수 \n운용규모 \n운용역 \n운용사 \n최근 1 년 \n최근 2 년 \n최근 1 년 \n최근 2 년 \n황현철 \n1992 \n전임 \n5 개 \n1,823 억 \n41.61% \n- \n41.61% \n- \n7년 7개월 \n주1) “책임운용인력”이란 해당 집합투자기구의",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p010_class_c001__5fcd30290a",
+      "field_path": "classes[3]",
+      "page": 10,
+      "section": "CLASS_INFO",
+      "source_text": "페이지 10 / 73 \n \n제 1부. 모집 또는 매출에 관한 사항 \n \n1. 집합투자기구의 명칭 \n집합투자기구 명칭 \n한국금융투자협회 펀드 코드 \n디에스Maestro증권자투자신탁[주식] \nE4451 \n수수료선취-오프라인형(A) \nE4452 \n수수료선취-온라인형(A-e) \nE4453 \n수수료선취-오프라인-무권유저비용형(AG) \nE4454 \n수수료미징구-오프라인형(C) \nE4455 \n수수료미징구-온라인형(C-e) \nE4456 \n수수료미징구-오프라인-무권유저비용형(CG) \nE4457 \n수수료미징구-오프라인-기관형(C-I) \nE4458 \n수수료후취-온라인슈퍼형(S) \nE4465 \n수수료미징구-오프라인-집합투자업자형(C-s) \nE4459 \n수수료미징구-오프라인-랩형(C-w) \nE4460 \n수수료미징구-오프라인-개인연금형(C-P) \nE4461 \n수수료미징구-온라인-개인연금형(C-Pe) \nE4462 \n수수료미징구-온라인슈퍼-개인연금형(S-P) \nE4466 \n수수료미징구-오프라인-퇴직연금형(C-P2) \nE4463 \n수수료미징구-온라인-퇴직연금형(C-P2e) \nE4464 \n수수료미징구-온라인슈퍼-퇴직연금형(S-P2) \nE4467 \n \n2. 집합투자기구의 종류 및 형태 \n가. 형태별 종류: 투자신탁 \n나. 운용자산별 종류: 증권(주식형) \n다. 개방형·폐쇄형 구분: 개방형(환매가 가능한 집합투자기구) \n라. 추가형·단위형 구분: 추가형(추가로 자금 납입이 가능한 집합투자기구) \n마. 특수형태: 모자형, 종류형 \n- 모자형: 모투자신탁이 발행하는 집합투자증권을 자투자신탁이 취득하는 구조의 투자신탁 \n- 종류형: 판매보수의 차이로 인하여 기준가격이 다르거나 판매보수가 다른 여러 종류의 집합투자증권을 발행\n하는 투자신탁 \n바. 고난도금융투자상품 해당 여부: 해당없음 \n주) 집합투자기구의 종류 및 형태에도 불구하고 투자대상은 여러 가지 다양한 자산에 투자될 수 있으며, 자세한 투자대상은 \n제2부 “투자대상”과 “투자전략” 부분을 참고하시기 바랍니다",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p027_class_c001__5fcd30290a",
+      "field_path": "classes[3]",
+      "page": 27,
+      "section": "CLASS_INFO",
+      "source_text": "페이지 27 / 73 \n \n \n(2) 가입자격 \n종류 \n구분 \n판매수수료 \n부과여부 \n수수료선취-오프라인형(A) \n제한없음 \n납입금액의 \n1.0% 이내 \n수수료선취-온라인형(A-e) \n온라인 가입자 \n납입금액의 \n0.5% 이내 \n수수료선취-오프라인- \n무권유저비용형(AG) \n투자자문업자로부터 투자자문을 받고 그 결과에 따라 집합\n투자증권 매수를 요청하는 등 금융기관으로부터 별도의 투\n자권유 없이 집합투자증권을 매수하는 가입자 \n납입금액의 \n0.7% 이내 \n수수료미징구-오프라인형(C) \n제한없음 \n없음 \n수수료미징구-온라인형(C-e) \n온라인 가입자 \n없음 \n수수료미징구-오프라인-무권\n유저비용형(CG) \n투자자문업자로부터 투자자문을 받고 그 결과에 따라 집합\n투자증권 매수를 요청하는 등 금융기관으로부터 별도의 투\n자권유 없이 집합투자증권을 매수하는 가입자 \n없음 \n수수료미징구-오프라인-기관\n형(C-I) \n법에서 정하는 집합투자기구(외국 법령에 의한 것으로서 집\n합투자기구의 성질을 가진 것을 포함한다) \n법 시행령 제10조 제2항 및 금융투자업규정 제1-4조에서 정\n하는 기관투자자 또는 국가재정법에 따른 기금(외국의 법령\n상 이에 준하는 자를 포함한다) \n없음 \n수수료후취-온라인슈퍼형(S) \n자산운용사의 공동판매채널로서의 역할 수행을 위해 모든 \n공모 S클래스를 취급하고, 객관적 지표를 기준으로 상품을 \n노출 및 배열하는 온라인판매시스템에 가입한 자 (후취판매\n수수료 부과) \n3년 미만 환매\n시 환매금액 \n0.15% 이내 \n수수료미징구-오프라인-집합\n투자업자형(C-s) \n당해 집합투자기구의 집합투자업자 \n없음 \n수수료미징구-오프라인-랩형\n(C-w) \n랩어카운트, 특정금전신탁을 통해 가입하기 원하는 가입자 \n없음 \n수수료미징구-오프라인-개 \n인연금형(C-P) \n소득세법 제20조의3 및 소득세법 시행령 제40조의2에 따른 \n연금저축계좌를 통하여 가입한 자 \n없음 \n수수료미징구-온라인-개인 \n연금형(C-Pe) \n판매회사의 전자매체(온라인)를 통하여 가입한 자로서 소득\n세법 제20조의3 및 소득세법 시행령 제40조의2에 따른 연금\n저축계좌를 통하여 가입한 자 \n없음 \n수수료미징구-온라인슈퍼- \n개인연금형(S-P) \n자산운용사의 공동판매채널로서의 역할 수행을 위해 모든 \n공모 S클래스를 취급하고, 객관적 지표를 기준으로 상품을 \n노출 및 배열하는 온라인판매시스템에 가입한 자로서 소득\n세법 제20조의3 및 소득세법 시행령 제40조의2에 따른 연금\n저축계좌를 통하여 가입한 자 \n없음 \n수수료미징구-오프라인-퇴직\n연금형(C-P2) \n근로자퇴직급여보장법에 의한 \n퇴직연금 및 개인퇴직연금\n(IRP), 퇴직연금사업자 \n없음",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p032_fees_c001__5fcd30290a",
+      "field_path": "classes[3]",
+      "page": 32,
+      "section": "FEES",
+      "source_text": "페이지 32 / 73 \n \n \n13. 보수 및 수수료에 관한 사항 \n이 투자신탁은 운용 및 판매 등의 대가로 수수료 및 보수를 지급하게 되며, 가입자격에 따라 아래와 같이 보수 \n및 수수료 등의 차이가 있습니다. 한편, 판매회사(투자매매업자 또는 투자중개업자)는 판매보수와 관련하여 집\n합투자증권의 해당 집합투자기구의 투자자에게 지속적으로 제공하는 용역의 대가에 관한 내용이 기재된 자료\n를 교부하고 설명하여야 합니다. \n \n가. 투자자에게 직접 부과되는 수수료 \n명칭 \n(클래스) \n가입자격 \n수수료율 \n선취 \n판매수수료 \n후취 \n판매수수료 \n환매 \n수수료 \n전환 \n수수료 \n(A) \n제한없음 \n납입금액의 \n1.0% 이내 \n \n \n \n \n \n \n(A-e) \n온라인 가입자 \n납입금액의 \n0.5% 이내 \n \n \n \n \n \n \n(AG) \n투자자문업자로부터 투자자문을 받고 그 \n결과에 따라 집합투자증권 매수를 요청\n하는 등 금융기관으로부터 별도의 투자\n권유 없이 집합투자증권을 매수하는 가\n입자 \n납입금액의 \n0.7% 이내 \n \n \n \n \n \n \n(C) \n제한없음 \n \n \n \n \n(C-e) \n온라인 가입자 \n \n \n \n \n(CG) \n투자자문업자로부터 투자자문을 받고 그 \n결과에 따라 집합투자증권 매수를 요청\n하는 등 금융기관으로부터 별도의 투자\n권유 없이 집합투자증권을 매수하는 가\n입자 \n \n \n \n \n(C-I) \n법에서 정하는 집합투자기구(외국 법령\n에 의한 것으로서 집합투자기구의 성질\n을 가진 것을 포함한다) \n법시행령 제10조 제2항 및 금융투자업규\n정 제1-4조에서 정하는 기관투자자 또는 \n국가재정법에 따른 기금(외국의 법령상 \n이에 준하는 자를 포함한다) \n \n \n \n \n(S) \n자산운용사의 공동판매채널로서의 역할 \n수행을 위해 모든 공모 S클래스를 취급\n하고, 객관적 지표를 기준으로 상품을 노\n출 및 배열하는 온라인판매시스템에 가\n입한 자 \n \n3년 미만 환매\n시 환매금액의 \n0.15% 이내 \n \n \n(C-s) \n당해 집합투자기구의 집합투자업자",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p035_fees_c001__5fcd30290a",
+      "field_path": "classes[3]",
+      "page": 35,
+      "section": "FEES",
+      "source_text": "페이지 35 / 73 주4) ‘총보수·비용’ 비율은 집합투자기구에서 지출되는 보수와 기타비용 총액을 순자산연평잔액으로 나누어 산출합니다. 주5) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투자기구 전체의 평균 총보수비용을 의미합니다. 주6) 기타비용 및 증권거래비용에는 이 투자신탁이 해당 모투자신탁에 투자한 비율을 안분한 모투자신탁의 비용이 포함되 어 있습니다. <1,000만원 투자시 투자자가 부담하게 되는 수수료 및 보수 비용의 투자기간별 예시(단위: 천원)> 구분 1년후 2년후 3년후 5년후 10년후 (A) 판매수수료 및 보수 비용 246 398 556 888 1,831 판매수수료 및 합성 총보수 247 401 560 896 1,847 (A-e) 판매수수료 및 보수 비용 167 289 416 684 1,453 판매수수료 및 합성 총보수 172 299 431 710 1,509 (AG) 판매수수료 및 보수 비용 199 332 471 765 1,604 판매수수료 및 합성 총보수 199 332 471 765 1,604 (C) 판매수수료 및 보수 비용 183 373 568 979 2,127 판매수수료 및 합성 총보수 183 373 568 979 2,127 (C-e) 판매수수료 및 보수 비용 135 275 421 728 1,604 판매수수료 및 합성 총보수 137 280 427 740 1,627 (CG) 판매수수료 및 보수 비용 154 314 479 828 1,813 판매수수료 및 합성 총보수 154 314 479 828 1,813 (C-I) 판매수수료 및 보수 비용 91 185 283 493 1,098 판매수수료 및 합성 총보수 91 187 286 497 1,107 (S)* 판매수수료 및 보수 비용 117 238 365 632 1,399 판매수수료 및 합성 총보수 119 243 372 645 1,425 (C-s) 판매수수료 및 보수 비용 89 181 277 482 1,074 판매수수료 및 합성 총보수 89 182 279 486 1,083 (C-w) 판매수수료 및 보수 비용 87 178 273 475 1,060 판매수수료 및 합성 총보수 87 178 273 475 1,060 (C-P) 판매수수료 및 보수 비용 168 342 522 901 1,966 판매수수료 및 합성 총보수 173 352 537 925 2,016 (C-Pe) 판매수수료 및 보수 비용 128 261 399 691 1,524 판매수수료 및 합성 총보수 133 270 413 715 1,575 (S-P) 판매수수료 및 보수 비용 115 234 358 621 1,374 판매수수료 및 합성 총보수 116 237 362 628 1,390 (C-P2) 판매수수료 및 보수 비용 158 322 492 849 1,858 판매수수료 및 합성 총보수 167 340 518 894 1,951 (C-P2e) 판매수수료 및 보수 비용 123 251 384 665 1,468 판매수수료 및 합성 총보수 126 257 392 679 1,499 (S-P2) 판매수수료 및 보수 비용 111 226 345 599 1,328 판매수수료 및 합성 총보수 112 229 350 607 1,346 주) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 제",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p036_fees_c001__5fcd30290a",
+      "field_path": "classes[3]",
+      "page": 36,
+      "section": "FEES",
+      "source_text": "페이지 36 / 73 \n \n외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 투자\n수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. 종류 A형과 종류 C형에 각각 투자할 경우 총비\n용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-e형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하\n는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용\n의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 있음에 유의하시기 바랍니다. \n* 종류 S는 후취판매수수료를 반영하지 않고 산출하였습니다. \n \n(2) 투자신탁 관련 비용 \n- 증권 및 파생상품 등의 매매수수료 \n- 증권 및 파생상품 등의 전자등록 및 결제비용 \n- 집합투자재산의 회계감사비용 \n- 수익자명부 관리비용 \n- 전체 수익자로 구성되는 수익자총회 관련비용 \n- 집합투자재산에 관한 소송비용(집합투자업자의 귀책사유로 인한 소송인 경우 제외) \n- 증권 및 파생상품 등 자산의 가격정보비용 \n- 집합투자재산의 운용에 필요한 지적재산권 비용 \n- 증권 및 파생상품 등 자산의 투자정보 비용 \n- 기타 이에 준하는 비용으로 집합투자재산의 운용 등에 소요되는 비용 \n \n다. 보수 및 지급내역에 관한 사항 \n다음 표는 『금융투자업규정』 제4-65조 제1항 제2호의 방식에 따라 성과연동형 운용보수를 수취하는 투자신탁\n인 경우에만 해당됩니다. 본 투자신탁은 해당 사항 없습니다. \n기준지표 \n보수 산정 \n방식 \n한도(%) \n산출 주기 \n지급시기 \n지급내역(직전 회계연도 기준, %) \n1분기 \n2분기 \n3분기 \n4분기 \n- \n- \n- \n- \n- \n- \n- \n- \n- \n \n14. 이익 분배 및 과세에 관한 사항 \n가. 이익 배분 \n(1) 이익분배 \n집합투자업자는 이 집합투자재산의 운용에 따라 발생한 당해 종류 수익증권별 이익금을 투자신탁회계 기간 종\n료일 익영업일에 분배합니다. 다만, 다음 각 호의 어느 하나에 해당하는 이익금은 분배를 유보 하며, 법 제242\n조에 따른 이익금이 0보다 적은 경우에도 분배를 유보 합니다. \n1. 법 제238조에 따라 평가한 집합투자재산의 평가이익 \n2. 법 제240조제1항의 회계처리기준에 따른 집합투자재산의 매매이익 \n※ 매년 결산 분배할 때 집합투자기구의 회계기간 동안 집합투자재산의 운용에 따라 발생한 이익금 중 집합투\n자 재산의 매매 및 평가 이익은 분배되지 않고 보유기간 동안의 손익을 합산하여 환매할 때 해당 환매분에 대",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p035_performance_t001__5fcd30290a",
+      "field_path": "classes[3]",
+      "page": 35,
+      "section": "PERFORMANCE",
+      "source_text": "페이지 35 / 73 주4) ‘총보수·비용’ 비율은 집합투자기구에서 지출되는 보수와 기타비용 총액을 순자산연평잔액으로 나누어 산출합니다. 주5) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투자기구 전체의 평균 총보수비용을 의미합니다. 주6) 기타비용 및 증권거래비용에는 이 투자신탁이 해당 모투자신탁에 투자한 비율을 안분한 모투자신탁의 비용이 포함되 어 있습니다. <1,000만원 투자시 투자자가 부담하게 되는 수수료 및 보수 비용의 투자기간별 예시(단위: 천원)> 구분 1년후 2년후 3년후 5년후 10년후 (A) 판매수수료 및 보수 비용 246 398 556 888 1,831 판매수수료 및 합성 총보수 247 401 560 896 1,847 (A-e) 판매수수료 및 보수 비용 167 289 416 684 1,453 판매수수료 및 합성 총보수 172 299 431 710 1,509 (AG) 판매수수료 및 보수 비용 199 332 471 765 1,604 판매수수료 및 합성 총보수 199 332 471 765 1,604 (C) 판매수수료 및 보수 비용 183 373 568 979 2,127 판매수수료 및 합성 총보수 183 373 568 979 2,127 (C-e) 판매수수료 및 보수 비용 135 275 421 728 1,604 판매수수료 및 합성 총보수 137 280 427 740 1,627 (CG) 판매수수료 및 보수 비용 154 314 479 828 1,813 판매수수료 및 합성 총보수 154 314 479 828 1,813 (C-I) 판매수수료 및 보수 비용 91 185 283 493 1,098 판매수수료 및 합성 총보수 91 187 286 497 1,107 (S)* 판매수수료 및 보수 비용 117 238 365 632 1,399 판매수수료 및 합성 총보수 119 243 372 645 1,425 (C-s) 판매수수료 및 보수 비용 89 181 277 482 1,074 판매수수료 및 합성 총보수 89 182 279 486 1,083 (C-w) 판매수수료 및 보수 비용 87 178 273 475 1,060 판매수수료 및 합성 총보수 87 178 273 475 1,060 (C-P) 판매수수료 및 보수 비용 168 342 522 901 1,966 판매수수료 및 합성 총보수 173 352 537 925 2,016 (C-Pe) 판매수수료 및 보수 비용 128 261 399 691 1,524 판매수수료 및 합성 총보수 133 270 413 715 1,575 (S-P) 판매수수료 및 보수 비용 115 234 358 621 1,374 판매수수료 및 합성 총보수 116 237 362 628 1,390 (C-P2) 판매수수료 및 보수 비용 158 322 492 849 1,858 판매수수료 및 합성 총보수 167 340 518 894 1,951 (C-P2e) 판매수수료 및 보수 비용 123 251 384 665 1,468 판매수수료 및 합성 총보수 126 257 392 679 1,499 (S-P2) 판매수수료 및 보수 비용 111 226 345 599 1,328 판매수수료 및 합성 총보수 112 229 350 607 1,346 주) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 제",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_t001__da111ce5f3",
+      "field_path": "sales_charges[0]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "페이지 3 / 73 \n \n요 약 정 보\n \n투자 위험 등급 \n2등급 (높은 위험) \n디에스자산운용㈜은 이 투자신탁의 투자대상 자산의 종류 및 \n위험도를 감안하여 2등급으로 분류하였습니다. \n집합투자증권은 『예금자보호법』에 따라 보호되지 않는 실적 배당상품입니다. \n해당 집합투자기구는 국내 주식을 주된 투자대상으로 하는 모투자신탁에 \n신탁재산의 60% 이상을 투자하여, 국내 주식 투자에 따른 주식 등 \n가격변동위험, 특정주식 집중투자위험, 시장위험 등이 있으므로 투자에 \n신중을 기하여 주시기 바랍니다. \n1 \n2 \n3 \n4 \n5 \n6 \n매우 \n높은 \n위험 \n높은 \n위험 \n다소 \n높은 \n위험 \n보통 \n위험 \n낮은 \n위험 \n매우 \n낮은 \n위험 \n이 요약정보는 디에스Maestro증권자투자신탁[주식]의 투자설명서의 내용 중 중요사항을 발췌∙요약한 핵심정\n보를 담고 있습니다. 따라서 자세한 정보가 필요하신 경우에는 동 집합투자증권을 매입하기 이전에 투자설\n명서를 반드시 참고 하시기 바랍니다. \n투자목적 \n및 \n투자전략 \n1. 투자목적: 이 투자신탁은 국내 주식에 주로 투자하는 모투자신탁을 법 시행령 제94조 제2항 \n제4호에서 규정하는 주된 투자대상자산으로 하며 수익을 추구하는 것을 목적으로 합니다. \n그러나 상기의 투자목적이 반드시 달성된다는 보장은 없으며, 집합투자업자, 신탁업자, 판매회사 \n등 이 투자신탁과 관련된 어떠한 당사자도 투자원금의 보장 또는 투자목적의 달성을 보장하지 \n아니합니다. \n2. \n투자전략: \n이 \n투자신탁은 \n디에스Brave증권모투자신탁[주식]에 \n90% \n이상 \n투자하는 \n자투자신탁으로서, 모투자신탁의 운용실적에 따라 이익 또는 손실이 발생합니다. \n※ 자세한 내용은 투자설명서를 참조하시기 바랍니다. \n분류 \n투자신탁, 증권(주식형), 개방형(중도환매가능), 추가형(추가납입가능), 종류형, 모자형 \n투자비용 \n클래스 \n종류 \n투자자가 부담하는 \n수수료 및 총보수(단위:%) \n1,000 만원 투자시 투자자가 부담하는 \n투자기간별 총비용 예시 (단위: 천원) \n판매 \n수수료 \n \n \n동종 \n유형 \n총보수 \n총보수 \n·비용 \n1 년 \n2 년 \n3 년 \n5 년 \n10 년 \n총 \n보수 \n판매 \n보수 \n수수료선취- \n오프라인형(A) \n납입금액의 \n1.0%이내 \n1.455 \n0.600 \n1.370 \n1.457 \n246 \n398 \n556 \n888 \n1,831 \n수수료선취- \n온라인형(A-e) \n납입금액의 \n0.5%이내 \n1.155 \n0.300 \n1.030 \n1.157 \n167 \n289 \n416 \n684 \n1,453 \n수수료미징구- \n오프라인형(C) \n없음 \n1.805 \n0.950 \n1.580 \n1,807 \n184 \n373 \n568 \n979 \n2,127 \n수수료미징구- \n온라인형(C-e) \n없음 \n1.325 \n0.470 \n1.160 \n1,327 \n135 \n275 \n421 \n728 \n1,604 \n주1) 종류형집합투자기구의 구체적인 투자비용은 ‘투자설명서 제2부. 집합투자기구에 관한 사항 중 13. 보수 및 수수료에 \n관한 사항’을 참고하시기 바랍니다. \n주2) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투가기구 전체의 평균 총보수비용을 의미합니다. \n주3) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 \n제외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 \n투자수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. \n주4) 종류 A형과 종류 C형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-\ne형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 \n수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 \n작성기준일: 2025. 7. 11 \n디에스Maestro증권자투자신탁[주식] (펀드코드:E4451)",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_t001__674bb6c4f2",
+      "field_path": "fees[0]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "페이지 3 / 73 \n \n요 약 정 보\n \n투자 위험 등급 \n2등급 (높은 위험) \n디에스자산운용㈜은 이 투자신탁의 투자대상 자산의 종류 및 \n위험도를 감안하여 2등급으로 분류하였습니다. \n집합투자증권은 『예금자보호법』에 따라 보호되지 않는 실적 배당상품입니다. \n해당 집합투자기구는 국내 주식을 주된 투자대상으로 하는 모투자신탁에 \n신탁재산의 60% 이상을 투자하여, 국내 주식 투자에 따른 주식 등 \n가격변동위험, 특정주식 집중투자위험, 시장위험 등이 있으므로 투자에 \n신중을 기하여 주시기 바랍니다. \n1 \n2 \n3 \n4 \n5 \n6 \n매우 \n높은 \n위험 \n높은 \n위험 \n다소 \n높은 \n위험 \n보통 \n위험 \n낮은 \n위험 \n매우 \n낮은 \n위험 \n이 요약정보는 디에스Maestro증권자투자신탁[주식]의 투자설명서의 내용 중 중요사항을 발췌∙요약한 핵심정\n보를 담고 있습니다. 따라서 자세한 정보가 필요하신 경우에는 동 집합투자증권을 매입하기 이전에 투자설\n명서를 반드시 참고 하시기 바랍니다. \n투자목적 \n및 \n투자전략 \n1. 투자목적: 이 투자신탁은 국내 주식에 주로 투자하는 모투자신탁을 법 시행령 제94조 제2항 \n제4호에서 규정하는 주된 투자대상자산으로 하며 수익을 추구하는 것을 목적으로 합니다. \n그러나 상기의 투자목적이 반드시 달성된다는 보장은 없으며, 집합투자업자, 신탁업자, 판매회사 \n등 이 투자신탁과 관련된 어떠한 당사자도 투자원금의 보장 또는 투자목적의 달성을 보장하지 \n아니합니다. \n2. \n투자전략: \n이 \n투자신탁은 \n디에스Brave증권모투자신탁[주식]에 \n90% \n이상 \n투자하는 \n자투자신탁으로서, 모투자신탁의 운용실적에 따라 이익 또는 손실이 발생합니다. \n※ 자세한 내용은 투자설명서를 참조하시기 바랍니다. \n분류 \n투자신탁, 증권(주식형), 개방형(중도환매가능), 추가형(추가납입가능), 종류형, 모자형 \n투자비용 \n클래스 \n종류 \n투자자가 부담하는 \n수수료 및 총보수(단위:%) \n1,000 만원 투자시 투자자가 부담하는 \n투자기간별 총비용 예시 (단위: 천원) \n판매 \n수수료 \n \n \n동종 \n유형 \n총보수 \n총보수 \n·비용 \n1 년 \n2 년 \n3 년 \n5 년 \n10 년 \n총 \n보수 \n판매 \n보수 \n수수료선취- \n오프라인형(A) \n납입금액의 \n1.0%이내 \n1.455 \n0.600 \n1.370 \n1.457 \n246 \n398 \n556 \n888 \n1,831 \n수수료선취- \n온라인형(A-e) \n납입금액의 \n0.5%이내 \n1.155 \n0.300 \n1.030 \n1.157 \n167 \n289 \n416 \n684 \n1,453 \n수수료미징구- \n오프라인형(C) \n없음 \n1.805 \n0.950 \n1.580 \n1,807 \n184 \n373 \n568 \n979 \n2,127 \n수수료미징구- \n온라인형(C-e) \n없음 \n1.325 \n0.470 \n1.160 \n1,327 \n135 \n275 \n421 \n728 \n1,604 \n주1) 종류형집합투자기구의 구체적인 투자비용은 ‘투자설명서 제2부. 집합투자기구에 관한 사항 중 13. 보수 및 수수료에 \n관한 사항’을 참고하시기 바랍니다. \n주2) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투가기구 전체의 평균 총보수비용을 의미합니다. \n주3) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 \n제외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 \n투자수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. \n주4) 종류 A형과 종류 C형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-\ne형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 \n수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 \n작성기준일: 2025. 7. 11 \n디에스Maestro증권자투자신탁[주식] (펀드코드:E4451)",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_t001__7f7d8a1e1e",
+      "field_path": "fees[1]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "페이지 3 / 73 \n \n요 약 정 보\n \n투자 위험 등급 \n2등급 (높은 위험) \n디에스자산운용㈜은 이 투자신탁의 투자대상 자산의 종류 및 \n위험도를 감안하여 2등급으로 분류하였습니다. \n집합투자증권은 『예금자보호법』에 따라 보호되지 않는 실적 배당상품입니다. \n해당 집합투자기구는 국내 주식을 주된 투자대상으로 하는 모투자신탁에 \n신탁재산의 60% 이상을 투자하여, 국내 주식 투자에 따른 주식 등 \n가격변동위험, 특정주식 집중투자위험, 시장위험 등이 있으므로 투자에 \n신중을 기하여 주시기 바랍니다. \n1 \n2 \n3 \n4 \n5 \n6 \n매우 \n높은 \n위험 \n높은 \n위험 \n다소 \n높은 \n위험 \n보통 \n위험 \n낮은 \n위험 \n매우 \n낮은 \n위험 \n이 요약정보는 디에스Maestro증권자투자신탁[주식]의 투자설명서의 내용 중 중요사항을 발췌∙요약한 핵심정\n보를 담고 있습니다. 따라서 자세한 정보가 필요하신 경우에는 동 집합투자증권을 매입하기 이전에 투자설\n명서를 반드시 참고 하시기 바랍니다. \n투자목적 \n및 \n투자전략 \n1. 투자목적: 이 투자신탁은 국내 주식에 주로 투자하는 모투자신탁을 법 시행령 제94조 제2항 \n제4호에서 규정하는 주된 투자대상자산으로 하며 수익을 추구하는 것을 목적으로 합니다. \n그러나 상기의 투자목적이 반드시 달성된다는 보장은 없으며, 집합투자업자, 신탁업자, 판매회사 \n등 이 투자신탁과 관련된 어떠한 당사자도 투자원금의 보장 또는 투자목적의 달성을 보장하지 \n아니합니다. \n2. \n투자전략: \n이 \n투자신탁은 \n디에스Brave증권모투자신탁[주식]에 \n90% \n이상 \n투자하는 \n자투자신탁으로서, 모투자신탁의 운용실적에 따라 이익 또는 손실이 발생합니다. \n※ 자세한 내용은 투자설명서를 참조하시기 바랍니다. \n분류 \n투자신탁, 증권(주식형), 개방형(중도환매가능), 추가형(추가납입가능), 종류형, 모자형 \n투자비용 \n클래스 \n종류 \n투자자가 부담하는 \n수수료 및 총보수(단위:%) \n1,000 만원 투자시 투자자가 부담하는 \n투자기간별 총비용 예시 (단위: 천원) \n판매 \n수수료 \n \n \n동종 \n유형 \n총보수 \n총보수 \n·비용 \n1 년 \n2 년 \n3 년 \n5 년 \n10 년 \n총 \n보수 \n판매 \n보수 \n수수료선취- \n오프라인형(A) \n납입금액의 \n1.0%이내 \n1.455 \n0.600 \n1.370 \n1.457 \n246 \n398 \n556 \n888 \n1,831 \n수수료선취- \n온라인형(A-e) \n납입금액의 \n0.5%이내 \n1.155 \n0.300 \n1.030 \n1.157 \n167 \n289 \n416 \n684 \n1,453 \n수수료미징구- \n오프라인형(C) \n없음 \n1.805 \n0.950 \n1.580 \n1,807 \n184 \n373 \n568 \n979 \n2,127 \n수수료미징구- \n온라인형(C-e) \n없음 \n1.325 \n0.470 \n1.160 \n1,327 \n135 \n275 \n421 \n728 \n1,604 \n주1) 종류형집합투자기구의 구체적인 투자비용은 ‘투자설명서 제2부. 집합투자기구에 관한 사항 중 13. 보수 및 수수료에 \n관한 사항’을 참고하시기 바랍니다. \n주2) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투가기구 전체의 평균 총보수비용을 의미합니다. \n주3) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 \n제외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 \n투자수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. \n주4) 종류 A형과 종류 C형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-\ne형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 \n수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 \n작성기준일: 2025. 7. 11 \n디에스Maestro증권자투자신탁[주식] (펀드코드:E4451)",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_t001__c0e233135e",
+      "field_path": "fees[2]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "페이지 3 / 73 \n \n요 약 정 보\n \n투자 위험 등급 \n2등급 (높은 위험) \n디에스자산운용㈜은 이 투자신탁의 투자대상 자산의 종류 및 \n위험도를 감안하여 2등급으로 분류하였습니다. \n집합투자증권은 『예금자보호법』에 따라 보호되지 않는 실적 배당상품입니다. \n해당 집합투자기구는 국내 주식을 주된 투자대상으로 하는 모투자신탁에 \n신탁재산의 60% 이상을 투자하여, 국내 주식 투자에 따른 주식 등 \n가격변동위험, 특정주식 집중투자위험, 시장위험 등이 있으므로 투자에 \n신중을 기하여 주시기 바랍니다. \n1 \n2 \n3 \n4 \n5 \n6 \n매우 \n높은 \n위험 \n높은 \n위험 \n다소 \n높은 \n위험 \n보통 \n위험 \n낮은 \n위험 \n매우 \n낮은 \n위험 \n이 요약정보는 디에스Maestro증권자투자신탁[주식]의 투자설명서의 내용 중 중요사항을 발췌∙요약한 핵심정\n보를 담고 있습니다. 따라서 자세한 정보가 필요하신 경우에는 동 집합투자증권을 매입하기 이전에 투자설\n명서를 반드시 참고 하시기 바랍니다. \n투자목적 \n및 \n투자전략 \n1. 투자목적: 이 투자신탁은 국내 주식에 주로 투자하는 모투자신탁을 법 시행령 제94조 제2항 \n제4호에서 규정하는 주된 투자대상자산으로 하며 수익을 추구하는 것을 목적으로 합니다. \n그러나 상기의 투자목적이 반드시 달성된다는 보장은 없으며, 집합투자업자, 신탁업자, 판매회사 \n등 이 투자신탁과 관련된 어떠한 당사자도 투자원금의 보장 또는 투자목적의 달성을 보장하지 \n아니합니다. \n2. \n투자전략: \n이 \n투자신탁은 \n디에스Brave증권모투자신탁[주식]에 \n90% \n이상 \n투자하는 \n자투자신탁으로서, 모투자신탁의 운용실적에 따라 이익 또는 손실이 발생합니다. \n※ 자세한 내용은 투자설명서를 참조하시기 바랍니다. \n분류 \n투자신탁, 증권(주식형), 개방형(중도환매가능), 추가형(추가납입가능), 종류형, 모자형 \n투자비용 \n클래스 \n종류 \n투자자가 부담하는 \n수수료 및 총보수(단위:%) \n1,000 만원 투자시 투자자가 부담하는 \n투자기간별 총비용 예시 (단위: 천원) \n판매 \n수수료 \n \n \n동종 \n유형 \n총보수 \n총보수 \n·비용 \n1 년 \n2 년 \n3 년 \n5 년 \n10 년 \n총 \n보수 \n판매 \n보수 \n수수료선취- \n오프라인형(A) \n납입금액의 \n1.0%이내 \n1.455 \n0.600 \n1.370 \n1.457 \n246 \n398 \n556 \n888 \n1,831 \n수수료선취- \n온라인형(A-e) \n납입금액의 \n0.5%이내 \n1.155 \n0.300 \n1.030 \n1.157 \n167 \n289 \n416 \n684 \n1,453 \n수수료미징구- \n오프라인형(C) \n없음 \n1.805 \n0.950 \n1.580 \n1,807 \n184 \n373 \n568 \n979 \n2,127 \n수수료미징구- \n온라인형(C-e) \n없음 \n1.325 \n0.470 \n1.160 \n1,327 \n135 \n275 \n421 \n728 \n1,604 \n주1) 종류형집합투자기구의 구체적인 투자비용은 ‘투자설명서 제2부. 집합투자기구에 관한 사항 중 13. 보수 및 수수료에 \n관한 사항’을 참고하시기 바랍니다. \n주2) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투가기구 전체의 평균 총보수비용을 의미합니다. \n주3) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 \n제외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 \n투자수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. \n주4) 종류 A형과 종류 C형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-\ne형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 \n수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 \n작성기준일: 2025. 7. 11 \n디에스Maestro증권자투자신탁[주식] (펀드코드:E4451)",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_t001__95910f1e8b",
+      "field_path": "fees[3]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "페이지 3 / 73 \n \n요 약 정 보\n \n투자 위험 등급 \n2등급 (높은 위험) \n디에스자산운용㈜은 이 투자신탁의 투자대상 자산의 종류 및 \n위험도를 감안하여 2등급으로 분류하였습니다. \n집합투자증권은 『예금자보호법』에 따라 보호되지 않는 실적 배당상품입니다. \n해당 집합투자기구는 국내 주식을 주된 투자대상으로 하는 모투자신탁에 \n신탁재산의 60% 이상을 투자하여, 국내 주식 투자에 따른 주식 등 \n가격변동위험, 특정주식 집중투자위험, 시장위험 등이 있으므로 투자에 \n신중을 기하여 주시기 바랍니다. \n1 \n2 \n3 \n4 \n5 \n6 \n매우 \n높은 \n위험 \n높은 \n위험 \n다소 \n높은 \n위험 \n보통 \n위험 \n낮은 \n위험 \n매우 \n낮은 \n위험 \n이 요약정보는 디에스Maestro증권자투자신탁[주식]의 투자설명서의 내용 중 중요사항을 발췌∙요약한 핵심정\n보를 담고 있습니다. 따라서 자세한 정보가 필요하신 경우에는 동 집합투자증권을 매입하기 이전에 투자설\n명서를 반드시 참고 하시기 바랍니다. \n투자목적 \n및 \n투자전략 \n1. 투자목적: 이 투자신탁은 국내 주식에 주로 투자하는 모투자신탁을 법 시행령 제94조 제2항 \n제4호에서 규정하는 주된 투자대상자산으로 하며 수익을 추구하는 것을 목적으로 합니다. \n그러나 상기의 투자목적이 반드시 달성된다는 보장은 없으며, 집합투자업자, 신탁업자, 판매회사 \n등 이 투자신탁과 관련된 어떠한 당사자도 투자원금의 보장 또는 투자목적의 달성을 보장하지 \n아니합니다. \n2. \n투자전략: \n이 \n투자신탁은 \n디에스Brave증권모투자신탁[주식]에 \n90% \n이상 \n투자하는 \n자투자신탁으로서, 모투자신탁의 운용실적에 따라 이익 또는 손실이 발생합니다. \n※ 자세한 내용은 투자설명서를 참조하시기 바랍니다. \n분류 \n투자신탁, 증권(주식형), 개방형(중도환매가능), 추가형(추가납입가능), 종류형, 모자형 \n투자비용 \n클래스 \n종류 \n투자자가 부담하는 \n수수료 및 총보수(단위:%) \n1,000 만원 투자시 투자자가 부담하는 \n투자기간별 총비용 예시 (단위: 천원) \n판매 \n수수료 \n \n \n동종 \n유형 \n총보수 \n총보수 \n·비용 \n1 년 \n2 년 \n3 년 \n5 년 \n10 년 \n총 \n보수 \n판매 \n보수 \n수수료선취- \n오프라인형(A) \n납입금액의 \n1.0%이내 \n1.455 \n0.600 \n1.370 \n1.457 \n246 \n398 \n556 \n888 \n1,831 \n수수료선취- \n온라인형(A-e) \n납입금액의 \n0.5%이내 \n1.155 \n0.300 \n1.030 \n1.157 \n167 \n289 \n416 \n684 \n1,453 \n수수료미징구- \n오프라인형(C) \n없음 \n1.805 \n0.950 \n1.580 \n1,807 \n184 \n373 \n568 \n979 \n2,127 \n수수료미징구- \n온라인형(C-e) \n없음 \n1.325 \n0.470 \n1.160 \n1,327 \n135 \n275 \n421 \n728 \n1,604 \n주1) 종류형집합투자기구의 구체적인 투자비용은 ‘투자설명서 제2부. 집합투자기구에 관한 사항 중 13. 보수 및 수수료에 \n관한 사항’을 참고하시기 바랍니다. \n주2) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투가기구 전체의 평균 총보수비용을 의미합니다. \n주3) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 \n제외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 \n투자수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. \n주4) 종류 A형과 종류 C형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-\ne형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 \n수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 \n작성기준일: 2025. 7. 11 \n디에스Maestro증권자투자신탁[주식] (펀드코드:E4451)",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_t001__fa88bf1a36",
+      "field_path": "sales_charges[1]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "페이지 3 / 73 \n \n요 약 정 보\n \n투자 위험 등급 \n2등급 (높은 위험) \n디에스자산운용㈜은 이 투자신탁의 투자대상 자산의 종류 및 \n위험도를 감안하여 2등급으로 분류하였습니다. \n집합투자증권은 『예금자보호법』에 따라 보호되지 않는 실적 배당상품입니다. \n해당 집합투자기구는 국내 주식을 주된 투자대상으로 하는 모투자신탁에 \n신탁재산의 60% 이상을 투자하여, 국내 주식 투자에 따른 주식 등 \n가격변동위험, 특정주식 집중투자위험, 시장위험 등이 있으므로 투자에 \n신중을 기하여 주시기 바랍니다. \n1 \n2 \n3 \n4 \n5 \n6 \n매우 \n높은 \n위험 \n높은 \n위험 \n다소 \n높은 \n위험 \n보통 \n위험 \n낮은 \n위험 \n매우 \n낮은 \n위험 \n이 요약정보는 디에스Maestro증권자투자신탁[주식]의 투자설명서의 내용 중 중요사항을 발췌∙요약한 핵심정\n보를 담고 있습니다. 따라서 자세한 정보가 필요하신 경우에는 동 집합투자증권을 매입하기 이전에 투자설\n명서를 반드시 참고 하시기 바랍니다. \n투자목적 \n및 \n투자전략 \n1. 투자목적: 이 투자신탁은 국내 주식에 주로 투자하는 모투자신탁을 법 시행령 제94조 제2항 \n제4호에서 규정하는 주된 투자대상자산으로 하며 수익을 추구하는 것을 목적으로 합니다. \n그러나 상기의 투자목적이 반드시 달성된다는 보장은 없으며, 집합투자업자, 신탁업자, 판매회사 \n등 이 투자신탁과 관련된 어떠한 당사자도 투자원금의 보장 또는 투자목적의 달성을 보장하지 \n아니합니다. \n2. \n투자전략: \n이 \n투자신탁은 \n디에스Brave증권모투자신탁[주식]에 \n90% \n이상 \n투자하는 \n자투자신탁으로서, 모투자신탁의 운용실적에 따라 이익 또는 손실이 발생합니다. \n※ 자세한 내용은 투자설명서를 참조하시기 바랍니다. \n분류 \n투자신탁, 증권(주식형), 개방형(중도환매가능), 추가형(추가납입가능), 종류형, 모자형 \n투자비용 \n클래스 \n종류 \n투자자가 부담하는 \n수수료 및 총보수(단위:%) \n1,000 만원 투자시 투자자가 부담하는 \n투자기간별 총비용 예시 (단위: 천원) \n판매 \n수수료 \n \n \n동종 \n유형 \n총보수 \n총보수 \n·비용 \n1 년 \n2 년 \n3 년 \n5 년 \n10 년 \n총 \n보수 \n판매 \n보수 \n수수료선취- \n오프라인형(A) \n납입금액의 \n1.0%이내 \n1.455 \n0.600 \n1.370 \n1.457 \n246 \n398 \n556 \n888 \n1,831 \n수수료선취- \n온라인형(A-e) \n납입금액의 \n0.5%이내 \n1.155 \n0.300 \n1.030 \n1.157 \n167 \n289 \n416 \n684 \n1,453 \n수수료미징구- \n오프라인형(C) \n없음 \n1.805 \n0.950 \n1.580 \n1,807 \n184 \n373 \n568 \n979 \n2,127 \n수수료미징구- \n온라인형(C-e) \n없음 \n1.325 \n0.470 \n1.160 \n1,327 \n135 \n275 \n421 \n728 \n1,604 \n주1) 종류형집합투자기구의 구체적인 투자비용은 ‘투자설명서 제2부. 집합투자기구에 관한 사항 중 13. 보수 및 수수료에 \n관한 사항’을 참고하시기 바랍니다. \n주2) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투가기구 전체의 평균 총보수비용을 의미합니다. \n주3) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 \n제외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 \n투자수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. \n주4) 종류 A형과 종류 C형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-\ne형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 \n수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 \n작성기준일: 2025. 7. 11 \n디에스Maestro증권자투자신탁[주식] (펀드코드:E4451)",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_t001__408d9ff58a",
+      "field_path": "fees[4]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "페이지 3 / 73 \n \n요 약 정 보\n \n투자 위험 등급 \n2등급 (높은 위험) \n디에스자산운용㈜은 이 투자신탁의 투자대상 자산의 종류 및 \n위험도를 감안하여 2등급으로 분류하였습니다. \n집합투자증권은 『예금자보호법』에 따라 보호되지 않는 실적 배당상품입니다. \n해당 집합투자기구는 국내 주식을 주된 투자대상으로 하는 모투자신탁에 \n신탁재산의 60% 이상을 투자하여, 국내 주식 투자에 따른 주식 등 \n가격변동위험, 특정주식 집중투자위험, 시장위험 등이 있으므로 투자에 \n신중을 기하여 주시기 바랍니다. \n1 \n2 \n3 \n4 \n5 \n6 \n매우 \n높은 \n위험 \n높은 \n위험 \n다소 \n높은 \n위험 \n보통 \n위험 \n낮은 \n위험 \n매우 \n낮은 \n위험 \n이 요약정보는 디에스Maestro증권자투자신탁[주식]의 투자설명서의 내용 중 중요사항을 발췌∙요약한 핵심정\n보를 담고 있습니다. 따라서 자세한 정보가 필요하신 경우에는 동 집합투자증권을 매입하기 이전에 투자설\n명서를 반드시 참고 하시기 바랍니다. \n투자목적 \n및 \n투자전략 \n1. 투자목적: 이 투자신탁은 국내 주식에 주로 투자하는 모투자신탁을 법 시행령 제94조 제2항 \n제4호에서 규정하는 주된 투자대상자산으로 하며 수익을 추구하는 것을 목적으로 합니다. \n그러나 상기의 투자목적이 반드시 달성된다는 보장은 없으며, 집합투자업자, 신탁업자, 판매회사 \n등 이 투자신탁과 관련된 어떠한 당사자도 투자원금의 보장 또는 투자목적의 달성을 보장하지 \n아니합니다. \n2. \n투자전략: \n이 \n투자신탁은 \n디에스Brave증권모투자신탁[주식]에 \n90% \n이상 \n투자하는 \n자투자신탁으로서, 모투자신탁의 운용실적에 따라 이익 또는 손실이 발생합니다. \n※ 자세한 내용은 투자설명서를 참조하시기 바랍니다. \n분류 \n투자신탁, 증권(주식형), 개방형(중도환매가능), 추가형(추가납입가능), 종류형, 모자형 \n투자비용 \n클래스 \n종류 \n투자자가 부담하는 \n수수료 및 총보수(단위:%) \n1,000 만원 투자시 투자자가 부담하는 \n투자기간별 총비용 예시 (단위: 천원) \n판매 \n수수료 \n \n \n동종 \n유형 \n총보수 \n총보수 \n·비용 \n1 년 \n2 년 \n3 년 \n5 년 \n10 년 \n총 \n보수 \n판매 \n보수 \n수수료선취- \n오프라인형(A) \n납입금액의 \n1.0%이내 \n1.455 \n0.600 \n1.370 \n1.457 \n246 \n398 \n556 \n888 \n1,831 \n수수료선취- \n온라인형(A-e) \n납입금액의 \n0.5%이내 \n1.155 \n0.300 \n1.030 \n1.157 \n167 \n289 \n416 \n684 \n1,453 \n수수료미징구- \n오프라인형(C) \n없음 \n1.805 \n0.950 \n1.580 \n1,807 \n184 \n373 \n568 \n979 \n2,127 \n수수료미징구- \n온라인형(C-e) \n없음 \n1.325 \n0.470 \n1.160 \n1,327 \n135 \n275 \n421 \n728 \n1,604 \n주1) 종류형집합투자기구의 구체적인 투자비용은 ‘투자설명서 제2부. 집합투자기구에 관한 사항 중 13. 보수 및 수수료에 \n관한 사항’을 참고하시기 바랍니다. \n주2) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투가기구 전체의 평균 총보수비용을 의미합니다. \n주3) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 \n제외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 \n투자수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. \n주4) 종류 A형과 종류 C형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-\ne형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 \n수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 \n작성기준일: 2025. 7. 11 \n디에스Maestro증권자투자신탁[주식] (펀드코드:E4451)",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_t001__916aad6894",
+      "field_path": "fees[5]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "페이지 3 / 73 \n \n요 약 정 보\n \n투자 위험 등급 \n2등급 (높은 위험) \n디에스자산운용㈜은 이 투자신탁의 투자대상 자산의 종류 및 \n위험도를 감안하여 2등급으로 분류하였습니다. \n집합투자증권은 『예금자보호법』에 따라 보호되지 않는 실적 배당상품입니다. \n해당 집합투자기구는 국내 주식을 주된 투자대상으로 하는 모투자신탁에 \n신탁재산의 60% 이상을 투자하여, 국내 주식 투자에 따른 주식 등 \n가격변동위험, 특정주식 집중투자위험, 시장위험 등이 있으므로 투자에 \n신중을 기하여 주시기 바랍니다. \n1 \n2 \n3 \n4 \n5 \n6 \n매우 \n높은 \n위험 \n높은 \n위험 \n다소 \n높은 \n위험 \n보통 \n위험 \n낮은 \n위험 \n매우 \n낮은 \n위험 \n이 요약정보는 디에스Maestro증권자투자신탁[주식]의 투자설명서의 내용 중 중요사항을 발췌∙요약한 핵심정\n보를 담고 있습니다. 따라서 자세한 정보가 필요하신 경우에는 동 집합투자증권을 매입하기 이전에 투자설\n명서를 반드시 참고 하시기 바랍니다. \n투자목적 \n및 \n투자전략 \n1. 투자목적: 이 투자신탁은 국내 주식에 주로 투자하는 모투자신탁을 법 시행령 제94조 제2항 \n제4호에서 규정하는 주된 투자대상자산으로 하며 수익을 추구하는 것을 목적으로 합니다. \n그러나 상기의 투자목적이 반드시 달성된다는 보장은 없으며, 집합투자업자, 신탁업자, 판매회사 \n등 이 투자신탁과 관련된 어떠한 당사자도 투자원금의 보장 또는 투자목적의 달성을 보장하지 \n아니합니다. \n2. \n투자전략: \n이 \n투자신탁은 \n디에스Brave증권모투자신탁[주식]에 \n90% \n이상 \n투자하는 \n자투자신탁으로서, 모투자신탁의 운용실적에 따라 이익 또는 손실이 발생합니다. \n※ 자세한 내용은 투자설명서를 참조하시기 바랍니다. \n분류 \n투자신탁, 증권(주식형), 개방형(중도환매가능), 추가형(추가납입가능), 종류형, 모자형 \n투자비용 \n클래스 \n종류 \n투자자가 부담하는 \n수수료 및 총보수(단위:%) \n1,000 만원 투자시 투자자가 부담하는 \n투자기간별 총비용 예시 (단위: 천원) \n판매 \n수수료 \n \n \n동종 \n유형 \n총보수 \n총보수 \n·비용 \n1 년 \n2 년 \n3 년 \n5 년 \n10 년 \n총 \n보수 \n판매 \n보수 \n수수료선취- \n오프라인형(A) \n납입금액의 \n1.0%이내 \n1.455 \n0.600 \n1.370 \n1.457 \n246 \n398 \n556 \n888 \n1,831 \n수수료선취- \n온라인형(A-e) \n납입금액의 \n0.5%이내 \n1.155 \n0.300 \n1.030 \n1.157 \n167 \n289 \n416 \n684 \n1,453 \n수수료미징구- \n오프라인형(C) \n없음 \n1.805 \n0.950 \n1.580 \n1,807 \n184 \n373 \n568 \n979 \n2,127 \n수수료미징구- \n온라인형(C-e) \n없음 \n1.325 \n0.470 \n1.160 \n1,327 \n135 \n275 \n421 \n728 \n1,604 \n주1) 종류형집합투자기구의 구체적인 투자비용은 ‘투자설명서 제2부. 집합투자기구에 관한 사항 중 13. 보수 및 수수료에 \n관한 사항’을 참고하시기 바랍니다. \n주2) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투가기구 전체의 평균 총보수비용을 의미합니다. \n주3) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 \n제외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 \n투자수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. \n주4) 종류 A형과 종류 C형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-\ne형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 \n수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 \n작성기준일: 2025. 7. 11 \n디에스Maestro증권자투자신탁[주식] (펀드코드:E4451)",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_t001__6911349e12",
+      "field_path": "fees[6]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "페이지 3 / 73 \n \n요 약 정 보\n \n투자 위험 등급 \n2등급 (높은 위험) \n디에스자산운용㈜은 이 투자신탁의 투자대상 자산의 종류 및 \n위험도를 감안하여 2등급으로 분류하였습니다. \n집합투자증권은 『예금자보호법』에 따라 보호되지 않는 실적 배당상품입니다. \n해당 집합투자기구는 국내 주식을 주된 투자대상으로 하는 모투자신탁에 \n신탁재산의 60% 이상을 투자하여, 국내 주식 투자에 따른 주식 등 \n가격변동위험, 특정주식 집중투자위험, 시장위험 등이 있으므로 투자에 \n신중을 기하여 주시기 바랍니다. \n1 \n2 \n3 \n4 \n5 \n6 \n매우 \n높은 \n위험 \n높은 \n위험 \n다소 \n높은 \n위험 \n보통 \n위험 \n낮은 \n위험 \n매우 \n낮은 \n위험 \n이 요약정보는 디에스Maestro증권자투자신탁[주식]의 투자설명서의 내용 중 중요사항을 발췌∙요약한 핵심정\n보를 담고 있습니다. 따라서 자세한 정보가 필요하신 경우에는 동 집합투자증권을 매입하기 이전에 투자설\n명서를 반드시 참고 하시기 바랍니다. \n투자목적 \n및 \n투자전략 \n1. 투자목적: 이 투자신탁은 국내 주식에 주로 투자하는 모투자신탁을 법 시행령 제94조 제2항 \n제4호에서 규정하는 주된 투자대상자산으로 하며 수익을 추구하는 것을 목적으로 합니다. \n그러나 상기의 투자목적이 반드시 달성된다는 보장은 없으며, 집합투자업자, 신탁업자, 판매회사 \n등 이 투자신탁과 관련된 어떠한 당사자도 투자원금의 보장 또는 투자목적의 달성을 보장하지 \n아니합니다. \n2. \n투자전략: \n이 \n투자신탁은 \n디에스Brave증권모투자신탁[주식]에 \n90% \n이상 \n투자하는 \n자투자신탁으로서, 모투자신탁의 운용실적에 따라 이익 또는 손실이 발생합니다. \n※ 자세한 내용은 투자설명서를 참조하시기 바랍니다. \n분류 \n투자신탁, 증권(주식형), 개방형(중도환매가능), 추가형(추가납입가능), 종류형, 모자형 \n투자비용 \n클래스 \n종류 \n투자자가 부담하는 \n수수료 및 총보수(단위:%) \n1,000 만원 투자시 투자자가 부담하는 \n투자기간별 총비용 예시 (단위: 천원) \n판매 \n수수료 \n \n \n동종 \n유형 \n총보수 \n총보수 \n·비용 \n1 년 \n2 년 \n3 년 \n5 년 \n10 년 \n총 \n보수 \n판매 \n보수 \n수수료선취- \n오프라인형(A) \n납입금액의 \n1.0%이내 \n1.455 \n0.600 \n1.370 \n1.457 \n246 \n398 \n556 \n888 \n1,831 \n수수료선취- \n온라인형(A-e) \n납입금액의 \n0.5%이내 \n1.155 \n0.300 \n1.030 \n1.157 \n167 \n289 \n416 \n684 \n1,453 \n수수료미징구- \n오프라인형(C) \n없음 \n1.805 \n0.950 \n1.580 \n1,807 \n184 \n373 \n568 \n979 \n2,127 \n수수료미징구- \n온라인형(C-e) \n없음 \n1.325 \n0.470 \n1.160 \n1,327 \n135 \n275 \n421 \n728 \n1,604 \n주1) 종류형집합투자기구의 구체적인 투자비용은 ‘투자설명서 제2부. 집합투자기구에 관한 사항 중 13. 보수 및 수수료에 \n관한 사항’을 참고하시기 바랍니다. \n주2) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투가기구 전체의 평균 총보수비용을 의미합니다. \n주3) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 \n제외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 \n투자수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. \n주4) 종류 A형과 종류 C형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-\ne형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 \n수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 \n작성기준일: 2025. 7. 11 \n디에스Maestro증권자투자신탁[주식] (펀드코드:E4451)",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_t001__a7208ba15a",
+      "field_path": "fees[7]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "페이지 3 / 73 \n \n요 약 정 보\n \n투자 위험 등급 \n2등급 (높은 위험) \n디에스자산운용㈜은 이 투자신탁의 투자대상 자산의 종류 및 \n위험도를 감안하여 2등급으로 분류하였습니다. \n집합투자증권은 『예금자보호법』에 따라 보호되지 않는 실적 배당상품입니다. \n해당 집합투자기구는 국내 주식을 주된 투자대상으로 하는 모투자신탁에 \n신탁재산의 60% 이상을 투자하여, 국내 주식 투자에 따른 주식 등 \n가격변동위험, 특정주식 집중투자위험, 시장위험 등이 있으므로 투자에 \n신중을 기하여 주시기 바랍니다. \n1 \n2 \n3 \n4 \n5 \n6 \n매우 \n높은 \n위험 \n높은 \n위험 \n다소 \n높은 \n위험 \n보통 \n위험 \n낮은 \n위험 \n매우 \n낮은 \n위험 \n이 요약정보는 디에스Maestro증권자투자신탁[주식]의 투자설명서의 내용 중 중요사항을 발췌∙요약한 핵심정\n보를 담고 있습니다. 따라서 자세한 정보가 필요하신 경우에는 동 집합투자증권을 매입하기 이전에 투자설\n명서를 반드시 참고 하시기 바랍니다. \n투자목적 \n및 \n투자전략 \n1. 투자목적: 이 투자신탁은 국내 주식에 주로 투자하는 모투자신탁을 법 시행령 제94조 제2항 \n제4호에서 규정하는 주된 투자대상자산으로 하며 수익을 추구하는 것을 목적으로 합니다. \n그러나 상기의 투자목적이 반드시 달성된다는 보장은 없으며, 집합투자업자, 신탁업자, 판매회사 \n등 이 투자신탁과 관련된 어떠한 당사자도 투자원금의 보장 또는 투자목적의 달성을 보장하지 \n아니합니다. \n2. \n투자전략: \n이 \n투자신탁은 \n디에스Brave증권모투자신탁[주식]에 \n90% \n이상 \n투자하는 \n자투자신탁으로서, 모투자신탁의 운용실적에 따라 이익 또는 손실이 발생합니다. \n※ 자세한 내용은 투자설명서를 참조하시기 바랍니다. \n분류 \n투자신탁, 증권(주식형), 개방형(중도환매가능), 추가형(추가납입가능), 종류형, 모자형 \n투자비용 \n클래스 \n종류 \n투자자가 부담하는 \n수수료 및 총보수(단위:%) \n1,000 만원 투자시 투자자가 부담하는 \n투자기간별 총비용 예시 (단위: 천원) \n판매 \n수수료 \n \n \n동종 \n유형 \n총보수 \n총보수 \n·비용 \n1 년 \n2 년 \n3 년 \n5 년 \n10 년 \n총 \n보수 \n판매 \n보수 \n수수료선취- \n오프라인형(A) \n납입금액의 \n1.0%이내 \n1.455 \n0.600 \n1.370 \n1.457 \n246 \n398 \n556 \n888 \n1,831 \n수수료선취- \n온라인형(A-e) \n납입금액의 \n0.5%이내 \n1.155 \n0.300 \n1.030 \n1.157 \n167 \n289 \n416 \n684 \n1,453 \n수수료미징구- \n오프라인형(C) \n없음 \n1.805 \n0.950 \n1.580 \n1,807 \n184 \n373 \n568 \n979 \n2,127 \n수수료미징구- \n온라인형(C-e) \n없음 \n1.325 \n0.470 \n1.160 \n1,327 \n135 \n275 \n421 \n728 \n1,604 \n주1) 종류형집합투자기구의 구체적인 투자비용은 ‘투자설명서 제2부. 집합투자기구에 관한 사항 중 13. 보수 및 수수료에 \n관한 사항’을 참고하시기 바랍니다. \n주2) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투가기구 전체의 평균 총보수비용을 의미합니다. \n주3) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 \n제외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 \n투자수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. \n주4) 종류 A형과 종류 C형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-\ne형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 \n수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 \n작성기준일: 2025. 7. 11 \n디에스Maestro증권자투자신탁[주식] (펀드코드:E4451)",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_t001__8e8e73622b",
+      "field_path": "sales_charges[2]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "페이지 3 / 73 \n \n요 약 정 보\n \n투자 위험 등급 \n2등급 (높은 위험) \n디에스자산운용㈜은 이 투자신탁의 투자대상 자산의 종류 및 \n위험도를 감안하여 2등급으로 분류하였습니다. \n집합투자증권은 『예금자보호법』에 따라 보호되지 않는 실적 배당상품입니다. \n해당 집합투자기구는 국내 주식을 주된 투자대상으로 하는 모투자신탁에 \n신탁재산의 60% 이상을 투자하여, 국내 주식 투자에 따른 주식 등 \n가격변동위험, 특정주식 집중투자위험, 시장위험 등이 있으므로 투자에 \n신중을 기하여 주시기 바랍니다. \n1 \n2 \n3 \n4 \n5 \n6 \n매우 \n높은 \n위험 \n높은 \n위험 \n다소 \n높은 \n위험 \n보통 \n위험 \n낮은 \n위험 \n매우 \n낮은 \n위험 \n이 요약정보는 디에스Maestro증권자투자신탁[주식]의 투자설명서의 내용 중 중요사항을 발췌∙요약한 핵심정\n보를 담고 있습니다. 따라서 자세한 정보가 필요하신 경우에는 동 집합투자증권을 매입하기 이전에 투자설\n명서를 반드시 참고 하시기 바랍니다. \n투자목적 \n및 \n투자전략 \n1. 투자목적: 이 투자신탁은 국내 주식에 주로 투자하는 모투자신탁을 법 시행령 제94조 제2항 \n제4호에서 규정하는 주된 투자대상자산으로 하며 수익을 추구하는 것을 목적으로 합니다. \n그러나 상기의 투자목적이 반드시 달성된다는 보장은 없으며, 집합투자업자, 신탁업자, 판매회사 \n등 이 투자신탁과 관련된 어떠한 당사자도 투자원금의 보장 또는 투자목적의 달성을 보장하지 \n아니합니다. \n2. \n투자전략: \n이 \n투자신탁은 \n디에스Brave증권모투자신탁[주식]에 \n90% \n이상 \n투자하는 \n자투자신탁으로서, 모투자신탁의 운용실적에 따라 이익 또는 손실이 발생합니다. \n※ 자세한 내용은 투자설명서를 참조하시기 바랍니다. \n분류 \n투자신탁, 증권(주식형), 개방형(중도환매가능), 추가형(추가납입가능), 종류형, 모자형 \n투자비용 \n클래스 \n종류 \n투자자가 부담하는 \n수수료 및 총보수(단위:%) \n1,000 만원 투자시 투자자가 부담하는 \n투자기간별 총비용 예시 (단위: 천원) \n판매 \n수수료 \n \n \n동종 \n유형 \n총보수 \n총보수 \n·비용 \n1 년 \n2 년 \n3 년 \n5 년 \n10 년 \n총 \n보수 \n판매 \n보수 \n수수료선취- \n오프라인형(A) \n납입금액의 \n1.0%이내 \n1.455 \n0.600 \n1.370 \n1.457 \n246 \n398 \n556 \n888 \n1,831 \n수수료선취- \n온라인형(A-e) \n납입금액의 \n0.5%이내 \n1.155 \n0.300 \n1.030 \n1.157 \n167 \n289 \n416 \n684 \n1,453 \n수수료미징구- \n오프라인형(C) \n없음 \n1.805 \n0.950 \n1.580 \n1,807 \n184 \n373 \n568 \n979 \n2,127 \n수수료미징구- \n온라인형(C-e) \n없음 \n1.325 \n0.470 \n1.160 \n1,327 \n135 \n275 \n421 \n728 \n1,604 \n주1) 종류형집합투자기구의 구체적인 투자비용은 ‘투자설명서 제2부. 집합투자기구에 관한 사항 중 13. 보수 및 수수료에 \n관한 사항’을 참고하시기 바랍니다. \n주2) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투가기구 전체의 평균 총보수비용을 의미합니다. \n주3) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 \n제외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 \n투자수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. \n주4) 종류 A형과 종류 C형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-\ne형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 \n수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 \n작성기준일: 2025. 7. 11 \n디에스Maestro증권자투자신탁[주식] (펀드코드:E4451)",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_t001__9252bbf3f0",
+      "field_path": "fees[8]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "페이지 3 / 73 \n \n요 약 정 보\n \n투자 위험 등급 \n2등급 (높은 위험) \n디에스자산운용㈜은 이 투자신탁의 투자대상 자산의 종류 및 \n위험도를 감안하여 2등급으로 분류하였습니다. \n집합투자증권은 『예금자보호법』에 따라 보호되지 않는 실적 배당상품입니다. \n해당 집합투자기구는 국내 주식을 주된 투자대상으로 하는 모투자신탁에 \n신탁재산의 60% 이상을 투자하여, 국내 주식 투자에 따른 주식 등 \n가격변동위험, 특정주식 집중투자위험, 시장위험 등이 있으므로 투자에 \n신중을 기하여 주시기 바랍니다. \n1 \n2 \n3 \n4 \n5 \n6 \n매우 \n높은 \n위험 \n높은 \n위험 \n다소 \n높은 \n위험 \n보통 \n위험 \n낮은 \n위험 \n매우 \n낮은 \n위험 \n이 요약정보는 디에스Maestro증권자투자신탁[주식]의 투자설명서의 내용 중 중요사항을 발췌∙요약한 핵심정\n보를 담고 있습니다. 따라서 자세한 정보가 필요하신 경우에는 동 집합투자증권을 매입하기 이전에 투자설\n명서를 반드시 참고 하시기 바랍니다. \n투자목적 \n및 \n투자전략 \n1. 투자목적: 이 투자신탁은 국내 주식에 주로 투자하는 모투자신탁을 법 시행령 제94조 제2항 \n제4호에서 규정하는 주된 투자대상자산으로 하며 수익을 추구하는 것을 목적으로 합니다. \n그러나 상기의 투자목적이 반드시 달성된다는 보장은 없으며, 집합투자업자, 신탁업자, 판매회사 \n등 이 투자신탁과 관련된 어떠한 당사자도 투자원금의 보장 또는 투자목적의 달성을 보장하지 \n아니합니다. \n2. \n투자전략: \n이 \n투자신탁은 \n디에스Brave증권모투자신탁[주식]에 \n90% \n이상 \n투자하는 \n자투자신탁으로서, 모투자신탁의 운용실적에 따라 이익 또는 손실이 발생합니다. \n※ 자세한 내용은 투자설명서를 참조하시기 바랍니다. \n분류 \n투자신탁, 증권(주식형), 개방형(중도환매가능), 추가형(추가납입가능), 종류형, 모자형 \n투자비용 \n클래스 \n종류 \n투자자가 부담하는 \n수수료 및 총보수(단위:%) \n1,000 만원 투자시 투자자가 부담하는 \n투자기간별 총비용 예시 (단위: 천원) \n판매 \n수수료 \n \n \n동종 \n유형 \n총보수 \n총보수 \n·비용 \n1 년 \n2 년 \n3 년 \n5 년 \n10 년 \n총 \n보수 \n판매 \n보수 \n수수료선취- \n오프라인형(A) \n납입금액의 \n1.0%이내 \n1.455 \n0.600 \n1.370 \n1.457 \n246 \n398 \n556 \n888 \n1,831 \n수수료선취- \n온라인형(A-e) \n납입금액의 \n0.5%이내 \n1.155 \n0.300 \n1.030 \n1.157 \n167 \n289 \n416 \n684 \n1,453 \n수수료미징구- \n오프라인형(C) \n없음 \n1.805 \n0.950 \n1.580 \n1,807 \n184 \n373 \n568 \n979 \n2,127 \n수수료미징구- \n온라인형(C-e) \n없음 \n1.325 \n0.470 \n1.160 \n1,327 \n135 \n275 \n421 \n728 \n1,604 \n주1) 종류형집합투자기구의 구체적인 투자비용은 ‘투자설명서 제2부. 집합투자기구에 관한 사항 중 13. 보수 및 수수료에 \n관한 사항’을 참고하시기 바랍니다. \n주2) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투가기구 전체의 평균 총보수비용을 의미합니다. \n주3) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 \n제외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 \n투자수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. \n주4) 종류 A형과 종류 C형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-\ne형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 \n수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 \n작성기준일: 2025. 7. 11 \n디에스Maestro증권자투자신탁[주식] (펀드코드:E4451)",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_t001__9fd0dfa582",
+      "field_path": "fees[9]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "페이지 3 / 73 \n \n요 약 정 보\n \n투자 위험 등급 \n2등급 (높은 위험) \n디에스자산운용㈜은 이 투자신탁의 투자대상 자산의 종류 및 \n위험도를 감안하여 2등급으로 분류하였습니다. \n집합투자증권은 『예금자보호법』에 따라 보호되지 않는 실적 배당상품입니다. \n해당 집합투자기구는 국내 주식을 주된 투자대상으로 하는 모투자신탁에 \n신탁재산의 60% 이상을 투자하여, 국내 주식 투자에 따른 주식 등 \n가격변동위험, 특정주식 집중투자위험, 시장위험 등이 있으므로 투자에 \n신중을 기하여 주시기 바랍니다. \n1 \n2 \n3 \n4 \n5 \n6 \n매우 \n높은 \n위험 \n높은 \n위험 \n다소 \n높은 \n위험 \n보통 \n위험 \n낮은 \n위험 \n매우 \n낮은 \n위험 \n이 요약정보는 디에스Maestro증권자투자신탁[주식]의 투자설명서의 내용 중 중요사항을 발췌∙요약한 핵심정\n보를 담고 있습니다. 따라서 자세한 정보가 필요하신 경우에는 동 집합투자증권을 매입하기 이전에 투자설\n명서를 반드시 참고 하시기 바랍니다. \n투자목적 \n및 \n투자전략 \n1. 투자목적: 이 투자신탁은 국내 주식에 주로 투자하는 모투자신탁을 법 시행령 제94조 제2항 \n제4호에서 규정하는 주된 투자대상자산으로 하며 수익을 추구하는 것을 목적으로 합니다. \n그러나 상기의 투자목적이 반드시 달성된다는 보장은 없으며, 집합투자업자, 신탁업자, 판매회사 \n등 이 투자신탁과 관련된 어떠한 당사자도 투자원금의 보장 또는 투자목적의 달성을 보장하지 \n아니합니다. \n2. \n투자전략: \n이 \n투자신탁은 \n디에스Brave증권모투자신탁[주식]에 \n90% \n이상 \n투자하는 \n자투자신탁으로서, 모투자신탁의 운용실적에 따라 이익 또는 손실이 발생합니다. \n※ 자세한 내용은 투자설명서를 참조하시기 바랍니다. \n분류 \n투자신탁, 증권(주식형), 개방형(중도환매가능), 추가형(추가납입가능), 종류형, 모자형 \n투자비용 \n클래스 \n종류 \n투자자가 부담하는 \n수수료 및 총보수(단위:%) \n1,000 만원 투자시 투자자가 부담하는 \n투자기간별 총비용 예시 (단위: 천원) \n판매 \n수수료 \n \n \n동종 \n유형 \n총보수 \n총보수 \n·비용 \n1 년 \n2 년 \n3 년 \n5 년 \n10 년 \n총 \n보수 \n판매 \n보수 \n수수료선취- \n오프라인형(A) \n납입금액의 \n1.0%이내 \n1.455 \n0.600 \n1.370 \n1.457 \n246 \n398 \n556 \n888 \n1,831 \n수수료선취- \n온라인형(A-e) \n납입금액의 \n0.5%이내 \n1.155 \n0.300 \n1.030 \n1.157 \n167 \n289 \n416 \n684 \n1,453 \n수수료미징구- \n오프라인형(C) \n없음 \n1.805 \n0.950 \n1.580 \n1,807 \n184 \n373 \n568 \n979 \n2,127 \n수수료미징구- \n온라인형(C-e) \n없음 \n1.325 \n0.470 \n1.160 \n1,327 \n135 \n275 \n421 \n728 \n1,604 \n주1) 종류형집합투자기구의 구체적인 투자비용은 ‘투자설명서 제2부. 집합투자기구에 관한 사항 중 13. 보수 및 수수료에 \n관한 사항’을 참고하시기 바랍니다. \n주2) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투가기구 전체의 평균 총보수비용을 의미합니다. \n주3) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 \n제외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 \n투자수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. \n주4) 종류 A형과 종류 C형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-\ne형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 \n수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 \n작성기준일: 2025. 7. 11 \n디에스Maestro증권자투자신탁[주식] (펀드코드:E4451)",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_t001__c80cbe2826",
+      "field_path": "fees[10]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "페이지 3 / 73 \n \n요 약 정 보\n \n투자 위험 등급 \n2등급 (높은 위험) \n디에스자산운용㈜은 이 투자신탁의 투자대상 자산의 종류 및 \n위험도를 감안하여 2등급으로 분류하였습니다. \n집합투자증권은 『예금자보호법』에 따라 보호되지 않는 실적 배당상품입니다. \n해당 집합투자기구는 국내 주식을 주된 투자대상으로 하는 모투자신탁에 \n신탁재산의 60% 이상을 투자하여, 국내 주식 투자에 따른 주식 등 \n가격변동위험, 특정주식 집중투자위험, 시장위험 등이 있으므로 투자에 \n신중을 기하여 주시기 바랍니다. \n1 \n2 \n3 \n4 \n5 \n6 \n매우 \n높은 \n위험 \n높은 \n위험 \n다소 \n높은 \n위험 \n보통 \n위험 \n낮은 \n위험 \n매우 \n낮은 \n위험 \n이 요약정보는 디에스Maestro증권자투자신탁[주식]의 투자설명서의 내용 중 중요사항을 발췌∙요약한 핵심정\n보를 담고 있습니다. 따라서 자세한 정보가 필요하신 경우에는 동 집합투자증권을 매입하기 이전에 투자설\n명서를 반드시 참고 하시기 바랍니다. \n투자목적 \n및 \n투자전략 \n1. 투자목적: 이 투자신탁은 국내 주식에 주로 투자하는 모투자신탁을 법 시행령 제94조 제2항 \n제4호에서 규정하는 주된 투자대상자산으로 하며 수익을 추구하는 것을 목적으로 합니다. \n그러나 상기의 투자목적이 반드시 달성된다는 보장은 없으며, 집합투자업자, 신탁업자, 판매회사 \n등 이 투자신탁과 관련된 어떠한 당사자도 투자원금의 보장 또는 투자목적의 달성을 보장하지 \n아니합니다. \n2. \n투자전략: \n이 \n투자신탁은 \n디에스Brave증권모투자신탁[주식]에 \n90% \n이상 \n투자하는 \n자투자신탁으로서, 모투자신탁의 운용실적에 따라 이익 또는 손실이 발생합니다. \n※ 자세한 내용은 투자설명서를 참조하시기 바랍니다. \n분류 \n투자신탁, 증권(주식형), 개방형(중도환매가능), 추가형(추가납입가능), 종류형, 모자형 \n투자비용 \n클래스 \n종류 \n투자자가 부담하는 \n수수료 및 총보수(단위:%) \n1,000 만원 투자시 투자자가 부담하는 \n투자기간별 총비용 예시 (단위: 천원) \n판매 \n수수료 \n \n \n동종 \n유형 \n총보수 \n총보수 \n·비용 \n1 년 \n2 년 \n3 년 \n5 년 \n10 년 \n총 \n보수 \n판매 \n보수 \n수수료선취- \n오프라인형(A) \n납입금액의 \n1.0%이내 \n1.455 \n0.600 \n1.370 \n1.457 \n246 \n398 \n556 \n888 \n1,831 \n수수료선취- \n온라인형(A-e) \n납입금액의 \n0.5%이내 \n1.155 \n0.300 \n1.030 \n1.157 \n167 \n289 \n416 \n684 \n1,453 \n수수료미징구- \n오프라인형(C) \n없음 \n1.805 \n0.950 \n1.580 \n1,807 \n184 \n373 \n568 \n979 \n2,127 \n수수료미징구- \n온라인형(C-e) \n없음 \n1.325 \n0.470 \n1.160 \n1,327 \n135 \n275 \n421 \n728 \n1,604 \n주1) 종류형집합투자기구의 구체적인 투자비용은 ‘투자설명서 제2부. 집합투자기구에 관한 사항 중 13. 보수 및 수수료에 \n관한 사항’을 참고하시기 바랍니다. \n주2) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투가기구 전체의 평균 총보수비용을 의미합니다. \n주3) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 \n제외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 \n투자수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. \n주4) 종류 A형과 종류 C형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-\ne형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 \n수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 \n작성기준일: 2025. 7. 11 \n디에스Maestro증권자투자신탁[주식] (펀드코드:E4451)",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_t001__fb9d431495",
+      "field_path": "fees[11]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "페이지 3 / 73 \n \n요 약 정 보\n \n투자 위험 등급 \n2등급 (높은 위험) \n디에스자산운용㈜은 이 투자신탁의 투자대상 자산의 종류 및 \n위험도를 감안하여 2등급으로 분류하였습니다. \n집합투자증권은 『예금자보호법』에 따라 보호되지 않는 실적 배당상품입니다. \n해당 집합투자기구는 국내 주식을 주된 투자대상으로 하는 모투자신탁에 \n신탁재산의 60% 이상을 투자하여, 국내 주식 투자에 따른 주식 등 \n가격변동위험, 특정주식 집중투자위험, 시장위험 등이 있으므로 투자에 \n신중을 기하여 주시기 바랍니다. \n1 \n2 \n3 \n4 \n5 \n6 \n매우 \n높은 \n위험 \n높은 \n위험 \n다소 \n높은 \n위험 \n보통 \n위험 \n낮은 \n위험 \n매우 \n낮은 \n위험 \n이 요약정보는 디에스Maestro증권자투자신탁[주식]의 투자설명서의 내용 중 중요사항을 발췌∙요약한 핵심정\n보를 담고 있습니다. 따라서 자세한 정보가 필요하신 경우에는 동 집합투자증권을 매입하기 이전에 투자설\n명서를 반드시 참고 하시기 바랍니다. \n투자목적 \n및 \n투자전략 \n1. 투자목적: 이 투자신탁은 국내 주식에 주로 투자하는 모투자신탁을 법 시행령 제94조 제2항 \n제4호에서 규정하는 주된 투자대상자산으로 하며 수익을 추구하는 것을 목적으로 합니다. \n그러나 상기의 투자목적이 반드시 달성된다는 보장은 없으며, 집합투자업자, 신탁업자, 판매회사 \n등 이 투자신탁과 관련된 어떠한 당사자도 투자원금의 보장 또는 투자목적의 달성을 보장하지 \n아니합니다. \n2. \n투자전략: \n이 \n투자신탁은 \n디에스Brave증권모투자신탁[주식]에 \n90% \n이상 \n투자하는 \n자투자신탁으로서, 모투자신탁의 운용실적에 따라 이익 또는 손실이 발생합니다. \n※ 자세한 내용은 투자설명서를 참조하시기 바랍니다. \n분류 \n투자신탁, 증권(주식형), 개방형(중도환매가능), 추가형(추가납입가능), 종류형, 모자형 \n투자비용 \n클래스 \n종류 \n투자자가 부담하는 \n수수료 및 총보수(단위:%) \n1,000 만원 투자시 투자자가 부담하는 \n투자기간별 총비용 예시 (단위: 천원) \n판매 \n수수료 \n \n \n동종 \n유형 \n총보수 \n총보수 \n·비용 \n1 년 \n2 년 \n3 년 \n5 년 \n10 년 \n총 \n보수 \n판매 \n보수 \n수수료선취- \n오프라인형(A) \n납입금액의 \n1.0%이내 \n1.455 \n0.600 \n1.370 \n1.457 \n246 \n398 \n556 \n888 \n1,831 \n수수료선취- \n온라인형(A-e) \n납입금액의 \n0.5%이내 \n1.155 \n0.300 \n1.030 \n1.157 \n167 \n289 \n416 \n684 \n1,453 \n수수료미징구- \n오프라인형(C) \n없음 \n1.805 \n0.950 \n1.580 \n1,807 \n184 \n373 \n568 \n979 \n2,127 \n수수료미징구- \n온라인형(C-e) \n없음 \n1.325 \n0.470 \n1.160 \n1,327 \n135 \n275 \n421 \n728 \n1,604 \n주1) 종류형집합투자기구의 구체적인 투자비용은 ‘투자설명서 제2부. 집합투자기구에 관한 사항 중 13. 보수 및 수수료에 \n관한 사항’을 참고하시기 바랍니다. \n주2) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투가기구 전체의 평균 총보수비용을 의미합니다. \n주3) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 \n제외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 \n투자수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. \n주4) 종류 A형과 종류 C형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-\ne형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 \n수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 \n작성기준일: 2025. 7. 11 \n디에스Maestro증권자투자신탁[주식] (펀드코드:E4451)",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_t001__d2acbcab64",
+      "field_path": "sales_charges[3]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "페이지 3 / 73 \n \n요 약 정 보\n \n투자 위험 등급 \n2등급 (높은 위험) \n디에스자산운용㈜은 이 투자신탁의 투자대상 자산의 종류 및 \n위험도를 감안하여 2등급으로 분류하였습니다. \n집합투자증권은 『예금자보호법』에 따라 보호되지 않는 실적 배당상품입니다. \n해당 집합투자기구는 국내 주식을 주된 투자대상으로 하는 모투자신탁에 \n신탁재산의 60% 이상을 투자하여, 국내 주식 투자에 따른 주식 등 \n가격변동위험, 특정주식 집중투자위험, 시장위험 등이 있으므로 투자에 \n신중을 기하여 주시기 바랍니다. \n1 \n2 \n3 \n4 \n5 \n6 \n매우 \n높은 \n위험 \n높은 \n위험 \n다소 \n높은 \n위험 \n보통 \n위험 \n낮은 \n위험 \n매우 \n낮은 \n위험 \n이 요약정보는 디에스Maestro증권자투자신탁[주식]의 투자설명서의 내용 중 중요사항을 발췌∙요약한 핵심정\n보를 담고 있습니다. 따라서 자세한 정보가 필요하신 경우에는 동 집합투자증권을 매입하기 이전에 투자설\n명서를 반드시 참고 하시기 바랍니다. \n투자목적 \n및 \n투자전략 \n1. 투자목적: 이 투자신탁은 국내 주식에 주로 투자하는 모투자신탁을 법 시행령 제94조 제2항 \n제4호에서 규정하는 주된 투자대상자산으로 하며 수익을 추구하는 것을 목적으로 합니다. \n그러나 상기의 투자목적이 반드시 달성된다는 보장은 없으며, 집합투자업자, 신탁업자, 판매회사 \n등 이 투자신탁과 관련된 어떠한 당사자도 투자원금의 보장 또는 투자목적의 달성을 보장하지 \n아니합니다. \n2. \n투자전략: \n이 \n투자신탁은 \n디에스Brave증권모투자신탁[주식]에 \n90% \n이상 \n투자하는 \n자투자신탁으로서, 모투자신탁의 운용실적에 따라 이익 또는 손실이 발생합니다. \n※ 자세한 내용은 투자설명서를 참조하시기 바랍니다. \n분류 \n투자신탁, 증권(주식형), 개방형(중도환매가능), 추가형(추가납입가능), 종류형, 모자형 \n투자비용 \n클래스 \n종류 \n투자자가 부담하는 \n수수료 및 총보수(단위:%) \n1,000 만원 투자시 투자자가 부담하는 \n투자기간별 총비용 예시 (단위: 천원) \n판매 \n수수료 \n \n \n동종 \n유형 \n총보수 \n총보수 \n·비용 \n1 년 \n2 년 \n3 년 \n5 년 \n10 년 \n총 \n보수 \n판매 \n보수 \n수수료선취- \n오프라인형(A) \n납입금액의 \n1.0%이내 \n1.455 \n0.600 \n1.370 \n1.457 \n246 \n398 \n556 \n888 \n1,831 \n수수료선취- \n온라인형(A-e) \n납입금액의 \n0.5%이내 \n1.155 \n0.300 \n1.030 \n1.157 \n167 \n289 \n416 \n684 \n1,453 \n수수료미징구- \n오프라인형(C) \n없음 \n1.805 \n0.950 \n1.580 \n1,807 \n184 \n373 \n568 \n979 \n2,127 \n수수료미징구- \n온라인형(C-e) \n없음 \n1.325 \n0.470 \n1.160 \n1,327 \n135 \n275 \n421 \n728 \n1,604 \n주1) 종류형집합투자기구의 구체적인 투자비용은 ‘투자설명서 제2부. 집합투자기구에 관한 사항 중 13. 보수 및 수수료에 \n관한 사항’을 참고하시기 바랍니다. \n주2) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투가기구 전체의 평균 총보수비용을 의미합니다. \n주3) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 \n제외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 \n투자수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. \n주4) 종류 A형과 종류 C형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-\ne형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 \n수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 \n작성기준일: 2025. 7. 11 \n디에스Maestro증권자투자신탁[주식] (펀드코드:E4451)",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_t001__3cd4aa231e",
+      "field_path": "fees[12]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "페이지 3 / 73 \n \n요 약 정 보\n \n투자 위험 등급 \n2등급 (높은 위험) \n디에스자산운용㈜은 이 투자신탁의 투자대상 자산의 종류 및 \n위험도를 감안하여 2등급으로 분류하였습니다. \n집합투자증권은 『예금자보호법』에 따라 보호되지 않는 실적 배당상품입니다. \n해당 집합투자기구는 국내 주식을 주된 투자대상으로 하는 모투자신탁에 \n신탁재산의 60% 이상을 투자하여, 국내 주식 투자에 따른 주식 등 \n가격변동위험, 특정주식 집중투자위험, 시장위험 등이 있으므로 투자에 \n신중을 기하여 주시기 바랍니다. \n1 \n2 \n3 \n4 \n5 \n6 \n매우 \n높은 \n위험 \n높은 \n위험 \n다소 \n높은 \n위험 \n보통 \n위험 \n낮은 \n위험 \n매우 \n낮은 \n위험 \n이 요약정보는 디에스Maestro증권자투자신탁[주식]의 투자설명서의 내용 중 중요사항을 발췌∙요약한 핵심정\n보를 담고 있습니다. 따라서 자세한 정보가 필요하신 경우에는 동 집합투자증권을 매입하기 이전에 투자설\n명서를 반드시 참고 하시기 바랍니다. \n투자목적 \n및 \n투자전략 \n1. 투자목적: 이 투자신탁은 국내 주식에 주로 투자하는 모투자신탁을 법 시행령 제94조 제2항 \n제4호에서 규정하는 주된 투자대상자산으로 하며 수익을 추구하는 것을 목적으로 합니다. \n그러나 상기의 투자목적이 반드시 달성된다는 보장은 없으며, 집합투자업자, 신탁업자, 판매회사 \n등 이 투자신탁과 관련된 어떠한 당사자도 투자원금의 보장 또는 투자목적의 달성을 보장하지 \n아니합니다. \n2. \n투자전략: \n이 \n투자신탁은 \n디에스Brave증권모투자신탁[주식]에 \n90% \n이상 \n투자하는 \n자투자신탁으로서, 모투자신탁의 운용실적에 따라 이익 또는 손실이 발생합니다. \n※ 자세한 내용은 투자설명서를 참조하시기 바랍니다. \n분류 \n투자신탁, 증권(주식형), 개방형(중도환매가능), 추가형(추가납입가능), 종류형, 모자형 \n투자비용 \n클래스 \n종류 \n투자자가 부담하는 \n수수료 및 총보수(단위:%) \n1,000 만원 투자시 투자자가 부담하는 \n투자기간별 총비용 예시 (단위: 천원) \n판매 \n수수료 \n \n \n동종 \n유형 \n총보수 \n총보수 \n·비용 \n1 년 \n2 년 \n3 년 \n5 년 \n10 년 \n총 \n보수 \n판매 \n보수 \n수수료선취- \n오프라인형(A) \n납입금액의 \n1.0%이내 \n1.455 \n0.600 \n1.370 \n1.457 \n246 \n398 \n556 \n888 \n1,831 \n수수료선취- \n온라인형(A-e) \n납입금액의 \n0.5%이내 \n1.155 \n0.300 \n1.030 \n1.157 \n167 \n289 \n416 \n684 \n1,453 \n수수료미징구- \n오프라인형(C) \n없음 \n1.805 \n0.950 \n1.580 \n1,807 \n184 \n373 \n568 \n979 \n2,127 \n수수료미징구- \n온라인형(C-e) \n없음 \n1.325 \n0.470 \n1.160 \n1,327 \n135 \n275 \n421 \n728 \n1,604 \n주1) 종류형집합투자기구의 구체적인 투자비용은 ‘투자설명서 제2부. 집합투자기구에 관한 사항 중 13. 보수 및 수수료에 \n관한 사항’을 참고하시기 바랍니다. \n주2) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투가기구 전체의 평균 총보수비용을 의미합니다. \n주3) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 \n제외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 \n투자수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. \n주4) 종류 A형과 종류 C형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-\ne형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 \n수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 \n작성기준일: 2025. 7. 11 \n디에스Maestro증권자투자신탁[주식] (펀드코드:E4451)",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_t001__a8eed7ae82",
+      "field_path": "fees[13]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "페이지 3 / 73 \n \n요 약 정 보\n \n투자 위험 등급 \n2등급 (높은 위험) \n디에스자산운용㈜은 이 투자신탁의 투자대상 자산의 종류 및 \n위험도를 감안하여 2등급으로 분류하였습니다. \n집합투자증권은 『예금자보호법』에 따라 보호되지 않는 실적 배당상품입니다. \n해당 집합투자기구는 국내 주식을 주된 투자대상으로 하는 모투자신탁에 \n신탁재산의 60% 이상을 투자하여, 국내 주식 투자에 따른 주식 등 \n가격변동위험, 특정주식 집중투자위험, 시장위험 등이 있으므로 투자에 \n신중을 기하여 주시기 바랍니다. \n1 \n2 \n3 \n4 \n5 \n6 \n매우 \n높은 \n위험 \n높은 \n위험 \n다소 \n높은 \n위험 \n보통 \n위험 \n낮은 \n위험 \n매우 \n낮은 \n위험 \n이 요약정보는 디에스Maestro증권자투자신탁[주식]의 투자설명서의 내용 중 중요사항을 발췌∙요약한 핵심정\n보를 담고 있습니다. 따라서 자세한 정보가 필요하신 경우에는 동 집합투자증권을 매입하기 이전에 투자설\n명서를 반드시 참고 하시기 바랍니다. \n투자목적 \n및 \n투자전략 \n1. 투자목적: 이 투자신탁은 국내 주식에 주로 투자하는 모투자신탁을 법 시행령 제94조 제2항 \n제4호에서 규정하는 주된 투자대상자산으로 하며 수익을 추구하는 것을 목적으로 합니다. \n그러나 상기의 투자목적이 반드시 달성된다는 보장은 없으며, 집합투자업자, 신탁업자, 판매회사 \n등 이 투자신탁과 관련된 어떠한 당사자도 투자원금의 보장 또는 투자목적의 달성을 보장하지 \n아니합니다. \n2. \n투자전략: \n이 \n투자신탁은 \n디에스Brave증권모투자신탁[주식]에 \n90% \n이상 \n투자하는 \n자투자신탁으로서, 모투자신탁의 운용실적에 따라 이익 또는 손실이 발생합니다. \n※ 자세한 내용은 투자설명서를 참조하시기 바랍니다. \n분류 \n투자신탁, 증권(주식형), 개방형(중도환매가능), 추가형(추가납입가능), 종류형, 모자형 \n투자비용 \n클래스 \n종류 \n투자자가 부담하는 \n수수료 및 총보수(단위:%) \n1,000 만원 투자시 투자자가 부담하는 \n투자기간별 총비용 예시 (단위: 천원) \n판매 \n수수료 \n \n \n동종 \n유형 \n총보수 \n총보수 \n·비용 \n1 년 \n2 년 \n3 년 \n5 년 \n10 년 \n총 \n보수 \n판매 \n보수 \n수수료선취- \n오프라인형(A) \n납입금액의 \n1.0%이내 \n1.455 \n0.600 \n1.370 \n1.457 \n246 \n398 \n556 \n888 \n1,831 \n수수료선취- \n온라인형(A-e) \n납입금액의 \n0.5%이내 \n1.155 \n0.300 \n1.030 \n1.157 \n167 \n289 \n416 \n684 \n1,453 \n수수료미징구- \n오프라인형(C) \n없음 \n1.805 \n0.950 \n1.580 \n1,807 \n184 \n373 \n568 \n979 \n2,127 \n수수료미징구- \n온라인형(C-e) \n없음 \n1.325 \n0.470 \n1.160 \n1,327 \n135 \n275 \n421 \n728 \n1,604 \n주1) 종류형집합투자기구의 구체적인 투자비용은 ‘투자설명서 제2부. 집합투자기구에 관한 사항 중 13. 보수 및 수수료에 \n관한 사항’을 참고하시기 바랍니다. \n주2) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투가기구 전체의 평균 총보수비용을 의미합니다. \n주3) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 \n제외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 \n투자수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. \n주4) 종류 A형과 종류 C형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-\ne형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 \n수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 \n작성기준일: 2025. 7. 11 \n디에스Maestro증권자투자신탁[주식] (펀드코드:E4451)",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_t001__cb3ba1c060",
+      "field_path": "fees[14]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "페이지 3 / 73 \n \n요 약 정 보\n \n투자 위험 등급 \n2등급 (높은 위험) \n디에스자산운용㈜은 이 투자신탁의 투자대상 자산의 종류 및 \n위험도를 감안하여 2등급으로 분류하였습니다. \n집합투자증권은 『예금자보호법』에 따라 보호되지 않는 실적 배당상품입니다. \n해당 집합투자기구는 국내 주식을 주된 투자대상으로 하는 모투자신탁에 \n신탁재산의 60% 이상을 투자하여, 국내 주식 투자에 따른 주식 등 \n가격변동위험, 특정주식 집중투자위험, 시장위험 등이 있으므로 투자에 \n신중을 기하여 주시기 바랍니다. \n1 \n2 \n3 \n4 \n5 \n6 \n매우 \n높은 \n위험 \n높은 \n위험 \n다소 \n높은 \n위험 \n보통 \n위험 \n낮은 \n위험 \n매우 \n낮은 \n위험 \n이 요약정보는 디에스Maestro증권자투자신탁[주식]의 투자설명서의 내용 중 중요사항을 발췌∙요약한 핵심정\n보를 담고 있습니다. 따라서 자세한 정보가 필요하신 경우에는 동 집합투자증권을 매입하기 이전에 투자설\n명서를 반드시 참고 하시기 바랍니다. \n투자목적 \n및 \n투자전략 \n1. 투자목적: 이 투자신탁은 국내 주식에 주로 투자하는 모투자신탁을 법 시행령 제94조 제2항 \n제4호에서 규정하는 주된 투자대상자산으로 하며 수익을 추구하는 것을 목적으로 합니다. \n그러나 상기의 투자목적이 반드시 달성된다는 보장은 없으며, 집합투자업자, 신탁업자, 판매회사 \n등 이 투자신탁과 관련된 어떠한 당사자도 투자원금의 보장 또는 투자목적의 달성을 보장하지 \n아니합니다. \n2. \n투자전략: \n이 \n투자신탁은 \n디에스Brave증권모투자신탁[주식]에 \n90% \n이상 \n투자하는 \n자투자신탁으로서, 모투자신탁의 운용실적에 따라 이익 또는 손실이 발생합니다. \n※ 자세한 내용은 투자설명서를 참조하시기 바랍니다. \n분류 \n투자신탁, 증권(주식형), 개방형(중도환매가능), 추가형(추가납입가능), 종류형, 모자형 \n투자비용 \n클래스 \n종류 \n투자자가 부담하는 \n수수료 및 총보수(단위:%) \n1,000 만원 투자시 투자자가 부담하는 \n투자기간별 총비용 예시 (단위: 천원) \n판매 \n수수료 \n \n \n동종 \n유형 \n총보수 \n총보수 \n·비용 \n1 년 \n2 년 \n3 년 \n5 년 \n10 년 \n총 \n보수 \n판매 \n보수 \n수수료선취- \n오프라인형(A) \n납입금액의 \n1.0%이내 \n1.455 \n0.600 \n1.370 \n1.457 \n246 \n398 \n556 \n888 \n1,831 \n수수료선취- \n온라인형(A-e) \n납입금액의 \n0.5%이내 \n1.155 \n0.300 \n1.030 \n1.157 \n167 \n289 \n416 \n684 \n1,453 \n수수료미징구- \n오프라인형(C) \n없음 \n1.805 \n0.950 \n1.580 \n1,807 \n184 \n373 \n568 \n979 \n2,127 \n수수료미징구- \n온라인형(C-e) \n없음 \n1.325 \n0.470 \n1.160 \n1,327 \n135 \n275 \n421 \n728 \n1,604 \n주1) 종류형집합투자기구의 구체적인 투자비용은 ‘투자설명서 제2부. 집합투자기구에 관한 사항 중 13. 보수 및 수수료에 \n관한 사항’을 참고하시기 바랍니다. \n주2) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투가기구 전체의 평균 총보수비용을 의미합니다. \n주3) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 \n제외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 \n투자수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. \n주4) 종류 A형과 종류 C형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-\ne형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 \n수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 \n작성기준일: 2025. 7. 11 \n디에스Maestro증권자투자신탁[주식] (펀드코드:E4451)",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_fees_t001__d53fbe3621",
+      "field_path": "fees[15]",
+      "page": 3,
+      "section": "FEES",
+      "source_text": "페이지 3 / 73 \n \n요 약 정 보\n \n투자 위험 등급 \n2등급 (높은 위험) \n디에스자산운용㈜은 이 투자신탁의 투자대상 자산의 종류 및 \n위험도를 감안하여 2등급으로 분류하였습니다. \n집합투자증권은 『예금자보호법』에 따라 보호되지 않는 실적 배당상품입니다. \n해당 집합투자기구는 국내 주식을 주된 투자대상으로 하는 모투자신탁에 \n신탁재산의 60% 이상을 투자하여, 국내 주식 투자에 따른 주식 등 \n가격변동위험, 특정주식 집중투자위험, 시장위험 등이 있으므로 투자에 \n신중을 기하여 주시기 바랍니다. \n1 \n2 \n3 \n4 \n5 \n6 \n매우 \n높은 \n위험 \n높은 \n위험 \n다소 \n높은 \n위험 \n보통 \n위험 \n낮은 \n위험 \n매우 \n낮은 \n위험 \n이 요약정보는 디에스Maestro증권자투자신탁[주식]의 투자설명서의 내용 중 중요사항을 발췌∙요약한 핵심정\n보를 담고 있습니다. 따라서 자세한 정보가 필요하신 경우에는 동 집합투자증권을 매입하기 이전에 투자설\n명서를 반드시 참고 하시기 바랍니다. \n투자목적 \n및 \n투자전략 \n1. 투자목적: 이 투자신탁은 국내 주식에 주로 투자하는 모투자신탁을 법 시행령 제94조 제2항 \n제4호에서 규정하는 주된 투자대상자산으로 하며 수익을 추구하는 것을 목적으로 합니다. \n그러나 상기의 투자목적이 반드시 달성된다는 보장은 없으며, 집합투자업자, 신탁업자, 판매회사 \n등 이 투자신탁과 관련된 어떠한 당사자도 투자원금의 보장 또는 투자목적의 달성을 보장하지 \n아니합니다. \n2. \n투자전략: \n이 \n투자신탁은 \n디에스Brave증권모투자신탁[주식]에 \n90% \n이상 \n투자하는 \n자투자신탁으로서, 모투자신탁의 운용실적에 따라 이익 또는 손실이 발생합니다. \n※ 자세한 내용은 투자설명서를 참조하시기 바랍니다. \n분류 \n투자신탁, 증권(주식형), 개방형(중도환매가능), 추가형(추가납입가능), 종류형, 모자형 \n투자비용 \n클래스 \n종류 \n투자자가 부담하는 \n수수료 및 총보수(단위:%) \n1,000 만원 투자시 투자자가 부담하는 \n투자기간별 총비용 예시 (단위: 천원) \n판매 \n수수료 \n \n \n동종 \n유형 \n총보수 \n총보수 \n·비용 \n1 년 \n2 년 \n3 년 \n5 년 \n10 년 \n총 \n보수 \n판매 \n보수 \n수수료선취- \n오프라인형(A) \n납입금액의 \n1.0%이내 \n1.455 \n0.600 \n1.370 \n1.457 \n246 \n398 \n556 \n888 \n1,831 \n수수료선취- \n온라인형(A-e) \n납입금액의 \n0.5%이내 \n1.155 \n0.300 \n1.030 \n1.157 \n167 \n289 \n416 \n684 \n1,453 \n수수료미징구- \n오프라인형(C) \n없음 \n1.805 \n0.950 \n1.580 \n1,807 \n184 \n373 \n568 \n979 \n2,127 \n수수료미징구- \n온라인형(C-e) \n없음 \n1.325 \n0.470 \n1.160 \n1,327 \n135 \n275 \n421 \n728 \n1,604 \n주1) 종류형집합투자기구의 구체적인 투자비용은 ‘투자설명서 제2부. 집합투자기구에 관한 사항 중 13. 보수 및 수수료에 \n관한 사항’을 참고하시기 바랍니다. \n주2) ‘동종유형 총보수’는 한국금융투자협회에서 공시하는 동종유형 집합투가기구 전체의 평균 총보수비용을 의미합니다. \n주3) 수익자가 1,000만원을 투자했을 경우 직·간접적으로 부담할 것으로 예상되는 수수료 또는 총보수·비용(증권거래비용 \n제외)을 누계액으로 산출한 것(정율식으로 인하되는 판매회사 보수분은 미반영)입니다. 이익금은 모두 재투자하며, 연간 \n투자수익률은 5%, 수수료율 및 총 보수·비용비율은 일정하다고 가정하였습니다. \n주4) 종류 A형과 종류 C형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점이며, 종류 A-\ne형과 종류 C-e형에 각각 투자할 경우 총비용이 일치하는 시점은 약 2년 8개월이 경과되는 시점입니다. 그러나 실제 \n수익자가 부담하게 되는 보수 및 비용은 추가납입, 기타비용의 변동, 보수의 인상 또는 인하 여부 등에 따라 달라질 수 \n작성기준일: 2025. 7. 11 \n디에스Maestro증권자투자신탁[주식] (펀드코드:E4451)",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p004_performance_t001__f1ea97bca2",
+      "field_path": "performance[0]",
+      "page": 4,
+      "section": "PERFORMANCE",
+      "source_text": "페이지 4 / 73 \n \n있음에 유의하시기 바랍니다. \n투자실적 \n추이 \n(연평균 \n수익률, \n단위: %) \n종류 \n최초설정일 \n최근 1 년 \n최근 2 년 \n최근 3 년 \n최근 5 년 \n설정일 이후 \n24.07.12 \n~ 25.07.11 \n23.07.12 \n ~ 25.07.11 \n \n \n23.07.12 \n ~ 25.07.11 \n수수료미징구- \n온라인형(C-e) \n23.07.12 \n38.42 \n21.33 \n \n \n21.33 \n비교지수 \n9.38 \n10.67 \n \n \n10.67 \n수익률변동성(%) \n22.62 \n18.40 \n \n \n21.33 \n주1) 비교지수 : (0.9 * [KOSPI]) + (0.1 * [CALL금리]) \n주2) 비교지수의 수익률에는 운용보수 등 투자신탁에 부과되는 보수 및 비용이 반영되지 않았습니다. \n주3) 연평균 수익률은 해당 기간동안의 누적수익률을 기하평균방식으로 계산한 것으로 해당기간 동안의 평균 수익률을 \n나타내는 수치입니다. \n주4) 수익률 변동성(%)은 해당 기간 동안 집합투자기구의 연환산된 주간수익률의 표준편차입니다. \n주5) 기재가 생략된 종류 수익증권에 대해서는 투자설명서를 참고하시기 바랍니다. \n운용전문 \n인력 \n(1) 책임운용전문인력 \n성명 \n생년 \n직위 \n운용 현황 \n동종집합투자기구 \n연평균 수익률(주식형-공모-국내) \n운용 \n경력년수 \n집합투자 \n기구수 \n운용규모 \n운용역 \n운용사 \n최근 1 년 \n최근 2 년 \n최근 1 년 \n최근 2 년 \n김창진 \n1980 \n상무 \n19 개 \n2,926 억 \n- \n- \n41.61% \n- \n8년 3개월 \n \n(2) 부책임운용전문인력 \n성명 \n생년 \n직위 \n운용 현황 \n동종집합투자기구 \n연평균 수익률(주식형-공모-국내) \n운용 \n경력년수 \n집합투자 \n기구수 \n운용규모 \n운용역 \n운용사 \n최근 1 년 \n최근 2 년 \n최근 1 년 \n최근 2 년 \n황현철 \n1992 \n전임 \n5 개 \n1,823 억 \n41.61% \n- \n41.61% \n- \n7년 7개월 \n주1) “책임운용인력”이란 해당 집합투자기구의 투자전략 수립 및 투자의사결정 등에 주도적·핵심적 역할을 수행하는 자를 \n의미하며, “부책임운용전문인력”이란 “책임운용인력”이 아닌 자로서, 집합투자기구의 투자목적 및 운용전략 등에 중대한 영\n향을 미칠 수 있는 자산에 대한 운용권한을 가진 운용전문인력을 의미합니다. \n주2) 운용전문인력의 최근 과거 3년 이내에 운용한 집합투자기구의 명칭, 집합투자재산의 규모와 수익률 등은 한국금융투\n자협회 홈페이지(www.kofia.or.kr)에서 확인할 수 있습니다. \n주3) 동종집합투자기구 연평균 수익률은 해당 집합투자업자가 분류한 동일 유형 집합투자기구의 평균운용성과이며, 해당 \n운용전문인력의 평균운용성과는 해당 회사 근무기간 중 운용한 성과를 의미합니다. 동종 집합투자기구 연평균 수익률은 \n당사 공모펀드를 대상으로 하였으며, 운용펀드 기준으로 보수차감 전 수익률이며 모자형 구조의 펀드의 경우 모펀드만을 \n대상으로 계산되었음을 알려드립니다. \n주4) 운용중인 다른 집합투자기구 중 성과보수가 약정된 집합투자기구(사모펀드) : 김창진 18개 펀드 2,769억원 / 황현철 4\n개 펀드 1,105억원 \n투자자 \n유의사항 \n• 집합투자증권은 ｢예금자보호법｣에 따라 보호되지 않는 실적배당상품으로 투자원금의 손실이 발생할 \n수 있으므로 투자에 신중을 기하여 주시기 바랍니다. \n• 금융위원회가 투자설명서의 기재사항이 진실 또는 정확하다는 것을 인정하거나 그 증권의 가치를 \n보증 또는 승인하지 아니함을 유의하시기 바랍니다. \n• 간이투자설명서보다 자세한 내용이 필요하시어 투자설명서의 교부를 요청하시면 귀하의 집합투자 \n증권 매입 이전까지 교부하오니 참고하시기 바랍니다. \n• 간이투자설명서는 증권신고서 효력발생일까지 기재사항 중 일부가 변경될 수 있으며, 개방형 집합 \n투자증권인 경우 효력발생일 이후에도 변경될 수 있습니다. \n• 이 집합투자증권의 투자위험등급을 확인하시고, 귀하의 투자 경력이나 투자성향에 적합한 상품인지",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p004_performance_t001__6d3d305934",
+      "field_path": "performance[1]",
+      "page": 4,
+      "section": "PERFORMANCE",
+      "source_text": "페이지 4 / 73 \n \n있음에 유의하시기 바랍니다. \n투자실적 \n추이 \n(연평균 \n수익률, \n단위: %) \n종류 \n최초설정일 \n최근 1 년 \n최근 2 년 \n최근 3 년 \n최근 5 년 \n설정일 이후 \n24.07.12 \n~ 25.07.11 \n23.07.12 \n ~ 25.07.11 \n \n \n23.07.12 \n ~ 25.07.11 \n수수료미징구- \n온라인형(C-e) \n23.07.12 \n38.42 \n21.33 \n \n \n21.33 \n비교지수 \n9.38 \n10.67 \n \n \n10.67 \n수익률변동성(%) \n22.62 \n18.40 \n \n \n21.33 \n주1) 비교지수 : (0.9 * [KOSPI]) + (0.1 * [CALL금리]) \n주2) 비교지수의 수익률에는 운용보수 등 투자신탁에 부과되는 보수 및 비용이 반영되지 않았습니다. \n주3) 연평균 수익률은 해당 기간동안의 누적수익률을 기하평균방식으로 계산한 것으로 해당기간 동안의 평균 수익률을 \n나타내는 수치입니다. \n주4) 수익률 변동성(%)은 해당 기간 동안 집합투자기구의 연환산된 주간수익률의 표준편차입니다. \n주5) 기재가 생략된 종류 수익증권에 대해서는 투자설명서를 참고하시기 바랍니다. \n운용전문 \n인력 \n(1) 책임운용전문인력 \n성명 \n생년 \n직위 \n운용 현황 \n동종집합투자기구 \n연평균 수익률(주식형-공모-국내) \n운용 \n경력년수 \n집합투자 \n기구수 \n운용규모 \n운용역 \n운용사 \n최근 1 년 \n최근 2 년 \n최근 1 년 \n최근 2 년 \n김창진 \n1980 \n상무 \n19 개 \n2,926 억 \n- \n- \n41.61% \n- \n8년 3개월 \n \n(2) 부책임운용전문인력 \n성명 \n생년 \n직위 \n운용 현황 \n동종집합투자기구 \n연평균 수익률(주식형-공모-국내) \n운용 \n경력년수 \n집합투자 \n기구수 \n운용규모 \n운용역 \n운용사 \n최근 1 년 \n최근 2 년 \n최근 1 년 \n최근 2 년 \n황현철 \n1992 \n전임 \n5 개 \n1,823 억 \n41.61% \n- \n41.61% \n- \n7년 7개월 \n주1) “책임운용인력”이란 해당 집합투자기구의 투자전략 수립 및 투자의사결정 등에 주도적·핵심적 역할을 수행하는 자를 \n의미하며, “부책임운용전문인력”이란 “책임운용인력”이 아닌 자로서, 집합투자기구의 투자목적 및 운용전략 등에 중대한 영\n향을 미칠 수 있는 자산에 대한 운용권한을 가진 운용전문인력을 의미합니다. \n주2) 운용전문인력의 최근 과거 3년 이내에 운용한 집합투자기구의 명칭, 집합투자재산의 규모와 수익률 등은 한국금융투\n자협회 홈페이지(www.kofia.or.kr)에서 확인할 수 있습니다. \n주3) 동종집합투자기구 연평균 수익률은 해당 집합투자업자가 분류한 동일 유형 집합투자기구의 평균운용성과이며, 해당 \n운용전문인력의 평균운용성과는 해당 회사 근무기간 중 운용한 성과를 의미합니다. 동종 집합투자기구 연평균 수익률은 \n당사 공모펀드를 대상으로 하였으며, 운용펀드 기준으로 보수차감 전 수익률이며 모자형 구조의 펀드의 경우 모펀드만을 \n대상으로 계산되었음을 알려드립니다. \n주4) 운용중인 다른 집합투자기구 중 성과보수가 약정된 집합투자기구(사모펀드) : 김창진 18개 펀드 2,769억원 / 황현철 4\n개 펀드 1,105억원 \n투자자 \n유의사항 \n• 집합투자증권은 ｢예금자보호법｣에 따라 보호되지 않는 실적배당상품으로 투자원금의 손실이 발생할 \n수 있으므로 투자에 신중을 기하여 주시기 바랍니다. \n• 금융위원회가 투자설명서의 기재사항이 진실 또는 정확하다는 것을 인정하거나 그 증권의 가치를 \n보증 또는 승인하지 아니함을 유의하시기 바랍니다. \n• 간이투자설명서보다 자세한 내용이 필요하시어 투자설명서의 교부를 요청하시면 귀하의 집합투자 \n증권 매입 이전까지 교부하오니 참고하시기 바랍니다. \n• 간이투자설명서는 증권신고서 효력발생일까지 기재사항 중 일부가 변경될 수 있으며, 개방형 집합 \n투자증권인 경우 효력발생일 이후에도 변경될 수 있습니다. \n• 이 집합투자증권의 투자위험등급을 확인하시고, 귀하의 투자 경력이나 투자성향에 적합한 상품인지",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p004_performance_t001__46ff40ebfd",
+      "field_path": "performance[2]",
+      "page": 4,
+      "section": "PERFORMANCE",
+      "source_text": "페이지 4 / 73 \n \n있음에 유의하시기 바랍니다. \n투자실적 \n추이 \n(연평균 \n수익률, \n단위: %) \n종류 \n최초설정일 \n최근 1 년 \n최근 2 년 \n최근 3 년 \n최근 5 년 \n설정일 이후 \n24.07.12 \n~ 25.07.11 \n23.07.12 \n ~ 25.07.11 \n \n \n23.07.12 \n ~ 25.07.11 \n수수료미징구- \n온라인형(C-e) \n23.07.12 \n38.42 \n21.33 \n \n \n21.33 \n비교지수 \n9.38 \n10.67 \n \n \n10.67 \n수익률변동성(%) \n22.62 \n18.40 \n \n \n21.33 \n주1) 비교지수 : (0.9 * [KOSPI]) + (0.1 * [CALL금리]) \n주2) 비교지수의 수익률에는 운용보수 등 투자신탁에 부과되는 보수 및 비용이 반영되지 않았습니다. \n주3) 연평균 수익률은 해당 기간동안의 누적수익률을 기하평균방식으로 계산한 것으로 해당기간 동안의 평균 수익률을 \n나타내는 수치입니다. \n주4) 수익률 변동성(%)은 해당 기간 동안 집합투자기구의 연환산된 주간수익률의 표준편차입니다. \n주5) 기재가 생략된 종류 수익증권에 대해서는 투자설명서를 참고하시기 바랍니다. \n운용전문 \n인력 \n(1) 책임운용전문인력 \n성명 \n생년 \n직위 \n운용 현황 \n동종집합투자기구 \n연평균 수익률(주식형-공모-국내) \n운용 \n경력년수 \n집합투자 \n기구수 \n운용규모 \n운용역 \n운용사 \n최근 1 년 \n최근 2 년 \n최근 1 년 \n최근 2 년 \n김창진 \n1980 \n상무 \n19 개 \n2,926 억 \n- \n- \n41.61% \n- \n8년 3개월 \n \n(2) 부책임운용전문인력 \n성명 \n생년 \n직위 \n운용 현황 \n동종집합투자기구 \n연평균 수익률(주식형-공모-국내) \n운용 \n경력년수 \n집합투자 \n기구수 \n운용규모 \n운용역 \n운용사 \n최근 1 년 \n최근 2 년 \n최근 1 년 \n최근 2 년 \n황현철 \n1992 \n전임 \n5 개 \n1,823 억 \n41.61% \n- \n41.61% \n- \n7년 7개월 \n주1) “책임운용인력”이란 해당 집합투자기구의 투자전략 수립 및 투자의사결정 등에 주도적·핵심적 역할을 수행하는 자를 \n의미하며, “부책임운용전문인력”이란 “책임운용인력”이 아닌 자로서, 집합투자기구의 투자목적 및 운용전략 등에 중대한 영\n향을 미칠 수 있는 자산에 대한 운용권한을 가진 운용전문인력을 의미합니다. \n주2) 운용전문인력의 최근 과거 3년 이내에 운용한 집합투자기구의 명칭, 집합투자재산의 규모와 수익률 등은 한국금융투\n자협회 홈페이지(www.kofia.or.kr)에서 확인할 수 있습니다. \n주3) 동종집합투자기구 연평균 수익률은 해당 집합투자업자가 분류한 동일 유형 집합투자기구의 평균운용성과이며, 해당 \n운용전문인력의 평균운용성과는 해당 회사 근무기간 중 운용한 성과를 의미합니다. 동종 집합투자기구 연평균 수익률은 \n당사 공모펀드를 대상으로 하였으며, 운용펀드 기준으로 보수차감 전 수익률이며 모자형 구조의 펀드의 경우 모펀드만을 \n대상으로 계산되었음을 알려드립니다. \n주4) 운용중인 다른 집합투자기구 중 성과보수가 약정된 집합투자기구(사모펀드) : 김창진 18개 펀드 2,769억원 / 황현철 4\n개 펀드 1,105억원 \n투자자 \n유의사항 \n• 집합투자증권은 ｢예금자보호법｣에 따라 보호되지 않는 실적배당상품으로 투자원금의 손실이 발생할 \n수 있으므로 투자에 신중을 기하여 주시기 바랍니다. \n• 금융위원회가 투자설명서의 기재사항이 진실 또는 정확하다는 것을 인정하거나 그 증권의 가치를 \n보증 또는 승인하지 아니함을 유의하시기 바랍니다. \n• 간이투자설명서보다 자세한 내용이 필요하시어 투자설명서의 교부를 요청하시면 귀하의 집합투자 \n증권 매입 이전까지 교부하오니 참고하시기 바랍니다. \n• 간이투자설명서는 증권신고서 효력발생일까지 기재사항 중 일부가 변경될 수 있으며, 개방형 집합 \n투자증권인 경우 효력발생일 이후에도 변경될 수 있습니다. \n• 이 집합투자증권의 투자위험등급을 확인하시고, 귀하의 투자 경력이나 투자성향에 적합한 상품인지",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p004_performance_t001__b283aad226",
+      "field_path": "performance[3]",
+      "page": 4,
+      "section": "PERFORMANCE",
+      "source_text": "페이지 4 / 73 \n \n있음에 유의하시기 바랍니다. \n투자실적 \n추이 \n(연평균 \n수익률, \n단위: %) \n종류 \n최초설정일 \n최근 1 년 \n최근 2 년 \n최근 3 년 \n최근 5 년 \n설정일 이후 \n24.07.12 \n~ 25.07.11 \n23.07.12 \n ~ 25.07.11 \n \n \n23.07.12 \n ~ 25.07.11 \n수수료미징구- \n온라인형(C-e) \n23.07.12 \n38.42 \n21.33 \n \n \n21.33 \n비교지수 \n9.38 \n10.67 \n \n \n10.67 \n수익률변동성(%) \n22.62 \n18.40 \n \n \n21.33 \n주1) 비교지수 : (0.9 * [KOSPI]) + (0.1 * [CALL금리]) \n주2) 비교지수의 수익률에는 운용보수 등 투자신탁에 부과되는 보수 및 비용이 반영되지 않았습니다. \n주3) 연평균 수익률은 해당 기간동안의 누적수익률을 기하평균방식으로 계산한 것으로 해당기간 동안의 평균 수익률을 \n나타내는 수치입니다. \n주4) 수익률 변동성(%)은 해당 기간 동안 집합투자기구의 연환산된 주간수익률의 표준편차입니다. \n주5) 기재가 생략된 종류 수익증권에 대해서는 투자설명서를 참고하시기 바랍니다. \n운용전문 \n인력 \n(1) 책임운용전문인력 \n성명 \n생년 \n직위 \n운용 현황 \n동종집합투자기구 \n연평균 수익률(주식형-공모-국내) \n운용 \n경력년수 \n집합투자 \n기구수 \n운용규모 \n운용역 \n운용사 \n최근 1 년 \n최근 2 년 \n최근 1 년 \n최근 2 년 \n김창진 \n1980 \n상무 \n19 개 \n2,926 억 \n- \n- \n41.61% \n- \n8년 3개월 \n \n(2) 부책임운용전문인력 \n성명 \n생년 \n직위 \n운용 현황 \n동종집합투자기구 \n연평균 수익률(주식형-공모-국내) \n운용 \n경력년수 \n집합투자 \n기구수 \n운용규모 \n운용역 \n운용사 \n최근 1 년 \n최근 2 년 \n최근 1 년 \n최근 2 년 \n황현철 \n1992 \n전임 \n5 개 \n1,823 억 \n41.61% \n- \n41.61% \n- \n7년 7개월 \n주1) “책임운용인력”이란 해당 집합투자기구의 투자전략 수립 및 투자의사결정 등에 주도적·핵심적 역할을 수행하는 자를 \n의미하며, “부책임운용전문인력”이란 “책임운용인력”이 아닌 자로서, 집합투자기구의 투자목적 및 운용전략 등에 중대한 영\n향을 미칠 수 있는 자산에 대한 운용권한을 가진 운용전문인력을 의미합니다. \n주2) 운용전문인력의 최근 과거 3년 이내에 운용한 집합투자기구의 명칭, 집합투자재산의 규모와 수익률 등은 한국금융투\n자협회 홈페이지(www.kofia.or.kr)에서 확인할 수 있습니다. \n주3) 동종집합투자기구 연평균 수익률은 해당 집합투자업자가 분류한 동일 유형 집합투자기구의 평균운용성과이며, 해당 \n운용전문인력의 평균운용성과는 해당 회사 근무기간 중 운용한 성과를 의미합니다. 동종 집합투자기구 연평균 수익률은 \n당사 공모펀드를 대상으로 하였으며, 운용펀드 기준으로 보수차감 전 수익률이며 모자형 구조의 펀드의 경우 모펀드만을 \n대상으로 계산되었음을 알려드립니다. \n주4) 운용중인 다른 집합투자기구 중 성과보수가 약정된 집합투자기구(사모펀드) : 김창진 18개 펀드 2,769억원 / 황현철 4\n개 펀드 1,105억원 \n투자자 \n유의사항 \n• 집합투자증권은 ｢예금자보호법｣에 따라 보호되지 않는 실적배당상품으로 투자원금의 손실이 발생할 \n수 있으므로 투자에 신중을 기하여 주시기 바랍니다. \n• 금융위원회가 투자설명서의 기재사항이 진실 또는 정확하다는 것을 인정하거나 그 증권의 가치를 \n보증 또는 승인하지 아니함을 유의하시기 바랍니다. \n• 간이투자설명서보다 자세한 내용이 필요하시어 투자설명서의 교부를 요청하시면 귀하의 집합투자 \n증권 매입 이전까지 교부하오니 참고하시기 바랍니다. \n• 간이투자설명서는 증권신고서 효력발생일까지 기재사항 중 일부가 변경될 수 있으며, 개방형 집합 \n투자증권인 경우 효력발생일 이후에도 변경될 수 있습니다. \n• 이 집합투자증권의 투자위험등급을 확인하시고, 귀하의 투자 경력이나 투자성향에 적합한 상품인지",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p004_performance_t001__916fcb6bf7",
+      "field_path": "performance[4]",
+      "page": 4,
+      "section": "PERFORMANCE",
+      "source_text": "페이지 4 / 73 \n \n있음에 유의하시기 바랍니다. \n투자실적 \n추이 \n(연평균 \n수익률, \n단위: %) \n종류 \n최초설정일 \n최근 1 년 \n최근 2 년 \n최근 3 년 \n최근 5 년 \n설정일 이후 \n24.07.12 \n~ 25.07.11 \n23.07.12 \n ~ 25.07.11 \n \n \n23.07.12 \n ~ 25.07.11 \n수수료미징구- \n온라인형(C-e) \n23.07.12 \n38.42 \n21.33 \n \n \n21.33 \n비교지수 \n9.38 \n10.67 \n \n \n10.67 \n수익률변동성(%) \n22.62 \n18.40 \n \n \n21.33 \n주1) 비교지수 : (0.9 * [KOSPI]) + (0.1 * [CALL금리]) \n주2) 비교지수의 수익률에는 운용보수 등 투자신탁에 부과되는 보수 및 비용이 반영되지 않았습니다. \n주3) 연평균 수익률은 해당 기간동안의 누적수익률을 기하평균방식으로 계산한 것으로 해당기간 동안의 평균 수익률을 \n나타내는 수치입니다. \n주4) 수익률 변동성(%)은 해당 기간 동안 집합투자기구의 연환산된 주간수익률의 표준편차입니다. \n주5) 기재가 생략된 종류 수익증권에 대해서는 투자설명서를 참고하시기 바랍니다. \n운용전문 \n인력 \n(1) 책임운용전문인력 \n성명 \n생년 \n직위 \n운용 현황 \n동종집합투자기구 \n연평균 수익률(주식형-공모-국내) \n운용 \n경력년수 \n집합투자 \n기구수 \n운용규모 \n운용역 \n운용사 \n최근 1 년 \n최근 2 년 \n최근 1 년 \n최근 2 년 \n김창진 \n1980 \n상무 \n19 개 \n2,926 억 \n- \n- \n41.61% \n- \n8년 3개월 \n \n(2) 부책임운용전문인력 \n성명 \n생년 \n직위 \n운용 현황 \n동종집합투자기구 \n연평균 수익률(주식형-공모-국내) \n운용 \n경력년수 \n집합투자 \n기구수 \n운용규모 \n운용역 \n운용사 \n최근 1 년 \n최근 2 년 \n최근 1 년 \n최근 2 년 \n황현철 \n1992 \n전임 \n5 개 \n1,823 억 \n41.61% \n- \n41.61% \n- \n7년 7개월 \n주1) “책임운용인력”이란 해당 집합투자기구의 투자전략 수립 및 투자의사결정 등에 주도적·핵심적 역할을 수행하는 자를 \n의미하며, “부책임운용전문인력”이란 “책임운용인력”이 아닌 자로서, 집합투자기구의 투자목적 및 운용전략 등에 중대한 영\n향을 미칠 수 있는 자산에 대한 운용권한을 가진 운용전문인력을 의미합니다. \n주2) 운용전문인력의 최근 과거 3년 이내에 운용한 집합투자기구의 명칭, 집합투자재산의 규모와 수익률 등은 한국금융투\n자협회 홈페이지(www.kofia.or.kr)에서 확인할 수 있습니다. \n주3) 동종집합투자기구 연평균 수익률은 해당 집합투자업자가 분류한 동일 유형 집합투자기구의 평균운용성과이며, 해당 \n운용전문인력의 평균운용성과는 해당 회사 근무기간 중 운용한 성과를 의미합니다. 동종 집합투자기구 연평균 수익률은 \n당사 공모펀드를 대상으로 하였으며, 운용펀드 기준으로 보수차감 전 수익률이며 모자형 구조의 펀드의 경우 모펀드만을 \n대상으로 계산되었음을 알려드립니다. \n주4) 운용중인 다른 집합투자기구 중 성과보수가 약정된 집합투자기구(사모펀드) : 김창진 18개 펀드 2,769억원 / 황현철 4\n개 펀드 1,105억원 \n투자자 \n유의사항 \n• 집합투자증권은 ｢예금자보호법｣에 따라 보호되지 않는 실적배당상품으로 투자원금의 손실이 발생할 \n수 있으므로 투자에 신중을 기하여 주시기 바랍니다. \n• 금융위원회가 투자설명서의 기재사항이 진실 또는 정확하다는 것을 인정하거나 그 증권의 가치를 \n보증 또는 승인하지 아니함을 유의하시기 바랍니다. \n• 간이투자설명서보다 자세한 내용이 필요하시어 투자설명서의 교부를 요청하시면 귀하의 집합투자 \n증권 매입 이전까지 교부하오니 참고하시기 바랍니다. \n• 간이투자설명서는 증권신고서 효력발생일까지 기재사항 중 일부가 변경될 수 있으며, 개방형 집합 \n투자증권인 경우 효력발생일 이후에도 변경될 수 있습니다. \n• 이 집합투자증권의 투자위험등급을 확인하시고, 귀하의 투자 경력이나 투자성향에 적합한 상품인지",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p004_performance_t001__598f55bac5",
+      "field_path": "performance[5]",
+      "page": 4,
+      "section": "PERFORMANCE",
+      "source_text": "페이지 4 / 73 \n \n있음에 유의하시기 바랍니다. \n투자실적 \n추이 \n(연평균 \n수익률, \n단위: %) \n종류 \n최초설정일 \n최근 1 년 \n최근 2 년 \n최근 3 년 \n최근 5 년 \n설정일 이후 \n24.07.12 \n~ 25.07.11 \n23.07.12 \n ~ 25.07.11 \n \n \n23.07.12 \n ~ 25.07.11 \n수수료미징구- \n온라인형(C-e) \n23.07.12 \n38.42 \n21.33 \n \n \n21.33 \n비교지수 \n9.38 \n10.67 \n \n \n10.67 \n수익률변동성(%) \n22.62 \n18.40 \n \n \n21.33 \n주1) 비교지수 : (0.9 * [KOSPI]) + (0.1 * [CALL금리]) \n주2) 비교지수의 수익률에는 운용보수 등 투자신탁에 부과되는 보수 및 비용이 반영되지 않았습니다. \n주3) 연평균 수익률은 해당 기간동안의 누적수익률을 기하평균방식으로 계산한 것으로 해당기간 동안의 평균 수익률을 \n나타내는 수치입니다. \n주4) 수익률 변동성(%)은 해당 기간 동안 집합투자기구의 연환산된 주간수익률의 표준편차입니다. \n주5) 기재가 생략된 종류 수익증권에 대해서는 투자설명서를 참고하시기 바랍니다. \n운용전문 \n인력 \n(1) 책임운용전문인력 \n성명 \n생년 \n직위 \n운용 현황 \n동종집합투자기구 \n연평균 수익률(주식형-공모-국내) \n운용 \n경력년수 \n집합투자 \n기구수 \n운용규모 \n운용역 \n운용사 \n최근 1 년 \n최근 2 년 \n최근 1 년 \n최근 2 년 \n김창진 \n1980 \n상무 \n19 개 \n2,926 억 \n- \n- \n41.61% \n- \n8년 3개월 \n \n(2) 부책임운용전문인력 \n성명 \n생년 \n직위 \n운용 현황 \n동종집합투자기구 \n연평균 수익률(주식형-공모-국내) \n운용 \n경력년수 \n집합투자 \n기구수 \n운용규모 \n운용역 \n운용사 \n최근 1 년 \n최근 2 년 \n최근 1 년 \n최근 2 년 \n황현철 \n1992 \n전임 \n5 개 \n1,823 억 \n41.61% \n- \n41.61% \n- \n7년 7개월 \n주1) “책임운용인력”이란 해당 집합투자기구의 투자전략 수립 및 투자의사결정 등에 주도적·핵심적 역할을 수행하는 자를 \n의미하며, “부책임운용전문인력”이란 “책임운용인력”이 아닌 자로서, 집합투자기구의 투자목적 및 운용전략 등에 중대한 영\n향을 미칠 수 있는 자산에 대한 운용권한을 가진 운용전문인력을 의미합니다. \n주2) 운용전문인력의 최근 과거 3년 이내에 운용한 집합투자기구의 명칭, 집합투자재산의 규모와 수익률 등은 한국금융투\n자협회 홈페이지(www.kofia.or.kr)에서 확인할 수 있습니다. \n주3) 동종집합투자기구 연평균 수익률은 해당 집합투자업자가 분류한 동일 유형 집합투자기구의 평균운용성과이며, 해당 \n운용전문인력의 평균운용성과는 해당 회사 근무기간 중 운용한 성과를 의미합니다. 동종 집합투자기구 연평균 수익률은 \n당사 공모펀드를 대상으로 하였으며, 운용펀드 기준으로 보수차감 전 수익률이며 모자형 구조의 펀드의 경우 모펀드만을 \n대상으로 계산되었음을 알려드립니다. \n주4) 운용중인 다른 집합투자기구 중 성과보수가 약정된 집합투자기구(사모펀드) : 김창진 18개 펀드 2,769억원 / 황현철 4\n개 펀드 1,105억원 \n투자자 \n유의사항 \n• 집합투자증권은 ｢예금자보호법｣에 따라 보호되지 않는 실적배당상품으로 투자원금의 손실이 발생할 \n수 있으므로 투자에 신중을 기하여 주시기 바랍니다. \n• 금융위원회가 투자설명서의 기재사항이 진실 또는 정확하다는 것을 인정하거나 그 증권의 가치를 \n보증 또는 승인하지 아니함을 유의하시기 바랍니다. \n• 간이투자설명서보다 자세한 내용이 필요하시어 투자설명서의 교부를 요청하시면 귀하의 집합투자 \n증권 매입 이전까지 교부하오니 참고하시기 바랍니다. \n• 간이투자설명서는 증권신고서 효력발생일까지 기재사항 중 일부가 변경될 수 있으며, 개방형 집합 \n투자증권인 경우 효력발생일 이후에도 변경될 수 있습니다. \n• 이 집합투자증권의 투자위험등급을 확인하시고, 귀하의 투자 경력이나 투자성향에 적합한 상품인지",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p004_performance_t001__a467ee0842",
+      "field_path": "performance[6]",
+      "page": 4,
+      "section": "PERFORMANCE",
+      "source_text": "페이지 4 / 73 \n \n있음에 유의하시기 바랍니다. \n투자실적 \n추이 \n(연평균 \n수익률, \n단위: %) \n종류 \n최초설정일 \n최근 1 년 \n최근 2 년 \n최근 3 년 \n최근 5 년 \n설정일 이후 \n24.07.12 \n~ 25.07.11 \n23.07.12 \n ~ 25.07.11 \n \n \n23.07.12 \n ~ 25.07.11 \n수수료미징구- \n온라인형(C-e) \n23.07.12 \n38.42 \n21.33 \n \n \n21.33 \n비교지수 \n9.38 \n10.67 \n \n \n10.67 \n수익률변동성(%) \n22.62 \n18.40 \n \n \n21.33 \n주1) 비교지수 : (0.9 * [KOSPI]) + (0.1 * [CALL금리]) \n주2) 비교지수의 수익률에는 운용보수 등 투자신탁에 부과되는 보수 및 비용이 반영되지 않았습니다. \n주3) 연평균 수익률은 해당 기간동안의 누적수익률을 기하평균방식으로 계산한 것으로 해당기간 동안의 평균 수익률을 \n나타내는 수치입니다. \n주4) 수익률 변동성(%)은 해당 기간 동안 집합투자기구의 연환산된 주간수익률의 표준편차입니다. \n주5) 기재가 생략된 종류 수익증권에 대해서는 투자설명서를 참고하시기 바랍니다. \n운용전문 \n인력 \n(1) 책임운용전문인력 \n성명 \n생년 \n직위 \n운용 현황 \n동종집합투자기구 \n연평균 수익률(주식형-공모-국내) \n운용 \n경력년수 \n집합투자 \n기구수 \n운용규모 \n운용역 \n운용사 \n최근 1 년 \n최근 2 년 \n최근 1 년 \n최근 2 년 \n김창진 \n1980 \n상무 \n19 개 \n2,926 억 \n- \n- \n41.61% \n- \n8년 3개월 \n \n(2) 부책임운용전문인력 \n성명 \n생년 \n직위 \n운용 현황 \n동종집합투자기구 \n연평균 수익률(주식형-공모-국내) \n운용 \n경력년수 \n집합투자 \n기구수 \n운용규모 \n운용역 \n운용사 \n최근 1 년 \n최근 2 년 \n최근 1 년 \n최근 2 년 \n황현철 \n1992 \n전임 \n5 개 \n1,823 억 \n41.61% \n- \n41.61% \n- \n7년 7개월 \n주1) “책임운용인력”이란 해당 집합투자기구의 투자전략 수립 및 투자의사결정 등에 주도적·핵심적 역할을 수행하는 자를 \n의미하며, “부책임운용전문인력”이란 “책임운용인력”이 아닌 자로서, 집합투자기구의 투자목적 및 운용전략 등에 중대한 영\n향을 미칠 수 있는 자산에 대한 운용권한을 가진 운용전문인력을 의미합니다. \n주2) 운용전문인력의 최근 과거 3년 이내에 운용한 집합투자기구의 명칭, 집합투자재산의 규모와 수익률 등은 한국금융투\n자협회 홈페이지(www.kofia.or.kr)에서 확인할 수 있습니다. \n주3) 동종집합투자기구 연평균 수익률은 해당 집합투자업자가 분류한 동일 유형 집합투자기구의 평균운용성과이며, 해당 \n운용전문인력의 평균운용성과는 해당 회사 근무기간 중 운용한 성과를 의미합니다. 동종 집합투자기구 연평균 수익률은 \n당사 공모펀드를 대상으로 하였으며, 운용펀드 기준으로 보수차감 전 수익률이며 모자형 구조의 펀드의 경우 모펀드만을 \n대상으로 계산되었음을 알려드립니다. \n주4) 운용중인 다른 집합투자기구 중 성과보수가 약정된 집합투자기구(사모펀드) : 김창진 18개 펀드 2,769억원 / 황현철 4\n개 펀드 1,105억원 \n투자자 \n유의사항 \n• 집합투자증권은 ｢예금자보호법｣에 따라 보호되지 않는 실적배당상품으로 투자원금의 손실이 발생할 \n수 있으므로 투자에 신중을 기하여 주시기 바랍니다. \n• 금융위원회가 투자설명서의 기재사항이 진실 또는 정확하다는 것을 인정하거나 그 증권의 가치를 \n보증 또는 승인하지 아니함을 유의하시기 바랍니다. \n• 간이투자설명서보다 자세한 내용이 필요하시어 투자설명서의 교부를 요청하시면 귀하의 집합투자 \n증권 매입 이전까지 교부하오니 참고하시기 바랍니다. \n• 간이투자설명서는 증권신고서 효력발생일까지 기재사항 중 일부가 변경될 수 있으며, 개방형 집합 \n투자증권인 경우 효력발생일 이후에도 변경될 수 있습니다. \n• 이 집합투자증권의 투자위험등급을 확인하시고, 귀하의 투자 경력이나 투자성향에 적합한 상품인지",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p004_performance_t001__d058a9769a",
+      "field_path": "performance[7]",
+      "page": 4,
+      "section": "PERFORMANCE",
+      "source_text": "페이지 4 / 73 \n \n있음에 유의하시기 바랍니다. \n투자실적 \n추이 \n(연평균 \n수익률, \n단위: %) \n종류 \n최초설정일 \n최근 1 년 \n최근 2 년 \n최근 3 년 \n최근 5 년 \n설정일 이후 \n24.07.12 \n~ 25.07.11 \n23.07.12 \n ~ 25.07.11 \n \n \n23.07.12 \n ~ 25.07.11 \n수수료미징구- \n온라인형(C-e) \n23.07.12 \n38.42 \n21.33 \n \n \n21.33 \n비교지수 \n9.38 \n10.67 \n \n \n10.67 \n수익률변동성(%) \n22.62 \n18.40 \n \n \n21.33 \n주1) 비교지수 : (0.9 * [KOSPI]) + (0.1 * [CALL금리]) \n주2) 비교지수의 수익률에는 운용보수 등 투자신탁에 부과되는 보수 및 비용이 반영되지 않았습니다. \n주3) 연평균 수익률은 해당 기간동안의 누적수익률을 기하평균방식으로 계산한 것으로 해당기간 동안의 평균 수익률을 \n나타내는 수치입니다. \n주4) 수익률 변동성(%)은 해당 기간 동안 집합투자기구의 연환산된 주간수익률의 표준편차입니다. \n주5) 기재가 생략된 종류 수익증권에 대해서는 투자설명서를 참고하시기 바랍니다. \n운용전문 \n인력 \n(1) 책임운용전문인력 \n성명 \n생년 \n직위 \n운용 현황 \n동종집합투자기구 \n연평균 수익률(주식형-공모-국내) \n운용 \n경력년수 \n집합투자 \n기구수 \n운용규모 \n운용역 \n운용사 \n최근 1 년 \n최근 2 년 \n최근 1 년 \n최근 2 년 \n김창진 \n1980 \n상무 \n19 개 \n2,926 억 \n- \n- \n41.61% \n- \n8년 3개월 \n \n(2) 부책임운용전문인력 \n성명 \n생년 \n직위 \n운용 현황 \n동종집합투자기구 \n연평균 수익률(주식형-공모-국내) \n운용 \n경력년수 \n집합투자 \n기구수 \n운용규모 \n운용역 \n운용사 \n최근 1 년 \n최근 2 년 \n최근 1 년 \n최근 2 년 \n황현철 \n1992 \n전임 \n5 개 \n1,823 억 \n41.61% \n- \n41.61% \n- \n7년 7개월 \n주1) “책임운용인력”이란 해당 집합투자기구의 투자전략 수립 및 투자의사결정 등에 주도적·핵심적 역할을 수행하는 자를 \n의미하며, “부책임운용전문인력”이란 “책임운용인력”이 아닌 자로서, 집합투자기구의 투자목적 및 운용전략 등에 중대한 영\n향을 미칠 수 있는 자산에 대한 운용권한을 가진 운용전문인력을 의미합니다. \n주2) 운용전문인력의 최근 과거 3년 이내에 운용한 집합투자기구의 명칭, 집합투자재산의 규모와 수익률 등은 한국금융투\n자협회 홈페이지(www.kofia.or.kr)에서 확인할 수 있습니다. \n주3) 동종집합투자기구 연평균 수익률은 해당 집합투자업자가 분류한 동일 유형 집합투자기구의 평균운용성과이며, 해당 \n운용전문인력의 평균운용성과는 해당 회사 근무기간 중 운용한 성과를 의미합니다. 동종 집합투자기구 연평균 수익률은 \n당사 공모펀드를 대상으로 하였으며, 운용펀드 기준으로 보수차감 전 수익률이며 모자형 구조의 펀드의 경우 모펀드만을 \n대상으로 계산되었음을 알려드립니다. \n주4) 운용중인 다른 집합투자기구 중 성과보수가 약정된 집합투자기구(사모펀드) : 김창진 18개 펀드 2,769억원 / 황현철 4\n개 펀드 1,105억원 \n투자자 \n유의사항 \n• 집합투자증권은 ｢예금자보호법｣에 따라 보호되지 않는 실적배당상품으로 투자원금의 손실이 발생할 \n수 있으므로 투자에 신중을 기하여 주시기 바랍니다. \n• 금융위원회가 투자설명서의 기재사항이 진실 또는 정확하다는 것을 인정하거나 그 증권의 가치를 \n보증 또는 승인하지 아니함을 유의하시기 바랍니다. \n• 간이투자설명서보다 자세한 내용이 필요하시어 투자설명서의 교부를 요청하시면 귀하의 집합투자 \n증권 매입 이전까지 교부하오니 참고하시기 바랍니다. \n• 간이투자설명서는 증권신고서 효력발생일까지 기재사항 중 일부가 변경될 수 있으며, 개방형 집합 \n투자증권인 경우 효력발생일 이후에도 변경될 수 있습니다. \n• 이 집합투자증권의 투자위험등급을 확인하시고, 귀하의 투자 경력이나 투자성향에 적합한 상품인지",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p004_performance_t001__8794f5bc36",
+      "field_path": "performance[8]",
+      "page": 4,
+      "section": "PERFORMANCE",
+      "source_text": "페이지 4 / 73 \n \n있음에 유의하시기 바랍니다. \n투자실적 \n추이 \n(연평균 \n수익률, \n단위: %) \n종류 \n최초설정일 \n최근 1 년 \n최근 2 년 \n최근 3 년 \n최근 5 년 \n설정일 이후 \n24.07.12 \n~ 25.07.11 \n23.07.12 \n ~ 25.07.11 \n \n \n23.07.12 \n ~ 25.07.11 \n수수료미징구- \n온라인형(C-e) \n23.07.12 \n38.42 \n21.33 \n \n \n21.33 \n비교지수 \n9.38 \n10.67 \n \n \n10.67 \n수익률변동성(%) \n22.62 \n18.40 \n \n \n21.33 \n주1) 비교지수 : (0.9 * [KOSPI]) + (0.1 * [CALL금리]) \n주2) 비교지수의 수익률에는 운용보수 등 투자신탁에 부과되는 보수 및 비용이 반영되지 않았습니다. \n주3) 연평균 수익률은 해당 기간동안의 누적수익률을 기하평균방식으로 계산한 것으로 해당기간 동안의 평균 수익률을 \n나타내는 수치입니다. \n주4) 수익률 변동성(%)은 해당 기간 동안 집합투자기구의 연환산된 주간수익률의 표준편차입니다. \n주5) 기재가 생략된 종류 수익증권에 대해서는 투자설명서를 참고하시기 바랍니다. \n운용전문 \n인력 \n(1) 책임운용전문인력 \n성명 \n생년 \n직위 \n운용 현황 \n동종집합투자기구 \n연평균 수익률(주식형-공모-국내) \n운용 \n경력년수 \n집합투자 \n기구수 \n운용규모 \n운용역 \n운용사 \n최근 1 년 \n최근 2 년 \n최근 1 년 \n최근 2 년 \n김창진 \n1980 \n상무 \n19 개 \n2,926 억 \n- \n- \n41.61% \n- \n8년 3개월 \n \n(2) 부책임운용전문인력 \n성명 \n생년 \n직위 \n운용 현황 \n동종집합투자기구 \n연평균 수익률(주식형-공모-국내) \n운용 \n경력년수 \n집합투자 \n기구수 \n운용규모 \n운용역 \n운용사 \n최근 1 년 \n최근 2 년 \n최근 1 년 \n최근 2 년 \n황현철 \n1992 \n전임 \n5 개 \n1,823 억 \n41.61% \n- \n41.61% \n- \n7년 7개월 \n주1) “책임운용인력”이란 해당 집합투자기구의 투자전략 수립 및 투자의사결정 등에 주도적·핵심적 역할을 수행하는 자를 \n의미하며, “부책임운용전문인력”이란 “책임운용인력”이 아닌 자로서, 집합투자기구의 투자목적 및 운용전략 등에 중대한 영\n향을 미칠 수 있는 자산에 대한 운용권한을 가진 운용전문인력을 의미합니다. \n주2) 운용전문인력의 최근 과거 3년 이내에 운용한 집합투자기구의 명칭, 집합투자재산의 규모와 수익률 등은 한국금융투\n자협회 홈페이지(www.kofia.or.kr)에서 확인할 수 있습니다. \n주3) 동종집합투자기구 연평균 수익률은 해당 집합투자업자가 분류한 동일 유형 집합투자기구의 평균운용성과이며, 해당 \n운용전문인력의 평균운용성과는 해당 회사 근무기간 중 운용한 성과를 의미합니다. 동종 집합투자기구 연평균 수익률은 \n당사 공모펀드를 대상으로 하였으며, 운용펀드 기준으로 보수차감 전 수익률이며 모자형 구조의 펀드의 경우 모펀드만을 \n대상으로 계산되었음을 알려드립니다. \n주4) 운용중인 다른 집합투자기구 중 성과보수가 약정된 집합투자기구(사모펀드) : 김창진 18개 펀드 2,769억원 / 황현철 4\n개 펀드 1,105억원 \n투자자 \n유의사항 \n• 집합투자증권은 ｢예금자보호법｣에 따라 보호되지 않는 실적배당상품으로 투자원금의 손실이 발생할 \n수 있으므로 투자에 신중을 기하여 주시기 바랍니다. \n• 금융위원회가 투자설명서의 기재사항이 진실 또는 정확하다는 것을 인정하거나 그 증권의 가치를 \n보증 또는 승인하지 아니함을 유의하시기 바랍니다. \n• 간이투자설명서보다 자세한 내용이 필요하시어 투자설명서의 교부를 요청하시면 귀하의 집합투자 \n증권 매입 이전까지 교부하오니 참고하시기 바랍니다. \n• 간이투자설명서는 증권신고서 효력발생일까지 기재사항 중 일부가 변경될 수 있으며, 개방형 집합 \n투자증권인 경우 효력발생일 이후에도 변경될 수 있습니다. \n• 이 집합투자증권의 투자위험등급을 확인하시고, 귀하의 투자 경력이나 투자성향에 적합한 상품인지",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_objective_c001__db210276c8",
+      "field_path": "narratives[0]",
+      "page": 3,
+      "section": "INVESTMENT_OBJECTIVE",
+      "source_text": "투자목적: 이 투자신탁은 국내 주식에 주로 투자하는 모투자신탁을 법 시행령 제94조 제2항 \n제4호에서 규정하는 주된 투자대상자산으로 하며 수익을 추구하는 것을 목적으로 합니다. \n그러나 상기의",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_objective_c002__db210276c8",
+      "field_path": "narratives[0]",
+      "page": 3,
+      "section": "INVESTMENT_OBJECTIVE",
+      "source_text": "투자목적이 반드시 달성된다는 보장은 없으며, 집합투자업자, 신탁업자, 판매회사 \n등 이 투자신탁과 관련된 어떠한 당사자도 투자원금의 보장 또는",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_objective_c003__db210276c8",
+      "field_path": "narratives[0]",
+      "page": 3,
+      "section": "INVESTMENT_OBJECTIVE",
+      "source_text": "투자목적의 달성을 보장하지 \n아니합니다. \n2.",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_strategy_c002__32f40c6089",
+      "field_path": "narratives[1]",
+      "page": 3,
+      "section": "INVESTMENT_STRATEGY",
+      "source_text": "투자전략 \n1.",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p003_strategy_c003__32f40c6089",
+      "field_path": "narratives[1]",
+      "page": 3,
+      "section": "INVESTMENT_STRATEGY",
+      "source_text": "투자전략: \n이 \n투자신탁은 \n디에스Brave증권모투자신탁[주식]에 \n90% \n이상 \n투자하는 \n자투자신탁으로서, 모투자신탁의 운용실적에 따라 이익 또는 손실이 발생합니다. \n※ 자세한 내용은 투자설명서를 참조하시기 바랍니다.",
+      "extraction_method": "TEXT",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p022_other_t002__ad241bba7c",
+      "field_path": "narratives[2]",
+      "page": 22,
+      "section": "OTHER",
+      "source_text": "페이지 22 / 73 \n \n투자금액의 손실 내지 감소의 위험은 전적으로 수익자가 부담하며, 집합투자업자나 판매회사 등 어떤 당사자도 \n투자손실에 대하여 책임을 지지 아니합니다. 또한, 이 투자신탁은 예금자보호법의 적용을 받는 은행 등에서 매\n입하는 경우에도 은행예금과 달리 예금자보호법에 따라 보호되지 않습니다. \n※ 다음의 투자위험은 본 자료 작성시점 현재 중요하다고 판단되는 위험을 기재한 것이며, 발생 가능한 모든 \n위험을 기재한 것이 아님을 유의하셔야 합니다. 또한, 향후 운용과정 등에서 현재로는 예상하기 어려운 위험이 \n발생하거나 현재 시점에서는 중요하지 않다고 판단되어 기재에 누락되어 있는 위험의 정도가 커져 그 위험으\n로부터 심각한 손실이 발생할 수도 있음에 유의하셔야 합니다. \n \n가. 일반 위험 \n세부 구분 \n투자위험 주요 내용 \n투자원본 \n손실위험 \n이 투자신탁은 원본을 보장하지 않습니다. 투자신탁의 운용실적에 따라 손익이 결정되는 실\n적배당상품으로 예금자보호법에 따라 보호되지 아니하며, 특히 예금자보호법의 적용을 받는 \n은행 등에서 집합투자증권을 매입하는 경우에도 은행 예금과 달리 예금자보호법에 따라 보호\n되지 않습니다. 따라서 투자재산 가치변동에 따라 투자원본의 전부 또는 일부에 대한 손실의 \n위험이 존재하며 투자 금액의 손실 내지 감소의 위험은 전적으로 투자자가 부담하게 되고, \n집합투자업자나 판매회사 등 어떤 당사자도 투자손실에 대하여 책임을 지지 아니합니다. \n주식가격 \n변동위험 \n이 투자신탁은 신탁재산을 주로 국내주식 등에 투자하기 때문에 국내 주식시장에 영향을 주\n는 거시경제지표의 변화에 따른 주식의 가격이 변동될 위험에 노출됩니다. 또한 투자 대상 \n기업의 영업환경, 재무상황 변동에 따라 주식의 가치가 급격히 변동될 경우 손실이 크게 발\n생할 수도 있습니다. \n시장위험 \n신탁재산을 국내주식, 채권 등에 투자함으로써 이 투자신탁은 국내 금융시장의 주가, 이자율 \n등 기타 거시경제지표의 변화에 따른 위험에 노출됩니다. 또한, 신탁재산의 운용에 있어 예\n상치 못한 정치, 경제상황, 정부의 조치 및 세제의 변경 등은 당해 신탁재산의 운용에 영향을 \n미칠 수 있습니다. \n이자율 변동\n에 따른 위\n험 \n채권의 가격은 이자율에 의해 결정됩니다. 일반적으로 이자율이 하락하면 채권가격 상승에 \n의한 자본이득이 발생하고 이자율이 상승하면 자본손실이 발생합니다. 따라서 채권을 만기까\n지 보유하지 않고 중도에 매도하는 경우에는 시장상황에 따라 손실 또는 이득이 발생할 수 \n있습니다. 또한 채권의 잔존만기가 길어질 경우 해당 위험도 커질 수 있습니다. \n신용위험 \n이 투자신탁이 투자하는 투자대상 종목의 가치는 해당 종목 발행회사의 영업환경, 재무상황, \n신용상태의 악화에 따라 급격히 변동될 수 있습니다. 따라서 주식뿐만 아니라 채권 등 비교\n적 안전자산이라 할지라도 해당 종목의 가격변동에 따른 원금손실을 입게 될 수도 있습니다. \n파생상품 \n투자위험 \n파생상품(선물, 옵션등)은 작은 증거금으로 거액의 결제가 가능한 지렛대 효과(레버리지 효과)\n로 인하여 기초자산에 직접 투자하는 경우에 비하여 훨씬 높은 위험에 노출될 수 있습니다. \n또한, 옵션매도에 따른 이론적인 손실범위는 무한대이므로 기초자산에 대한 투자나 옵션 매\n수의 경우에 비하여 높은 위험에 노출될 수 있습니다. \n \n나. 특수 위험 \n세부 구분 \n투자위험 주요 내용 \n집중투자에 \n따른 위험 \n이 투자신탁은 법령이 허용하는 한도 내에서 소수 종목 또는 산업에 선별적으로 집중 투자할 \n수 있으며 이에 따라 변동성 및 일부 종목의 집합투자기구에 미치는 영향력이 동일 유형의",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p005_risks_t001__ad241bba7c",
+      "field_path": "narratives[2]",
+      "page": 5,
+      "section": "INVESTMENT_RISK",
+      "source_text": "페이지 5 / 73 \n \n신중한 투자결정을 하시기 바랍니다. \n• 증권신고서, 투자설명서상 기재된 투자전략에 따른 투자목적 또는 성과목표는 반드시 실현된다는 \n보장은 없습니다. 또한 과거의 투자실적이 장래에도 실현된다는 보장은 없습니다. \n• 집합투자기구가 설정 후 1년이 경과하였음에도 설정액이 50억원 미만(소규모펀드)인 경우 \n분산투자가 어려워 효율적인 자산운용이 곤란하거나 임의해지 될 수 있으니, 투자시 소규모펀드 \n여부를 확인하시기 바라며 소규모펀드 해당여부는 금융투자협회, 판매회사, 자산운용사 홈페이지에서 \n확인할 수 있습니다. \n• 최초설정일 이후 6개월이 되는 날에 투자신탁 원본액이 15억원 미만인 경우에는 그 날로부터 1개월 \n이내에 수익자총회 없이 집합투자업자가 운용하는 다른 투자신탁으로 전환을 위한 조치를 취할 수 \n있습니다. \n※ 추가적인 투자자 유의사항은 투자설명서 ‘투자결정시 유의사항 안내’ 참조 \n주요 \n투자 \n위험 \n세부 구분 \n투자위험 주요 내용 \n투자원본 \n손실위험 \n이 투자신탁은 원본을 보장하지 않습니다. 투자신탁의 운용실적에 따라 손익이 결정 되는 \n실적배당상품으로 예금자보호법에 따라 보호되지 아니하며, 특히 예금자 보호법의 적용을 \n받는 은행 등에서 집합투자증권을 매입하는 경우에도 은행 예금과 달리 예금자보호법에 따\n라 보호되지 않습니다. 따라서 투자재산 가치변동에 따라 투자원본의 전부 또는 일부에 대\n한 손실의 위험이 존재하며 투자 금액의 손실 내지 감소의 위험은 전적으로 투자자가 부담\n하게 되고, 집합투자업자나 판매회사 등 어떤 당사자도 투자손실에 대하여 책임을 지지 아\n니합니다. \n주식가격 \n변동위험 \n이 투자신탁은 신탁재산을 주로 국내주식 등에 투자하기 때문에 국내 주식시장에 영향을 \n주는 거시경제지표의 변화에 따른 주식의 가격이 변동될 위험에 노출됩니다. 또한 투자 대\n상 기업의 영업환경, 재무상황 변동에 따라 주식의 가치가 급격히 변동될 경우 손실이 크\n게 발생할 수도 있습니다. \n시장위험 \n신탁재산을 국내주식, 채권 등에 투자함으로써 이 투자신탁은 국내금융시장의 주가, 이자율 \n등 기타 거시경제지표의 변화에 따른 위험에 노출됩니다. 또한, 신탁재산의 운용에 있어 \n예상치 못한 정치, 경제상황, 정부의 조치 및 세제의 변경 등은 당해 신탁재산의 운용에 영\n향을 미칠 수 있습니다. \n신용위험 \n이 투자신탁이 투자하는 투자대상 종목의 가치는 해당 종목 발행회사의 영업환경, 재무상\n황, 신용상태의 악화에 따라 급격히 변동될 수 있습니다. 따라서 주식뿐만 아니라 채권 등 \n비교적 안전자산이라 할지라도 해당 종목의 가격변동에 따른 원금손실을 입게 될 수도 있\n습니다. \n집중투자에 \n따른 위험 \n이 투자신탁은 법령이 허용하는 한도 내에서 소수 종목 또는 산업에 선별적으로 집중 투자 \n할 수 있으며 이에 따라 변동성 및 일부 종목의 집합투자기구에 미치는 영향력이 동일 유\n형의 일반적인 집합투자기구 혹은 해당 시장에 비하여 상대적으로 클 수 있습니다. \n매입방법 \n- 15시 30분(오후 3시 30분)이전에 자금을 납입한 \n경우: 납입일로부터 2영업일(D+1)에 공고되는 기준\n가격을 적용하여 매입 \n- 15시 30분(오후 3시 30분)경과 후 자금을 납입한 \n경우: 납입일로부터 3영업일(D+2)에 공고되는 기준\n가격을 적용하여 매입 \n환매 \n방법 \n- 15시 30분(오후 3시 30분)이전 환매를 청\n구한 경우: 환매청구일부터 2영업일(D+1)에 \n공고되는 기준가격을 적용. 4영업일(D+3)에 \n관련 세금 등을 공제한 후 환매대금 지급 \n- 15시 30분(오후 3시 30분)경과 후 환매를 \n청구한 경우: 환매를 청구한날로부터 기산하\n여 3영업일(D+2)에 공고되는 수익증권 기준\n가격을 적용하여 환매를 청구한 날로부터 기\n산하여 4영업일(D+3)에 관련 세금 등을 공\n제한 후 환매 대금 지급 \n환매 \n수수료 \n해당사항 없음",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p022_other_t001__a9dae7a869",
+      "field_path": "narratives[3]",
+      "page": 22,
+      "section": "OTHER",
+      "source_text": "페이지 22 / 73 \n \n투자금액의 손실 내지 감소의 위험은 전적으로 수익자가 부담하며, 집합투자업자나 판매회사 등 어떤 당사자도 \n투자손실에 대하여 책임을 지지 아니합니다. 또한, 이 투자신탁은 예금자보호법의 적용을 받는 은행 등에서 매\n입하는 경우에도 은행예금과 달리 예금자보호법에 따라 보호되지 않습니다. \n※ 다음의 투자위험은 본 자료 작성시점 현재 중요하다고 판단되는 위험을 기재한 것이며, 발생 가능한 모든 \n위험을 기재한 것이 아님을 유의하셔야 합니다. 또한, 향후 운용과정 등에서 현재로는 예상하기 어려운 위험이 \n발생하거나 현재 시점에서는 중요하지 않다고 판단되어 기재에 누락되어 있는 위험의 정도가 커져 그 위험으\n로부터 심각한 손실이 발생할 수도 있음에 유의하셔야 합니다. \n \n가. 일반 위험 \n세부 구분 \n투자위험 주요 내용 \n투자원본 \n손실위험 \n이 투자신탁은 원본을 보장하지 않습니다. 투자신탁의 운용실적에 따라 손익이 결정되는 실\n적배당상품으로 예금자보호법에 따라 보호되지 아니하며, 특히 예금자보호법의 적용을 받는 \n은행 등에서 집합투자증권을 매입하는 경우에도 은행 예금과 달리 예금자보호법에 따라 보호\n되지 않습니다. 따라서 투자재산 가치변동에 따라 투자원본의 전부 또는 일부에 대한 손실의 \n위험이 존재하며 투자 금액의 손실 내지 감소의 위험은 전적으로 투자자가 부담하게 되고, \n집합투자업자나 판매회사 등 어떤 당사자도 투자손실에 대하여 책임을 지지 아니합니다. \n주식가격 \n변동위험 \n이 투자신탁은 신탁재산을 주로 국내주식 등에 투자하기 때문에 국내 주식시장에 영향을 주\n는 거시경제지표의 변화에 따른 주식의 가격이 변동될 위험에 노출됩니다. 또한 투자 대상 \n기업의 영업환경, 재무상황 변동에 따라 주식의 가치가 급격히 변동될 경우 손실이 크게 발\n생할 수도 있습니다. \n시장위험 \n신탁재산을 국내주식, 채권 등에 투자함으로써 이 투자신탁은 국내 금융시장의 주가, 이자율 \n등 기타 거시경제지표의 변화에 따른 위험에 노출됩니다. 또한, 신탁재산의 운용에 있어 예\n상치 못한 정치, 경제상황, 정부의 조치 및 세제의 변경 등은 당해 신탁재산의 운용에 영향을 \n미칠 수 있습니다. \n이자율 변동\n에 따른 위\n험 \n채권의 가격은 이자율에 의해 결정됩니다. 일반적으로 이자율이 하락하면 채권가격 상승에 \n의한 자본이득이 발생하고 이자율이 상승하면 자본손실이 발생합니다. 따라서 채권을 만기까\n지 보유하지 않고 중도에 매도하는 경우에는 시장상황에 따라 손실 또는 이득이 발생할 수 \n있습니다. 또한 채권의 잔존만기가 길어질 경우 해당 위험도 커질 수 있습니다. \n신용위험 \n이 투자신탁이 투자하는 투자대상 종목의 가치는 해당 종목 발행회사의 영업환경, 재무상황, \n신용상태의 악화에 따라 급격히 변동될 수 있습니다. 따라서 주식뿐만 아니라 채권 등 비교\n적 안전자산이라 할지라도 해당 종목의 가격변동에 따른 원금손실을 입게 될 수도 있습니다. \n파생상품 \n투자위험 \n파생상품(선물, 옵션등)은 작은 증거금으로 거액의 결제가 가능한 지렛대 효과(레버리지 효과)\n로 인하여 기초자산에 직접 투자하는 경우에 비하여 훨씬 높은 위험에 노출될 수 있습니다. \n또한, 옵션매도에 따른 이론적인 손실범위는 무한대이므로 기초자산에 대한 투자나 옵션 매\n수의 경우에 비하여 높은 위험에 노출될 수 있습니다. \n \n나. 특수 위험 \n세부 구분 \n투자위험 주요 내용 \n집중투자에 \n따른 위험 \n이 투자신탁은 법령이 허용하는 한도 내에서 소수 종목 또는 산업에 선별적으로 집중 투자할 \n수 있으며 이에 따라 변동성 및 일부 종목의 집합투자기구에 미치는 영향력이 동일 유형의",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p022_other_t001__21500297b5",
+      "field_path": "narratives[4]",
+      "page": 22,
+      "section": "OTHER",
+      "source_text": "페이지 22 / 73 \n \n투자금액의 손실 내지 감소의 위험은 전적으로 수익자가 부담하며, 집합투자업자나 판매회사 등 어떤 당사자도 \n투자손실에 대하여 책임을 지지 아니합니다. 또한, 이 투자신탁은 예금자보호법의 적용을 받는 은행 등에서 매\n입하는 경우에도 은행예금과 달리 예금자보호법에 따라 보호되지 않습니다. \n※ 다음의 투자위험은 본 자료 작성시점 현재 중요하다고 판단되는 위험을 기재한 것이며, 발생 가능한 모든 \n위험을 기재한 것이 아님을 유의하셔야 합니다. 또한, 향후 운용과정 등에서 현재로는 예상하기 어려운 위험이 \n발생하거나 현재 시점에서는 중요하지 않다고 판단되어 기재에 누락되어 있는 위험의 정도가 커져 그 위험으\n로부터 심각한 손실이 발생할 수도 있음에 유의하셔야 합니다. \n \n가. 일반 위험 \n세부 구분 \n투자위험 주요 내용 \n투자원본 \n손실위험 \n이 투자신탁은 원본을 보장하지 않습니다. 투자신탁의 운용실적에 따라 손익이 결정되는 실\n적배당상품으로 예금자보호법에 따라 보호되지 아니하며, 특히 예금자보호법의 적용을 받는 \n은행 등에서 집합투자증권을 매입하는 경우에도 은행 예금과 달리 예금자보호법에 따라 보호\n되지 않습니다. 따라서 투자재산 가치변동에 따라 투자원본의 전부 또는 일부에 대한 손실의 \n위험이 존재하며 투자 금액의 손실 내지 감소의 위험은 전적으로 투자자가 부담하게 되고, \n집합투자업자나 판매회사 등 어떤 당사자도 투자손실에 대하여 책임을 지지 아니합니다. \n주식가격 \n변동위험 \n이 투자신탁은 신탁재산을 주로 국내주식 등에 투자하기 때문에 국내 주식시장에 영향을 주\n는 거시경제지표의 변화에 따른 주식의 가격이 변동될 위험에 노출됩니다. 또한 투자 대상 \n기업의 영업환경, 재무상황 변동에 따라 주식의 가치가 급격히 변동될 경우 손실이 크게 발\n생할 수도 있습니다. \n시장위험 \n신탁재산을 국내주식, 채권 등에 투자함으로써 이 투자신탁은 국내 금융시장의 주가, 이자율 \n등 기타 거시경제지표의 변화에 따른 위험에 노출됩니다. 또한, 신탁재산의 운용에 있어 예\n상치 못한 정치, 경제상황, 정부의 조치 및 세제의 변경 등은 당해 신탁재산의 운용에 영향을 \n미칠 수 있습니다. \n이자율 변동\n에 따른 위\n험 \n채권의 가격은 이자율에 의해 결정됩니다. 일반적으로 이자율이 하락하면 채권가격 상승에 \n의한 자본이득이 발생하고 이자율이 상승하면 자본손실이 발생합니다. 따라서 채권을 만기까\n지 보유하지 않고 중도에 매도하는 경우에는 시장상황에 따라 손실 또는 이득이 발생할 수 \n있습니다. 또한 채권의 잔존만기가 길어질 경우 해당 위험도 커질 수 있습니다. \n신용위험 \n이 투자신탁이 투자하는 투자대상 종목의 가치는 해당 종목 발행회사의 영업환경, 재무상황, \n신용상태의 악화에 따라 급격히 변동될 수 있습니다. 따라서 주식뿐만 아니라 채권 등 비교\n적 안전자산이라 할지라도 해당 종목의 가격변동에 따른 원금손실을 입게 될 수도 있습니다. \n파생상품 \n투자위험 \n파생상품(선물, 옵션등)은 작은 증거금으로 거액의 결제가 가능한 지렛대 효과(레버리지 효과)\n로 인하여 기초자산에 직접 투자하는 경우에 비하여 훨씬 높은 위험에 노출될 수 있습니다. \n또한, 옵션매도에 따른 이론적인 손실범위는 무한대이므로 기초자산에 대한 투자나 옵션 매\n수의 경우에 비하여 높은 위험에 노출될 수 있습니다. \n \n나. 특수 위험 \n세부 구분 \n투자위험 주요 내용 \n집중투자에 \n따른 위험 \n이 투자신탁은 법령이 허용하는 한도 내에서 소수 종목 또는 산업에 선별적으로 집중 투자할 \n수 있으며 이에 따라 변동성 및 일부 종목의 집합투자기구에 미치는 영향력이 동일 유형의",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p022_other_t001__a9ab9cc710",
+      "field_path": "narratives[5]",
+      "page": 22,
+      "section": "OTHER",
+      "source_text": "페이지 22 / 73 \n \n투자금액의 손실 내지 감소의 위험은 전적으로 수익자가 부담하며, 집합투자업자나 판매회사 등 어떤 당사자도 \n투자손실에 대하여 책임을 지지 아니합니다. 또한, 이 투자신탁은 예금자보호법의 적용을 받는 은행 등에서 매\n입하는 경우에도 은행예금과 달리 예금자보호법에 따라 보호되지 않습니다. \n※ 다음의 투자위험은 본 자료 작성시점 현재 중요하다고 판단되는 위험을 기재한 것이며, 발생 가능한 모든 \n위험을 기재한 것이 아님을 유의하셔야 합니다. 또한, 향후 운용과정 등에서 현재로는 예상하기 어려운 위험이 \n발생하거나 현재 시점에서는 중요하지 않다고 판단되어 기재에 누락되어 있는 위험의 정도가 커져 그 위험으\n로부터 심각한 손실이 발생할 수도 있음에 유의하셔야 합니다. \n \n가. 일반 위험 \n세부 구분 \n투자위험 주요 내용 \n투자원본 \n손실위험 \n이 투자신탁은 원본을 보장하지 않습니다. 투자신탁의 운용실적에 따라 손익이 결정되는 실\n적배당상품으로 예금자보호법에 따라 보호되지 아니하며, 특히 예금자보호법의 적용을 받는 \n은행 등에서 집합투자증권을 매입하는 경우에도 은행 예금과 달리 예금자보호법에 따라 보호\n되지 않습니다. 따라서 투자재산 가치변동에 따라 투자원본의 전부 또는 일부에 대한 손실의 \n위험이 존재하며 투자 금액의 손실 내지 감소의 위험은 전적으로 투자자가 부담하게 되고, \n집합투자업자나 판매회사 등 어떤 당사자도 투자손실에 대하여 책임을 지지 아니합니다. \n주식가격 \n변동위험 \n이 투자신탁은 신탁재산을 주로 국내주식 등에 투자하기 때문에 국내 주식시장에 영향을 주\n는 거시경제지표의 변화에 따른 주식의 가격이 변동될 위험에 노출됩니다. 또한 투자 대상 \n기업의 영업환경, 재무상황 변동에 따라 주식의 가치가 급격히 변동될 경우 손실이 크게 발\n생할 수도 있습니다. \n시장위험 \n신탁재산을 국내주식, 채권 등에 투자함으로써 이 투자신탁은 국내 금융시장의 주가, 이자율 \n등 기타 거시경제지표의 변화에 따른 위험에 노출됩니다. 또한, 신탁재산의 운용에 있어 예\n상치 못한 정치, 경제상황, 정부의 조치 및 세제의 변경 등은 당해 신탁재산의 운용에 영향을 \n미칠 수 있습니다. \n이자율 변동\n에 따른 위\n험 \n채권의 가격은 이자율에 의해 결정됩니다. 일반적으로 이자율이 하락하면 채권가격 상승에 \n의한 자본이득이 발생하고 이자율이 상승하면 자본손실이 발생합니다. 따라서 채권을 만기까\n지 보유하지 않고 중도에 매도하는 경우에는 시장상황에 따라 손실 또는 이득이 발생할 수 \n있습니다. 또한 채권의 잔존만기가 길어질 경우 해당 위험도 커질 수 있습니다. \n신용위험 \n이 투자신탁이 투자하는 투자대상 종목의 가치는 해당 종목 발행회사의 영업환경, 재무상황, \n신용상태의 악화에 따라 급격히 변동될 수 있습니다. 따라서 주식뿐만 아니라 채권 등 비교\n적 안전자산이라 할지라도 해당 종목의 가격변동에 따른 원금손실을 입게 될 수도 있습니다. \n파생상품 \n투자위험 \n파생상품(선물, 옵션등)은 작은 증거금으로 거액의 결제가 가능한 지렛대 효과(레버리지 효과)\n로 인하여 기초자산에 직접 투자하는 경우에 비하여 훨씬 높은 위험에 노출될 수 있습니다. \n또한, 옵션매도에 따른 이론적인 손실범위는 무한대이므로 기초자산에 대한 투자나 옵션 매\n수의 경우에 비하여 높은 위험에 노출될 수 있습니다. \n \n나. 특수 위험 \n세부 구분 \n투자위험 주요 내용 \n집중투자에 \n따른 위험 \n이 투자신탁은 법령이 허용하는 한도 내에서 소수 종목 또는 산업에 선별적으로 집중 투자할 \n수 있으며 이에 따라 변동성 및 일부 종목의 집합투자기구에 미치는 영향력이 동일 유형의",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p022_other_t001__65e9778a1e",
+      "field_path": "narratives[6]",
+      "page": 22,
+      "section": "OTHER",
+      "source_text": "페이지 22 / 73 \n \n투자금액의 손실 내지 감소의 위험은 전적으로 수익자가 부담하며, 집합투자업자나 판매회사 등 어떤 당사자도 \n투자손실에 대하여 책임을 지지 아니합니다. 또한, 이 투자신탁은 예금자보호법의 적용을 받는 은행 등에서 매\n입하는 경우에도 은행예금과 달리 예금자보호법에 따라 보호되지 않습니다. \n※ 다음의 투자위험은 본 자료 작성시점 현재 중요하다고 판단되는 위험을 기재한 것이며, 발생 가능한 모든 \n위험을 기재한 것이 아님을 유의하셔야 합니다. 또한, 향후 운용과정 등에서 현재로는 예상하기 어려운 위험이 \n발생하거나 현재 시점에서는 중요하지 않다고 판단되어 기재에 누락되어 있는 위험의 정도가 커져 그 위험으\n로부터 심각한 손실이 발생할 수도 있음에 유의하셔야 합니다. \n \n가. 일반 위험 \n세부 구분 \n투자위험 주요 내용 \n투자원본 \n손실위험 \n이 투자신탁은 원본을 보장하지 않습니다. 투자신탁의 운용실적에 따라 손익이 결정되는 실\n적배당상품으로 예금자보호법에 따라 보호되지 아니하며, 특히 예금자보호법의 적용을 받는 \n은행 등에서 집합투자증권을 매입하는 경우에도 은행 예금과 달리 예금자보호법에 따라 보호\n되지 않습니다. 따라서 투자재산 가치변동에 따라 투자원본의 전부 또는 일부에 대한 손실의 \n위험이 존재하며 투자 금액의 손실 내지 감소의 위험은 전적으로 투자자가 부담하게 되고, \n집합투자업자나 판매회사 등 어떤 당사자도 투자손실에 대하여 책임을 지지 아니합니다. \n주식가격 \n변동위험 \n이 투자신탁은 신탁재산을 주로 국내주식 등에 투자하기 때문에 국내 주식시장에 영향을 주\n는 거시경제지표의 변화에 따른 주식의 가격이 변동될 위험에 노출됩니다. 또한 투자 대상 \n기업의 영업환경, 재무상황 변동에 따라 주식의 가치가 급격히 변동될 경우 손실이 크게 발\n생할 수도 있습니다. \n시장위험 \n신탁재산을 국내주식, 채권 등에 투자함으로써 이 투자신탁은 국내 금융시장의 주가, 이자율 \n등 기타 거시경제지표의 변화에 따른 위험에 노출됩니다. 또한, 신탁재산의 운용에 있어 예\n상치 못한 정치, 경제상황, 정부의 조치 및 세제의 변경 등은 당해 신탁재산의 운용에 영향을 \n미칠 수 있습니다. \n이자율 변동\n에 따른 위\n험 \n채권의 가격은 이자율에 의해 결정됩니다. 일반적으로 이자율이 하락하면 채권가격 상승에 \n의한 자본이득이 발생하고 이자율이 상승하면 자본손실이 발생합니다. 따라서 채권을 만기까\n지 보유하지 않고 중도에 매도하는 경우에는 시장상황에 따라 손실 또는 이득이 발생할 수 \n있습니다. 또한 채권의 잔존만기가 길어질 경우 해당 위험도 커질 수 있습니다. \n신용위험 \n이 투자신탁이 투자하는 투자대상 종목의 가치는 해당 종목 발행회사의 영업환경, 재무상황, \n신용상태의 악화에 따라 급격히 변동될 수 있습니다. 따라서 주식뿐만 아니라 채권 등 비교\n적 안전자산이라 할지라도 해당 종목의 가격변동에 따른 원금손실을 입게 될 수도 있습니다. \n파생상품 \n투자위험 \n파생상품(선물, 옵션등)은 작은 증거금으로 거액의 결제가 가능한 지렛대 효과(레버리지 효과)\n로 인하여 기초자산에 직접 투자하는 경우에 비하여 훨씬 높은 위험에 노출될 수 있습니다. \n또한, 옵션매도에 따른 이론적인 손실범위는 무한대이므로 기초자산에 대한 투자나 옵션 매\n수의 경우에 비하여 높은 위험에 노출될 수 있습니다. \n \n나. 특수 위험 \n세부 구분 \n투자위험 주요 내용 \n집중투자에 \n따른 위험 \n이 투자신탁은 법령이 허용하는 한도 내에서 소수 종목 또는 산업에 선별적으로 집중 투자할 \n수 있으며 이에 따라 변동성 및 일부 종목의 집합투자기구에 미치는 영향력이 동일 유형의",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p022_other_t001__e6e1f9d2d4",
+      "field_path": "narratives[7]",
+      "page": 22,
+      "section": "OTHER",
+      "source_text": "페이지 22 / 73 \n \n투자금액의 손실 내지 감소의 위험은 전적으로 수익자가 부담하며, 집합투자업자나 판매회사 등 어떤 당사자도 \n투자손실에 대하여 책임을 지지 아니합니다. 또한, 이 투자신탁은 예금자보호법의 적용을 받는 은행 등에서 매\n입하는 경우에도 은행예금과 달리 예금자보호법에 따라 보호되지 않습니다. \n※ 다음의 투자위험은 본 자료 작성시점 현재 중요하다고 판단되는 위험을 기재한 것이며, 발생 가능한 모든 \n위험을 기재한 것이 아님을 유의하셔야 합니다. 또한, 향후 운용과정 등에서 현재로는 예상하기 어려운 위험이 \n발생하거나 현재 시점에서는 중요하지 않다고 판단되어 기재에 누락되어 있는 위험의 정도가 커져 그 위험으\n로부터 심각한 손실이 발생할 수도 있음에 유의하셔야 합니다. \n \n가. 일반 위험 \n세부 구분 \n투자위험 주요 내용 \n투자원본 \n손실위험 \n이 투자신탁은 원본을 보장하지 않습니다. 투자신탁의 운용실적에 따라 손익이 결정되는 실\n적배당상품으로 예금자보호법에 따라 보호되지 아니하며, 특히 예금자보호법의 적용을 받는 \n은행 등에서 집합투자증권을 매입하는 경우에도 은행 예금과 달리 예금자보호법에 따라 보호\n되지 않습니다. 따라서 투자재산 가치변동에 따라 투자원본의 전부 또는 일부에 대한 손실의 \n위험이 존재하며 투자 금액의 손실 내지 감소의 위험은 전적으로 투자자가 부담하게 되고, \n집합투자업자나 판매회사 등 어떤 당사자도 투자손실에 대하여 책임을 지지 아니합니다. \n주식가격 \n변동위험 \n이 투자신탁은 신탁재산을 주로 국내주식 등에 투자하기 때문에 국내 주식시장에 영향을 주\n는 거시경제지표의 변화에 따른 주식의 가격이 변동될 위험에 노출됩니다. 또한 투자 대상 \n기업의 영업환경, 재무상황 변동에 따라 주식의 가치가 급격히 변동될 경우 손실이 크게 발\n생할 수도 있습니다. \n시장위험 \n신탁재산을 국내주식, 채권 등에 투자함으로써 이 투자신탁은 국내 금융시장의 주가, 이자율 \n등 기타 거시경제지표의 변화에 따른 위험에 노출됩니다. 또한, 신탁재산의 운용에 있어 예\n상치 못한 정치, 경제상황, 정부의 조치 및 세제의 변경 등은 당해 신탁재산의 운용에 영향을 \n미칠 수 있습니다. \n이자율 변동\n에 따른 위\n험 \n채권의 가격은 이자율에 의해 결정됩니다. 일반적으로 이자율이 하락하면 채권가격 상승에 \n의한 자본이득이 발생하고 이자율이 상승하면 자본손실이 발생합니다. 따라서 채권을 만기까\n지 보유하지 않고 중도에 매도하는 경우에는 시장상황에 따라 손실 또는 이득이 발생할 수 \n있습니다. 또한 채권의 잔존만기가 길어질 경우 해당 위험도 커질 수 있습니다. \n신용위험 \n이 투자신탁이 투자하는 투자대상 종목의 가치는 해당 종목 발행회사의 영업환경, 재무상황, \n신용상태의 악화에 따라 급격히 변동될 수 있습니다. 따라서 주식뿐만 아니라 채권 등 비교\n적 안전자산이라 할지라도 해당 종목의 가격변동에 따른 원금손실을 입게 될 수도 있습니다. \n파생상품 \n투자위험 \n파생상품(선물, 옵션등)은 작은 증거금으로 거액의 결제가 가능한 지렛대 효과(레버리지 효과)\n로 인하여 기초자산에 직접 투자하는 경우에 비하여 훨씬 높은 위험에 노출될 수 있습니다. \n또한, 옵션매도에 따른 이론적인 손실범위는 무한대이므로 기초자산에 대한 투자나 옵션 매\n수의 경우에 비하여 높은 위험에 노출될 수 있습니다. \n \n나. 특수 위험 \n세부 구분 \n투자위험 주요 내용 \n집중투자에 \n따른 위험 \n이 투자신탁은 법령이 허용하는 한도 내에서 소수 종목 또는 산업에 선별적으로 집중 투자할 \n수 있으며 이에 따라 변동성 및 일부 종목의 집합투자기구에 미치는 영향력이 동일 유형의",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p022_other_t001__35db616c90",
+      "field_path": "narratives[8]",
+      "page": 22,
+      "section": "OTHER",
+      "source_text": "페이지 22 / 73 \n \n투자금액의 손실 내지 감소의 위험은 전적으로 수익자가 부담하며, 집합투자업자나 판매회사 등 어떤 당사자도 \n투자손실에 대하여 책임을 지지 아니합니다. 또한, 이 투자신탁은 예금자보호법의 적용을 받는 은행 등에서 매\n입하는 경우에도 은행예금과 달리 예금자보호법에 따라 보호되지 않습니다. \n※ 다음의 투자위험은 본 자료 작성시점 현재 중요하다고 판단되는 위험을 기재한 것이며, 발생 가능한 모든 \n위험을 기재한 것이 아님을 유의하셔야 합니다. 또한, 향후 운용과정 등에서 현재로는 예상하기 어려운 위험이 \n발생하거나 현재 시점에서는 중요하지 않다고 판단되어 기재에 누락되어 있는 위험의 정도가 커져 그 위험으\n로부터 심각한 손실이 발생할 수도 있음에 유의하셔야 합니다. \n \n가. 일반 위험 \n세부 구분 \n투자위험 주요 내용 \n투자원본 \n손실위험 \n이 투자신탁은 원본을 보장하지 않습니다. 투자신탁의 운용실적에 따라 손익이 결정되는 실\n적배당상품으로 예금자보호법에 따라 보호되지 아니하며, 특히 예금자보호법의 적용을 받는 \n은행 등에서 집합투자증권을 매입하는 경우에도 은행 예금과 달리 예금자보호법에 따라 보호\n되지 않습니다. 따라서 투자재산 가치변동에 따라 투자원본의 전부 또는 일부에 대한 손실의 \n위험이 존재하며 투자 금액의 손실 내지 감소의 위험은 전적으로 투자자가 부담하게 되고, \n집합투자업자나 판매회사 등 어떤 당사자도 투자손실에 대하여 책임을 지지 아니합니다. \n주식가격 \n변동위험 \n이 투자신탁은 신탁재산을 주로 국내주식 등에 투자하기 때문에 국내 주식시장에 영향을 주\n는 거시경제지표의 변화에 따른 주식의 가격이 변동될 위험에 노출됩니다. 또한 투자 대상 \n기업의 영업환경, 재무상황 변동에 따라 주식의 가치가 급격히 변동될 경우 손실이 크게 발\n생할 수도 있습니다. \n시장위험 \n신탁재산을 국내주식, 채권 등에 투자함으로써 이 투자신탁은 국내 금융시장의 주가, 이자율 \n등 기타 거시경제지표의 변화에 따른 위험에 노출됩니다. 또한, 신탁재산의 운용에 있어 예\n상치 못한 정치, 경제상황, 정부의 조치 및 세제의 변경 등은 당해 신탁재산의 운용에 영향을 \n미칠 수 있습니다. \n이자율 변동\n에 따른 위\n험 \n채권의 가격은 이자율에 의해 결정됩니다. 일반적으로 이자율이 하락하면 채권가격 상승에 \n의한 자본이득이 발생하고 이자율이 상승하면 자본손실이 발생합니다. 따라서 채권을 만기까\n지 보유하지 않고 중도에 매도하는 경우에는 시장상황에 따라 손실 또는 이득이 발생할 수 \n있습니다. 또한 채권의 잔존만기가 길어질 경우 해당 위험도 커질 수 있습니다. \n신용위험 \n이 투자신탁이 투자하는 투자대상 종목의 가치는 해당 종목 발행회사의 영업환경, 재무상황, \n신용상태의 악화에 따라 급격히 변동될 수 있습니다. 따라서 주식뿐만 아니라 채권 등 비교\n적 안전자산이라 할지라도 해당 종목의 가격변동에 따른 원금손실을 입게 될 수도 있습니다. \n파생상품 \n투자위험 \n파생상품(선물, 옵션등)은 작은 증거금으로 거액의 결제가 가능한 지렛대 효과(레버리지 효과)\n로 인하여 기초자산에 직접 투자하는 경우에 비하여 훨씬 높은 위험에 노출될 수 있습니다. \n또한, 옵션매도에 따른 이론적인 손실범위는 무한대이므로 기초자산에 대한 투자나 옵션 매\n수의 경우에 비하여 높은 위험에 노출될 수 있습니다. \n \n나. 특수 위험 \n세부 구분 \n투자위험 주요 내용 \n집중투자에 \n따른 위험 \n이 투자신탁은 법령이 허용하는 한도 내에서 소수 종목 또는 산업에 선별적으로 집중 투자할 \n수 있으며 이에 따라 변동성 및 일부 종목의 집합투자기구에 미치는 영향력이 동일 유형의",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p023_other_t002__5f93fdc23e",
+      "field_path": "narratives[9]",
+      "page": 23,
+      "section": "OTHER",
+      "source_text": "페이지 23 / 73 \n \n일반적인 집합투자기구 혹은 해당 시장에 비하여 상대적으로 클 수 있습니다. \n적극적 \n매매위험 \n이 투자신탁은 투자목적 달성을 위해 적극적인 매매전략을 수행할 수 있으며, 통상 이러한 \n전략은 상대적으로 높은 매매비용을 수반하는 경향이 있습니다. 또한 동 전략은 일반적으로 \n시장수익률과 괴리가 클 수 있으므로 기대수준이 시장수익률 수준인 투자자에게는 적합하지 \n않습니다. \n \n다. 기타 투자위험 \n세부 구분 \n투자위험 주요 내용 \n유동성위험 \n증권시장규모 등을 감안할 때 집합투자재산에서 거래량이 풍부하지 못한 종목에 투자하는 경\n우 투자대상 종목의 유동성부족에 따른 환금성에 제약이 발생할 수 있으며, 이는 집합투자재\n산의 가치하락을 초래할 수 있습니다. \n환매 중 \n재산가치변\n동 위험 \n환매를 청구하시는 날과 환매대금을 결정하는 기준가격 적용일이 다르기 때문에 환매 시 환\n매 청구일로부터 환매기준가격 적용일까지의 집합투자기구 재산의 가치변동에 따른 위험에 \n노출됩니다. \n투자신탁 \n규모 변동에 \n따른 위험 \n집합투자업자는 이 투자신탁의 투자목적 달성을 위한 투자전략의 수행에 최선을 다할 것이\n나, 이 투자신탁의 규모가 자산가치의 과도한 하락 또는 환매 등에 의해 적정규모 이하로 작\n아지는 경우 원활한 투자전략의 수행 또는 충분한 분산투자가 불가능해질 수도 있습니다. \n과세제도 \n변경위험 \n투자에 따른 손익에 대한 세금부과 방법이나 기준은 정부의 정책적 판단 등에 의해 변경될 \n수 있으며, 특히 투자자의 지위에 따라 각기 다른 과세기준이 적용될 수 있습니다. 따라서, 과\n세에 관한 사항은 투자자 본인의 재산상태 등을 고려하시어 반드시 세무전문가의 조언 등 추\n가적인 확인을 권장합니다. \n과세 위험 \n- 과세당국에서 인식하는 투자에 따른 손익은 세금을 내야 하는 과세대상자산에서 발생한 손\n익과 세금을 내지 않아도 되는 비과세대상자산에서 발생한 손익으로 구분할 수 있습니다. 여\n기서 비과세손익은 수익이 있더라도 세금이 부과되지 않는다는 의미이기도 하지만 손해를 보\n더라도 이를 손실로 인정하지 않는다는 의미이기도 합니다. 이에 따라 비과세대상자산에서 \n손실을 본 경우라도 과세대상자산에서는 발생 한 수익이 있다면 결과적으로 전체 투자결과가 \n손실이 발생한 경우라도 세금을 내야 하는 상황이 발생할 수 있습니다. \n* 과세대상자산의 예: 해외투자 환차손익 및 매매•평가손익, 채권투자 매매•평가손익 등 \n* 비과세대상자산의 예: 국내 상장주식 매매차익 등 \n- 이 집합투자기구에서 발생한 손익에 대한 과세 기준 및 과세 방법은 세법 등 관련 법령 및 \n제도에 따라 결정됩니다. 따라서, 과세에 관한 사항은 투자자 본인의 재산상태 등을 고려하시\n어 세무전문가의 조언 등 추가적인 확인을 권장합니다. \n예상배당 \n위험 \n이 투자신탁이 보유하는 증권에 대하여 배당락 기준으로 각 종목별 예상배당액을 추정하여 \n당해 투자신탁의 기준가격에 반영합니다. 이 때 예상 배당금액은 추후 주주총회에서 확정되\n는 실제 배당금액과 차이가 있을 수 있으며, 확정된 실제 배당금액이 예상 배당금액 보다 적\n어질 경우 투자신탁의 가치하락이 있을 수 있습니다. \n투자신탁 \n해지위험 \n투자신탁을 설정한 후 1년 경과시점에서 설정원본이 50억원 미만인 경우 또는 투자신탁을 설\n정하고 1년이 경과한 이후 1개월간 계속하여 투자신탁의 설정원본이 50억원 미만인 경우 집\n합투자업자는 투자자의 동의 없이 해당 집합투자기구를 해지할 수 있습니다. \n투자신탁 \n규모 위험 \n투자신탁의 설정금액이 소액이거나, 환매 등에 의해 투자신탁의 규모가 일정 규모 이하로 작\n아지는 경우, 분산투자 등 원활한 펀드 운용에 장애가 발생할 수 있습니다.",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p023_other_t002__ca5f4a4ca0",
+      "field_path": "narratives[10]",
+      "page": 23,
+      "section": "OTHER",
+      "source_text": "페이지 23 / 73 \n \n일반적인 집합투자기구 혹은 해당 시장에 비하여 상대적으로 클 수 있습니다. \n적극적 \n매매위험 \n이 투자신탁은 투자목적 달성을 위해 적극적인 매매전략을 수행할 수 있으며, 통상 이러한 \n전략은 상대적으로 높은 매매비용을 수반하는 경향이 있습니다. 또한 동 전략은 일반적으로 \n시장수익률과 괴리가 클 수 있으므로 기대수준이 시장수익률 수준인 투자자에게는 적합하지 \n않습니다. \n \n다. 기타 투자위험 \n세부 구분 \n투자위험 주요 내용 \n유동성위험 \n증권시장규모 등을 감안할 때 집합투자재산에서 거래량이 풍부하지 못한 종목에 투자하는 경\n우 투자대상 종목의 유동성부족에 따른 환금성에 제약이 발생할 수 있으며, 이는 집합투자재\n산의 가치하락을 초래할 수 있습니다. \n환매 중 \n재산가치변\n동 위험 \n환매를 청구하시는 날과 환매대금을 결정하는 기준가격 적용일이 다르기 때문에 환매 시 환\n매 청구일로부터 환매기준가격 적용일까지의 집합투자기구 재산의 가치변동에 따른 위험에 \n노출됩니다. \n투자신탁 \n규모 변동에 \n따른 위험 \n집합투자업자는 이 투자신탁의 투자목적 달성을 위한 투자전략의 수행에 최선을 다할 것이\n나, 이 투자신탁의 규모가 자산가치의 과도한 하락 또는 환매 등에 의해 적정규모 이하로 작\n아지는 경우 원활한 투자전략의 수행 또는 충분한 분산투자가 불가능해질 수도 있습니다. \n과세제도 \n변경위험 \n투자에 따른 손익에 대한 세금부과 방법이나 기준은 정부의 정책적 판단 등에 의해 변경될 \n수 있으며, 특히 투자자의 지위에 따라 각기 다른 과세기준이 적용될 수 있습니다. 따라서, 과\n세에 관한 사항은 투자자 본인의 재산상태 등을 고려하시어 반드시 세무전문가의 조언 등 추\n가적인 확인을 권장합니다. \n과세 위험 \n- 과세당국에서 인식하는 투자에 따른 손익은 세금을 내야 하는 과세대상자산에서 발생한 손\n익과 세금을 내지 않아도 되는 비과세대상자산에서 발생한 손익으로 구분할 수 있습니다. 여\n기서 비과세손익은 수익이 있더라도 세금이 부과되지 않는다는 의미이기도 하지만 손해를 보\n더라도 이를 손실로 인정하지 않는다는 의미이기도 합니다. 이에 따라 비과세대상자산에서 \n손실을 본 경우라도 과세대상자산에서는 발생 한 수익이 있다면 결과적으로 전체 투자결과가 \n손실이 발생한 경우라도 세금을 내야 하는 상황이 발생할 수 있습니다. \n* 과세대상자산의 예: 해외투자 환차손익 및 매매•평가손익, 채권투자 매매•평가손익 등 \n* 비과세대상자산의 예: 국내 상장주식 매매차익 등 \n- 이 집합투자기구에서 발생한 손익에 대한 과세 기준 및 과세 방법은 세법 등 관련 법령 및 \n제도에 따라 결정됩니다. 따라서, 과세에 관한 사항은 투자자 본인의 재산상태 등을 고려하시\n어 세무전문가의 조언 등 추가적인 확인을 권장합니다. \n예상배당 \n위험 \n이 투자신탁이 보유하는 증권에 대하여 배당락 기준으로 각 종목별 예상배당액을 추정하여 \n당해 투자신탁의 기준가격에 반영합니다. 이 때 예상 배당금액은 추후 주주총회에서 확정되\n는 실제 배당금액과 차이가 있을 수 있으며, 확정된 실제 배당금액이 예상 배당금액 보다 적\n어질 경우 투자신탁의 가치하락이 있을 수 있습니다. \n투자신탁 \n해지위험 \n투자신탁을 설정한 후 1년 경과시점에서 설정원본이 50억원 미만인 경우 또는 투자신탁을 설\n정하고 1년이 경과한 이후 1개월간 계속하여 투자신탁의 설정원본이 50억원 미만인 경우 집\n합투자업자는 투자자의 동의 없이 해당 집합투자기구를 해지할 수 있습니다. \n투자신탁 \n규모 위험 \n투자신탁의 설정금액이 소액이거나, 환매 등에 의해 투자신탁의 규모가 일정 규모 이하로 작\n아지는 경우, 분산투자 등 원활한 펀드 운용에 장애가 발생할 수 있습니다.",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p023_other_t002__e49fe68de4",
+      "field_path": "narratives[11]",
+      "page": 23,
+      "section": "OTHER",
+      "source_text": "페이지 23 / 73 \n \n일반적인 집합투자기구 혹은 해당 시장에 비하여 상대적으로 클 수 있습니다. \n적극적 \n매매위험 \n이 투자신탁은 투자목적 달성을 위해 적극적인 매매전략을 수행할 수 있으며, 통상 이러한 \n전략은 상대적으로 높은 매매비용을 수반하는 경향이 있습니다. 또한 동 전략은 일반적으로 \n시장수익률과 괴리가 클 수 있으므로 기대수준이 시장수익률 수준인 투자자에게는 적합하지 \n않습니다. \n \n다. 기타 투자위험 \n세부 구분 \n투자위험 주요 내용 \n유동성위험 \n증권시장규모 등을 감안할 때 집합투자재산에서 거래량이 풍부하지 못한 종목에 투자하는 경\n우 투자대상 종목의 유동성부족에 따른 환금성에 제약이 발생할 수 있으며, 이는 집합투자재\n산의 가치하락을 초래할 수 있습니다. \n환매 중 \n재산가치변\n동 위험 \n환매를 청구하시는 날과 환매대금을 결정하는 기준가격 적용일이 다르기 때문에 환매 시 환\n매 청구일로부터 환매기준가격 적용일까지의 집합투자기구 재산의 가치변동에 따른 위험에 \n노출됩니다. \n투자신탁 \n규모 변동에 \n따른 위험 \n집합투자업자는 이 투자신탁의 투자목적 달성을 위한 투자전략의 수행에 최선을 다할 것이\n나, 이 투자신탁의 규모가 자산가치의 과도한 하락 또는 환매 등에 의해 적정규모 이하로 작\n아지는 경우 원활한 투자전략의 수행 또는 충분한 분산투자가 불가능해질 수도 있습니다. \n과세제도 \n변경위험 \n투자에 따른 손익에 대한 세금부과 방법이나 기준은 정부의 정책적 판단 등에 의해 변경될 \n수 있으며, 특히 투자자의 지위에 따라 각기 다른 과세기준이 적용될 수 있습니다. 따라서, 과\n세에 관한 사항은 투자자 본인의 재산상태 등을 고려하시어 반드시 세무전문가의 조언 등 추\n가적인 확인을 권장합니다. \n과세 위험 \n- 과세당국에서 인식하는 투자에 따른 손익은 세금을 내야 하는 과세대상자산에서 발생한 손\n익과 세금을 내지 않아도 되는 비과세대상자산에서 발생한 손익으로 구분할 수 있습니다. 여\n기서 비과세손익은 수익이 있더라도 세금이 부과되지 않는다는 의미이기도 하지만 손해를 보\n더라도 이를 손실로 인정하지 않는다는 의미이기도 합니다. 이에 따라 비과세대상자산에서 \n손실을 본 경우라도 과세대상자산에서는 발생 한 수익이 있다면 결과적으로 전체 투자결과가 \n손실이 발생한 경우라도 세금을 내야 하는 상황이 발생할 수 있습니다. \n* 과세대상자산의 예: 해외투자 환차손익 및 매매•평가손익, 채권투자 매매•평가손익 등 \n* 비과세대상자산의 예: 국내 상장주식 매매차익 등 \n- 이 집합투자기구에서 발생한 손익에 대한 과세 기준 및 과세 방법은 세법 등 관련 법령 및 \n제도에 따라 결정됩니다. 따라서, 과세에 관한 사항은 투자자 본인의 재산상태 등을 고려하시\n어 세무전문가의 조언 등 추가적인 확인을 권장합니다. \n예상배당 \n위험 \n이 투자신탁이 보유하는 증권에 대하여 배당락 기준으로 각 종목별 예상배당액을 추정하여 \n당해 투자신탁의 기준가격에 반영합니다. 이 때 예상 배당금액은 추후 주주총회에서 확정되\n는 실제 배당금액과 차이가 있을 수 있으며, 확정된 실제 배당금액이 예상 배당금액 보다 적\n어질 경우 투자신탁의 가치하락이 있을 수 있습니다. \n투자신탁 \n해지위험 \n투자신탁을 설정한 후 1년 경과시점에서 설정원본이 50억원 미만인 경우 또는 투자신탁을 설\n정하고 1년이 경과한 이후 1개월간 계속하여 투자신탁의 설정원본이 50억원 미만인 경우 집\n합투자업자는 투자자의 동의 없이 해당 집합투자기구를 해지할 수 있습니다. \n투자신탁 \n규모 위험 \n투자신탁의 설정금액이 소액이거나, 환매 등에 의해 투자신탁의 규모가 일정 규모 이하로 작\n아지는 경우, 분산투자 등 원활한 펀드 운용에 장애가 발생할 수 있습니다.",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p023_other_t002__0c2b8e3493",
+      "field_path": "narratives[12]",
+      "page": 23,
+      "section": "OTHER",
+      "source_text": "페이지 23 / 73 \n \n일반적인 집합투자기구 혹은 해당 시장에 비하여 상대적으로 클 수 있습니다. \n적극적 \n매매위험 \n이 투자신탁은 투자목적 달성을 위해 적극적인 매매전략을 수행할 수 있으며, 통상 이러한 \n전략은 상대적으로 높은 매매비용을 수반하는 경향이 있습니다. 또한 동 전략은 일반적으로 \n시장수익률과 괴리가 클 수 있으므로 기대수준이 시장수익률 수준인 투자자에게는 적합하지 \n않습니다. \n \n다. 기타 투자위험 \n세부 구분 \n투자위험 주요 내용 \n유동성위험 \n증권시장규모 등을 감안할 때 집합투자재산에서 거래량이 풍부하지 못한 종목에 투자하는 경\n우 투자대상 종목의 유동성부족에 따른 환금성에 제약이 발생할 수 있으며, 이는 집합투자재\n산의 가치하락을 초래할 수 있습니다. \n환매 중 \n재산가치변\n동 위험 \n환매를 청구하시는 날과 환매대금을 결정하는 기준가격 적용일이 다르기 때문에 환매 시 환\n매 청구일로부터 환매기준가격 적용일까지의 집합투자기구 재산의 가치변동에 따른 위험에 \n노출됩니다. \n투자신탁 \n규모 변동에 \n따른 위험 \n집합투자업자는 이 투자신탁의 투자목적 달성을 위한 투자전략의 수행에 최선을 다할 것이\n나, 이 투자신탁의 규모가 자산가치의 과도한 하락 또는 환매 등에 의해 적정규모 이하로 작\n아지는 경우 원활한 투자전략의 수행 또는 충분한 분산투자가 불가능해질 수도 있습니다. \n과세제도 \n변경위험 \n투자에 따른 손익에 대한 세금부과 방법이나 기준은 정부의 정책적 판단 등에 의해 변경될 \n수 있으며, 특히 투자자의 지위에 따라 각기 다른 과세기준이 적용될 수 있습니다. 따라서, 과\n세에 관한 사항은 투자자 본인의 재산상태 등을 고려하시어 반드시 세무전문가의 조언 등 추\n가적인 확인을 권장합니다. \n과세 위험 \n- 과세당국에서 인식하는 투자에 따른 손익은 세금을 내야 하는 과세대상자산에서 발생한 손\n익과 세금을 내지 않아도 되는 비과세대상자산에서 발생한 손익으로 구분할 수 있습니다. 여\n기서 비과세손익은 수익이 있더라도 세금이 부과되지 않는다는 의미이기도 하지만 손해를 보\n더라도 이를 손실로 인정하지 않는다는 의미이기도 합니다. 이에 따라 비과세대상자산에서 \n손실을 본 경우라도 과세대상자산에서는 발생 한 수익이 있다면 결과적으로 전체 투자결과가 \n손실이 발생한 경우라도 세금을 내야 하는 상황이 발생할 수 있습니다. \n* 과세대상자산의 예: 해외투자 환차손익 및 매매•평가손익, 채권투자 매매•평가손익 등 \n* 비과세대상자산의 예: 국내 상장주식 매매차익 등 \n- 이 집합투자기구에서 발생한 손익에 대한 과세 기준 및 과세 방법은 세법 등 관련 법령 및 \n제도에 따라 결정됩니다. 따라서, 과세에 관한 사항은 투자자 본인의 재산상태 등을 고려하시\n어 세무전문가의 조언 등 추가적인 확인을 권장합니다. \n예상배당 \n위험 \n이 투자신탁이 보유하는 증권에 대하여 배당락 기준으로 각 종목별 예상배당액을 추정하여 \n당해 투자신탁의 기준가격에 반영합니다. 이 때 예상 배당금액은 추후 주주총회에서 확정되\n는 실제 배당금액과 차이가 있을 수 있으며, 확정된 실제 배당금액이 예상 배당금액 보다 적\n어질 경우 투자신탁의 가치하락이 있을 수 있습니다. \n투자신탁 \n해지위험 \n투자신탁을 설정한 후 1년 경과시점에서 설정원본이 50억원 미만인 경우 또는 투자신탁을 설\n정하고 1년이 경과한 이후 1개월간 계속하여 투자신탁의 설정원본이 50억원 미만인 경우 집\n합투자업자는 투자자의 동의 없이 해당 집합투자기구를 해지할 수 있습니다. \n투자신탁 \n규모 위험 \n투자신탁의 설정금액이 소액이거나, 환매 등에 의해 투자신탁의 규모가 일정 규모 이하로 작\n아지는 경우, 분산투자 등 원활한 펀드 운용에 장애가 발생할 수 있습니다.",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p023_other_t002__fbbe97b205",
+      "field_path": "narratives[13]",
+      "page": 23,
+      "section": "OTHER",
+      "source_text": "페이지 23 / 73 \n \n일반적인 집합투자기구 혹은 해당 시장에 비하여 상대적으로 클 수 있습니다. \n적극적 \n매매위험 \n이 투자신탁은 투자목적 달성을 위해 적극적인 매매전략을 수행할 수 있으며, 통상 이러한 \n전략은 상대적으로 높은 매매비용을 수반하는 경향이 있습니다. 또한 동 전략은 일반적으로 \n시장수익률과 괴리가 클 수 있으므로 기대수준이 시장수익률 수준인 투자자에게는 적합하지 \n않습니다. \n \n다. 기타 투자위험 \n세부 구분 \n투자위험 주요 내용 \n유동성위험 \n증권시장규모 등을 감안할 때 집합투자재산에서 거래량이 풍부하지 못한 종목에 투자하는 경\n우 투자대상 종목의 유동성부족에 따른 환금성에 제약이 발생할 수 있으며, 이는 집합투자재\n산의 가치하락을 초래할 수 있습니다. \n환매 중 \n재산가치변\n동 위험 \n환매를 청구하시는 날과 환매대금을 결정하는 기준가격 적용일이 다르기 때문에 환매 시 환\n매 청구일로부터 환매기준가격 적용일까지의 집합투자기구 재산의 가치변동에 따른 위험에 \n노출됩니다. \n투자신탁 \n규모 변동에 \n따른 위험 \n집합투자업자는 이 투자신탁의 투자목적 달성을 위한 투자전략의 수행에 최선을 다할 것이\n나, 이 투자신탁의 규모가 자산가치의 과도한 하락 또는 환매 등에 의해 적정규모 이하로 작\n아지는 경우 원활한 투자전략의 수행 또는 충분한 분산투자가 불가능해질 수도 있습니다. \n과세제도 \n변경위험 \n투자에 따른 손익에 대한 세금부과 방법이나 기준은 정부의 정책적 판단 등에 의해 변경될 \n수 있으며, 특히 투자자의 지위에 따라 각기 다른 과세기준이 적용될 수 있습니다. 따라서, 과\n세에 관한 사항은 투자자 본인의 재산상태 등을 고려하시어 반드시 세무전문가의 조언 등 추\n가적인 확인을 권장합니다. \n과세 위험 \n- 과세당국에서 인식하는 투자에 따른 손익은 세금을 내야 하는 과세대상자산에서 발생한 손\n익과 세금을 내지 않아도 되는 비과세대상자산에서 발생한 손익으로 구분할 수 있습니다. 여\n기서 비과세손익은 수익이 있더라도 세금이 부과되지 않는다는 의미이기도 하지만 손해를 보\n더라도 이를 손실로 인정하지 않는다는 의미이기도 합니다. 이에 따라 비과세대상자산에서 \n손실을 본 경우라도 과세대상자산에서는 발생 한 수익이 있다면 결과적으로 전체 투자결과가 \n손실이 발생한 경우라도 세금을 내야 하는 상황이 발생할 수 있습니다. \n* 과세대상자산의 예: 해외투자 환차손익 및 매매•평가손익, 채권투자 매매•평가손익 등 \n* 비과세대상자산의 예: 국내 상장주식 매매차익 등 \n- 이 집합투자기구에서 발생한 손익에 대한 과세 기준 및 과세 방법은 세법 등 관련 법령 및 \n제도에 따라 결정됩니다. 따라서, 과세에 관한 사항은 투자자 본인의 재산상태 등을 고려하시\n어 세무전문가의 조언 등 추가적인 확인을 권장합니다. \n예상배당 \n위험 \n이 투자신탁이 보유하는 증권에 대하여 배당락 기준으로 각 종목별 예상배당액을 추정하여 \n당해 투자신탁의 기준가격에 반영합니다. 이 때 예상 배당금액은 추후 주주총회에서 확정되\n는 실제 배당금액과 차이가 있을 수 있으며, 확정된 실제 배당금액이 예상 배당금액 보다 적\n어질 경우 투자신탁의 가치하락이 있을 수 있습니다. \n투자신탁 \n해지위험 \n투자신탁을 설정한 후 1년 경과시점에서 설정원본이 50억원 미만인 경우 또는 투자신탁을 설\n정하고 1년이 경과한 이후 1개월간 계속하여 투자신탁의 설정원본이 50억원 미만인 경우 집\n합투자업자는 투자자의 동의 없이 해당 집합투자기구를 해지할 수 있습니다. \n투자신탁 \n규모 위험 \n투자신탁의 설정금액이 소액이거나, 환매 등에 의해 투자신탁의 규모가 일정 규모 이하로 작\n아지는 경우, 분산투자 등 원활한 펀드 운용에 장애가 발생할 수 있습니다.",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p023_other_t002__2720191d5a",
+      "field_path": "narratives[14]",
+      "page": 23,
+      "section": "OTHER",
+      "source_text": "페이지 23 / 73 \n \n일반적인 집합투자기구 혹은 해당 시장에 비하여 상대적으로 클 수 있습니다. \n적극적 \n매매위험 \n이 투자신탁은 투자목적 달성을 위해 적극적인 매매전략을 수행할 수 있으며, 통상 이러한 \n전략은 상대적으로 높은 매매비용을 수반하는 경향이 있습니다. 또한 동 전략은 일반적으로 \n시장수익률과 괴리가 클 수 있으므로 기대수준이 시장수익률 수준인 투자자에게는 적합하지 \n않습니다. \n \n다. 기타 투자위험 \n세부 구분 \n투자위험 주요 내용 \n유동성위험 \n증권시장규모 등을 감안할 때 집합투자재산에서 거래량이 풍부하지 못한 종목에 투자하는 경\n우 투자대상 종목의 유동성부족에 따른 환금성에 제약이 발생할 수 있으며, 이는 집합투자재\n산의 가치하락을 초래할 수 있습니다. \n환매 중 \n재산가치변\n동 위험 \n환매를 청구하시는 날과 환매대금을 결정하는 기준가격 적용일이 다르기 때문에 환매 시 환\n매 청구일로부터 환매기준가격 적용일까지의 집합투자기구 재산의 가치변동에 따른 위험에 \n노출됩니다. \n투자신탁 \n규모 변동에 \n따른 위험 \n집합투자업자는 이 투자신탁의 투자목적 달성을 위한 투자전략의 수행에 최선을 다할 것이\n나, 이 투자신탁의 규모가 자산가치의 과도한 하락 또는 환매 등에 의해 적정규모 이하로 작\n아지는 경우 원활한 투자전략의 수행 또는 충분한 분산투자가 불가능해질 수도 있습니다. \n과세제도 \n변경위험 \n투자에 따른 손익에 대한 세금부과 방법이나 기준은 정부의 정책적 판단 등에 의해 변경될 \n수 있으며, 특히 투자자의 지위에 따라 각기 다른 과세기준이 적용될 수 있습니다. 따라서, 과\n세에 관한 사항은 투자자 본인의 재산상태 등을 고려하시어 반드시 세무전문가의 조언 등 추\n가적인 확인을 권장합니다. \n과세 위험 \n- 과세당국에서 인식하는 투자에 따른 손익은 세금을 내야 하는 과세대상자산에서 발생한 손\n익과 세금을 내지 않아도 되는 비과세대상자산에서 발생한 손익으로 구분할 수 있습니다. 여\n기서 비과세손익은 수익이 있더라도 세금이 부과되지 않는다는 의미이기도 하지만 손해를 보\n더라도 이를 손실로 인정하지 않는다는 의미이기도 합니다. 이에 따라 비과세대상자산에서 \n손실을 본 경우라도 과세대상자산에서는 발생 한 수익이 있다면 결과적으로 전체 투자결과가 \n손실이 발생한 경우라도 세금을 내야 하는 상황이 발생할 수 있습니다. \n* 과세대상자산의 예: 해외투자 환차손익 및 매매•평가손익, 채권투자 매매•평가손익 등 \n* 비과세대상자산의 예: 국내 상장주식 매매차익 등 \n- 이 집합투자기구에서 발생한 손익에 대한 과세 기준 및 과세 방법은 세법 등 관련 법령 및 \n제도에 따라 결정됩니다. 따라서, 과세에 관한 사항은 투자자 본인의 재산상태 등을 고려하시\n어 세무전문가의 조언 등 추가적인 확인을 권장합니다. \n예상배당 \n위험 \n이 투자신탁이 보유하는 증권에 대하여 배당락 기준으로 각 종목별 예상배당액을 추정하여 \n당해 투자신탁의 기준가격에 반영합니다. 이 때 예상 배당금액은 추후 주주총회에서 확정되\n는 실제 배당금액과 차이가 있을 수 있으며, 확정된 실제 배당금액이 예상 배당금액 보다 적\n어질 경우 투자신탁의 가치하락이 있을 수 있습니다. \n투자신탁 \n해지위험 \n투자신탁을 설정한 후 1년 경과시점에서 설정원본이 50억원 미만인 경우 또는 투자신탁을 설\n정하고 1년이 경과한 이후 1개월간 계속하여 투자신탁의 설정원본이 50억원 미만인 경우 집\n합투자업자는 투자자의 동의 없이 해당 집합투자기구를 해지할 수 있습니다. \n투자신탁 \n규모 위험 \n투자신탁의 설정금액이 소액이거나, 환매 등에 의해 투자신탁의 규모가 일정 규모 이하로 작\n아지는 경우, 분산투자 등 원활한 펀드 운용에 장애가 발생할 수 있습니다.",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p023_other_t002__31bdd9ed13",
+      "field_path": "narratives[15]",
+      "page": 23,
+      "section": "OTHER",
+      "source_text": "페이지 23 / 73 \n \n일반적인 집합투자기구 혹은 해당 시장에 비하여 상대적으로 클 수 있습니다. \n적극적 \n매매위험 \n이 투자신탁은 투자목적 달성을 위해 적극적인 매매전략을 수행할 수 있으며, 통상 이러한 \n전략은 상대적으로 높은 매매비용을 수반하는 경향이 있습니다. 또한 동 전략은 일반적으로 \n시장수익률과 괴리가 클 수 있으므로 기대수준이 시장수익률 수준인 투자자에게는 적합하지 \n않습니다. \n \n다. 기타 투자위험 \n세부 구분 \n투자위험 주요 내용 \n유동성위험 \n증권시장규모 등을 감안할 때 집합투자재산에서 거래량이 풍부하지 못한 종목에 투자하는 경\n우 투자대상 종목의 유동성부족에 따른 환금성에 제약이 발생할 수 있으며, 이는 집합투자재\n산의 가치하락을 초래할 수 있습니다. \n환매 중 \n재산가치변\n동 위험 \n환매를 청구하시는 날과 환매대금을 결정하는 기준가격 적용일이 다르기 때문에 환매 시 환\n매 청구일로부터 환매기준가격 적용일까지의 집합투자기구 재산의 가치변동에 따른 위험에 \n노출됩니다. \n투자신탁 \n규모 변동에 \n따른 위험 \n집합투자업자는 이 투자신탁의 투자목적 달성을 위한 투자전략의 수행에 최선을 다할 것이\n나, 이 투자신탁의 규모가 자산가치의 과도한 하락 또는 환매 등에 의해 적정규모 이하로 작\n아지는 경우 원활한 투자전략의 수행 또는 충분한 분산투자가 불가능해질 수도 있습니다. \n과세제도 \n변경위험 \n투자에 따른 손익에 대한 세금부과 방법이나 기준은 정부의 정책적 판단 등에 의해 변경될 \n수 있으며, 특히 투자자의 지위에 따라 각기 다른 과세기준이 적용될 수 있습니다. 따라서, 과\n세에 관한 사항은 투자자 본인의 재산상태 등을 고려하시어 반드시 세무전문가의 조언 등 추\n가적인 확인을 권장합니다. \n과세 위험 \n- 과세당국에서 인식하는 투자에 따른 손익은 세금을 내야 하는 과세대상자산에서 발생한 손\n익과 세금을 내지 않아도 되는 비과세대상자산에서 발생한 손익으로 구분할 수 있습니다. 여\n기서 비과세손익은 수익이 있더라도 세금이 부과되지 않는다는 의미이기도 하지만 손해를 보\n더라도 이를 손실로 인정하지 않는다는 의미이기도 합니다. 이에 따라 비과세대상자산에서 \n손실을 본 경우라도 과세대상자산에서는 발생 한 수익이 있다면 결과적으로 전체 투자결과가 \n손실이 발생한 경우라도 세금을 내야 하는 상황이 발생할 수 있습니다. \n* 과세대상자산의 예: 해외투자 환차손익 및 매매•평가손익, 채권투자 매매•평가손익 등 \n* 비과세대상자산의 예: 국내 상장주식 매매차익 등 \n- 이 집합투자기구에서 발생한 손익에 대한 과세 기준 및 과세 방법은 세법 등 관련 법령 및 \n제도에 따라 결정됩니다. 따라서, 과세에 관한 사항은 투자자 본인의 재산상태 등을 고려하시\n어 세무전문가의 조언 등 추가적인 확인을 권장합니다. \n예상배당 \n위험 \n이 투자신탁이 보유하는 증권에 대하여 배당락 기준으로 각 종목별 예상배당액을 추정하여 \n당해 투자신탁의 기준가격에 반영합니다. 이 때 예상 배당금액은 추후 주주총회에서 확정되\n는 실제 배당금액과 차이가 있을 수 있으며, 확정된 실제 배당금액이 예상 배당금액 보다 적\n어질 경우 투자신탁의 가치하락이 있을 수 있습니다. \n투자신탁 \n해지위험 \n투자신탁을 설정한 후 1년 경과시점에서 설정원본이 50억원 미만인 경우 또는 투자신탁을 설\n정하고 1년이 경과한 이후 1개월간 계속하여 투자신탁의 설정원본이 50억원 미만인 경우 집\n합투자업자는 투자자의 동의 없이 해당 집합투자기구를 해지할 수 있습니다. \n투자신탁 \n규모 위험 \n투자신탁의 설정금액이 소액이거나, 환매 등에 의해 투자신탁의 규모가 일정 규모 이하로 작\n아지는 경우, 분산투자 등 원활한 펀드 운용에 장애가 발생할 수 있습니다.",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "R2_KR5169950018_p023_other_t002__61367d8511",
+      "field_path": "narratives[16]",
+      "page": 23,
+      "section": "OTHER",
+      "source_text": "페이지 23 / 73 \n \n일반적인 집합투자기구 혹은 해당 시장에 비하여 상대적으로 클 수 있습니다. \n적극적 \n매매위험 \n이 투자신탁은 투자목적 달성을 위해 적극적인 매매전략을 수행할 수 있으며, 통상 이러한 \n전략은 상대적으로 높은 매매비용을 수반하는 경향이 있습니다. 또한 동 전략은 일반적으로 \n시장수익률과 괴리가 클 수 있으므로 기대수준이 시장수익률 수준인 투자자에게는 적합하지 \n않습니다. \n \n다. 기타 투자위험 \n세부 구분 \n투자위험 주요 내용 \n유동성위험 \n증권시장규모 등을 감안할 때 집합투자재산에서 거래량이 풍부하지 못한 종목에 투자하는 경\n우 투자대상 종목의 유동성부족에 따른 환금성에 제약이 발생할 수 있으며, 이는 집합투자재\n산의 가치하락을 초래할 수 있습니다. \n환매 중 \n재산가치변\n동 위험 \n환매를 청구하시는 날과 환매대금을 결정하는 기준가격 적용일이 다르기 때문에 환매 시 환\n매 청구일로부터 환매기준가격 적용일까지의 집합투자기구 재산의 가치변동에 따른 위험에 \n노출됩니다. \n투자신탁 \n규모 변동에 \n따른 위험 \n집합투자업자는 이 투자신탁의 투자목적 달성을 위한 투자전략의 수행에 최선을 다할 것이\n나, 이 투자신탁의 규모가 자산가치의 과도한 하락 또는 환매 등에 의해 적정규모 이하로 작\n아지는 경우 원활한 투자전략의 수행 또는 충분한 분산투자가 불가능해질 수도 있습니다. \n과세제도 \n변경위험 \n투자에 따른 손익에 대한 세금부과 방법이나 기준은 정부의 정책적 판단 등에 의해 변경될 \n수 있으며, 특히 투자자의 지위에 따라 각기 다른 과세기준이 적용될 수 있습니다. 따라서, 과\n세에 관한 사항은 투자자 본인의 재산상태 등을 고려하시어 반드시 세무전문가의 조언 등 추\n가적인 확인을 권장합니다. \n과세 위험 \n- 과세당국에서 인식하는 투자에 따른 손익은 세금을 내야 하는 과세대상자산에서 발생한 손\n익과 세금을 내지 않아도 되는 비과세대상자산에서 발생한 손익으로 구분할 수 있습니다. 여\n기서 비과세손익은 수익이 있더라도 세금이 부과되지 않는다는 의미이기도 하지만 손해를 보\n더라도 이를 손실로 인정하지 않는다는 의미이기도 합니다. 이에 따라 비과세대상자산에서 \n손실을 본 경우라도 과세대상자산에서는 발생 한 수익이 있다면 결과적으로 전체 투자결과가 \n손실이 발생한 경우라도 세금을 내야 하는 상황이 발생할 수 있습니다. \n* 과세대상자산의 예: 해외투자 환차손익 및 매매•평가손익, 채권투자 매매•평가손익 등 \n* 비과세대상자산의 예: 국내 상장주식 매매차익 등 \n- 이 집합투자기구에서 발생한 손익에 대한 과세 기준 및 과세 방법은 세법 등 관련 법령 및 \n제도에 따라 결정됩니다. 따라서, 과세에 관한 사항은 투자자 본인의 재산상태 등을 고려하시\n어 세무전문가의 조언 등 추가적인 확인을 권장합니다. \n예상배당 \n위험 \n이 투자신탁이 보유하는 증권에 대하여 배당락 기준으로 각 종목별 예상배당액을 추정하여 \n당해 투자신탁의 기준가격에 반영합니다. 이 때 예상 배당금액은 추후 주주총회에서 확정되\n는 실제 배당금액과 차이가 있을 수 있으며, 확정된 실제 배당금액이 예상 배당금액 보다 적\n어질 경우 투자신탁의 가치하락이 있을 수 있습니다. \n투자신탁 \n해지위험 \n투자신탁을 설정한 후 1년 경과시점에서 설정원본이 50억원 미만인 경우 또는 투자신탁을 설\n정하고 1년이 경과한 이후 1개월간 계속하여 투자신탁의 설정원본이 50억원 미만인 경우 집\n합투자업자는 투자자의 동의 없이 해당 집합투자기구를 해지할 수 있습니다. \n투자신탁 \n규모 위험 \n투자신탁의 설정금액이 소액이거나, 환매 등에 의해 투자신탁의 규모가 일정 규모 이하로 작\n아지는 경우, 분산투자 등 원활한 펀드 운용에 장애가 발생할 수 있습니다.",
+      "extraction_method": "TABLE",
+      "confidence": 1.0
+    }
+  ],
+  "field_status": {
+    "risk_ratings": "FOUND",
+    "classes": "FOUND",
+    "fees": "FOUND",
+    "performance": "FOUND",
+    "product.investment_objective": "FOUND",
+    "product.investment_strategy": "FOUND",
+    "product.investment_risks": "FOUND",
+    "product.official_name": "FOUND",
+    "product.kofia_fund_code": "FOUND",
+    "product.manager_name": "FOUND"
+  },
+  "extraction_issues": []
+}

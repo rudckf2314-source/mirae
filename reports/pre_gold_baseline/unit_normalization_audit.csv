@@ -1,0 +1,7 @@
+﻿raw_value,raw_unit,metric,display
+0.71,PERCENT_PER_YEAR,fee,연 0.71%
+1.57,PERCENT_PER_YEAR,fee,연 1.57%
+3.2,PERCENT,fund_return,3.2%
+98776.0,PERCENT,fund_return,수익률 값의 단위/스케일 확인이 필요합니다
+100,BASIS_POINT,spread,100bp
+1000000,KRW,amount,1000000원

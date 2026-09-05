@@ -1,0 +1,10 @@
+{
+  "records": 461,
+  "performance_rows": 705,
+  "status_counts": {
+    "VERIFIED": 547,
+    "SOURCE_CONFLICT": 140,
+    "UNVERIFIED": 18
+  },
+  "t008_count": 5
+}
