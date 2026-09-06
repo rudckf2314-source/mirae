@@ -1,0 +1,6 @@
+{
+  "evaluator_version": "gold100-v2-exact-source-contract",
+  "serving_date": "20260906",
+  "code_data_sha256": "58fc7cf5cc810a15d8a4666e0be2794ee3ed595177367394d02bdaa93c36955e",
+  "dataset_sha256": "ecf3c3bc6389dee2ac97c6b18e8118abe4f70a9ec560504d236a95906224f502"
+}

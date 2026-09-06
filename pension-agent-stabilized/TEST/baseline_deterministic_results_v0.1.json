@@ -1,0 +1,376 @@
+{
+  "summary": {
+    "total": 20,
+    "pass": 9,
+    "fail": 11,
+    "error": 0
+  },
+  "results": [
+    {
+      "case_id": "EVAL_001",
+      "verdict": "PASS",
+      "checks": {
+        "route": true,
+        "tools": true,
+        "calculation_type": true
+      },
+      "actual_route": "calculation",
+      "actual_tools": [
+        "calculation"
+      ],
+      "actual_ambiguity_action": "EXECUTE",
+      "actual_missing_fields": [],
+      "actual_calculation_type": "tax_credit",
+      "known_current_gaps": [
+        "MULTI_CALCULATION_INTENT",
+        "TAX_CREDIT_POLICY_NOT_IMPLEMENTED"
+      ]
+    },
+    {
+      "case_id": "EVAL_002",
+      "verdict": "PASS",
+      "checks": {
+        "route": true,
+        "tools": true
+      },
+      "actual_route": "document",
+      "actual_tools": [
+        "document"
+      ],
+      "actual_ambiguity_action": "EXECUTE",
+      "actual_missing_fields": [],
+      "actual_calculation_type": null,
+      "known_current_gaps": []
+    },
+    {
+      "case_id": "EVAL_003",
+      "verdict": "FAIL",
+      "checks": {
+        "route": false,
+        "tools": false
+      },
+      "actual_route": "product",
+      "actual_tools": [
+        "product"
+      ],
+      "actual_ambiguity_action": "ASSUME_AND_EXPOSE",
+      "actual_missing_fields": [],
+      "actual_calculation_type": null,
+      "known_current_gaps": [
+        "ROUTER_MISSES_LAW_DOMAIN",
+        "LAW_TOOL_SCOPE_LIMITED"
+      ]
+    },
+    {
+      "case_id": "EVAL_004",
+      "verdict": "FAIL",
+      "checks": {
+        "route": false,
+        "tools": false
+      },
+      "actual_route": "product",
+      "actual_tools": [
+        "product"
+      ],
+      "actual_ambiguity_action": "ASSUME_AND_EXPOSE",
+      "actual_missing_fields": [],
+      "actual_calculation_type": null,
+      "known_current_gaps": [
+        "PRODUCT_KEYWORD_OVERRIDES_DOCUMENT"
+      ]
+    },
+    {
+      "case_id": "EVAL_005",
+      "verdict": "PASS",
+      "checks": {
+        "route": true,
+        "tools": true,
+        "calculation_type": true
+      },
+      "actual_route": "calculation",
+      "actual_tools": [
+        "calculation"
+      ],
+      "actual_ambiguity_action": "EXECUTE",
+      "actual_missing_fields": [],
+      "actual_calculation_type": "tax_credit",
+      "known_current_gaps": [
+        "TAX_CREDIT_POLICY_NOT_IMPLEMENTED"
+      ]
+    },
+    {
+      "case_id": "EVAL_006",
+      "verdict": "PASS",
+      "checks": {
+        "route": true,
+        "tools": true
+      },
+      "actual_route": "document",
+      "actual_tools": [
+        "document"
+      ],
+      "actual_ambiguity_action": "EXECUTE",
+      "actual_missing_fields": [],
+      "actual_calculation_type": null,
+      "known_current_gaps": []
+    },
+    {
+      "case_id": "EVAL_007",
+      "verdict": "FAIL",
+      "checks": {
+        "route": false,
+        "tools": false
+      },
+      "actual_route": "calculation",
+      "actual_tools": [
+        "calculation"
+      ],
+      "actual_ambiguity_action": "EXECUTE",
+      "actual_missing_fields": [],
+      "actual_calculation_type": "tax_credit",
+      "known_current_gaps": [
+        "ROUTER_OVERCLASSIFIES_POLICY_AS_CALCULATION",
+        "TAX_CREDIT_POLICY_NOT_IMPLEMENTED"
+      ]
+    },
+    {
+      "case_id": "EVAL_008",
+      "verdict": "PASS",
+      "checks": {
+        "route": true,
+        "tools": true
+      },
+      "actual_route": "document",
+      "actual_tools": [
+        "document"
+      ],
+      "actual_ambiguity_action": "EXECUTE",
+      "actual_missing_fields": [],
+      "actual_calculation_type": null,
+      "known_current_gaps": []
+    },
+    {
+      "case_id": "EVAL_009",
+      "verdict": "FAIL",
+      "checks": {
+        "route": false,
+        "tools": false
+      },
+      "actual_route": "product",
+      "actual_tools": [
+        "product"
+      ],
+      "actual_ambiguity_action": "ASSUME_AND_EXPOSE",
+      "actual_missing_fields": [],
+      "actual_calculation_type": null,
+      "known_current_gaps": [
+        "PRODUCT_KEYWORD_OVERRIDES_REGULATION_QUERY",
+        "LAW_TOOL_SCOPE_LIMITED"
+      ]
+    },
+    {
+      "case_id": "EVAL_010",
+      "verdict": "PASS",
+      "checks": {
+        "route": true,
+        "tools": true,
+        "ambiguity": true
+      },
+      "actual_route": "product",
+      "actual_tools": [
+        "product"
+      ],
+      "actual_ambiguity_action": "CLARIFY",
+      "actual_missing_fields": [
+        "risk_tolerance",
+        "investment_horizon"
+      ],
+      "actual_calculation_type": null,
+      "known_current_gaps": []
+    },
+    {
+      "case_id": "EVAL_011",
+      "verdict": "FAIL",
+      "checks": {
+        "route": false,
+        "tools": false
+      },
+      "actual_route": "product",
+      "actual_tools": [
+        "product"
+      ],
+      "actual_ambiguity_action": "ASSUME_AND_EXPOSE",
+      "actual_missing_fields": [],
+      "actual_calculation_type": null,
+      "known_current_gaps": [
+        "GENERIC_COST_EXPLANATION_ROUTED_TO_PRODUCT"
+      ]
+    },
+    {
+      "case_id": "EVAL_012",
+      "verdict": "FAIL",
+      "checks": {
+        "route": false,
+        "tools": false
+      },
+      "actual_route": "product",
+      "actual_tools": [
+        "product"
+      ],
+      "actual_ambiguity_action": "ASSUME_AND_EXPOSE",
+      "actual_missing_fields": [],
+      "actual_calculation_type": null,
+      "known_current_gaps": [
+        "OPS_MANUAL_QUERY_ROUTED_TO_PRODUCT"
+      ]
+    },
+    {
+      "case_id": "EVAL_013",
+      "verdict": "FAIL",
+      "checks": {
+        "route": false,
+        "tools": false
+      },
+      "actual_route": "product",
+      "actual_tools": [
+        "product"
+      ],
+      "actual_ambiguity_action": "ASSUME_AND_EXPOSE",
+      "actual_missing_fields": [],
+      "actual_calculation_type": null,
+      "known_current_gaps": [
+        "OPS_MANUAL_QUERY_ROUTED_TO_PRODUCT"
+      ]
+    },
+    {
+      "case_id": "EVAL_014",
+      "verdict": "FAIL",
+      "checks": {
+        "route": false,
+        "tools": false
+      },
+      "actual_route": "product",
+      "actual_tools": [
+        "product"
+      ],
+      "actual_ambiguity_action": "ASSUME_AND_EXPOSE",
+      "actual_missing_fields": [],
+      "actual_calculation_type": null,
+      "known_current_gaps": [
+        "OPS_MANUAL_QUERY_ROUTED_TO_PRODUCT",
+        "SOURCE_VERIFICATION_PENDING"
+      ]
+    },
+    {
+      "case_id": "EVAL_015",
+      "verdict": "FAIL",
+      "checks": {
+        "route": false,
+        "tools": false
+      },
+      "actual_route": "product",
+      "actual_tools": [
+        "product"
+      ],
+      "actual_ambiguity_action": "ASSUME_AND_EXPOSE",
+      "actual_missing_fields": [],
+      "actual_calculation_type": null,
+      "known_current_gaps": [
+        "OPS_MANUAL_QUERY_ROUTED_TO_PRODUCT"
+      ]
+    },
+    {
+      "case_id": "EVAL_016",
+      "verdict": "FAIL",
+      "checks": {
+        "route": true,
+        "tools": true,
+        "ambiguity": false
+      },
+      "actual_route": "product",
+      "actual_tools": [
+        "product"
+      ],
+      "actual_ambiguity_action": "ASSUME_AND_EXPOSE",
+      "actual_missing_fields": [],
+      "actual_calculation_type": null,
+      "known_current_gaps": [
+        "AMBIGUITY_POLICY_TOO_PERMISSIVE"
+      ]
+    },
+    {
+      "case_id": "EVAL_017",
+      "verdict": "PASS",
+      "checks": {
+        "route": true,
+        "tools": true
+      },
+      "actual_route": "product",
+      "actual_tools": [
+        "product"
+      ],
+      "actual_ambiguity_action": "ASSUME_AND_EXPOSE",
+      "actual_missing_fields": [],
+      "actual_calculation_type": null,
+      "known_current_gaps": [
+        "PRODUCT_QUERY_MISSING_ENTITY_CLASS_PERFORMANCE_FILTERS"
+      ]
+    },
+    {
+      "case_id": "EVAL_018",
+      "verdict": "PASS",
+      "checks": {
+        "route": true,
+        "tools": true
+      },
+      "actual_route": "product",
+      "actual_tools": [
+        "product"
+      ],
+      "actual_ambiguity_action": "ASSUME_AND_EXPOSE",
+      "actual_missing_fields": [],
+      "actual_calculation_type": null,
+      "known_current_gaps": [
+        "PRODUCT_QUERY_MISSING_ENTITY_CLASS_COMPOSITE_FEE_FILTERS"
+      ]
+    },
+    {
+      "case_id": "EVAL_019",
+      "verdict": "FAIL",
+      "checks": {
+        "route": true,
+        "tools": true,
+        "ambiguity": false
+      },
+      "actual_route": "product",
+      "actual_tools": [
+        "product"
+      ],
+      "actual_ambiguity_action": "ASSUME_AND_EXPOSE",
+      "actual_missing_fields": [],
+      "actual_calculation_type": null,
+      "known_current_gaps": [
+        "ACCOUNT_CONTEXT_MISSING",
+        "PRODUCT_QUERY_TOO_LIMITED_FOR_SIMILARITY_SEARCH"
+      ]
+    },
+    {
+      "case_id": "EVAL_020",
+      "verdict": "PASS",
+      "checks": {
+        "route": true,
+        "tools": true
+      },
+      "actual_route": "product",
+      "actual_tools": [
+        "product"
+      ],
+      "actual_ambiguity_action": "ASSUME_AND_EXPOSE",
+      "actual_missing_fields": [],
+      "actual_calculation_type": null,
+      "known_current_gaps": [
+        "TRANSACTION_ACTION_GUARD_NOT_VISIBLE_IN_CURRENT_CONTRACT"
+      ]
+    }
+  ]
+}

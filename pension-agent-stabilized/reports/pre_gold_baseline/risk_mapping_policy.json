@@ -1,0 +1,68 @@
+{
+  "note": "Filter policy only. No enterprise suitability rule was found in provided docs.",
+  "prospectus_grade_labels": {
+    "1": "매우 높은 위험",
+    "2": "높은 위험",
+    "3": "다소 높은 위험",
+    "4": "보통 위험",
+    "5": "낮은 위험",
+    "6": "매우 낮은 위험"
+  },
+  "grade_to_bucket": {
+    "1": "VERY_AGGRESSIVE",
+    "2": "AGGRESSIVE",
+    "3": "MODERATE_AGGRESSIVE",
+    "4": "MODERATE",
+    "5": "CONSERVATIVE",
+    "6": "VERY_CONSERVATIVE"
+  },
+  "risk_tolerance_policy": {
+    "conservative": {
+      "preferred": [
+        "CONSERVATIVE",
+        "VERY_CONSERVATIVE"
+      ],
+      "acceptable": [
+        "MODERATE"
+      ],
+      "exclude": [
+        "VERY_AGGRESSIVE",
+        "AGGRESSIVE",
+        "MODERATE_AGGRESSIVE"
+      ]
+    },
+    "moderate": {
+      "preferred": [
+        "MODERATE"
+      ],
+      "acceptable": [
+        "CONSERVATIVE",
+        "MODERATE_AGGRESSIVE"
+      ],
+      "exclude": [
+        "VERY_AGGRESSIVE",
+        "AGGRESSIVE"
+      ]
+    },
+    "aggressive": {
+      "preferred": [
+        "AGGRESSIVE",
+        "MODERATE_AGGRESSIVE"
+      ],
+      "acceptable": [
+        "VERY_AGGRESSIVE",
+        "MODERATE"
+      ],
+      "exclude": []
+    }
+  },
+  "ranking_policy_default": [
+    "account_eligibility",
+    "risk_compatibility",
+    "user_requested_metric",
+    "fee",
+    "performance",
+    "evidence_completeness"
+  ],
+  "expression_guidance": "입력한 위험 선호 조건 기준으로 비교 가능한 후보"
+}

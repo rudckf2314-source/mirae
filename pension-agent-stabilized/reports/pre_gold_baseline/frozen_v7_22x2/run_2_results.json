@@ -1,0 +1,1514 @@
+{
+  "summary": {
+    "cases": 22,
+    "turns": 29,
+    "pass": 22,
+    "fail": 0,
+    "skip": 0,
+    "average_score": 9.79,
+    "entrypoint": "PensionLangGraphAgent.respond / POST /api/search",
+    "llm_judge": false,
+    "skip_reason": null
+  },
+  "case_verdicts": {
+    "T001": "PASS",
+    "T002": "PASS",
+    "T003": "PASS",
+    "T004": "PASS",
+    "T005": "PASS",
+    "T006": "PASS",
+    "T007": "PASS",
+    "T008": "PASS",
+    "T009": "PASS",
+    "T010": "PASS",
+    "T011": "PASS",
+    "T012": "PASS",
+    "T013": "PASS",
+    "T014": "PASS",
+    "T015": "PASS",
+    "T016": "PASS",
+    "T017": "PASS",
+    "T018": "PASS",
+    "T019": "PASS",
+    "T020": "PASS",
+    "T021": "PASS",
+    "T022": "PASS"
+  },
+  "category_stats": {
+    "general_concept": {
+      "pass": 2,
+      "total": 2,
+      "rate": "100.0%"
+    },
+    "recommendation": {
+      "pass": 4,
+      "total": 4,
+      "rate": "100.0%"
+    },
+    "procedure": {
+      "pass": 1,
+      "total": 1,
+      "rate": "100.0%"
+    },
+    "product_query": {
+      "pass": 4,
+      "total": 4,
+      "rate": "100.0%"
+    },
+    "legal_procedure": {
+      "pass": 1,
+      "total": 1,
+      "rate": "100.0%"
+    },
+    "hypothetical": {
+      "pass": 1,
+      "total": 1,
+      "rate": "100.0%"
+    },
+    "evidence_followup": {
+      "pass": 1,
+      "total": 1,
+      "rate": "100.0%"
+    },
+    "source_coverage": {
+      "pass": 1,
+      "total": 1,
+      "rate": "100.0%"
+    },
+    "official_p0": {
+      "pass": 5,
+      "total": 5,
+      "rate": "100.0%"
+    },
+    "official_multiturn": {
+      "pass": 1,
+      "total": 1,
+      "rate": "100.0%"
+    },
+    "official_compound": {
+      "pass": 1,
+      "total": 1,
+      "rate": "100.0%"
+    }
+  },
+  "turns": [
+    {
+      "test_id": "T001",
+      "turn_no": 1,
+      "user_query": "IRP 계좌가 뭐야?",
+      "response_text": "IRP 계좌는 **개인형 퇴직연금제도**(Individual Retirement Pension)의 약자로, 퇴직 시 수령한 퇴직급여 또는 가입자가 납입한 부담금을 적립·운용하여 노후자금으로 활용할 수 있는 퇴직급여 전용 통장을 의미합니다. 쉽게 말해, 퇴직금을 관리하고 노후 자금으로 활용할 수 있도록 도와주는 특별한 계좌입니다.\n\nIRP 계좌는 다음과 같은 특징을 가지고 있습니다:\n\n1. **의무 이전**: 대부분의 경우, 퇴직 시 퇴직급여는 IRP 계좌로 의무적으로 이전됩니다. 다만, 55세 이후 퇴직, 퇴직급여 300만 원 이하 등의 예외 사유가 있을 수 있습니다.\n\n2. **세제 혜택**: IRP 계좌에 적립된 금액은 세제 혜택을 받을 수 있으며, 일정 조건을 만족하면 중도 인출도 가능합니다. 단, 중도 인출 시에는 세금이 부과될 수 있으므로 주의가 필요합니다.\n\n3. **압류 방지**: IRP 계좌는 법적으로 압류가 금지되어 있어, 퇴직급여를 안전하게 보호받을 수 있습니다.\n\n4. **다양한 투자 옵션**: IRP 계좌 내의 자산은 예금, 펀드, 채권 등 다양한 금융상품에 투자할 수 있어, 개인의 투자 성향에 맞게 운용할 수 있습니다.\n\n이와 같은 이유로 많은 사람들이 IRP 계좌를 통해 퇴직금을 효율적으로 관리하고 노후를 준비하고 있습니다. 출처: doc11.pdf, doc20.docx, doc55.docx, doc16.pdf, doc1.pdf",
+      "detected_intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT"
+      ],
+      "actual_route": "document",
+      "expected_routes": [
+        "document"
+      ],
+      "tools_called": [
+        "document"
+      ],
+      "source_types": [
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [],
+      "postgres_used": false,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "matched": 5
+      },
+      "latency_ms": 9636.7,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "success",
+      "session_id": "eval-T001-0f1c67cb",
+      "confirmed_constraints": {}
+    },
+    {
+      "test_id": "T002",
+      "turn_no": 1,
+      "user_query": "IRP 상품 추천해줘",
+      "response_text": "요청을 정확히 처리하려면 추가 정보가 필요합니다. 필요한 정보: risk_tolerance, investment_horizon.\n- 감수 가능한 위험 수준(예: 원금 변동을 어느 정도 감수할 수 있는지)을 알려주세요.\n- 예상 투자기간 또는 연금 수령까지 남은 기간을 알려주세요.",
+      "detected_intent": [
+        "CLARIFY",
+        "PRODUCT_RECOMMENDATION"
+      ],
+      "actual_route": "product",
+      "expected_routes": [
+        "product"
+      ],
+      "tools_called": [
+        "product"
+      ],
+      "source_types": [
+        "postgres"
+      ],
+      "source_documents": [],
+      "postgres_used": true,
+      "enterprise_rag_used": false,
+      "external_api_used": false,
+      "evidence_status": "clarify",
+      "latency_ms": 26.6,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 1,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 9,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "clarify",
+      "session_id": "eval-T002-1fcc4068",
+      "confirmed_constraints": {}
+    },
+    {
+      "test_id": "T002",
+      "turn_no": 2,
+      "user_query": "예시 샘플을 줘봐",
+      "response_text": "이렇게 알려주시면 됩니다.\n예: '원금 변동은 어느 정도 감수할 수 있고, 은퇴까지 약 15년 남았습니다.'\n예: '손실 가능성을 최대한 낮추고 싶고, 5년 정도 운용할 예정입니다.'",
+      "detected_intent": [
+        "EXAMPLE_RESPONSE",
+        "CLARIFY_EXAMPLE",
+        "HYPOTHETICAL_EXAMPLE"
+      ],
+      "actual_route": "conversation",
+      "expected_routes": [
+        "conversation"
+      ],
+      "tools_called": [
+        "conversation"
+      ],
+      "source_types": [],
+      "source_documents": [],
+      "postgres_used": false,
+      "enterprise_rag_used": false,
+      "external_api_used": false,
+      "evidence_status": "success",
+      "latency_ms": 0.0,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "success",
+      "session_id": "eval-T002-1fcc4068",
+      "confirmed_constraints": {}
+    },
+    {
+      "test_id": "T003",
+      "turn_no": 1,
+      "user_query": "IRP 상품 추천해줘",
+      "response_text": "요청을 정확히 처리하려면 추가 정보가 필요합니다. 필요한 정보: risk_tolerance, investment_horizon.\n- 감수 가능한 위험 수준(예: 원금 변동을 어느 정도 감수할 수 있는지)을 알려주세요.\n- 예상 투자기간 또는 연금 수령까지 남은 기간을 알려주세요.",
+      "detected_intent": [
+        "CLARIFY",
+        "PRODUCT_RECOMMENDATION"
+      ],
+      "actual_route": "product",
+      "expected_routes": [
+        "product"
+      ],
+      "tools_called": [
+        "product"
+      ],
+      "source_types": [
+        "postgres"
+      ],
+      "source_documents": [],
+      "postgres_used": true,
+      "enterprise_rag_used": false,
+      "external_api_used": false,
+      "evidence_status": "clarify",
+      "latency_ms": 25.8,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 1,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 9,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "clarify",
+      "session_id": "eval-T003-6c1db3dc",
+      "confirmed_constraints": {}
+    },
+    {
+      "test_id": "T003",
+      "turn_no": 2,
+      "user_query": "나는 위험은 중간 정도, 10년 정도 투자할 거야",
+      "response_text": "적용한 기본값: product_limit=5 (상품 개수가 지정되지 않았습니다.)\n\n확인된 조건에 맞는 상품 후보입니다. 개인 투자 적합성이나 수익을 보장하는 추천은 아닙니다.\n1. KCGI코리아증권투자신탁1호[주식] / 클래스 종류C-P2 / 위험등급 2 / 출처 R2_KR515302022M.pdf\n2. 미래에셋AI퀀트미국투자등급회사채증권자투자신탁(채권) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 4 / 총보수 0.71PERCENT_PER_YEAR / 출처 R2_KR5153420318.pdf\n3. 미래에셋그린뉴딜인덱스증권자투자신탁(주식) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 1 / 총보수 0.89PERCENT_PER_YEAR / 출처 R2_KR5153450772.pdf\n4. 미래에셋스마트롱숏70증권자투자신탁1호(주식) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 4 / 총보수 1.35PERCENT_PER_YEAR / 출처 R2_KR5153450268.pdf\n5. 미래에셋연금아시아퍼시픽소비성장증권자투자신탁1호(주식) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 3 / 총보수 1.57PERCENT_PER_YEAR / 출처 R2_KR5153451009.pdf\n근거 출처: 상품 PostgreSQL/Standard JSON 구조화 레코드.",
+      "detected_intent": [
+        "PRODUCT_RECOMMENDATION",
+        "PRODUCT_RISK_LOOKUP",
+        "PRODUCT_RISK_FILTER"
+      ],
+      "actual_route": "product",
+      "expected_routes": [
+        "product"
+      ],
+      "tools_called": [
+        "product"
+      ],
+      "source_types": [
+        "product",
+        "postgres",
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [
+        "R2_KR515302022M.pdf",
+        "R2_KR5153420318.pdf",
+        "R2_KR5153450772.pdf",
+        "R2_KR5153450268.pdf",
+        "R2_KR5153451009.pdf"
+      ],
+      "postgres_used": true,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "missing": 90,
+        "matched": 131
+      },
+      "latency_ms": 1480.8,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [
+        "KCGI코리아증권투자신탁1호[주식]",
+        "미래에셋AI퀀트미국투자등급회사채증권자투자신탁(채권)",
+        "미래에셋그린뉴딜인덱스증권자투자신탁(주식)",
+        "미래에셋스마트롱숏70증권자투자신탁1호(주식)",
+        "미래에셋연금아시아퍼시픽소비성장증권자투자신탁1호(주식)"
+      ],
+      "response_status": "success",
+      "session_id": "eval-T003-6c1db3dc",
+      "confirmed_constraints": {
+        "risk_tolerance": "moderate",
+        "investment_horizon": "10년"
+      }
+    },
+    {
+      "test_id": "T004",
+      "turn_no": 1,
+      "user_query": "IRP 상품 추천해줘",
+      "response_text": "요청을 정확히 처리하려면 추가 정보가 필요합니다. 필요한 정보: risk_tolerance, investment_horizon.\n- 감수 가능한 위험 수준(예: 원금 변동을 어느 정도 감수할 수 있는지)을 알려주세요.\n- 예상 투자기간 또는 연금 수령까지 남은 기간을 알려주세요.",
+      "detected_intent": [
+        "CLARIFY",
+        "PRODUCT_RECOMMENDATION"
+      ],
+      "actual_route": "product",
+      "expected_routes": [
+        "product"
+      ],
+      "tools_called": [
+        "product"
+      ],
+      "source_types": [
+        "postgres"
+      ],
+      "source_documents": [],
+      "postgres_used": true,
+      "enterprise_rag_used": false,
+      "external_api_used": false,
+      "evidence_status": "clarify",
+      "latency_ms": 25.4,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 1,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 9,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "clarify",
+      "session_id": "eval-T004-475106ef",
+      "confirmed_constraints": {}
+    },
+    {
+      "test_id": "T004",
+      "turn_no": 2,
+      "user_query": "위험은 중간 정도, 10년",
+      "response_text": "적용한 기본값: product_limit=5 (상품 개수가 지정되지 않았습니다.)\n\n확인된 조건에 맞는 상품 후보입니다. 개인 투자 적합성이나 수익을 보장하는 추천은 아닙니다.\n1. KCGI코리아증권투자신탁1호[주식] / 클래스 종류C-P2 / 위험등급 2 / 출처 R2_KR515302022M.pdf\n2. 미래에셋AI퀀트미국투자등급회사채증권자투자신탁(채권) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 4 / 총보수 0.71PERCENT_PER_YEAR / 출처 R2_KR5153420318.pdf\n3. 미래에셋그린뉴딜인덱스증권자투자신탁(주식) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 1 / 총보수 0.89PERCENT_PER_YEAR / 출처 R2_KR5153450772.pdf\n4. 미래에셋스마트롱숏70증권자투자신탁1호(주식) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 4 / 총보수 1.35PERCENT_PER_YEAR / 출처 R2_KR5153450268.pdf\n5. 미래에셋연금아시아퍼시픽소비성장증권자투자신탁1호(주식) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 3 / 총보수 1.57PERCENT_PER_YEAR / 출처 R2_KR5153451009.pdf\n근거 출처: 상품 PostgreSQL/Standard JSON 구조화 레코드.",
+      "detected_intent": [
+        "PRODUCT_RECOMMENDATION",
+        "PRODUCT_RISK_LOOKUP",
+        "PRODUCT_RISK_FILTER"
+      ],
+      "actual_route": "product",
+      "expected_routes": [
+        "product"
+      ],
+      "tools_called": [
+        "product"
+      ],
+      "source_types": [
+        "product",
+        "postgres",
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [
+        "R2_KR515302022M.pdf",
+        "R2_KR5153420318.pdf",
+        "R2_KR5153450772.pdf",
+        "R2_KR5153450268.pdf",
+        "R2_KR5153451009.pdf"
+      ],
+      "postgres_used": true,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "missing": 90,
+        "matched": 131
+      },
+      "latency_ms": 1619.8,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [
+        "KCGI코리아증권투자신탁1호[주식]",
+        "미래에셋AI퀀트미국투자등급회사채증권자투자신탁(채권)",
+        "미래에셋그린뉴딜인덱스증권자투자신탁(주식)",
+        "미래에셋스마트롱숏70증권자투자신탁1호(주식)",
+        "미래에셋연금아시아퍼시픽소비성장증권자투자신탁1호(주식)"
+      ],
+      "response_status": "success",
+      "session_id": "eval-T004-475106ef",
+      "confirmed_constraints": {
+        "risk_tolerance": "moderate",
+        "investment_horizon": "10년"
+      }
+    },
+    {
+      "test_id": "T004",
+      "turn_no": 3,
+      "user_query": "그중에서 보수가 가장 낮은 상품은?",
+      "response_text": "적용한 기본값: product_limit=5 (상품 개수가 지정되지 않았습니다.)\n\n상품 DB의 총보수(total_fee) 값으로 정렬한 결과입니다.\n1. 미래에셋AI퀀트미국투자등급회사채증권자투자신탁(채권) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 4 / 총보수 0.71PERCENT_PER_YEAR / 출처 R2_KR5153420318.pdf\n2. 미래에셋그린뉴딜인덱스증권자투자신탁(주식) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 1 / 총보수 0.89PERCENT_PER_YEAR / 출처 R2_KR5153450772.pdf\n3. 미래에셋스마트롱숏70증권자투자신탁1호(주식) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 4 / 총보수 1.35PERCENT_PER_YEAR / 출처 R2_KR5153450268.pdf\n4. 미래에셋연금아시아퍼시픽소비성장증권자투자신탁1호(주식) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 3 / 총보수 1.57PERCENT_PER_YEAR / 출처 R2_KR5153451009.pdf\n근거 출처: 상품 PostgreSQL/Standard JSON 구조화 레코드.",
+      "detected_intent": [
+        "PRODUCT_RECOMMENDATION",
+        "PRODUCT_FEE_FILTER",
+        "PRODUCT_FEE_SORT"
+      ],
+      "actual_route": "product",
+      "expected_routes": [
+        "product"
+      ],
+      "tools_called": [
+        "product"
+      ],
+      "source_types": [
+        "product",
+        "postgres",
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [
+        "R2_KR5153420318.pdf",
+        "R2_KR5153450772.pdf",
+        "R2_KR5153450268.pdf",
+        "R2_KR5153451009.pdf"
+      ],
+      "postgres_used": true,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "matched": 194
+      },
+      "latency_ms": 1396.3,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [
+        "미래에셋AI퀀트미국투자등급회사채증권자투자신탁(채권)",
+        "미래에셋그린뉴딜인덱스증권자투자신탁(주식)",
+        "미래에셋스마트롱숏70증권자투자신탁1호(주식)",
+        "미래에셋연금아시아퍼시픽소비성장증권자투자신탁1호(주식)"
+      ],
+      "response_status": "success",
+      "session_id": "eval-T004-475106ef",
+      "confirmed_constraints": {
+        "risk_tolerance": "moderate",
+        "investment_horizon": "10년"
+      }
+    },
+    {
+      "test_id": "T005",
+      "turn_no": 1,
+      "user_query": "IRP 상품 추천해줘",
+      "response_text": "요청을 정확히 처리하려면 추가 정보가 필요합니다. 필요한 정보: risk_tolerance, investment_horizon.\n- 감수 가능한 위험 수준(예: 원금 변동을 어느 정도 감수할 수 있는지)을 알려주세요.\n- 예상 투자기간 또는 연금 수령까지 남은 기간을 알려주세요.",
+      "detected_intent": [
+        "CLARIFY",
+        "PRODUCT_RECOMMENDATION"
+      ],
+      "actual_route": "product",
+      "expected_routes": [
+        "product"
+      ],
+      "tools_called": [
+        "product"
+      ],
+      "source_types": [
+        "postgres"
+      ],
+      "source_documents": [],
+      "postgres_used": true,
+      "enterprise_rag_used": false,
+      "external_api_used": false,
+      "evidence_status": "clarify",
+      "latency_ms": 24.8,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 1,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 9,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "clarify",
+      "session_id": "eval-T005-22f4b9e6",
+      "confirmed_constraints": {}
+    },
+    {
+      "test_id": "T005",
+      "turn_no": 2,
+      "user_query": "위험은 중간 정도, 10년",
+      "response_text": "적용한 기본값: product_limit=5 (상품 개수가 지정되지 않았습니다.)\n\n확인된 조건에 맞는 상품 후보입니다. 개인 투자 적합성이나 수익을 보장하는 추천은 아닙니다.\n1. KCGI코리아증권투자신탁1호[주식] / 클래스 종류C-P2 / 위험등급 2 / 출처 R2_KR515302022M.pdf\n2. 미래에셋AI퀀트미국투자등급회사채증권자투자신탁(채권) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 4 / 총보수 0.71PERCENT_PER_YEAR / 출처 R2_KR5153420318.pdf\n3. 미래에셋그린뉴딜인덱스증권자투자신탁(주식) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 1 / 총보수 0.89PERCENT_PER_YEAR / 출처 R2_KR5153450772.pdf\n4. 미래에셋스마트롱숏70증권자투자신탁1호(주식) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 4 / 총보수 1.35PERCENT_PER_YEAR / 출처 R2_KR5153450268.pdf\n5. 미래에셋연금아시아퍼시픽소비성장증권자투자신탁1호(주식) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 3 / 총보수 1.57PERCENT_PER_YEAR / 출처 R2_KR5153451009.pdf\n근거 출처: 상품 PostgreSQL/Standard JSON 구조화 레코드.",
+      "detected_intent": [
+        "PRODUCT_RECOMMENDATION",
+        "PRODUCT_RISK_LOOKUP",
+        "PRODUCT_RISK_FILTER"
+      ],
+      "actual_route": "product",
+      "expected_routes": [
+        "product"
+      ],
+      "tools_called": [
+        "product"
+      ],
+      "source_types": [
+        "product",
+        "postgres",
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [
+        "R2_KR515302022M.pdf",
+        "R2_KR5153420318.pdf",
+        "R2_KR5153450772.pdf",
+        "R2_KR5153450268.pdf",
+        "R2_KR5153451009.pdf"
+      ],
+      "postgres_used": true,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "missing": 90,
+        "matched": 131
+      },
+      "latency_ms": 2369.8,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [
+        "KCGI코리아증권투자신탁1호[주식]",
+        "미래에셋AI퀀트미국투자등급회사채증권자투자신탁(채권)",
+        "미래에셋그린뉴딜인덱스증권자투자신탁(주식)",
+        "미래에셋스마트롱숏70증권자투자신탁1호(주식)",
+        "미래에셋연금아시아퍼시픽소비성장증권자투자신탁1호(주식)"
+      ],
+      "response_status": "success",
+      "session_id": "eval-T005-22f4b9e6",
+      "confirmed_constraints": {
+        "risk_tolerance": "moderate",
+        "investment_horizon": "10년"
+      }
+    },
+    {
+      "test_id": "T005",
+      "turn_no": 3,
+      "user_query": "그 상품 위험은?",
+      "response_text": "적용한 기본값: product_limit=5 (상품 개수가 지정되지 않았습니다.)\n\nKCGI코리아증권투자신탁1호[주식]의 위험에 대해 다음과 같은 정보를 확인할 수 있습니다:\n\n1. **투자 대상**: 주식형 펀드로, 주로 국내 주식에 투자됩니다.\n2. **개방형 구조**: 언제든지 환매가 가능하여 자금 회수가 용이합니다.\n3. **추가형**: 추가로 자금 납입이 가능해 유연하게 투자할 수 있습니다.\n4. **고난도 금융투자상품 아님**: 상대적으로 복잡한 구조를 가지지 않아 고위험 상품으로 분류되지 않습니다.\n5. **보수 구조**: 다양한 수수료 구조가 있으며, 온라인 및 오프라인, 개인연금, 퇴직연금 등 다양한 클래스가 존재합니다.\n6. **과거 성과**: 최근 몇 년간의 연평균 및 연도별 수익률이 제시되어 있어, 투자 성과를 참고할 수 있습니다.\n\n이 펀드는 주식 시장의 변동성에 따라 수익률이 달라질 수 있으며, 투자 전에는 반드시 투자설명서와 관련 문서를 꼼꼼히 확인해야 합니다. 또한, 과거의 성과가 미래의 결과를 보장하지 않으므로 신중한 판단이 필요합니다.\n\n출처: R2_KR515302022M.pdf (각 페이지 참조)",
+      "detected_intent": [
+        "PRODUCT_RECOMMENDATION",
+        "PRODUCT_RISK_LOOKUP",
+        "PRODUCT_RISK_FILTER"
+      ],
+      "actual_route": "product",
+      "expected_routes": [
+        "product"
+      ],
+      "tools_called": [
+        "product"
+      ],
+      "source_types": [
+        "product",
+        "postgres",
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [
+        "R2_KR515302022M.pdf"
+      ],
+      "postgres_used": true,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "matched": 38
+      },
+      "latency_ms": 7814.0,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [
+        "KCGI코리아증권투자신탁1호[주식]"
+      ],
+      "response_status": "success",
+      "session_id": "eval-T005-22f4b9e6",
+      "confirmed_constraints": {
+        "risk_tolerance": "moderate",
+        "investment_horizon": "10년"
+      }
+    },
+    {
+      "test_id": "T006",
+      "turn_no": 1,
+      "user_query": "IRP에 가입하고 싶은데 어떻게 해?",
+      "response_text": "IRP에 가입하려면 다음과 같은 절차를 따르시면 됩니다:\n\n1. **가입 자격 확인**: 본인이 IRP 가입 대상인지 확인합니다. 예를 들어, 일부 직군은 별도의 법에 따라 퇴직급여를 받기 때문에 가입 가능 여부를 확인해야 합니다.\n\n2. **가입 방법 선택**: 개인사업자의 경우 일반 IRP를 통해 자영업자로서 가입할 수 있으며, 다른 법에 따라 퇴직급여를 받는 사람도 DB 또는 DC 퇴직연금에 가입할 수 있는지 확인이 필요합니다.\n\n3. **가입 신청**: 가입 조건이 충족된다면, 미래에셋 연금 Agent 지점이나 온라인 플랫폼을 통해 IRP 계좌를 개설 신청합니다.\n\n4. **필요 서류 준비**: 가입 신청 시 필요한 서류를 준비합니다. 이는 신분증, 재직증명서 등이 포함될 수 있습니다.\n\n5. **계좌 관리**: 가입 후에는 IRP 계좌를 통해 퇴직급여를 적립하고 운용하며, 필요 시 중도 인출 신청을 할 수 있습니다.\n\n6. **세무 처리**: 퇴직급여 수령 시 세무 처리를 위해 필요한 서류를 준비하고, 관할 세무서에 경정청구가 필요할 경우 이를 진행합니다.\n\n위의 절차를 참고하여 IRP에 가입하시면 됩니다. 자세한 사항은 미래에셋 연금 Agent 지점에 문의하시거나, 관련 자료를 참고하시기 바랍니다.",
+      "detected_intent": [
+        "ACCOUNT_PROCEDURE"
+      ],
+      "actual_route": "document",
+      "expected_routes": [
+        "document",
+        "document+law"
+      ],
+      "tools_called": [
+        "document"
+      ],
+      "source_types": [
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [],
+      "postgres_used": false,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "matched": 5
+      },
+      "latency_ms": 8593.2,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "success",
+      "session_id": "eval-T006-3441fea6",
+      "confirmed_constraints": {}
+    },
+    {
+      "test_id": "T007",
+      "turn_no": 1,
+      "user_query": "TDF가 뭐야?",
+      "response_text": "TDF(Target Date Fund)는 투자자의 은퇴 시점을 목표로 하여, 투자 기간 동안 자동으로 자산 배분을 조정하는 펀드입니다. 주로 퇴직연금에서 많이 활용되며, 다음과 같은 특징을 가지고 있습니다.\n\n1. **자동 리밸런싱**: 투자자의 나이나 은퇴 시점(타겟 데이트)에 맞춰 주식과 채권의 비중을 자동으로 조정합니다. 은퇴 시점이 가까워질수록 안전 자산인 채권의 비중을 늘리고, 위험 자산인 주식의 비중을 줄입니다.\n\n2. **투자 한도**: 금융감독원장이 정한 조건을 충족할 경우, DC(확정기여형)와 IRP(개인형 퇴직연금)에서는 적립금의 100%까지 투자가 가능하며, DB(확정급여형)는 70%까지만 가능합니다.\n\n3. **조건**: TDF가 적립금의 100% 투자 가능하려면 세 가지 조건을 충족해야 합니다.\n   - 투자 목표 시점을 집합투자기구 설정일로부터 5년 이후로 설정\n   - 주식의 투자 한도를 자산 총액의 80% 이내로 제한, 은퇴 시점 이후에는 40% 이내로 제한\n   - 투자 부적격 등급 채권의 투자 한도를 자산 총액의 20% 이내, 채무 증권 투자액의 50% 이내로 제한\n\n이러한 특징 덕분에 투자자는 복잡한 자산 배분 전략을 고민하지 않고도 은퇴 준비를 할 수 있습니다. 출처: [ENTERPRISE_DOCUMENT 1], [ENTERPRISE_DOCUMENT 2]",
+      "detected_intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT"
+      ],
+      "actual_route": "document",
+      "expected_routes": [
+        "document"
+      ],
+      "tools_called": [
+        "document"
+      ],
+      "source_types": [
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [],
+      "postgres_used": false,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "matched": 5
+      },
+      "latency_ms": 8903.3,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "success",
+      "session_id": "eval-T007-49eb3365",
+      "confirmed_constraints": {}
+    },
+    {
+      "test_id": "T008",
+      "turn_no": 1,
+      "user_query": "최근 1년 수익률이 높은 상품 5개 보여줘",
+      "response_text": "상품 DB에서 확인된 결과입니다.\n1. 교보악사 Tomorrow 장기우량 증권투자신탁 K-1호(채권) / 클래스 수수료미징구-오프라인(CF) / 위험등급 5 / 1Y 수익률 98776.0 / 출처 R2_KR5120420039.pdf\n2. 교보악사 파워인덱스 증권 자투자신탁 1 호 (주식) / 클래스 수수료선취-오프라인(Af) / 위험등급 2 / 1Y 수익률 92946.0 / 출처 R2_KR5120450015.pdf\n3. 교보악사 파워인덱스 증권 자투자신탁 1 호 (주식) / 클래스 수수료미징구-오프라인(Ch) / 위험등급 2 / 1Y 수익률 92662.0 / 출처 R2_KR5120450015.pdf\n4. 교보악사 파워인덱스 증권 자투자신탁 1 호 (주식) / 클래스 수수료미징구-오프라인(C4) / 위험등급 2 / 1Y 수익률 92661.0 / 출처 R2_KR5120450015.pdf\n5. 교보악사 파워인덱스 증권 자투자신탁 1 호 (주식) / 클래스 수수료미징구-오프라인(C3) / 위험등급 2 / 1Y 수익률 92660.0 / 출처 R2_KR5120450015.pdf\n근거 출처: 상품 PostgreSQL/Standard JSON 구조화 레코드.",
+      "detected_intent": [
+        "PRODUCT_PERFORMANCE_LOOKUP"
+      ],
+      "actual_route": "product",
+      "expected_routes": [
+        "product"
+      ],
+      "tools_called": [
+        "product"
+      ],
+      "source_types": [
+        "product",
+        "postgres",
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [
+        "R2_KR5120420039.pdf",
+        "R2_KR5120450015.pdf",
+        "R2_KR5120450015.pdf",
+        "R2_KR5120450015.pdf",
+        "R2_KR5120450015.pdf"
+      ],
+      "postgres_used": true,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "matched": 78
+      },
+      "latency_ms": 1087.7,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [
+        "교보악사 Tomorrow 장기우량 증권투자신탁 K-1호(채권)",
+        "교보악사 파워인덱스 증권 자투자신탁 1 호 (주식)",
+        "교보악사 파워인덱스 증권 자투자신탁 1 호 (주식)",
+        "교보악사 파워인덱스 증권 자투자신탁 1 호 (주식)",
+        "교보악사 파워인덱스 증권 자투자신탁 1 호 (주식)"
+      ],
+      "response_status": "success",
+      "session_id": "eval-T008-ec7e1f82",
+      "confirmed_constraints": {}
+    },
+    {
+      "test_id": "T009",
+      "turn_no": 1,
+      "user_query": "위험등급 3등급 이하 상품만 보여줘",
+      "response_text": "적용한 기본값: product_limit=5 (상품 개수가 지정되지 않았습니다.)\n\n상품 DB에서 확인된 결과입니다.\n1. KB 그로스 포커스 증권 자투자신탁(주식) / 클래스 수수료미징구(C-E) / 위험등급 2 / 총보수 1.713PERCENT_PER_YEAR / 출처 R2_KR5127450117.pdf\n2. KB 그로스 포커스 증권 자투자신탁(주식) / 클래스 수수료미징구-오프라인(C) / 위험등급 2 / 총보수 2.223PERCENT_PER_YEAR / 출처 R2_KR5127450117.pdf\n3. KB 그로스 포커스 증권 자투자신탁(주식) / 클래스 수수료선취-오프라인(A) / 위험등급 2 / 총보수 1.306PERCENT_PER_YEAR / 출처 R2_KR5127450117.pdf\n4. KB 그로스 포커스 증권 자투자신탁(주식) / 클래스 수수료선취-온라인(A-E) / 위험등급 2 / 총보수 1.014PERCENT_PER_YEAR / 출처 R2_KR5127450117.pdf\n5. KB 코리아 밸류업 액티브 증권 자투자신탁(주식) / 클래스 수수료미징구-오프라인(C) / 위험등급 2 / 총보수 1.66PERCENT_PER_YEAR / 출처 R2_KR5127450473.pdf\n근거 출처: 상품 PostgreSQL/Standard JSON 구조화 레코드.",
+      "detected_intent": [
+        "PRODUCT_RISK_LOOKUP",
+        "PRODUCT_RISK_FILTER"
+      ],
+      "actual_route": "product",
+      "expected_routes": [
+        "product"
+      ],
+      "tools_called": [
+        "product"
+      ],
+      "source_types": [
+        "product",
+        "postgres",
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [
+        "R2_KR5127450117.pdf",
+        "R2_KR5127450117.pdf",
+        "R2_KR5127450117.pdf",
+        "R2_KR5127450117.pdf",
+        "R2_KR5127450473.pdf"
+      ],
+      "postgres_used": true,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "matched": 56
+      },
+      "latency_ms": 1039.6,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [
+        "KB 그로스 포커스 증권 자투자신탁(주식)",
+        "KB 그로스 포커스 증권 자투자신탁(주식)",
+        "KB 그로스 포커스 증권 자투자신탁(주식)",
+        "KB 그로스 포커스 증권 자투자신탁(주식)",
+        "KB 코리아 밸류업 액티브 증권 자투자신탁(주식)"
+      ],
+      "response_status": "success",
+      "session_id": "eval-T009-9b8918d5",
+      "confirmed_constraints": {}
+    },
+    {
+      "test_id": "T010",
+      "turn_no": 1,
+      "user_query": "TDF 상품 중 총보수가 낮은 순서대로 보여줘",
+      "response_text": "적용한 기본값: product_limit=5 (상품 개수가 지정되지 않았습니다.)\n\n상품 DB의 총보수(total_fee) 값으로 정렬한 결과입니다.\n1. 미래에셋라이프사이클7090연금증권전환형자투자신탁1호(채권) / 클래스 종류C-0 / 위험등급 5 / 총보수 0.15PERCENT_PER_YEAR / 출처 R2_KR5153420022.pdf\n2. 미래에셋라이프사이클2030연금증권전환형자투자신탁1호(주식) / 클래스 수수료미징구-온라인-개인연금(C-e) / 위험등급 2 / 총보수 1.06PERCENT_PER_YEAR / 출처 R2_KR5153450112.pdf\n근거 출처: 상품 PostgreSQL/Standard JSON 구조화 레코드.",
+      "detected_intent": [
+        "PRODUCT_FEE_FILTER",
+        "PRODUCT_FEE_SORT"
+      ],
+      "actual_route": "product",
+      "expected_routes": [
+        "product"
+      ],
+      "tools_called": [
+        "product"
+      ],
+      "source_types": [
+        "product",
+        "postgres",
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [
+        "R2_KR5153420022.pdf",
+        "R2_KR5153450112.pdf"
+      ],
+      "postgres_used": true,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "matched": 42
+      },
+      "latency_ms": 1186.3,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [
+        "미래에셋라이프사이클7090연금증권전환형자투자신탁1호(채권)",
+        "미래에셋라이프사이클2030연금증권전환형자투자신탁1호(주식)"
+      ],
+      "response_status": "success",
+      "session_id": "eval-T010-21b50984",
+      "confirmed_constraints": {}
+    },
+    {
+      "test_id": "T011",
+      "turn_no": 1,
+      "user_query": "이 상품의 1년, 3년, 5년 수익률을 보여줘",
+      "response_text": "요청을 정확히 처리하려면 추가 정보가 필요합니다. 필요한 정보: product_reference.\n- 어떤 상품을 말씀하시는지 상품명을 알려주세요.",
+      "detected_intent": [
+        "CLARIFY",
+        "PRODUCT_PERFORMANCE_LOOKUP"
+      ],
+      "actual_route": "product",
+      "expected_routes": [],
+      "tools_called": [
+        "product"
+      ],
+      "source_types": [
+        "postgres"
+      ],
+      "source_documents": [],
+      "postgres_used": true,
+      "enterprise_rag_used": false,
+      "external_api_used": false,
+      "evidence_status": "clarify",
+      "latency_ms": 41.1,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "clarify",
+      "session_id": "eval-T011-069c64bd",
+      "confirmed_constraints": {}
+    },
+    {
+      "test_id": "T012",
+      "turn_no": 1,
+      "user_query": "IRP에서 중도인출은 언제 가능해?",
+      "response_text": "IRP에서 중도인출은 원칙적으로 만 55세 이전에 불가능하지만, 특정한 사유에 해당할 경우 가능합니다. 이러한 사유는 근로자퇴직급여 보장법 시행령 제18조에 의해 규정되어 있으며, 예를 들어 다음과 같은 경우가 포함됩니다:\n\n1. **무주택자의 주택 구입**\n2. **가입자가 「채무자 회생 및 파산에 관한 법률」에 따라 개인회생절차개시결정 또는 파산선고를 받은 경우**\n\n또한, 중도인출을 위해서는 해당 사유를 증명할 수 있는 서류를 준비하여 제출해야 하며, 이는 퇴직연금 사업자에게 제출됩니다. \n\n중도인출 사유에 해당하지 않을 경우, 만 55세 이전에 IRP 계좌를 해지하여 전액 일시금으로 인출하는 방법밖에 없습니다. 이때 기타소득세 16.5%가 부과됩니다.\n\n따라서, IRP 중도인출을 고려하신다면 본인의 상황이 법에서 정한 중도인출 사유에 해당하는지 먼저 확인하시기 바랍니다. (출처: [LAW_EVIDENCE], [Document RAG 근거 1], [Document RAG 근거 3])",
+      "detected_intent": [
+        "ACCOUNT_PROCEDURE",
+        "LEGAL_CONDITION"
+      ],
+      "actual_route": "document+law",
+      "expected_routes": [
+        "document",
+        "document+law",
+        "law"
+      ],
+      "tools_called": [
+        "document",
+        "law"
+      ],
+      "source_types": [
+        "enterprise_rag",
+        "enterprise_document",
+        "law",
+        "external_api"
+      ],
+      "source_documents": [],
+      "postgres_used": false,
+      "enterprise_rag_used": true,
+      "external_api_used": true,
+      "evidence_status": {
+        "matched": 7
+      },
+      "latency_ms": 18412.0,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "success",
+      "session_id": "eval-T012-35a5c1da",
+      "confirmed_constraints": {}
+    },
+    {
+      "test_id": "T013",
+      "turn_no": 1,
+      "user_query": "그냥 예시로 안정형 투자자라면 어떻게 추천해?",
+      "response_text": "예시로 안정형 투자자라면 원금 변동을 낮추는 방향에서 위험등급이 낮고 채권 비중이 높은 후보를 먼저 비교할 수 있습니다. 이는 실제 상품 추천이 아니라 예시 시나리오입니다. 실제 추천에는 투자기간과 감내 위험을 확인합니다.",
+      "detected_intent": [
+        "EXAMPLE_RESPONSE",
+        "CLARIFY_EXAMPLE",
+        "HYPOTHETICAL_EXAMPLE"
+      ],
+      "actual_route": "conversation",
+      "expected_routes": [],
+      "tools_called": [
+        "conversation"
+      ],
+      "source_types": [],
+      "source_documents": [],
+      "postgres_used": false,
+      "enterprise_rag_used": false,
+      "external_api_used": false,
+      "evidence_status": "success",
+      "latency_ms": 1.0,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "success",
+      "session_id": "eval-T013-0cf4e536",
+      "confirmed_constraints": {}
+    },
+    {
+      "test_id": "T014",
+      "turn_no": 1,
+      "user_query": "근거 문장을 보여줘",
+      "response_text": "사용자님께서 요청하신 근거 문장은 다음과 같습니다:\n\n1. **디폴트옵션 지정만 되어 있고 실제 보유가 없을 때 다른 유형으로 옵트인 매수가 가능한지**에 대한 답변입니다.\n   - \"가능합니다. 옵트인은 현재 디폴트옵션 적립금을 실제로 운용하고 있지 않은 가입자가 1개 디폴트옵션상품을 직접 매수하는 방식이므로, 지정만 되어 있고 실제 보유가 없다면 B유형으로 직접 매수할 수 있습니다.\" (FAQ_100 시트의 ID 1번)\n\n2. **디폴트옵션을 아직 지정하지도 않았고 실제 보유도 없는 상황에서 옵트인으로 디폴트옵션을 매수할 수 있는지**에 대한 답변입니다.\n   - \"가능합니다. 현재 디폴트옵션으로 운용 중인 적립금이 없다면 가입자는 현재 사업자가 제공하는 승인된 디폴트옵션 중 1개를 직접 선택해 매수할 수 있습니다. 다만 향후 자동적용을 원하면 별도로 사전지정도 해두는 것이 좋습니다.\" (FAQ_100 시트의 ID 2번)\n\n3. **A유형으로 자동매수되어 이미 운용 중인 상태에서 B유형으로 옵트인 매수가 가능한지**에 대한 답변입니다.\n   - \"불가합니다. 이미 디폴트옵션 적립금을 운용 중인 가입자는 원칙적으로 다른 디폴트옵션상품으로 옵트인 매수할 수 없습니다. 다른 유형으로 직접 매수하려면 현재 보유 중인 디폴트옵션 적립금을 정리한 뒤 진행해야 합니다.\" (FAQ_100 시트의 ID 3번)\n\n위 내용은 모두 공식 FAQ 및 법령을 근거로 하고 있으며, 각 답변의 근거 ID는 S1, S2, S3, S3, S4입니다. 출처: [ENTERPRISE_DOCUMENT 1], [ENTERPRISE_DOCUMENT 2]",
+      "detected_intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT",
+        "EVIDENCE_REQUEST"
+      ],
+      "actual_route": "document",
+      "expected_routes": [],
+      "tools_called": [
+        "document"
+      ],
+      "source_types": [
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [],
+      "postgres_used": false,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "matched": 2
+      },
+      "latency_ms": 12073.8,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "success",
+      "session_id": "eval-T014-da6e4158",
+      "confirmed_constraints": {}
+    },
+    {
+      "test_id": "T015",
+      "turn_no": 1,
+      "user_query": "기업이 준 자료에 없는 내용이면 알려줘",
+      "response_text": "기업이 제공한 자료에 없는 내용은 다음과 같습니다.\n\n- 특정 상품의 구체적인 수익률 데이터\n- 개별 고객의 투자 사례\n- 실시간 시장 동향 분석\n- 특정 기업의 재무 상태나 신용등급\n- 기타 개별적인 투자 조언\n\n이와 같은 내용은 기업 제공 자료에 포함되어 있지 않으므로, 추가적인 정보나 구체적인 투자 상담을 원하신다면 전문가와의 직접 상담이 필요합니다. (출처: 기업 제공 자료 전반)",
+      "detected_intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT",
+        "SOURCE_COVERAGE"
+      ],
+      "actual_route": "document",
+      "expected_routes": [],
+      "tools_called": [
+        "document"
+      ],
+      "source_types": [
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [],
+      "postgres_used": false,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "matched": 3
+      },
+      "latency_ms": 4181.0,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "success",
+      "session_id": "eval-T015-d65165df",
+      "confirmed_constraints": {}
+    },
+    {
+      "test_id": "T016",
+      "turn_no": 1,
+      "user_query": "DC와 DB, 퇴직금이 정해지는 방식이랑 운용 주체가 어떻게 다른가요?",
+      "response_text": "DC와 DB, 퇴직금이 정해지는 방식과 운용 주체는 다음과 같습니다.\n\n1. **DB 제도 (확정급여형)**\n   - **운용 주체**: 회사가 퇴직급여 재원을 금융기관에 적립하고 운용합니다.\n   - **퇴직급여 산정 방식**: 퇴직급여 = 평균임금 × 계속근로기간(근속연수).\n   - **적립금 보관 및 운용**: 회사가 금융기관에 적립하며, 회사가 운용 책임을 집니다.\n\n2. **DC 제도 (확정기여형)**\n   - **운용 주체**: 근로자가 적립금을 직접 운용합니다.\n   - **부담금 산정**: 연간 임금총액의 1/12.\n   - **퇴직급여 산정 방식**: 기여금(부담금) 누계액 ± 운용손익.\n   - **적립금 보관**: 금융기관에 보관되며, 근로자가 운용 결과에 따라 최종 수령액이 변동됩니다.\n\n3. **퇴직금 제도**\n   - **운용 주체**: 회사가 퇴직 시 직접 퇴직급여를 지급합니다.\n   - **적립금**: 별도로 적립되지 않으며, 퇴직 시 회사가 일시에 지급합니다.\n\n이와 같이, DB 제도는 회사가 운용 주체로서 퇴직급여를 보장하는 반면, DC 제도는 근로자가 직접 자산을 운용하며 그 결과에 따라 퇴직급여가 결정됩니다. 퇴직금 제도는 별도의 적립 없이 퇴직 시 직접 지급된다는 점에서 두 제도와 차이가 있습니다. (출처: doc11.pdf, page 1)",
+      "detected_intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT"
+      ],
+      "actual_route": "document",
+      "expected_routes": [
+        "document"
+      ],
+      "tools_called": [
+        "document"
+      ],
+      "source_types": [
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [],
+      "postgres_used": false,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "matched": 5
+      },
+      "latency_ms": 11368.8,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "success",
+      "session_id": "eval-T016-05a5aa71",
+      "confirmed_constraints": {}
+    },
+    {
+      "test_id": "T017",
+      "turn_no": 1,
+      "user_query": "연금저축이랑 IRP에 넣으면 세액공제 얼마까지 되나요? 다 합쳐서요.",
+      "response_text": "연금저축과 IRP를 합한 연금계좌 세액공제 대상 납입액 한도는 연 9,000,000원입니다. 이 중 연금저축 납입액은 연 6,000,000원까지 세액공제 대상에 포함됩니다. 실제 공제세액은 소득구간과 실제 납입액에 따라 달라집니다.",
+      "detected_intent": [
+        "LEGAL_CONDITION",
+        "GENERAL_EDUCATION"
+      ],
+      "actual_route": "calculation",
+      "expected_routes": [
+        "calculation",
+        "document",
+        "document+law"
+      ],
+      "tools_called": [
+        "calculation"
+      ],
+      "source_types": [
+        "enterprise_rag",
+        "enterprise_document",
+        "law",
+        "external_api",
+        "calculation"
+      ],
+      "source_documents": [],
+      "postgres_used": false,
+      "enterprise_rag_used": true,
+      "external_api_used": true,
+      "evidence_status": {
+        "matched": 2
+      },
+      "latency_ms": 4487.6,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "success",
+      "session_id": "eval-T017-66852b09",
+      "confirmed_constraints": {}
+    },
+    {
+      "test_id": "T018",
+      "turn_no": 1,
+      "user_query": "명퇴하는 교사예요. 퇴직금을 어떻게 받으면 좋은지 절세법만 알려주세요.",
+      "response_text": "명퇴하는 교사의 퇴직금 절세법에 대해 다음과 같이 정리할 수 있습니다:\n\n1. **연금계좌 활용**:\n   - 퇴직금을 IRP나 연금저축펀드 같은 연금계좌로 이전하여 연금 형태로 수령하면 퇴직소득세를 30%~50% 감면받을 수 있습니다.\n   - 연금 수령 시 나이에 따라 3.3%~5.5%의 낮은 연금소득세가 적용됩니다. 나이가 많을수록 세율이 낮아지므로 늦게 인출할수록 유리합니다.\n   - 연금수령한도를 초과하지 않도록 주의하며, 이를 초과할 경우 16.5%의 기타소득세가 부과됩니다.\n\n2. **근속연수 고려**:\n   - 근속연수가 길수록 공제액이 커지고 세금이 줄어듭니다. 따라서 퇴직 시점에 맞춰 퇴직금을 수령하면 더 많은 절세 효과를 누릴 수 있습니다.\n\n3. **연금 계좌 유지**:\n   - 퇴직 시점부터 연금 수령을 개시한 계좌는 계속 유지되며, 이 계좌의 연금 수령 연차가 그대로 적용됩니다. 따라서 기존에 연금을 받아오던 계좌를 활용하는 것이 좋습니다.\n\n이와 같은 방법을 통해 퇴직금을 수령하면 절세 효과를 극대화할 수 있습니다. 단, 연금 수령 조건 및 한도는 개인의 상황에 따라 다를 수 있으므로, 퇴직 전 전문가와 상담하여 최적의 계획을 세우는 것이 좋습니다.",
+      "detected_intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT"
+      ],
+      "actual_route": "document",
+      "expected_routes": [
+        "document",
+        "document+law",
+        "law"
+      ],
+      "tools_called": [
+        "document"
+      ],
+      "source_types": [
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [],
+      "postgres_used": false,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "matched": 5
+      },
+      "latency_ms": 15171.7,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 1,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 9,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "success",
+      "session_id": "eval-T018-60af094d",
+      "confirmed_constraints": {}
+    },
+    {
+      "test_id": "T019",
+      "turn_no": 1,
+      "user_query": "솔로몬 국공채 단기·중장기·장기, 뭐가 달라요? 안정적인 걸 원해요.",
+      "response_text": "적용한 기본값: product_limit=5 (상품 개수가 지정되지 않았습니다.)\n\n솔로몬 국공채 계열에서 확인된 상품입니다. 일반 금리 민감도 설명은 기업 근거 없이 단정하지 않습니다.\n1. 미래에셋솔로몬단기국공채증권자투자신탁1호(채권) / 클래스 수수료미징구-오프라인-개인연금(C-P) / 위험등급 5 / 총보수 0.47PERCENT_PER_YEAR / 출처 R2_KR5153420063.pdf\n2. 미래에셋솔로몬장기국공채증권자투자신탁1호(채권) / 클래스 수수료미징구-오프라인-개인연금(C-P) / 위험등급 5 / 총보수 0.43PERCENT_PER_YEAR / 출처 R2_KR5153420105.pdf\n3. 미래에셋솔로몬중장기국공채증권자투자신탁1호(채권) / 클래스 수수료미징구-오프라인-개인연금(C-P) / 위험등급 5 / 총보수 0.48PERCENT_PER_YEAR / 출처 R2_KR5153420079.pdf\n근거 출처: 상품 PostgreSQL/Standard JSON 구조화 레코드.",
+      "detected_intent": [
+        "PRODUCT_LOOKUP"
+      ],
+      "actual_route": "product",
+      "expected_routes": [
+        "product"
+      ],
+      "tools_called": [
+        "product"
+      ],
+      "source_types": [
+        "product",
+        "postgres",
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [
+        "R2_KR5153420063.pdf",
+        "R2_KR5153420105.pdf",
+        "R2_KR5153420079.pdf"
+      ],
+      "postgres_used": true,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "matched": 193
+      },
+      "latency_ms": 1618.5,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [
+        "미래에셋솔로몬단기국공채증권자투자신탁1호(채권)",
+        "미래에셋솔로몬장기국공채증권자투자신탁1호(채권)",
+        "미래에셋솔로몬중장기국공채증권자투자신탁1호(채권)"
+      ],
+      "response_status": "success",
+      "session_id": "eval-T019-b633925f",
+      "confirmed_constraints": {}
+    },
+    {
+      "test_id": "T020",
+      "turn_no": 1,
+      "user_query": "좋은 연금 상품 하나 추천해 주세요.",
+      "response_text": "요청을 정확히 처리하려면 추가 정보가 필요합니다. 필요한 정보: risk_tolerance, investment_horizon.\n- 감수 가능한 위험 수준(예: 원금 변동을 어느 정도 감수할 수 있는지)을 알려주세요.\n- 예상 투자기간 또는 연금 수령까지 남은 기간을 알려주세요.",
+      "detected_intent": [
+        "CLARIFY",
+        "PRODUCT_RECOMMENDATION"
+      ],
+      "actual_route": "product",
+      "expected_routes": [
+        "product"
+      ],
+      "tools_called": [
+        "product"
+      ],
+      "source_types": [
+        "postgres"
+      ],
+      "source_documents": [],
+      "postgres_used": true,
+      "enterprise_rag_used": false,
+      "external_api_used": false,
+      "evidence_status": "clarify",
+      "latency_ms": 26.9,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 1,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 9,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "clarify",
+      "session_id": "eval-T020-6165c59a",
+      "confirmed_constraints": {}
+    },
+    {
+      "test_id": "T021",
+      "turn_no": 1,
+      "user_query": "DC와 DB, 퇴직금이 정해지는 방식이랑 운용 주체가 어떻게 다른가요?",
+      "response_text": "DC와 DB, 퇴직금이 정해지는 방식과 운용 주체는 다음과 같습니다.\n\n1. **DB 제도 (확정급여형)**\n   - **운용 주체**: 회사가 퇴직급여 재원을 금융기관에 적립하고 운용합니다.\n   - **퇴직급여 산정 방식**: 퇴직급여 = 평균임금 × 계속근로기간(근속연수).\n   - **적립금 보관 및 운용**: 회사가 금융기관에 적립하며, 회사가 운용 책임을 집니다.\n\n2. **DC 제도 (확정기여형)**\n   - **운용 주체**: 근로자가 적립금을 직접 운용합니다.\n   - **부담금 산정**: 연간 임금총액의 1/12.\n   - **퇴직급여 산정 방식**: 기여금(부담금) 누계액 ± 운용손익.\n   - **적립금 보관**: 금융기관에 보관되며, 근로자가 운용 결과에 따라 최종 수령액이 변동됩니다.\n\n3. **퇴직금 제도**\n   - **운용 주체**: 회사가 퇴직 시 직접 퇴직급여를 지급합니다.\n   - **적립금**: 별도로 적립되지 않으며, 퇴직 시 회사가 일시에 지급합니다.\n\n이와 같이, DB 제도는 회사가 운용 주체로서 퇴직급여를 보장하는 반면, DC 제도는 근로자가 직접 자산을 운용하며 그 결과에 따라 퇴직급여가 결정됩니다. 퇴직금 제도는 별도의 적립 없이 퇴직 시 직접 지급된다는 점에서 두 제도와 차이가 있습니다. (출처: doc11.pdf, page 1)",
+      "detected_intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT"
+      ],
+      "actual_route": "document",
+      "expected_routes": [
+        "document"
+      ],
+      "tools_called": [
+        "document"
+      ],
+      "source_types": [
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [],
+      "postgres_used": false,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "matched": 5
+      },
+      "latency_ms": 22.4,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "success",
+      "session_id": "eval-T021-8ffb3e3f",
+      "confirmed_constraints": {}
+    },
+    {
+      "test_id": "T021",
+      "turn_no": 2,
+      "user_query": "그럼 IRP는 운용 주체가 어느 쪽에 가깝나요?",
+      "response_text": "IRP(Individual Retirement Pension)는 개인형 퇴직연금제도로, 운용 주체는 근로자 본인입니다. 이는 확정기여형 퇴직연금제도(DC제도)와 유사하게, 회사가 정해진 기여금을 금융기관에 적립해주면 근로자가 직접 운용하는 방식입니다. 따라서 IRP의 적립금 운용 주체는 '근로자'에 가깝습니다.",
+      "detected_intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT"
+      ],
+      "actual_route": "document",
+      "expected_routes": [
+        "document"
+      ],
+      "tools_called": [
+        "document"
+      ],
+      "source_types": [
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [],
+      "postgres_used": false,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "matched": 5
+      },
+      "latency_ms": 4518.5,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "success",
+      "session_id": "eval-T021-8ffb3e3f",
+      "confirmed_constraints": {}
+    },
+    {
+      "test_id": "T022",
+      "turn_no": 1,
+      "user_query": "연금저축이랑 IRP에 넣으면 세액공제 얼마까지 되나요? 다 합쳐서요. 그리고 한도를 넘기면 이월도 되나요?",
+      "response_text": "연금저축과 IRP를 합한 연금계좌 세액공제 대상 납입액 한도는 연 9,000,000원입니다. 이 중 연금저축 납입액은 연 6,000,000원까지 세액공제 대상에 포함됩니다. 실제 공제세액은 소득구간과 실제 납입액에 따라 달라집니다.",
+      "detected_intent": [
+        "LEGAL_CONDITION",
+        "GENERAL_EDUCATION"
+      ],
+      "actual_route": "calculation",
+      "expected_routes": [
+        "calculation",
+        "document",
+        "document+law",
+        "calculation+document"
+      ],
+      "tools_called": [
+        "calculation"
+      ],
+      "source_types": [
+        "enterprise_rag",
+        "enterprise_document",
+        "law",
+        "external_api",
+        "calculation"
+      ],
+      "source_documents": [],
+      "postgres_used": false,
+      "enterprise_rag_used": true,
+      "external_api_used": true,
+      "evidence_status": {
+        "matched": 2
+      },
+      "latency_ms": 4167.8,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "success",
+      "session_id": "eval-T022-12f2982c",
+      "confirmed_constraints": {}
+    }
+  ]
+}

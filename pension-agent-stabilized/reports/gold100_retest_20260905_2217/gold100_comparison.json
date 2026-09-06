@@ -1,0 +1,49 @@
+{
+  "baseline_dir": "c:\\mirae\\reports\\gold100_hyperclova_20260905",
+  "retest_dir": "c:\\mirae\\reports\\gold100_retest_20260905_2217",
+  "baseline": {
+    "PASS": 46,
+    "FAIL": 54,
+    "SKIP": 0,
+    "overall_pass_rate": "46.0%",
+    "routing_accuracy": "71.0%",
+    "latency_ms_avg": 8363.7,
+    "safe_stop_count": 13
+  },
+  "retest": {
+    "PASS": 46,
+    "FAIL": 54,
+    "SKIP": 0,
+    "overall_pass_rate": "46.0%",
+    "routing_accuracy": "71.0%",
+    "latency_ms_avg": 7068.4,
+    "safe_stop_count": 13,
+    "started_at": "2026-09-05T22:17:48+0900",
+    "finished_at": "2026-09-05T22:30:31+0900"
+  },
+  "delta_pass": 0,
+  "FAIL_to_PASS": [
+    "Test 30"
+  ],
+  "PASS_to_FAIL": [
+    "Test 73"
+  ],
+  "integrity": {
+    "total_rows": 100,
+    "unique_test_ids": 100,
+    "duplicates": [],
+    "missing": [],
+    "PASS": 46,
+    "FAIL": 54,
+    "SKIP": 0,
+    "sum_equals_100": true
+  },
+  "code_exposure_cases": 0,
+  "models": {
+    "normalizer": "HCX-DASH-002",
+    "supervisor": "HCX-007",
+    "extraction": "HCX-005",
+    "answer": "HCX-005"
+  },
+  "caveat": "Single re-run score delta is not conclusive performance improvement; display polish vs content change must be distinguished."
+}

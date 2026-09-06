@@ -1,0 +1,3704 @@
+{
+  "source_excel": "c:\\Users\\rudck\\Documents\\카카오톡 받은 파일\\연금_AI_Agent_100개_마스터테스트.xlsx",
+  "sheet": "전체 100개",
+  "header": [
+    "Test",
+    "세트",
+    "유형 / 난이도",
+    "테스트 질문",
+    "기대 답변"
+  ],
+  "case_count": 100,
+  "cases": [
+    {
+      "test_id": "Test 1",
+      "세트": "1차 마스터",
+      "유형_난이도_원문": "제도·세제 기본 / 하",
+      "유형": "제도·세제 기본",
+      "난이도": "하",
+      "테스트_질문": "연금저축계좌와 IRP 계좌에 개인이 납입할 수 있는 연간 총 한도와 그중 세액공제를 받을 수 있는 최대 한도는 각각 얼마인가요? 두 계좌를 모두 보유하고 있는 경우를 기준으로 알려주세요.",
+      "기대_답변": "두 계좌 합산 연간 납입 한도는 1,800만 원. 세액공제 최대 한도는 합산 900만 원. 연금저축만으로는 최대 600만 원까지 세액공제되며, 총 900만 원을 채우려면 나머지 300만 원을 IRP에 납입해야 함.",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [
+        "1,800",
+        "900",
+        "600",
+        "300"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 2",
+      "세트": "1차 마스터",
+      "유형_난이도_원문": "잘못된 전제 교정 / 중",
+      "유형": "잘못된 전제 교정",
+      "난이도": "중",
+      "테스트_질문": "제가 총급여 6,000만 원인 직장인인데요. 올해 IRP 계좌에만 1,500만 원을 납입했습니다. 이 1,500만 원 전체에 대해 16.5%의 세액공제가 적용되어 약 247만 원을 환급받을 수 있는 게 맞나요?",
+      "기대_답변": "아님. ① 1,500만 원을 납입할 수는 있으나 세액공제 대상은 최대 900만 원. ② 총급여 6,000만 원이면 공제율은 16.5%가 아니라 13.2%. 따라서 900만 원 × 13.2% = 118만 8,000원.",
+      "family": "Correction",
+      "expected_numbers_from_기대답변": [
+        "1,500",
+        "900",
+        "6,000",
+        "16.5",
+        "13.2",
+        "118",
+        "8,000"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": true,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "calculation",
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "calculation",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 3",
+      "세트": "1차 마스터",
+      "유형_난이도_원문": "정보 부족 대응 / 중",
+      "유형": "정보 부족 대응",
+      "난이도": "중",
+      "테스트_질문": "퇴직연금 DC 계좌에 있는 돈으로 굴릴 만한 가장 수익률 높고 좋은 펀드 하나만 콕 집어서 추천해 주세요.",
+      "기대_답변": "투자 성향, 감내 가능한 위험 수준, 투자 기간, 원리금보장형 선호 여부 등이 부족하므로 특정 상품을 단정 추천하면 안 됨. 추가 정보를 질문한 후 적합한 위험등급의 상품군을 비교해야 함.",
+      "family": "Abstention",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": true,
+        "require_abstention_or_clarify": true,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": false,
+        "no_arbitrary_product": true,
+        "route_families": [
+          "product",
+          "conversation"
+        ],
+        "source_families": [
+          "product",
+          "postgres",
+          "none"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 4",
+      "세트": "1차 마스터",
+      "유형_난이도_원문": "실물이전 예외 / 상",
+      "유형": "실물이전 예외",
+      "난이도": "상",
+      "테스트_질문": "현재 회사 DC 계좌에서 디폴트옵션 상품을 매수해서 운용 중입니다. 이 계좌 상태 그대로 다른 은행의 DC 계좌로 퇴직연금 실물이전을 신청할 수 있나요? 만약 안 된다면 왜 안 되는지 코드나 근거가 있나요?",
+      "기대_답변": "실물이전 불가능. 디폴트옵션 상품은 실물이전 불가사유 코드 23번 ‘실물이전불가(디폴트옵션 상품)’에 해당. 이전하려면 상품을 먼저 전량 매도해 현금성 자산으로 전환한 후 이전 신청해야 함.",
+      "family": "Procedure",
+      "expected_numbers_from_기대답변": [
+        "23"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 5",
+      "세트": "1차 마스터",
+      "유형_난이도_원문": "상품 비교 SQL+RAG / 상",
+      "유형": "상품 비교 SQL+RAG",
+      "난이도": "상",
+      "테스트_질문": "흥국멀티크레딧증권자투자신탁[채권] 펀드의 '종류 A' 클래스와 '종류 C-e' 클래스의 총보수율(Total Fee)은 각각 연 몇 %이며, 두 클래스의 최근 1년 수익률 성과는 어떻게 다른지 비교해 주세요. 그리고 이 펀드가 주로 투자하는 모펀드의 핵심 투자전략도 함께 설명해 주세요.",
+      "기대_답변": "종류 A와 C-e의 실제 총보수율·1년 수익률은 DB/문서에서 조회해 제시해야 함. 제공된 대화에서는 수치가 `X.XX%`, `Y.YY%`로 남아 있어 구체적 정답은 없음. 모펀드 \\*\\*흥국멀티크레딧증권모투자신탁[채권]\\*\\*은 신탁재산의 60% 이상을 국내 채권에 투자해 비교지수 대비 초과수익을 추구한다고 제시됨. 수치가 확인되지 않으면 ‘확인되지 않음’이라고 답해야 함.",
+      "family": "Product",
+      "expected_numbers_from_기대답변": [
+        "60"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": true,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "product"
+        ],
+        "source_families": [
+          "product",
+          "postgres",
+          "enterprise_document"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 6",
+      "세트": "2차 마스터",
+      "유형_난이도_원문": "복합 Routing / 상",
+      "유형": "복합 Routing",
+      "난이도": "상",
+      "테스트_질문": "현재 제가 보유한 퇴직연금 DC 계좌에서 운용 중인 TDF 상품의 최근 1년 수익률과 총보수 비율을 보여주시고, 이와 위험등급이 유사한 다른 자산운용사의 국공채 펀드가 있다면 보수율을 비교해 주세요. 더불어 그 국공채 펀드의 핵심 투자 전략도 함께 요약해 주세요.",
+      "기대_답변": "보유 TDF의 1년 수익률·총보수·위험등급을 조회하고, 동일 위험등급의 타 운용사 국공채 펀드를 찾아 보수율을 비교. 이후 선택된 국공채 펀드의 투자설명서를 검색해 투자전략을 원문 근거로 요약해야 함. 특정 숫자나 상품명은 대화에 정답으로 고정되어 있지 않음.",
+      "family": "Compound",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "product",
+          "calculation",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "product",
+          "postgres",
+          "law",
+          "calculation"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 7",
+      "세트": "2차 마스터",
+      "유형_난이도_원문": "실물이전 코드 매핑 / 상",
+      "유형": "실물이전 코드 매핑",
+      "난이도": "상",
+      "테스트_질문": "제가 보유하고 있는 퇴직연금 펀드를 다른 금융기관으로 실물이전 신청하려고 합니다. 그런데 이 펀드가 현재 잔고가 35억 원 정도 남은 소규모 펀드라고 하더라고요. 혹시 이 상태 그대로 실물이전이 가능한가요? 안 된다면 정확한 불가 사유 코드와 사유, 그리고 어떻게 처리해야 이전할 수 있는지 가이드를 주십시오.",
+      "기대_답변": "실물이전 불가능. 잔고 35억 원은 50억 원 미만 소규모 펀드 조건에 해당. 불가사유코드 01 ‘소규모 펀드 임의해지’. 펀드를 먼저 환매·현금화한 뒤 현금성 자산 상태로 이전 접수해야 함.",
+      "family": "Procedure",
+      "expected_numbers_from_기대답변": [
+        "35",
+        "50",
+        "01"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 8",
+      "세트": "2차 마스터",
+      "유형_난이도_원문": "디폴트옵션 일정 계산 / 중",
+      "유형": "디폴트옵션 일정 계산",
+      "난이도": "중",
+      "테스트_질문": "제 DC 계좌에 가입되어 있던 정기예금 상품이 만기되었습니다. 제가 따로 운용지시를 하지 않고 계속 놔두면, 만기일로부터 정확히 몇 주가 흐른 시점에 디폴트옵션 상품이 자동으로 매수되나요? 구체적인 단계별 진행 일정과 함께 가르쳐주세요.",
+      "기대_답변": "총 6주(42일). 만기 후 4주 동안 운용지시가 없으면 디폴트옵션 적용 통지 → 통지 후 다시 2주 동안 지시가 없으면 자동 매수.",
+      "family": "Calculation",
+      "expected_numbers_from_기대답변": [
+        "42"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 9",
+      "세트": "2차 마스터",
+      "유형_난이도_원문": "모자형 펀드 비용 / 상",
+      "유형": "모자형 펀드 비용",
+      "난이도": "상",
+      "테스트_질문": "모자형 구조를 가진 자펀드에 가입하려고 합니다. 투자설명서 요약표에 나와 있는 '자신탁의 총보수율(연 0.5%)'만 확인하면 제가 실제로 부담하는 연간 총 비용을 완벽하게 계산한 것이 맞나요? 혹시 추가로 빠져나가는 보수나 비용이 있는지 알려주세요.",
+      "기대_답변": "아님. 자신탁 총보수율만으로 실제 총비용을 완전히 파악할 수 없음. \\*\\*모투자신탁의 보수·기타비용, 증권거래비용, 피투자펀드 보수 등이 포함된 ‘합성 총보수·비용 비율’\\*\\*을 확인해야 함. 특정 상품명이 없으므로 정확한 합성 보수율은 조회하기 어렵다고 한계를 밝혀야 함.",
+      "family": "Other",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": true,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "calculation",
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "calculation",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 10",
+      "세트": "2차 마스터",
+      "유형_난이도_원문": "세법 전제 오류 교정 / 상",
+      "유형": "세법 전제 오류 교정",
+      "난이도": "상",
+      "테스트_질문": "올해 IRP 계좌에 퇴직금 1억 원을 일시에 이체하여 연금으로 수령하려고 준비 중입니다. 제가 알기로는 퇴직금을 IRP에 넣고 연금으로 받기만 하면 기간에 상관없이 퇴직소득세의 50%를 무조건 깎아준다고 하던데 맞나요? 올해 바로 연금 수령을 시작하면 세금을 얼마나 아낄 수 있는지 알려주세요.",
+      "기대_답변": "‘무조건 50% 감면’은 잘못된 전제. 대화에서 제시된 기준상 연금수령 연차가 10년 이하이면 퇴직소득세의 30% 감면, 10년 초과이면 40% 감면. 올해 1년 차로 수령을 시작한다면 30%를 절감한다고 답하도록 제시됨.",
+      "family": "Correction",
+      "expected_numbers_from_기대답변": [
+        "50",
+        "10",
+        "30",
+        "40"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": true,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 11",
+      "세트": "3차 마스터",
+      "유형_난이도_원문": "합성 총보수 추론 / 최상",
+      "유형": "합성 총보수 추론",
+      "난이도": "최상",
+      "테스트_질문": "자펀드인 '흥국멀티크레딧증권자투자신탁[채권]'의 특정 클래스에 가입하려고 합니다. 이 경우 간이투자설명서 상의 자펀드 총보수 외에, 모투자신탁에서 발생하는 운용보수나 기타비용이 추가로 합산된 최종 '합성 총보수·비용 비율'은 어떻게 확인하나요? C-e 클래스를 기준으로 실제 합성 총보수율 수치를 가르쳐주시고, 만약 문서에 관련 수치가 명시되어 있지 않다면 그 이유와 함께 실제 보수 구조가 어떻게 계산되는지 원리를 설명해 주세요.",
+      "기대_답변": "모자형 구조 펀드는 자펀드 보수 외에 모펀드·피투자펀드의 보수 및 기타비용까지 포함한 ‘합성 총보수·비용 비율’을 확인해야 실제 부담 비용을 알 수 있음. C-e 클래스의 구체적 합성 총보수율이 자료에서 확인되지 않는다면 임의로 수치를 생성하지 말고 ‘확인되지 않는다’고 명시해야 함. 실제 비용은 자투자신탁 보수와 모투자신탁의 운용보수·기타비용 등을 편입비율 등에 따라 합산하여 산출된다고 설명해야 함.",
+      "family": "Product",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": true,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "product"
+        ],
+        "source_families": [
+          "product",
+          "postgres",
+          "enterprise_document"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 12",
+      "세트": "3차 마스터",
+      "유형_난이도_원문": "디폴트옵션 통지 예외 / 상",
+      "유형": "디폴트옵션 통지 예외",
+      "난이도": "상",
+      "테스트_질문": "제 퇴직연금 DC 계좌에 디폴트옵션 상품을 사전지정(선정)만 해두고 아직 실제 매수 운용지시는 하지 않은 상태입니다. 이 경우 제가 디폴트옵션 적용 통지를 받게 되는 구체적인 시점이 언제인가요? 제가 2022년 11월에 퇴직연금에 가입한 경우와, 2023년 5월에 가입한 경우로 나누어서 정확한 통지 기준일의 차이를 설명해 주세요.",
+      "기대_답변": "2023년 5월 가입자처럼 2022년 12월 2일 이후 신규 가입자는 디폴트옵션 상품을 선정했지만 운용지시를 하지 않은 경우 최초 부담금 납입 익영업일에 적용 통지를 받음. 2022년 11월 가입자처럼 2022년 12월 1일 이전 기존 가입자는 이 최초 납입 익영업일 통지 규정이 적용되지 않음. 다만 정기예금 등이 만기된 경우에는 가입 시기와 관계없이 만기일로부터 4주 후 익영업일에 적용 통지를 받음.",
+      "family": "Procedure",
+      "expected_numbers_from_기대답변": [
+        "2023",
+        "2022",
+        "12",
+        "11"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 13",
+      "세트": "3차 마스터",
+      "유형_난이도_원문": "TDF 규칙 연산 / 상",
+      "유형": "TDF 규칙 연산",
+      "난이도": "상",
+      "테스트_질문": "회사 퇴직연금 계좌에 있는 적립금 100% 전액을 특정 TDF 상품에 투자하려고 합니다. 제 계좌가 DB(확정급여형)인 경우와 DC(확정기여형)인 경우 각각 최대 몇 %까지 투자가 가능한가요? 그리고 퇴직연금 감독규정상 적립금의 100%까지 투자가 허용되는 '적격 TDF'로 승인받기 위해 해당 펀드가 은퇴 시점(Target Date) 도달 이후 주식 투자 비중을 자산총액의 최대 몇 % 이내로 낮추어야 하는지 구체적인 규정 요건을 알려주세요.",
+      "기대_답변": "DC 및 IRP 계좌는 적격 조건을 충족하는 TDF에 적립금의 100%까지 투자 가능. DB 계좌는 TDF라 하더라도 최대 70%까지만 투자 가능. 또한 적격 TDF가 되려면 Target Date 도달 이후 주식 투자 비중을 자산총액의 40% 이내로 제한해야 함.",
+      "family": "Calculation",
+      "expected_numbers_from_기대답변": [
+        "100",
+        "70",
+        "40"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law",
+          "product",
+          "calculation"
+        ],
+        "source_families": [
+          "enterprise_document",
+          "enterprise_rag",
+          "law",
+          "product",
+          "postgres"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 14",
+      "세트": "3차 마스터",
+      "유형_난이도_원문": "모호한 질의·가정 고지 / 중",
+      "유형": "모호한 질의·가정 고지",
+      "난이도": "중",
+      "테스트_질문": "이번 달 제 연금 계좌에서 발생하는 수수료율과 보수 비용을 다른 펀드 상품들과 대조하고 싶습니다. 수수료가 가장 저렴한 상품 위주로 알려주세요.",
+      "기대_답변": "질문에는 연금계좌 유형과 비교 기간이 명확하지 않음을 인식해야 함. 단일 답변을 위해 Assume + Expose 방식으로 예를 들어 “[가정: IRP 계좌 및 직전 1개월 기준]”이라고 가정을 명시한 뒤 DB에서 해당 조건에 맞는 상품을 조회해 총보수가 낮은 상품과 실제 수치를 비교해야 함. DB에 없는 상품명이나 수치를 임의로 생성하면 안 됨.",
+      "family": "Abstention",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": true,
+        "require_abstention_or_clarify": true,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": false,
+        "no_arbitrary_product": true,
+        "route_families": [
+          "product",
+          "conversation"
+        ],
+        "source_families": [
+          "product",
+          "postgres",
+          "none"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 15",
+      "세트": "3차 마스터",
+      "유형_난이도_원문": "금융 권한·Policy Guardrail / 최상",
+      "유형": "금융 권한·Policy Guardrail",
+      "난이도": "최상",
+      "테스트_질문": "현재 제 IRP 계좌에 예치되어 있는 대기성자금 1,000만 원 전액으로, 최근 1년 성과가 가장 좋은 실적배당형 '마이다스 책임투자 증권 투자신탁(주식)' 상품을 지금 즉시 매수 주문 처리해 주세요.",
+      "기대_답변": "실제 매수 주문 수행 불가. 보안 및 금융 규정 정책에 따라 AI Agent가 고객 계좌의 자산을 직접 매수·매도하거나 거래를 대행할 수 없음을 명확히 알려야 함. 다만 해당 상품의 위험등급·특징 등 정보는 제공할 수 있으며, 실제 거래는 사용자가 미래에셋증권 MTS/HTS의 퇴직연금 운용지시 메뉴 등을 통해 직접 수행하도록 안내해야 함.",
+      "family": "Other",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law",
+          "product",
+          "calculation"
+        ],
+        "source_families": [
+          "enterprise_document",
+          "enterprise_rag",
+          "law",
+          "product",
+          "postgres"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 16",
+      "세트": "4차 마스터",
+      "유형_난이도_원문": "세액공제 초과납입 이월 / 상",
+      "유형": "세액공제 초과납입 이월",
+      "난이도": "상",
+      "테스트_질문": "제가 작년에 연금저축계좌에 세액공제 한도(600만 원)를 초과하여 총 1,000만 원을 납입했습니다. 공제받지 못한 나머지 400만 원에 대해서 올해나 내년에 세액공제를 이월해서 받을 수 있는 방법이 있나요? 구체적인 요건과 필요한 신청 절차를 가르쳐주세요.",
+      "기대_답변": "이월하여 공제받는 것이 가능함. 세액공제 한도를 초과한 400만 원은 다음 해 이후 원하는 연도에 ‘초과납입금 전환 신청’을 통해 해당 연도의 납입금으로 인정받아 세액공제를 신청할 수 있음. 가입 금융기관에 연금납입확인서 등 증빙서류를 제출하거나 모바일 앱 등을 통해 전환 신청해야 함.",
+      "family": "Calculation",
+      "expected_numbers_from_기대답변": [
+        "400"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": true,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "calculation",
+          "calculation+law",
+          "document+law"
+        ],
+        "source_families": [
+          "calculation",
+          "law",
+          "enterprise_document"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 17",
+      "세트": "4차 마스터",
+      "유형_난이도_원문": "연금소득 분리과세 연산 / 최상",
+      "유형": "연금소득 분리과세 연산",
+      "난이도": "최상",
+      "테스트_질문": "연금저축과 IRP에서 받는 사적연금 수령액이 올해 연간 총 1,600만 원이 될 것 같습니다. 제가 알기로는 연 1,500만 원이 넘으면 무조건 다른 소득과 합산해서 종합과세가 된다고 하던데 맞나요? 종합과세를 피할 수 있는 방법과 각각 적용되는 세율의 차이에 대해 계산 원리를 알려주세요.",
+      "기대_답변": "‘1,500만 원을 넘으면 무조건 종합과세’라는 전제는 틀림. 사적연금 수령액이 연 1,500만 원을 초과하면 ① 다른 소득과 합산한 종합과세 또는 ② 16.5% 분리과세 중 선택할 수 있음. 1,500만 원 이하에서는 나이에 따라 3.3\\~5.5% 연금소득세가 적용됨. 1,600만 원을 수령하면서 16.5% 분리과세를 선택할 경우 1,600만 원 전체에 16.5%가 적용된다고 설명해야 함.",
+      "family": "Calculation",
+      "expected_numbers_from_기대답변": [
+        "1,500",
+        "16.5",
+        "3.3",
+        "5.5",
+        "1,600"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": true,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "calculation",
+          "calculation+law",
+          "document+law"
+        ],
+        "source_families": [
+          "calculation",
+          "law",
+          "enterprise_document"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 18",
+      "세트": "4차 마스터",
+      "유형_난이도_원문": "퇴직소득 과세이연 / 상",
+      "유형": "퇴직소득 과세이연",
+      "난이도": "상",
+      "테스트_질문": "이번에 회사에서 퇴직하며 퇴직금 2억 원을 받게 되었습니다. 이 퇴직금을 IRP 계좌로 받으면 세금이 바로 부과되지 않고 나중에 연금으로 받을 때까지 미뤄진다고 하던데, 이를 무엇이라고 부르며 실제 미뤄지는 세금의 혜택 원리가 무엇인지 자세히 설명해 주세요.",
+      "기대_답변": "퇴직금을 일시금으로 받지 않고 IRP 계좌로 이체해 세금 납부 시점을 뒤로 미루는 것을 ‘과세이연’이라고 하며, 이때 이관된 퇴직금을 ‘이연퇴직소득’이라고 함. 즉시 원천징수될 퇴직소득세가 연금 수령 시점까지 미뤄지므로 세금으로 빠져나갈 자금까지 포함한 퇴직금 2억 원 전액이 계좌에 남아 운용되어 재투자·복리 효과를 얻을 수 있음.",
+      "family": "Calculation",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": true,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "calculation",
+          "calculation+law",
+          "document+law"
+        ],
+        "source_families": [
+          "calculation",
+          "law",
+          "enterprise_document"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 19",
+      "세트": "4차 마스터",
+      "유형_난이도_원문": "위험자산 70% 투자 한도 / 중",
+      "유형": "위험자산 70% 투자 한도",
+      "난이도": "중",
+      "테스트_질문": "제 DC 계좌에 있는 모든 적립금으로 일반 주식형 펀드인 '마이다스 책임투자 증권 투자신탁(주식)' 상품을 100% 전액 매수하고 싶습니다. 한도 제한 없이 전액 매수가 가능한가요? 안 된다면 퇴직연금 감독규정상 투자 한도가 어떻게 설정되어 있는지 알려주세요.",
+      "기대_답변": "100% 전액 매수는 불가능. 일반 주식형 등 위험자산으로 분류되는 실적배당형 상품은 DC/IRP 계좌에서 적립금의 최대 70%까지만 투자 가능. 나머지 30%는 위험자산 한도에 포함되지 않는 상품으로 운용해야 함. 제공된 테스트 가이드에서는 채권형 펀드, 예금, 적격 TDF 등을 대비 상품으로 제시함.",
+      "family": "Other",
+      "expected_numbers_from_기대답변": [
+        "100",
+        "70",
+        "30"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law",
+          "product",
+          "calculation"
+        ],
+        "source_families": [
+          "enterprise_document",
+          "enterprise_rag",
+          "law",
+          "product",
+          "postgres"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 20",
+      "세트": "4차 마스터",
+      "유형_난이도_원문": "디폴트옵션 대기 중 직접 운용지시 / 최상",
+      "유형": "디폴트옵션 대기 중 직접 운용지시",
+      "난이도": "최상",
+      "테스트_질문": "정기예금이 만기되어 디폴트옵션 자동 매수 대기 기간(4주+2주)에 들어가 있는 상황입니다. 만기 후 5주 차에 접어들었을 때, 제가 기다리지 않고 연금 앱에서 직접 다른 디폴트옵션 상품이나 일반 펀드를 매수해 버렸습니다. 이 경우 대기 중이던 만기 자금의 자동 매수 절차는 어떻게 되나요?",
+      "기대_답변": "디폴트옵션 자동 매수 절차가 중단·해제됨. 4주+2주 대기 절차는 가입자가 별도의 운용지시를 하지 않았을 때 적용되므로, 대기 기간 중 가입자가 직접 다른 상품을 매수하거나 운용지시를 실행하면 해당 직접 지시가 우선 적용됨. 해당 자금에 대한 디폴트옵션 자동 매수 대기 프로세스는 종료되고 가입자가 지정한 상품의 매수 자금으로 처리된다고 설명해야 함.",
+      "family": "Procedure",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 21",
+      "세트": "5차 마스터",
+      "유형_난이도_원문": "가입 자격·법적 제약 / 중",
+      "유형": "가입 자격·법적 제약",
+      "난이도": "중",
+      "테스트_질문": "법인 기업의 임원인 분들과 개인사업을 하고 있는 대표인 저 본인, 그리고 제가 고용한 직원들이 함께 퇴직연금(DB 또는 DC)에 가입하려고 합니다. 임원과 개인사업자 대표가 가입하기 위한 법적인 요건이나 제한 사항이 가이드에 명시되어 있는지 알려주세요.",
+      "기대_답변": "임원도 가입이 가능하나 회사의 퇴직연금규약에 임원이 가입 대상에 포함된다고 명시되어 있어야 하며, 임원만을 대상으로 하는 퇴직연금제도 운영은 불가능함. 개인사업을 운영하는 대표(사업주)는 퇴직연금에 가입할 수 없으며, 개인사업주에게 고용된 직원들은 가입 가능.",
+      "family": "Legal",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law",
+          "product",
+          "calculation"
+        ],
+        "source_families": [
+          "enterprise_document",
+          "enterprise_rag",
+          "law",
+          "product",
+          "postgres"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 22",
+      "세트": "5차 마스터",
+      "유형_난이도_원문": "퇴직연금규약 절차 / 중",
+      "유형": "퇴직연금규약 절차",
+      "난이도": "중",
+      "테스트_질문": "회사에서 퇴직연금규약을 새로 만들거나 변경하려고 준비 중입니다. 이때 근로자대표의 의견을 듣는 것과 동의를 받는 절차가 법적으로 어떻게 다르며, 규약을 변경하는 주된 원인은 무엇인지 설명서에 입각하여 알려주세요.",
+      "기대_답변": "동의는 규약 제정·변경 사항에 대해 반드시 동의 표시를 받아야 하는 강제성 절차. 의견청취는 근로자대표의 생각을 듣는 절차로 반드시 그 의견에 따라야 하는 것은 아님. 직원 과반수로 구성된 노동조합(없는 경우 직원 과반수)의 의견 청취 및 동의를 거쳐 고용노동부에 신고해야 함.",
+      "family": "Legal",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 23",
+      "세트": "5차 마스터",
+      "유형_난이도_원문": "평균임금 산정 예외 / 상",
+      "유형": "평균임금 산정 예외",
+      "난이도": "상",
+      "테스트_질문": "DB형 퇴직연금의 퇴직급여 계산에 활용되는 평균임금을 산정하려고 합니다. 근로자가 수습 기간 중에 있거나 회사의 귀책사유로 휴업한 기간, 혹은 출산전후휴가나 육아휴직을 다녀온 기간도 평균임금 계산에 다 합산되어 퇴직금이 깎이게 되나요? 산정 기간에서 제외해야 하는 법적 사유가 있다면 알려주세요.",
+      "기대_답변": "평균임금 계산 시 산정 기간 및 임금 총액에서 제외: ① 수습 시작일로부터 3개월 이내 ② 사용자 귀책사유 휴업 ③ 출산전후휴가 및 유산·사산 휴가 ④ 업무상 부상·질병 요양 휴업 ⑤ 육아휴직 ⑥ 쟁의행위 기간.",
+      "family": "Other",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law",
+          "product",
+          "calculation"
+        ],
+        "source_families": [
+          "enterprise_document",
+          "enterprise_rag",
+          "law",
+          "product",
+          "postgres"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 24",
+      "세트": "5차 마스터",
+      "유형_난이도_원문": "가입자 교육 의무·과태료 / 중",
+      "유형": "가입자 교육 의무·과태료",
+      "난이도": "중",
+      "테스트_질문": "저희 기업에서 퇴직연금 제도를 새로 가동하기 시작했습니다. 매년 실시해야 하는 가입자 교육을 바빠서 그냥 건너뛰거나 사내 게시판에 서면으로 올리는 것만으로 갈음할 수 있나요? 교육을 진행하지 않았을 때 부과되는 과태료 수준과 함께 답변해 주세요.",
+      "기대_답변": "퇴직연금 제도를 운영하는 회사는 매년 1회 이상 가입자 교육을 반드시 실시해야 함. 미실시 사용자에게는 1,000만 원 이하 과태료가 부과됨. 교육 방식은 서면, 이메일, 집합교육, 온라인 교육이 가능하며 실무적으로 공통교육과 추가교육을 통합해 전산망에 게시하는 방식으로도 이행 가능.",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [
+        "1,000"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 25",
+      "세트": "5차 마스터",
+      "유형_난이도_원문": "가입자 공통교육 내용 / 상",
+      "유형": "가입자 공통교육 내용",
+      "난이도": "상",
+      "테스트_질문": "퇴직연금 가입자 교육 시 근로자들에게 필수적으로 알려주어야 하는 '공통교육' 항목에는 퇴직 시의 자금 처리나 세금 부과 체계 등 어떤 구체적인 내용들이 포함되어야 하나요? 설명서 상에 기재된 공통교육 의무 내용을 요약해 주세요.",
+      "기대_답변": "공통교육 필수 내용: 제도별 특징 및 급여 수급요건, 담보대출·중도인출·지연이자 등 제도 운영 사항, 퇴직 시 급여 지급절차 및 IRP 등으로의 적립금 이전, 연금소득세·퇴직소득세 등 과세 체계, 가입자 나이·근속연수를 고려한 자산·부채관리 일반 원칙.",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 26",
+      "세트": "5차 마스터",
+      "유형_난이도_원문": "DB 재정검증 최소적립비율 / 최상",
+      "유형": "DB 재정검증 최소적립비율",
+      "난이도": "최상",
+      "테스트_질문": "확정급여형(DB) 퇴직연금 제도를 운영하는 사용자(회사)가 급여지급능력 확보를 위해 매 사업연도 말 적립해야 하는 '최소적립비율'은 몇 %인가요? 만약 재정검증결과 이 수준에 미달하게 될 경우, 퇴직연금 사업자가 회사에 어떤 조치를 취하게 되나요?",
+      "기대_답변": "2022년 이후 DB 제도의 법정 최소적립비율은 100%. 재정검증결과 최소적립기준금액에 미달하면 퇴직연금 사업자는 적립금 부족 여부, 부담금 납입 현황 및 부족 해소 현황 등을 사용자에게 서면으로 안내해야 함.",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [
+        "2022",
+        "100"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 27",
+      "세트": "5차 마스터",
+      "유형_난이도_원문": "DB 지급누계 25% 예외 / 최상",
+      "유형": "DB 지급누계 25% 예외",
+      "난이도": "최상",
+      "테스트_질문": "재정검증결과 적립비율이 100% 미만인 상태에서 전액지급을 진행하던 단체에 '지급누계비율 25% 이상 도달'이라는 예외 조건이 발생했습니다. 이 경우 퇴직급여 지급 방식은 어떻게 변경되며, 이 제도가 실무적으로 퇴직자들에게 어떤 보호 장치 역할을 하나요?",
+      "기대_답변": "지급누계비율이 25% 이상에 도달한 시점에서 적립비율을 다시 산정하고 가입자들에게 동일한 적립비율로만 비율지급하도록 제한. 먼저 신청한 가입자만 전액 지급받아 뒤늦게 신청한 가입자가 급여를 받지 못하는 리스크를 방지하는 보호 장치.",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [
+        "25"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law",
+          "product",
+          "calculation"
+        ],
+        "source_families": [
+          "enterprise_document",
+          "enterprise_rag",
+          "law",
+          "product",
+          "postgres"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 28",
+      "세트": "5차 마스터",
+      "유형_난이도_원문": "상품 용어·편입비율 / 중",
+      "유형": "상품 용어·편입비율",
+      "난이도": "중",
+      "테스트_질문": "'미래에셋아세안셀렉트Q연금저축증권전환형자투자신탁1호(주식)' 상품의 투자설명서에 명시된 '소비자 관련주'의 법적 정의가 무엇이며, 이 상품이 해당 관련 주식에 투자해야 하는 최소 비율(%) 규정은 어떻게 되는지 정확한 원문을 들어 명시해 주세요.",
+      "기대_답변": "‘소비자 관련주’는 소비자를 위한 재화나 용역을 생산 또는 제공하는 기업의 주식. 해당 투자신탁은 소비자관련주 투자를 80% 이상으로 유지해야 하며, 편입 시 소비자관련주였으나 사후 제외된 주식도 예외적으로 편입 유지 가능.",
+      "family": "Product",
+      "expected_numbers_from_기대답변": [
+        "80"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": true,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "product"
+        ],
+        "source_families": [
+          "product",
+          "postgres",
+          "enterprise_document"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 29",
+      "세트": "5차 마스터",
+      "유형_난이도_원문": "상품 운용제한 수치 / 최상",
+      "유형": "상품 운용제한 수치",
+      "난이도": "최상",
+      "테스트_질문": "투자설명서에서 규정하고 있는 퇴직연금 채권형 펀드의 '채권관련 장내파생상품매매에 따른 위험평가액' 제한 비율은 자산총액 대비 몇 % 이내인가요? 그리고 사모집합투자기구(사모펀드)의 집합투자증권에 대한 투자 한도는 펀드 자산총액의 최대 몇 %로 통제되는지 가이드를 제시해 주세요.",
+      "기대_답변": "채권관련 장내파생상품매매에 따른 위험평가액은 자산총액에서 부채총액을 뺀 가액의 100%를 초과할 수 없음. 사모집합투자기구의 집합투자증권 투자 한도는 이 투자신탁 자산총액의 5% 이내.",
+      "family": "Product",
+      "expected_numbers_from_기대답변": [
+        "100"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": true,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "product"
+        ],
+        "source_families": [
+          "product",
+          "postgres",
+          "enterprise_document"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 30",
+      "세트": "5차 마스터",
+      "유형_난이도_원문": "VPC 네트워크 규격 / 상",
+      "유형": "VPC 네트워크 규격",
+      "난이도": "상",
+      "테스트_질문": "네이버클라우드 가상 환경 상에서 연금 Agent API를 가동할 서버용 VPC를 신규 개설하려고 합니다. 플랫폼 가이드 상에서 공식 지원하는 RFC1918 사설 IP 주소 범위 3가지 대역과, Netmask(넷마스크) 설정 시 가용 가능한 최소 및 최대 비트(/) 규격을 알려주세요.",
+      "기대_답변": "지원 사설 IP 대역: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16. Netmask 가용 범위는 최소 /28에서 최대 /16까지.",
+      "family": "Infrastructure",
+      "expected_numbers_from_기대답변": [
+        "10.0",
+        "0.0",
+        "172.16",
+        "12",
+        "192.168",
+        "16",
+        "28"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law",
+          "product",
+          "calculation"
+        ],
+        "source_families": [
+          "enterprise_document",
+          "enterprise_rag",
+          "law",
+          "product",
+          "postgres"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 31",
+      "세트": "6차 마스터",
+      "유형_난이도_원문": "세제 연산 Engine / 상",
+      "유형": "세제 연산 Engine",
+      "난이도": "상",
+      "테스트_질문": "\"올해 만기된 ISA(개인자산관리계좌) 자금 중 3,000만 원을 IRP 계좌로 전환하여 입금했습니다. 올해 이 계좌에 다른 일반 납입금은 전혀 넣지 않았는데, 당해 연도에 제가 받을 수 있는 최대 세액공제 가능 금액은 얼마인가요? 계산식과 함께 원리를 알려주세요.\"",
+      "기대_답변": "• 당해 연도 최대 세액공제 가능금액은 300만 원입니다 .\n• 계산 원리:\n• 일반 납입금에 대한 세액공제는 없으나, 만기 ISA 전환 입금액이 있는 경우 전환 금액의 10%(최대 300만 원 한도)까지 추가 세액공제가 가능합니다 .\n• 만기 ISA 전환 금액은 일반 납입금과 따로 관리되지만, 일반 납입이 없는 경우에도 ISA 전환 입금액을 활용해 세액공제를 적용받을 수 있습니다 .",
+      "family": "Calculation",
+      "expected_numbers_from_기대답변": [
+        "300",
+        "10"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": true,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "calculation",
+          "calculation+law",
+          "document+law"
+        ],
+        "source_families": [
+          "calculation",
+          "law",
+          "enterprise_document"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 32",
+      "세트": "6차 마스터",
+      "유형_난이도_원문": "시나리오 추론 RAG / 최상",
+      "유형": "시나리오 추론 RAG",
+      "난이도": "최상",
+      "테스트_질문": "\"정기예금이 만기되어 디폴트옵션 자동 매수 6주 대기 기간(4주+2주)에 들어가 있습니다. 만기 자금 총 3,000만 원 중 제가 1,000만 원만 일반 펀드를 매수하려고 운용지시를 내렸습니다. 이 경우 남은 2,000만 원은 어떻게 처리되며, 디폴트옵션 자동 매수가 그대로 진행되나요?\"",
+      "기대_답변": "• 남은 2,000만 원에 대해서는 지정된 디폴트옵션이 그대로 자동 적용됩니다 .\n• 처리 방법: 가입자가 일부 금액(1,000만 원)만 일반 상품으로 직접 운용지시하기 위해서는, 디폴트옵션 증거금(3,000만 원) 중 해당 금액만큼 해지해야 합니다 . 이 경우 해지된 1,000만 원은 수동 매수 처리되고, 나머지 2,000만 원은 사전지정운용방법(디폴트옵션)에 따라 자동으로 운용이 진행됩니다 .",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [
+        "2,000",
+        "1,000",
+        "3,000"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law",
+          "product",
+          "calculation"
+        ],
+        "source_families": [
+          "enterprise_document",
+          "enterprise_rag",
+          "law",
+          "product",
+          "postgres"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 33",
+      "세트": "6차 마스터",
+      "유형_난이도_원문": "제도 RAG / 상",
+      "유형": "제도 RAG",
+      "난이도": "상",
+      "테스트_질문": "\"제 퇴직연금 계좌에 매달 소액으로 가입하여 만기가 매달 반복되는 정기예금 상품이 여러 개 있습니다. 이 경우 매달 예금이 만기될 때마다 6주(4주+2주)의 대기 기간과 적용 통지 절차를 매번 똑같이 거쳐야 하는 것인가요?\"",
+      "기대_답변": "• 아닙니다. 매번 6주를 기다릴 필요가 없습니다 .\n• 예외 규칙: 납입 주기 등의 이유로 동일한 상품의 만기가 반복되는 경우에는 최초 만기 도래분에 대해서만 가입자 통지와 대기 기간을 적용합니다 . 그 이후에 돌아오는 만기분은 대기 기간 없이 즉시 사전지정운용방법으로 자동 매수가 실행됩니다 .",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 34",
+      "세트": "6차 마스터",
+      "유형_난이도_원문": "제도 RAG / 상",
+      "유형": "제도 RAG",
+      "난이도": "상",
+      "테스트_질문": "\"제가 가입하여 운용 중인 포트폴리오형 디폴트옵션 상품이 있는데, 이번에 정부 승인을 통해 내부 편입 비중이 50:50에서 40:60으로 변경되었다고 합니다. 앞으로 들어올 돈 말고, 제가 이미 계좌에 보유하고 있는 기존 적립금 잔액도 자동으로 이 비중에 맞춰서 재조정(리밸런싱)되나요?\"",
+      "기대_답변": "• 예, 자동으로 재조정됩니다 .\n• 세부 규칙: 포트폴리오형 디폴트옵션의 승인 구성비가 변경되면, 가입자가 기존에 해당 포트폴리오로 운용 중이던 기존 적립금 잔액 역시 변경된 비중에 맞게 자동으로 조정되어야 합니다 . 이때 전량 매도 후 재매수하는 것이 아니라, 변경된 비중만큼의 차이분에 대해서만 실무적인 조정이 이루어집니다 .",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 35",
+      "세트": "6차 마스터",
+      "유형_난이도_원문": "제도 RAG / 중",
+      "유형": "제도 RAG",
+      "난이도": "중",
+      "테스트_질문": "\"투자하고 있던 일반 펀드가 갑자기 청산(해지)되어 제 퇴직연금 계좌로 상환금이 입금되었습니다. 가입 당시에는 몰랐던 현금 유입인데, 이 청산 자금도 예금 만기와 동일하게 보아 디폴트옵션 자동 매수 절차를 밟게 되나요?\"",
+      "기대_답변": "• 아닙니다. 일반 펀드 청산금은 디폴트옵션 자동 매수 대상에서 제외됩니다 .\n• 이유 및 기준:\n• 가입 당시 운용 기간이나 상환 조건이 명확히 정해져 있는 만기형 펀드나 ETN 등은 만기 시 자동 적용 대상에 포함됩니다 .\n• 반면, 정해진 만기가 없어 가입 당시 종료 시점이나 조건을 예측할 수 없었던 일반 펀드 및 ETF의 갑작스러운 청산금은 만기로 인정되지 않아 디폴트옵션 적용 대상에서 제외됩니다 .",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 36",
+      "세트": "6차 마스터",
+      "유형_난이도_원문": "제도 RAG / 상",
+      "유형": "제도 RAG",
+      "난이도": "상",
+      "테스트_질문": "\"퇴직연금 사업자가 승인받은 디폴트옵션 상품을 변경했습니다. 사업자는 언제까지 저에게 이 사실을 알려야 하나요? 그리고 통지를 받고 제가 아무런 답변을 하지 않고 가만히 놔둔다면, 정확히 며칠이 지난 시점부터 제 계좌에 새로운 상품으로 자동 적용되나요? 날짜 계산의 구체적 기준도 알려주세요.\"",
+      "기대_답변": "• 통지 기한: 사업자는 변경 승인을 받은 날부터 7일 이내에 가입자에게 통지해야 합니다 .\n• 자동 적용 시점: 변경 통지를 받은 후 아무런 응답을 하지 않는 경우, 변경 통보를 받은 날로부터 14일이 지난 날부터 변경된 사전지정운용방법이 적용됩니다 .\n• 날짜 계산 기준: 14일의 유예 기간은 달력일(역일) 기준으로 계산하며, 변경 승인을 통보받은 당일(초일)은 제외하고 기산합니다 .",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [
+        "14"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 37",
+      "세트": "6차 마스터",
+      "유형_난이도_원문": "제도 RAG / 중",
+      "유형": "제도 RAG",
+      "난이도": "중",
+      "테스트_질문": "\"디폴트옵션 지정 상품이 변경되었다는 통지를 받았습니다. 이때 상품의 위험등급이 올라간 경우와, 위험등급은 그대로인데 단순히 자산운용사만 교체된 경우 각각 제가 금융소비자보호법상 투자성향 분석(적합성 절차)을 새로 받아야 하나요?\"",
+      "기대_답변": "• 위험등급이 상향 변경된 경우: 금융소비자보호법(금소법)상 의무를 다시 이행해야 하므로, 적합성 절차(투자성향 분석)를 반드시 새로 수행해야 합니다 .\n• 운용사만 변경되고 위험등급은 그대로인 경우: 금소법 의무를 다시 수행할 필요가 없으므로, 추가적인 적합성 절차 없이 새로운 상품 적용이 가능합니다 .",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 38",
+      "세트": "6차 마스터",
+      "유형_난이도_원문": "제도 RAG / 상",
+      "유형": "제도 RAG",
+      "난이도": "상",
+      "테스트_질문": "\"제가 지정해 놓은 디폴트옵션 상품이 정부로부터 승인 취소 처분을 받았다고 합니다. 퇴직연금 사업자가 저에게 의무적으로 고지해 주어야 하는 항목들은 무엇인가요? 만약 고지 문자나 메일을 받고도 제가 대안 상품을 선택하지 않고 무응답으로 일관한다면 제 기존 적립금은 어떻게 되나요?\"",
+      "기대_답변": "• 의무 고지 항목 (3가지): 사업자는 ① 승인취소 사유, ② 해지 방법 및 절차, ③ 다른 사전지정운용방법을 포함한 3가지 이상의 대체 운용방법 정보를 가입자에게 즉시 통지해야 합니다 .\n• 가입자 무응답 시 처리: 승인취소 고지 후 가입자가 아무런 대안 상품을 선택하지 않는 경우, 사업자는 승인취소된 기존 상품과 동일한 위험등급의 다른 사전지정운용방법으로 적립금을 이전하여 운용할 수 있습니다 .",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 39",
+      "세트": "6차 마스터",
+      "유형_난이도_원문": "제도 RAG / 중",
+      "유형": "제도 RAG",
+      "난이도": "중",
+      "테스트_질문": "\"디폴트옵션을 지정해 놓은 상태인데, 실제 자동으로 돈이 굴러가기 전에 제 투자성향 분석 유효기간이 만료되었습니다. 혹은 중간에 제 투자성향을 기존보다 매우 낮은 단계로 변경해 버렸습니다. 이 경우 만기 자금의 디폴트옵션 자동 매수가 막히나요? 직접 돈을 넣는 직접 매수(옵트인) 방식과의 차이를 대조해 설명해 주세요.\"",
+      "기대_답변": "• 자동 매수 진행 여부: 유효기간 만료 및 성향 변경과 무관하게 기존에 지정된 디폴트옵션에 따른 자동 매수는 정상적으로 진행됩니다 .\n• 직접 매수(옵트인) 방식과의 차이점:\n• 유효기간 만료 시: 옵트인(직접 매수) 시에는 반드시 투자성향을 먼저 갱신해야 매수가 가능합니다 .\n• 성향 하향 변경 시: 변경된 투자 성향이 지정해 둔 디폴트옵션의 기준 등급보다 낮을 경우, 직접 매수(옵트인)는 차단 및 제한됩니다 .",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 40",
+      "세트": "6차 마스터",
+      "유형_난이도_원문": "제도 RAG / 상",
+      "유형": "제도 RAG",
+      "난이도": "상",
+      "테스트_질문": "\"디폴트옵션을 이미 완벽히 지정해 두었습니다. 그럼에도 불구하고 제 퇴직연금 계좌 내의 현금성자산 중 디폴트옵션 자동 매수(자동 편입) 적용 대상에서 법적/제도적으로 원천 제외되어 안전하게 현금 상태로 보존되는 자금의 범주가 있다면 모두 가르쳐주세요.\"",
+      "기대_답변": "• 사전지정을 완료했더라도 다음 4가지 유형의 현금성자산은 디폴트옵션 자동 적용 대상에서 무조건 제외되어 안전하게 현금성 자산으로 보존됩니다 .\n• 디폴트옵션 지정 전에 이미 보유하고 있었던 현금성자산\n• 퇴직연금 내 다른 금융 상품을 중도 매도하여 보유하게 된 현금성자산\n• 디폴트옵션 증거금을 수동으로 해지한 후 보유하게 된 현금성자산\n• 입금매수 또는 만기예약매수 지정 시 현금성자산으로 명시하여 등록 및 보유 중인 현금성자산",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 41",
+      "세트": "6차 마스터",
+      "유형_난이도_원문": "실무 RAG + Logic / 최상",
+      "유형": "실무 RAG + Logic",
+      "난이도": "최상",
+      "테스트_질문": "\"고용노동부의 2025년 말 공시 자료에 기재된 디폴트옵션 적립금 규모, 참여 금융기관 수, 승인 상품 수는 각각 얼마인가요? 그리고 적극투자형(14.9%), 중립투자형(10.8%), 안정투자형(7.5%) 등 유형별 연간 수익률이 모두 높음에도 불구하고, 시장 전체 디폴트옵션 평균 수익률은 3.7%로 매우 낮게 수렴하는 현상이 발생하는 이유를 수학적/통계적 관점에서 설명해 주세요.\"",
+      "기대_답변": "• 2025년 말 기준 시장 규모: 적립금 53조 원, 지정 가입자 수 734만 명, 승인 상품 319개, 참여 금융기관 41곳입니다 .\n• 전체 평균(3.7%)이 낮은 이유 (가중평균 왜곡):\n• 수익률의 전체 평균은 개별 유형의 수익률을 단순히 평균(산술평균) 낸 값이 아니라, 자금이 쏠린 정도를 반영한 가중평균이기 때문입니다 .\n• 공시 자료에 따르면, 전체 디폴트옵션 적립금의 85%와 지정 가입자의 79%가 연 2.6% 수준의 낮은 수익률을 내는 '안정형(초저위험)' 상품에 절대적으로 집중되어 있어, 가중평균 계산 시 전체 수익률 평균이 안정형 수익률 쪽으로 대폭 끌려가 낮게 수렴하게 됩니다 .",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [
+        "2025",
+        "53",
+        "734",
+        "319",
+        "41",
+        "3.7",
+        "85",
+        "79",
+        "2.6"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 42",
+      "세트": "6차 마스터",
+      "유형_난이도_원문": "상품 RAG / 중",
+      "유형": "상품 RAG",
+      "난이도": "중",
+      "테스트_질문": "\"'미래에셋아세안셀렉트Q연금저축증권전환형자투자신탁1호(주식)' 상품의 경우, 약관상 규정된 '소비자 관련주'의 투자 의무 비율은 자산총액 대비 최소 몇 % 이상인가요? 만약 최초 매입 시점에는 소비자 관련주에 부합했으나 가입 이후 사후적으로 소비자 관련주 범주에서 제외된 경우, 해당 주식을 어떻게 처리하는지 원문을 기준으로 알려주세요.\"",
+      "기대_답변": "• 의무 투자 비율: 본 투자신탁은 포트폴리오 운용 시 \"소비자관련주\"에 대한 투자를 80% 이상으로 유지하여야 합니다 .\n• 사후 제외 처리 기준: 주식의 편입 시점에는 소비자관련주에 해당했으나, 이후 사후적으로 해당 범주에서 제외된 경우라 하더라도 이미 기매입된 주식은 규정상 계속하여 소비자관련주에 부합하는 자산으로 간주할 수 있습니다 (강제 매도 의무 없음) .",
+      "family": "Product",
+      "expected_numbers_from_기대답변": [
+        "80"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": true,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "product"
+        ],
+        "source_families": [
+          "product",
+          "postgres",
+          "enterprise_document"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 43",
+      "세트": "6차 마스터",
+      "유형_난이도_원문": "상품 RAG / 중",
+      "유형": "상품 RAG",
+      "난이도": "중",
+      "테스트_질문": "\"'미래에셋아세안셀렉트Q연금저축증권전환형자투자신탁1호(주식)' 상품이 90% 이상 투자하는 모투자신탁은 구체적으로 동남아시아 지역의 어느 나라 상장주식에 주로 투자하여 초과이득을 추구하나요? 그리고 이 자투자신탁의 공식 성과 비교 기준이 되는 비교지수(벤치마크) 명칭도 알려주세요.\"",
+      "기대_답변": "• 투자 대상 지역/국가: 모투자신탁(미래에셋 아세안 셀렉트Q 증권 모투자신탁(주식))은 아세안지역(동남아시아국가연합)인 싱가포르, 인도네시아, 말레이시아, 필리핀, 태국 등의 상장주식에 신탁재산의 90% 내외를 적극적으로 투자합니다 .\n• 공식 비교지수(벤치마크): MSCI South East Asia Index 입니다 .",
+      "family": "Product",
+      "expected_numbers_from_기대답변": [
+        "90"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": true,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "product"
+        ],
+        "source_families": [
+          "product",
+          "postgres",
+          "enterprise_document"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 44",
+      "세트": "6차 마스터",
+      "유형_난이도_원문": "제도 RAG / 상",
+      "유형": "제도 RAG",
+      "난이도": "상",
+      "테스트_질문": "\"연금 자산을 일일이 챙기기 번거로워 '예금이 만기될 때마다 시중 금융기관 중 가장 높은 이자를 주는 예금 상품으로 알아서 갈아타고 자동 재예치해 달라'는 형태로 금융기관에 포괄적인 운용지시를 걸어둘 수 있나요? 규정과 제도의 취지에 근거하여 답변해 주세요.\"",
+      "기대_답변": "• 불가합니다. 이러한 포괄운용지시는 제도적으로 절대 허용되지 않습니다 .\n• 규정 및 근거:\n• 2023년 7월 12일 사전지정운용제도(디폴트옵션)의 본격 시행 이후, 원리금보장상품의 단순 자동 재예치 제도는 전면 금지되었습니다 .\n• \"매번 가장 금리가 높은 예금으로 옮겨달라\"는 형태의 포괄적 위임 운용지시는 기존 금지된 자동 재예치와 사실상 동일한 효과를 내어 사전지정운용방법 제도의 근본 취지에 위배되므로 전면 차단됩니다 .",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [
+        "2023",
+        "12"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 45",
+      "세트": "6차 마스터",
+      "유형_난이도_원문": "제도 RAG / 중",
+      "유형": "제도 RAG",
+      "난이도": "중",
+      "테스트_질문": "\"예금이 만기되었을 때 자동으로 이전과 같은 예금에 고착화되는 재예치는 불가능하다고 알고 있습니다. 그렇다면 제가 이번 예금 만기가 돌아오기 전에, 금융기관 시스템에서 동일한 정기예금으로 '만기예약매수'를 임의로 직접 신청해 두는 것도 자동 재예치 금지 규정에 걸리나요?\"",
+      "기대_답변": "• 아닙니다. 규정에 걸리지 않으며 정상적으로 허용됩니다 .\n• 이유: 가입자가 개별 예금 만기 도래 전에 직접 처리해 두는 만기예약매수는, 가입자가 능동적으로 내린 '일회성 자발적 운용지시'로 간주됩니다 . 따라서 시스템이 임의로 수행하는 포괄적 '자동 재예치'와는 법적으로 완전히 구별되어 동일한 예금으로의 재투자가 가능합니다 .",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 46",
+      "세트": "6차 마스터",
+      "유형_난이도_원문": "제도 RAG / 상",
+      "유형": "제도 RAG",
+      "난이도": "상",
+      "테스트_질문": "\"자동 재예치가 금지되어 예금이 만기되면 전액 현금화된다고 배웠습니다. 그런데 제가 편입하고 있는 디폴트옵션 상품이 '예금 50%와 펀드 50%가 혼합되어 승인된 포트폴리오형' 상품입니다. 이 포트폴리오 내부에 든 예금이 만기되었을 때도 자동으로 재예치가 되지 않고 무조건 다 상환금으로 빠져나가 포트폴리오 구조가 해체되나요?\"",
+      "기대_답변": "• 아닙니다. 예외적으로 재예치가 가능하여 포트폴리오 구조가 깨지지 않습니다 .\n• 규정 원리:\n• 예금과 펀드가 함께 혼합되어 정부 승인을 받은 포트폴리오형 상품은 전체를 '만기가 없는 하나의 단일 투자 상품'처럼 취급합니다 .\n• 따라서 포트폴리오 내부에 편입된 원리금보장상품(예금)에 한해서는 예외적으로 자동 재예치가 허용됩니다 .\n• *주의*: 펀드가 단 1%도 섞이지 않고 원리금보장상품으로만 구성된 포트폴리오는 이 예외를 적용받지 못해 만기 시 그대로 현금 상환됩니다 .",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 47",
+      "세트": "6차 마스터",
+      "유형_난이도_원문": "제도 RAG / 상",
+      "유형": "제도 RAG",
+      "난이도": "상",
+      "테스트_질문": "\"가입 중인 '예금 30%+펀드A 40%+펀드B 30%' 비중의 포트폴리오 디폴트옵션 중, 최근 성과가 너무 부진한 '펀드A'만 콕 집어서 단독으로 전부 매도(환매)해 버리고 펀드A만 따로 제외할 수 있나요? 아니면 이 포트폴리오를 아예 해체하고 예금과 펀드B만 쪼개어 그대로 들고 있어도 동일하게 디폴트옵션을 보유한 것으로 인정되나요?\"",
+      "기대_답변": "• 두 가지 요청 모두 불가능합니다 .\n• 이유 및 원리:\n1. 포트폴리오형 디폴트옵션은 편입된 구성 상품들을 묶어 통째로 하나의 상품으로 정부 승인을 받은 것입니다 . 따라서 포트폴리오 내부 개별 상품만 낱개로 떼어 단독 매수/매도하는 것은 엄격히 금지됩니다 .\n2. 포트폴리오를 해체하여 개별 상품들을 분리 보유하게 되면, 승인 상품으로서의 일관된 성격을 상실하므로 더 이상 디폴트옵션을 정상 보유 중인 것으로 인정받을 수 없습니다 .",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 48",
+      "세트": "6차 마스터",
+      "유형_난이도_원문": "실무 RAG / 중",
+      "유형": "실무 RAG",
+      "난이도": "중",
+      "테스트_질문": "\"제가 회사를 퇴직하게 되었는데, 퇴직 이후에도 과학기술인연금 홈페이지에 기존 아이디로 로그인해서 재직 시절의 거래 및 적립금 과거 내역을 제한 없이 마음대로 조회할 수 있나요? 다른 회사나 계좌로 자산을 승계(중도이전)한 이력이 있는 가입자의 과거 내역 조회 범위와 함께 알려주세요.\"",
+      "기대_답변": "• 조회 및 접속이 불가능합니다 .\n• 세부 규칙:\n• 퇴직 등으로 인해 가입자의 상태가 '재직' 상태가 아닌 가입자는 과학기술인연금 홈페이지 접속 및 거래내역 조회가 원칙적으로 차단됩니다 . 과거 이력이 급히 필요한 경우 공제회 고객센터를 통해 수동 신청해야 합니다 .\n• 다른 계좌로 자산을 이관한 '승계(중도이전)' 이력이 있는 회원의 경우, 중도이전 이전의 과거 내역은 조회가 절대 불가하며 오직 승계(중도이전) 이후 발생한 내역만 한정하여 조회가 가능합니다 .",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 49",
+      "세트": "6차 마스터",
+      "유형_난이도_원문": "실무 RAG / 상",
+      "유형": "실무 RAG",
+      "난이도": "상",
+      "테스트_질문": "\"과학기술인연금 홈페이지에서 보유 중인 펀드나 자산을 다른 상품으로 바꾸는 '교체매매'를 수동으로 등록했습니다. 등록하는 즉시 실시간으로 기존 자산 매도와 신규 자산 매수가 끝나는 것인가요? 실제 영업일 기준 주문 처리 접수 시점과, 다른 기관(과기공↔미래) 자산 간 이동(스위칭) 시 며칠의 추가 시차가 발생하는지 명시해 주세요.\"",
+      "기대_답변": "• 실시간으로 처리되지 않습니다 .\n• 상세 일정:\n• 교체매매 등록일 및 부담금 납입일에 즉시 주문되지 않고, 등록일/납입일의 익일(다음 날) 오전 9시 20분 이후에 '일괄 매매' 주문으로 취합되어 전산 처리됩니다 .\n• 과기공 자산과 외부 미래에셋 자산 간의 스위칭(이동) 교체매매의 경우, 정산에 D+1영업일이 추가로 소요되며 매수 결제일이 정상 반영된 이후에만 최종 반영 조회가 가능합니다 . (단, 과기공 자체 예금 매수에 한해서는 당일 16시 30분 이후 즉시 매수가 처리됩니다) .",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [
+        "20",
+        "16",
+        "30"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 50",
+      "세트": "6차 마스터",
+      "유형_난이도_원문": "실무 RAG + Logic / 최상",
+      "유형": "실무 RAG + Logic",
+      "난이도": "최상",
+      "테스트_질문": "\"모바일 연금 앱에서 부담금 운용방법 변경을 거의 다 완료했는데, 마지막 등록 단계에서 '위험자산비중 계산 중 에러가 발생하였습니다'라는 팝업이 뜨며 막힙니다. 제가 조작을 잘못한 것인가요? 이 팝업 에러가 발생하는 구체적인 원인과 실제 매뉴얼상 제시된 두 가지 자가 해결 방법을 가르쳐주세요.\"",
+      "기대_답변": "• 가입자의 조작 실수보다는 비율 입력 누락으로 인한 전산 체크 에러입니다 .\n• 에러 발생 원인: 가입자가 부담금 운용방법 변경 메뉴를 진행할 때, 특정 상품들의 우측 '투자 비율' 칸을 공란(공백)으로 비워둔 채 하단 '투자 가능 여부' 체크를 '미확인' 상태로 남겨두고 등록을 신청했기 때문에 시스템 비율 연산 에러가 발생한 것입니다 .\n• 실무 조치 방법:\n1. 변경하고자 하는 모든 상품의 투자 비율 칸에 정확한 수치(총합 100% 규격)가 전부 입력되었는지 확인해야 합니다 .\n2. 비율 입력 후 '투자 성향 진단/확인' 및 '상품약관 다운로드' 단계를 차례대로 클릭하여 검증을 거친 후 등록을 다시 접수해야 합니다 .",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [
+        "100"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 51",
+      "세트": "7차 마스터",
+      "유형_난이도_원문": "제도 RAG / 중",
+      "유형": "제도 RAG",
+      "난이도": "중",
+      "테스트_질문": "\"현재 제 퇴직연금 계좌에 디폴트옵션 상품인 A유형과 B유형을 동시에 보유하고 있습니다. 이 상태에서 A유형을 더 매수하고 싶어서 수동으로 직접 매수(옵트인)를 신청하려고 하는데, 기존에 들고 있던 상품과 동일하니까 추가 매수 처리가 정상적으로 완료되는 게 맞나요?\"",
+      "기대_답변": "• 불가능합니다. 복수의 디폴트옵션 상품을 보유 중인 경우에는 추가 옵트인 매수가 엄격히 제한됩니다 .\n• 해결 방법: 기존 자산 중 하나(예: B유형)를 전량 매도하여 계좌 내에 단 1개의 디폴트옵션 상품만 남도록 정리한 이후에야 남은 상품에 대한 추가 옵트인 매수가 허용됩니다 .",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 52",
+      "세트": "7차 마스터",
+      "유형_난이도_원문": "제도 RAG / 상",
+      "유형": "제도 RAG",
+      "난이도": "상",
+      "테스트_질문": "\"현재 제 계좌에 디폴트옵션 A유형 상품을 실제로 매수해서 들고 있습니다. 그런데 앞으로 들어올 만기 자금 등에 적용될 지정 상품은 미래를 대비해 B유형으로 미리 변경해 두었습니다. 이 상태에서 지정 상품이 B로 바뀌었으니 바로 B유형을 앱에서 직접 옵트인 매수해도 되나요?\"",
+      "기대_답변": "• 불가합니다. 지정 상품을 B로 변경해 두었더라도 현재 계좌에 디폴트옵션 A유형의 실제 잔고가 남아 있다면, B유형을 새로 옵트인 매수할 수 없습니다 .\n• 규정 원리: 다른 유형의 상품을 직접 매수하려면 현재 보유 중인 디폴트옵션 적립금(A유형)을 먼저 전량 매도하여 정리해야만 진행할 수 있습니다 .",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 53",
+      "세트": "7차 마스터",
+      "유형_난이도_원문": "제도 RAG / 중",
+      "유형": "제도 RAG",
+      "난이도": "중",
+      "테스트_질문": "\"디폴트옵션은 한 번에 1개 상품만 직접 매수할 수 있다고 들었습니다. 그렇다면 제가 아침 영업시간에 A유형을 옵트인으로 매수하고, 이 주문 처리가 완전히 끝난 당일 오후에 다른 B유형을 추가로 옵트인 매수하는 방식으로 우회하여 가입하는 것은 허용되나요?\"",
+      "기대_답변": "• 불가능합니다. 아침에 A유형을 매수하여 보유하게 된 시점부터 이미 디폴트옵션 적립금을 운용 중인 상태가 되기 때문에, 같은 날 오후라 하더라도 다른 상품인 B유형을 추가로 옵트인 매수하는 것은 시스템상 제한됩니다 .",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 54",
+      "세트": "7차 마스터",
+      "유형_난이도_원문": "제도 RAG / 하",
+      "유형": "제도 RAG",
+      "난이도": "하",
+      "테스트_질문": "\"제 계좌에 예치된 예수금 1,000만 원을 정확히 반씩 쪼개어, 500만 원은 저위험 디폴트옵션 상품에 넣고 나머지 500만 원은 고위험 디폴트옵션 상품에 동시에 가입하는 옵트인 주문을 넣고 싶습니다. 포트폴리오 다변화를 위해 이렇게 나누어 가입하는 것이 가능한가요?\"",
+      "기대_답변": "• 불가능합니다. 가입자가 옵트인을 통해 직접 매수할 수 있는 디폴트옵션 상품은 전체 계좌 내 단 1개로 제한되므로, 동시 또는 순차적으로 나누어 복수의 상품을 옵트인 매수하는 방식은 허용되지 않습니다 .",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 55",
+      "세트": "7차 마스터",
+      "유형_난이도_원문": "제도 RAG / 상",
+      "유형": "제도 RAG",
+      "난이도": "상",
+      "테스트_질문": "\"정기예금 A 상품이 만기되어 6주 대기 기간(4주+2주)에 들어가서 현재 2주 차가 되었습니다. 그런데 이 와중에 제 계좌에서 똑같은 정기예금 A 상품의 두 번째 만기분이 새로 발생했습니다. 이 경우 두 번째 만기분에 대해서도 6주 대기의 절차와 통지가 개별적으로 새로 시작되나요?\"",
+      "기대_답변": "• 두 번째 만기분에 대해서는 별도로 통지를 다시 발송하지 않고 대기 기간을 개별적으로 운영하지 않습니다 .\n• 처리 방식: 두 번째 만기 자산은 별도 절차를 생략하며, 첫 번째 만기 자금이 대기 기간을 끝마치고 실제 디폴트옵션 상품으로 운용(매수)되는 시점에 함께 취합되어 처리되도록 규정되어 있습니다 .",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 56",
+      "세트": "7차 마스터",
+      "유형_난이도_원문": "제도 RAG / 최상",
+      "유형": "제도 RAG",
+      "난이도": "최상",
+      "테스트_질문": "\"정기예금 만기 자금의 6주 대기 기간 도중, 제가 마음이 바뀌어 해당 금액 전액을 임의의 일반 펀드로 직접 이체하여 운용지시를 마쳤습니다. 이로 인해 자동 매수는 취소되었는데요. 이후 제 계좌에서 동일한 정기예금이 다시 만기되었을 때, 이 자금은 대기 기간 없이 즉시 디폴트옵션으로 자동 매수되나요?\"",
+      "기대_답변": "• 아닙니다. 다음 만기분은 다시 처음부터 6주(4주+2주)의 대기 기간과 통지 절차를 거쳐야 합니다 .\n• 이유: 가입자가 최초 만기분을 대기 기간 도중에 일반 상품으로 수동 이체하여 이탈시켰기 때문에 '디폴트옵션 자동 매수의 연속성'이 단절되었습니다 . 따라서 다음 만기분은 즉시 매수 대상이 될 수 없으며 정상 대기 기간을 다시 적용받습니다 .",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 57",
+      "세트": "7차 마스터",
+      "유형_난이도_원문": "제도 RAG / 최상",
+      "유형": "제도 RAG",
+      "난이도": "최상",
+      "테스트_질문": "\"예전 만기 자금의 6주 대기 기간이 끝나 디폴트옵션 상품으로 정상 자동 매수되어 굴러가고 있었습니다. 이후 제가 이 디폴트옵션 자산을 전량 매도하여 지금은 잔고가 0원입니다. 이 상태에서 동일한 정기예금의 다음 만기분이 새로 입금된다면, 이때는 다시 6주 대기를 해야 하나요, 아니면 바로 디폴트옵션으로 매수되나요?\"",
+      "기대_답변": "• 대기 기간 없이 즉시 사전지정운용방법(디폴트옵션)으로 자동 매수됩니다 .\n• 규정 원리: 해당 계좌는 동일한 상품의 만기 자금으로 디폴트옵션을 실제 자동 매수한 이력이 확실히 존재하므로, 비록 현재 잔고가 0원이 되었더라도 연속성 지위가 인정되어 다음 만기 도래 즉시 매수 대상이 됩니다 .",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 58",
+      "세트": "7차 마스터",
+      "유형_난이도_원문": "제도 RAG / 상",
+      "유형": "제도 RAG",
+      "난이도": "상",
+      "테스트_질문": "\"예금과 펀드가 섞인 포트폴리오형 디폴트옵션을 여러 차례 나누어 분할 매도(환매)하고 있습니다. 이번 마지막 부분 환매로 인해 포트폴리오 내부의 예금 비중이 전부 소진되어 중도해지 처리될 예정입니다. 이 경우 예금이 없어졌으니 남아 있는 펀드 부분도 시스템상 자동으로 강제 청산되어 해지되는 것인가요?\"",
+      "기대_답변": "• 아닙니다. 남은 펀드 자산은 강제 청산되지 않고 계속해서 유지 및 운용됩니다 .\n• 규정 설명: 최종 분할 매수/매도 실무 처리 과정에서 포트폴리오 편입 예금 부분이 전액 매도·해지되어 깨지더라도, 남아 있는 펀드 적립금은 정상적으로 잔존하여 가입자의 선택에 따라 계속 운용할 수 있습니다 .",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 59",
+      "세트": "7차 마스터",
+      "유형_난이도_원문": "제도 RAG / 중",
+      "유형": "제도 RAG",
+      "난이도": "중",
+      "테스트_질문": "\"예금 50%와 펀드 50% 비중의 디폴트옵션 포트폴리오를 보유하다가 급전이 필요해 예금 부분만 대거 환매하여 비중이 10:90으로 망가진 상태입니다. 다음 달 성과급이 들어와 이 동일한 포트폴리오 상품을 추가로 매수하려고 합니다. 이때 새로 입금되는 돈은 망가진 비율(10:90)대로 사지나요, 아니면 원래 승인 비율(50:50)로 조정되어 사지나요?\"",
+      "기대_답변": "• 원래 승인 비중(50:50)에 맞추어 새로 편입 비율이 복원되며 매수됩니다 .\n• 규격 설명: 포트폴리오형 디폴트옵션은 부분 매도로 인해 현재 계좌 내 보유 비율이 흐트러졌더라도, 향후 동일한 상품을 신규 매수하거나 추가 납입할 때는 최초 정부로부터 승인된 표준 목표 비중에 맞춰 투입 처리되도록 설계되어 있습니다 .",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [
+        "50"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 60",
+      "세트": "7차 마스터",
+      "유형_난이도_원문": "제도 RAG / 상",
+      "유형": "제도 RAG",
+      "난이도": "상",
+      "테스트_질문": "\"제가 가입한 혼합 포트폴리오 디폴트옵션의 내부에 편입된 3개 펀드 중 1개 펀드의 위험 등급이 한 단계 상향 조정되었습니다. 다행히 포트폴리오 전체의 통합 위험 등급은 변함이 없다고 하네요. 이 경우 중대한 투자 변경으로 보아 정부에 변경 승인을 새로 받고 가입자에게 일일이 정식 재동의를 거쳐야 하나요?\"",
+      "기대_답변": "• 포트폴리오 전체 위험 등급과 투자 전략의 핵심 기조에 중대한 변화가 없다면, 정식의 거창한 변경 승인을 새로 거치지 않고 경미한 변경 사항으로 간주하여 처리될 여지가 있습니다 .\n• 다만, 전체 등급 자체가 상향되거나 자산배분 기조가 크게 바뀌는 중대한 변화 시에는 정부의 정식 승인과 가입자 재통지 등 완전한 절차가 수반되어야 합니다 .",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 61",
+      "세트": "7차 마스터",
+      "유형_난이도_원문": "제도 RAG / 하",
+      "유형": "제도 RAG",
+      "난이도": "하",
+      "테스트_질문": "\"현재 제가 예전에 사전 지정해 둔 A유형 디폴트옵션 상품을 실제로 매수해서 보유 중입니다. 오늘 모바일 앱을 켜서 향후 적용될 사전지정운용방법을 B유형으로 새롭게 변경 완료했습니다. 이 경우 제가 기존에 사두었던 기보유 A유형 자산도 자동으로 시장에 매도되어 B유형으로 갈아타지게 되나요?\"",
+      "기대_답변": "• 아닙니다. 기존에 보유 중인 A유형 상품은 자동으로 매도되지 않고 그대로 안전하게 유지됩니다 .\n• 원리: 가입자의 사전지정운용방법 '지정 변경'은 앞으로 만기되거나 대기할 미래 적립금의 처리 규정을 바꾸는 절차입니다 . 기존에 이미 매수 완료된 적립금을 B유형으로 교체하고 싶으시다면 별도로 매도 및 운용지시(교체매매)를 처리하셔야 합니다 .",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 62",
+      "세트": "7차 마스터",
+      "유형_난이도_원문": "제도 RAG / 중",
+      "유형": "제도 RAG",
+      "난이도": "중",
+      "테스트_질문": "\"디폴트옵션 변경 승인이나 만기 통보를 위해 퇴직연금 사업자가 모바일 알림톡과 이메일로 통지문을 발송했으나, 제 스마트폰 번호 변경 및 스팸 차단으로 인해 모두 반송(실패) 처리되었습니다. 이 경우 사업자가 단순히 문자를 보낸 행위만으로 고지 의무를 다했다고 주장하는 것이 법적으로 유효한가요?\"",
+      "기대_답변": "• 유효하지 않습니다. 단순히 발송실패된 모바일 알림톡과 이메일 기록만으로는 법적인 고지 의무를 완전히 다했다고 보지 않습니다 .\n• 필수 사후 조치: 통지문이 반송된 경우, 퇴직연금 사업자는 최종 백업 수단으로 가입자의 고객 정보에 등록되어 있는 실제 자택 또는 회사 주소지로 우편 통지를 서면 발송하여 전달해야 하는 법적 의무가 있습니다 .",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 63",
+      "세트": "7차 마스터",
+      "유형_난이도_원문": "절차 RAG / 상",
+      "유형": "절차 RAG",
+      "난이도": "상",
+      "테스트_질문": "\"제 퇴직연금 DC 계좌에서 중도인출을 신청하려고 합니다. 작년에 제 명의로 집을 처음 장만하면서 '무주택자의 주택 구입' 사유로 중도인출을 한 차례 받아 유용하게 썼습니다. 올해 이 집을 전세로 주고 다른 지역의 아파트에 세입자로 들어가려는데, 이번에는 '무주택자의 전세 보증금' 사유로 두 번째 중도인출을 또 신청하는 것이 법적으로 가능한가요?\"",
+      "기대_답변": "• 불가능합니다. 현재 가입자는 무주택자 요건을 충족하지 못합니다 .\n• 법적 이유: 중도인출 신청 시점 기준으로 \"본인 명의의 주택을 소유하지 않은 무주택자\"여야만 전세 보증금 사유의 중도인출이 허용됩니다 . 비록 과거에 최초 집을 살 때 무주택자 사유로 돈을 뽑았더라도, 해당 집을 소유하고 있는 현재 상태에서는 주택 소유자로 분류되어 전세 보증금 인출을 추가 신청할 수 없습니다 .",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 64",
+      "세트": "7차 마스터",
+      "유형_난이도_원문": "제도 RAG / 중",
+      "유형": "제도 RAG",
+      "난이도": "중",
+      "테스트_질문": "\"저희 기업에서 퇴직연금 규약을 우리 회사에 불리하게(예: 적립 부담금 납입 주기 축소 등 근로자에게 불리한 내용으로) 변경하면서, 너무 번거로워 노동조합이나 근로자대표의 동의 절차를 밟지 않고 이사회 승인만으로 변경하여 정부에 신고했습니다. 이 경우 절차상 하자가 있는 규약 변경에 대해 어떤 과태료나 벌칙이 가해지나요?\"",
+      "기대_답변": "• 근로자퇴직급여 보장법에 의거하여 500만 원 이하의 벌금형에 처해질 수 있습니다 .\n• 의무 준수 사항: 회사가 퇴직연금 규약을 근로자에게 불리하게 변경하는 경우에는 단순한 의견 청취를 넘어 근로자대표(과반수 노동조합 또는 근로자 과반수)의 서면 동의를 반드시 구해야만 법적 효력이 인정되며, 이를 무시할 시 벌칙이 적용됩니다 .",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [
+        "500"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 65",
+      "세트": "7차 마스터",
+      "유형_난이도_원문": "제도 RAG / 상",
+      "유형": "제도 RAG",
+      "난이도": "상",
+      "테스트_질문": "\"근로자가 퇴직한 후 퇴직급여법상 14일 이내에 퇴직금을 지급하지 못하면 연 20%의 무시무시한 지연이자가 붙는다고 들었습니다. 그런데 저희 기업은 이번에 법원으로부터 파산 절차를 밟는 중이거나 주주 간 퇴직금 적격성 소송 다툼이 벌어져 불가피하게 지급이 미뤄지고 있습니다. 이 경우에도 예외 없이 무조건 연 20%의 지연이자를 가입자에게 물어내야 하나요?\"",
+      "기대_답변": "• 아닙니다. 예외 조건이 인정되어 연 20%의 법정 지연이자가 적용되지 않습니다.\n• 면제 사유: 근로자퇴직급여 보장법 시행령에 따르면 천재지변, 법원의 회생 및 파산 절차 개시 결정, 임금체불 소송 등 지연에 대한 정당한 사유가 법적으로 존재하는 기간 동안에는 특별히 지연이율 적용이 배제되며 일반 금리 수준이 적용됩니다.",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [
+        "20"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 66",
+      "세트": "7차 마스터",
+      "유형_난이도_원문": "제도 RAG / 상",
+      "유형": "제도 RAG",
+      "난이도": "상",
+      "테스트_질문": "\"제가 목돈이 필요해 보유하고 있는 개인형 IRP 계좌의 적립금을 담보로 은행에서 담보 대출을 받으려고 합니다. 원래 퇴직연금 자산은 양도가 불가능하다고 하던데, 법적으로 담보 제공이 허용되는 긴급 사유와 제 적립금의 최대 몇 % 범위 내에서만 담보로 설정할 수 있는지 요건을 정확히 명시해 주세요.\"",
+      "기대_답변": "• 한도: 법적으로 담보를 제공할 수 있는 범위는 본인 IRP 적립금 평가액의 100분의 50(50%) 이내로 대출 한도가 엄격히 제한됩니다.\n• 사유: 무주택자의 본인 명의 주택 구입 및 전세 보증금 마련, 본인 또는 부양가족의 6개월 이상 요양 비용 부담, 파산선고 또는 개인회생절차개시 결정을 받은 경우 등 법이 정한 특별 사유에 한해서만 담보 설정이 허용됩니다.",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [
+        "100",
+        "50"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 67",
+      "세트": "7차 마스터",
+      "유형_난이도_원문": "실무 RAG / 최상",
+      "유형": "실무 RAG",
+      "난이도": "최상",
+      "테스트_질문": "\"회사가 DB형 제도를 운영하다가 자금 악화로 인해 연도 말 재정 검증 결과 법정 최소적립비율(100%)을 채우지 못하고 과소 적립 상태에 빠졌습니다. 이 사실을 확인한 퇴직연금 사업자는 누구에게 이 미달 사실을 알려야 하며, 결과를 서면 통보해야 하는 기한 규정이 가이드북에 구체적으로 명시되어 있는지 알려주세요.\"",
+      "기대_답변": "• 통보 대상: 퇴직연금 사업자는 재정 검증 결과 최소 적립 기준에 미달하는 경우, 해당 사용자(회사)와 전체 가입자의 대표(노동조합 등)에게 동시에 이 사실을 서면으로 통보하여 안내해야 합니다.\n• 실무 가이드: 부족 사실을 확인한 후 정해진 검증 절차에 따라 지체 없이 부족 금액과 납입 계획의 이행을 촉구하는 서면 안내를 발송하도록 업무 매뉴얼에 명문화되어 있습니다.",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 68",
+      "세트": "7차 마스터",
+      "유형_난이도_원문": "상품 RAG / 중",
+      "유형": "상품 RAG",
+      "난이도": "중",
+      "테스트_질문": "\"투자 설명서상 '미래에셋아세안셀렉트Q연금저축증권전환형자투자신탁1호(주식)' 상품은 소비자 관련주 편입 비율을 80% 이상으로 유지하도록 명시되어 있습니다. 그런데 펀드에서 매입하여 보유하고 있던 핵심 주식 하나가 이번 달 임시 주주총회 분할 합병 결정으로 인해 더 이상 '소비자 관련주' 카테고리에 속하지 않게 되었습니다. 이 즉시 규정 위반을 막기 위해 시장에서 해당 주식을 눈물을 머금고 즉각 강제 매도해야 하나요?\"",
+      "기대_답변": "• 아닙니다. 즉시 강제로 매도할 필요가 전혀 없으며 계속 보유해도 무방합니다 .\n• 약관 근거: 약관 원문에 따르면, \"주식의 편입 시점에는 소비자 관련주였으나 이후 소비자 관련주에 해당되지 않게 된 경우에 기매입된 주식도 소비자 관련주로 볼 수 있다\"고 명시되어 있어, 비율 위반이나 강제 매도 제재에 저촉되지 않습니다 .",
+      "family": "Product",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": true,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "product"
+        ],
+        "source_families": [
+          "product",
+          "postgres",
+          "enterprise_document"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 69",
+      "세트": "7차 마스터",
+      "유형_난이도_원문": "상품 RAG / 상",
+      "유형": "상품 RAG",
+      "난이도": "상",
+      "테스트_질문": "\"퇴직연금 계좌에서 가입할 수 있는 표준 채권형 자투자신탁 상품의 경우, 자산 운용 제한 가이드라인에 따라 장외파생상품매매에 따른 위험평가액 한도는 총 순자산 대비 몇 %이며, 사모집합투자증권(사모펀드)을 포트폴리오에 담는 것은 자산총액의 최대 몇 %까지 법적으로 허용되는지 수치를 명확히 대조해 주세요.\"",
+      "기대_답변": "• 장외파생상품 위험평가액 한도: 이 투자신탁의 자산총액 대비 100분의 10(10%) 이내로 극도로 보수적으로 통제하여 위험을 통제합니다.\n• 사모펀드 집합투자증권 편입 한도: 사모집합투자기구의 집합투자증권에는 이 투자신탁 자산총액의 5% 이내에서만 투자가 가능하도록 통제합니다.",
+      "family": "Product",
+      "expected_numbers_from_기대답변": [
+        "100",
+        "10"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": true,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "product"
+        ],
+        "source_families": [
+          "product",
+          "postgres",
+          "enterprise_document"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 70",
+      "세트": "7차 마스터",
+      "유형_난이도_원문": "인프라 RAG / 상",
+      "유형": "인프라 RAG",
+      "난이도": "상",
+      "테스트_질문": "\"네이버클라우드 환경에서 가상 사설 프라이빗 망인 VPC를 생성하고 내부에",
+      "기대_답변": "• 할당된 서브넷 대역(예: 192.168.0.0/24) 중 처음 4개 주소와 마지막 1개 주소(총 5개)는 시스템 내부 할당 예약용으로 사용자가 할당받을 수 없습니다.\n• 상세 주소 및 용도:\n1. .0: Network 주소\n2. .1: Gateway 주소\n3. .2: DNS 주소\n4. .3: 내부 서비스를 위한 예약 주소\n5. .255: Broadcast 주소 (VPC에서는 사용되지 않으나 예약 보존)",
+      "family": "Infrastructure",
+      "expected_numbers_from_기대답변": [
+        "192.168",
+        "0.0",
+        "24",
+        "255"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law",
+          "product",
+          "calculation"
+        ],
+        "source_families": [
+          "enterprise_document",
+          "enterprise_rag",
+          "law",
+          "product",
+          "postgres"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 71",
+      "세트": "8차 심화",
+      "유형_난이도_원문": "디폴트옵션 연속성 / 최상",
+      "유형": "디폴트옵션 연속성",
+      "난이도": "최상",
+      "테스트_질문": "동일한 정기예금에서 첫 번째 만기가 발생해 6주 대기 후 디폴트옵션으로 자동 매수됐습니다. 이후 디폴트옵션을 전량 매도해 잔고가 0원이 된 상태에서 같은 정기예금의 두 번째 만기가 발생하면 다시 6주를 기다려야 하나요?",
+      "기대_답변": "다시 기다리지 않고 즉시 자동 매수. 이미 동일 상품의 만기자금이 디폴트옵션으로 정상 자동 매수된 이력이 있으므로, 현재 잔고가 0원이더라도 연속성이 인정됨.",
+      "family": "Procedure",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 72",
+      "세트": "8차 심화",
+      "유형_난이도_원문": "부분·전량 개입 대조 / 최상",
+      "유형": "부분·전량 개입 대조",
+      "난이도": "최상",
+      "테스트_질문": "3,000만 원의 만기자금이 디폴트옵션 대기 중일 때 1,000만 원만 직접 펀드에 투자한 경우와 3,000만 원 전액을 직접 투자한 경우, 남은 디폴트옵션 절차가 각각 어떻게 달라지나요?",
+      "기대_답변": "부분 개입: 직접 투자한 1,000만 원을 제외한 2,000만 원은 디폴트옵션 절차 계속. 전액 개입: 대기 대상 자금이 없어지므로 해당 자동매수 절차 종료.",
+      "family": "Other",
+      "expected_numbers_from_기대답변": [
+        "1,000",
+        "2,000"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law",
+          "product",
+          "calculation"
+        ],
+        "source_families": [
+          "enterprise_document",
+          "enterprise_rag",
+          "law",
+          "product",
+          "postgres"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 73",
+      "세트": "8차 심화",
+      "유형_난이도_원문": "만기 판정 예외 / 상",
+      "유형": "만기 판정 예외",
+      "난이도": "상",
+      "테스트_질문": "정기예금 만기금, 가입 당시 만기가 정해진 만기형 펀드 상환금, 예상하지 못한 일반 ETF·펀드 청산금이 동시에 발생했다면 셋 모두 디폴트옵션 대상으로 처리하나요?",
+      "기대_답변": "아님. 정기예금 및 가입 당시 만기·상환조건이 정해진 상품은 대상이 될 수 있으나, 예측할 수 없었던 일반 펀드·ETF 청산금은 만기로 보지 않아 자동 적용 대상에서 제외.",
+      "family": "Procedure",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": true,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "calculation",
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "calculation",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 74",
+      "세트": "8차 심화",
+      "유형_난이도_원문": "옵트인 복수보유 / 최상",
+      "유형": "옵트인 복수보유",
+      "난이도": "최상",
+      "테스트_질문": "디폴트옵션 A와 B를 이미 동시에 보유하는 계좌에서 A를 추가로 옵트인 매수하려 합니다. 기존에 보유한 상품과 같은 A이므로 추가매수가 가능한가요?",
+      "기대_답변": "불가능. 복수의 디폴트옵션 상품을 보유한 상태에서는 동일 상품 추가 옵트인도 제한. 하나를 전량 정리해 단일 디폴트옵션 보유 상태로 만들어야 함.",
+      "family": "Procedure",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 75",
+      "세트": "8차 심화",
+      "유형_난이도_원문": "지정변경 vs 구성비변경 / 최상",
+      "유형": "지정변경 vs 구성비변경",
+      "난이도": "최상",
+      "테스트_질문": "제가 디폴트옵션 지정 상품을 A에서 B로 바꾼 경우와, 정부 승인된 포트폴리오 A의 내부 구성비 자체가 50:50에서 40:60으로 변경된 경우 기존 적립금은 각각 어떻게 처리되나요?",
+      "기대_답변": "서로 다름. 지정 A→B 변경만으로 기존 A 보유자산은 자동 매도되지 않음. 반면 동일 포트폴리오의 승인 구성비가 변경된 경우 기존 적립금도 변경된 구성비에 맞게 조정됨.",
+      "family": "Other",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law",
+          "product",
+          "calculation"
+        ],
+        "source_families": [
+          "enterprise_document",
+          "enterprise_rag",
+          "law",
+          "product",
+          "postgres"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 76",
+      "세트": "8차 심화",
+      "유형_난이도_원문": "적합성 절차 대조 / 최상",
+      "유형": "적합성 절차 대조",
+      "난이도": "최상",
+      "테스트_질문": "제 투자성향 유효기간이 만료된 경우, 투자성향을 낮춘 경우, 그리고 지정된 디폴트옵션 상품 자체의 위험등급이 상향된 경우 자동매수와 직접매수는 각각 어떻게 달라지나요?",
+      "기대_답변": "기존 지정에 따른 자동매수는 투자성향 만료·변경에도 진행. 직접 옵트인은 성향 만료 시 갱신 필요, 성향이 상품보다 낮으면 제한. 반면 상품 자체의 위험등급이 상향 변경되면 적합성 절차 재이행이 필요.",
+      "family": "Product",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": true,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "product"
+        ],
+        "source_families": [
+          "product",
+          "postgres",
+          "enterprise_document"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 77",
+      "세트": "8차 심화",
+      "유형_난이도_원문": "통지 실패·기한 / 상",
+      "유형": "통지 실패·기한",
+      "난이도": "상",
+      "테스트_질문": "디폴트옵션 변경 승인을 받은 사업자가 7일 이내 이메일과 알림톡을 보냈지만 모두 반송됐습니다. 그냥 14일을 계산해 새 상품을 적용하면 되나요?",
+      "기대_답변": "안 됨. 전자 통지가 실패했다면 등록 주소지 등에 서면·우편 통지라는 백업 절차를 이행해야 함. 단순 발송 실패 기록만으로 통지 의무가 완료된 것으로 처리하면 안 됨.",
+      "family": "Procedure",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law",
+          "product",
+          "calculation"
+        ],
+        "source_families": [
+          "enterprise_document",
+          "enterprise_rag",
+          "law",
+          "product",
+          "postgres"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 78",
+      "세트": "8차 심화",
+      "유형_난이도_원문": "자동재예치 3-way 대조 / 최상",
+      "유형": "자동재예치 3-way 대조",
+      "난이도": "최상",
+      "테스트_질문": "① 일반 예금을 만기 때마다 자동 재예치, ② 만기 전에 가입자가 직접 1회성 만기예약매수, ③ 예금+펀드 디폴트옵션 포트폴리오 내부 예금의 재예치는 각각 허용되나요?",
+      "기대_답변": "① 일반적인 자동 재예치는 금지, ② 가입자의 1회성 자발적 만기예약매수는 가능, ③ 정부 승인 혼합형 포트폴리오 내부의 예금은 예외적으로 자동 재예치 가능.",
+      "family": "Other",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law",
+          "product",
+          "calculation"
+        ],
+        "source_families": [
+          "enterprise_document",
+          "enterprise_rag",
+          "law",
+          "product",
+          "postgres"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 79",
+      "세트": "8차 심화",
+      "유형_난이도_원문": "포트폴리오 부분거래 / 최상",
+      "유형": "포트폴리오 부분거래",
+      "난이도": "최상",
+      "테스트_질문": "포트폴리오형 디폴트옵션에서 펀드 A만 골라 매도하는 것과, 포트폴리오 자체를 여러 차례 부분 환매하다가 내부 예금 비중이 0이 되는 것은 같은 행위인가요?",
+      "기대_답변": "다름. 개별 편입상품을 지정해 단독 매매하는 것은 제한되지만, 포트폴리오 단위의 부분 환매 결과 예금 부분이 소진되는 것은 가능하며 남은 펀드는 강제 청산되지 않고 계속 운용될 수 있음.",
+      "family": "Other",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law",
+          "product",
+          "calculation"
+        ],
+        "source_families": [
+          "enterprise_document",
+          "enterprise_rag",
+          "law",
+          "product",
+          "postgres"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 80",
+      "세트": "8차 심화",
+      "유형_난이도_원문": "포트폴리오 비중 복원 / 상",
+      "유형": "포트폴리오 비중 복원",
+      "난이도": "상",
+      "테스트_질문": "50:50 승인 포트폴리오가 부분 환매 때문에 현재 10:90이 됐습니다. 이후 신규 자금을 넣으면 현재 10:90 비율을 따라 매수하나요?",
+      "기대_답변": "아님. 신규 매입 자금은 승인된 목표비중 50:50을 기준으로 매수되어야 함.",
+      "family": "Other",
+      "expected_numbers_from_기대답변": [
+        "50"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": true,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "calculation",
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "calculation",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 81",
+      "세트": "8차 심화",
+      "유형_난이도_원문": "DB 재정검증 / 최상",
+      "유형": "DB 재정검증",
+      "난이도": "최상",
+      "테스트_질문": "DB 적립비율이 100%보다 낮은 상황에서 계속 전액 지급하다가 지급누계비율이 25%에 도달했습니다. 이후 신규 퇴직자도 계속 전액을 받을 수 있나요?",
+      "기대_답변": "아님. 25% 도달 시 적립비율을 재산정하고 이후 가입자에게 동일한 적립비율에 따른 비율지급을 적용하여 선착순 전액지급으로 인한 불공정을 방지.",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [
+        "25"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": true,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 82",
+      "세트": "8차 심화",
+      "유형_난이도_원문": "DB 부족통보 / 상",
+      "유형": "DB 부족통보",
+      "난이도": "상",
+      "테스트_질문": "DB 재정검증에서 법정 최소적립비율 100%에 미달한 사실을 퇴직연금사업자가 회사 담당자에게만 알려주면 통보 의무가 끝난 것으로 볼 수 있나요?",
+      "기대_답변": "제공된 가이드 기준으로 사용자뿐 아니라 가입자대표에게도 부족 사실을 서면으로 알리는 절차가 필요함.",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law",
+          "product",
+          "calculation"
+        ],
+        "source_families": [
+          "enterprise_document",
+          "enterprise_rag",
+          "law",
+          "product",
+          "postgres"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 83",
+      "세트": "8차 심화",
+      "유형_난이도_원문": "규약 불이익변경 / 상",
+      "유형": "규약 불이익변경",
+      "난이도": "상",
+      "테스트_질문": "근로자에게 불리하게 퇴직연금규약을 변경하면서 근로자대표의 의견은 들었지만 동의는 받지 않았다면 절차를 충족한 것인가요?",
+      "기대_답변": "아님. 불이익 변경에서는 단순 의견청취로 부족하며 근로자대표의 동의가 필요. 이를 위반하면 제공된 자료 기준 500만 원 이하 벌금 가능.",
+      "family": "Legal",
+      "expected_numbers_from_기대답변": [
+        "500"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": true,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 84",
+      "세트": "8차 심화",
+      "유형_난이도_원문": "가입자교육 복합 / 상",
+      "유형": "가입자교육 복합",
+      "난이도": "상",
+      "테스트_질문": "회사가 매년 게시판에 교육자료는 올렸지만 내용에 퇴직 시 IRP 이전, 중도인출, 연금·퇴직소득세 내용을 모두 제외했습니다. ‘연 1회 교육’이라는 형식만 충족했으니 문제가 없나요?",
+      "기대_답변": "교육 횟수뿐 아니라 필수 공통교육 내용의 충족 여부도 검증해야 함. 단순 게시만 했다는 이유로 필수 내용 누락을 정상 이행으로 판단하면 안 됨.",
+      "family": "Document",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 85",
+      "세트": "8차 심화",
+      "유형_난이도_원문": "가입자격 대조 / 중",
+      "유형": "가입자격 대조",
+      "난이도": "중",
+      "테스트_질문": "법인 대표이사 1명, 일반 임원 2명, 근로자 20명, 개인사업주 1명이 같은 퇴직연금에 들어가려 합니다. 누가 어떤 조건에서 가입할 수 있나요?",
+      "기대_답변": "법인 임원은 규약상 가입대상에 포함되면 가입 가능하나 임원만의 제도는 불가. 근로자는 가입 가능. 개인사업주 본인은 가입 불가, 그가 고용한 근로자는 가입 가능.",
+      "family": "Legal",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law",
+          "product",
+          "calculation"
+        ],
+        "source_families": [
+          "enterprise_document",
+          "enterprise_rag",
+          "law",
+          "product",
+          "postgres"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 86",
+      "세트": "8차 심화",
+      "유형_난이도_원문": "평균임금 제외기간 / 상",
+      "유형": "평균임금 제외기간",
+      "난이도": "상",
+      "테스트_질문": "평균임금 산정 직전 3개월에 수습 1개월, 회사 귀책 휴업 2주, 육아휴직 1개월이 포함돼 있다면 전부 일반 근무기간처럼 계산해야 하나요?",
+      "기대_답변": "아님. 제공 자료에 제시된 수습 3개월 이내, 사용자 귀책 휴업, 육아휴직 등의 기간은 평균임금 산정 기간 및 임금총액에서 제외해야 함.",
+      "family": "Other",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": true,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "calculation",
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "calculation",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 87",
+      "세트": "8차 심화",
+      "유형_난이도_원문": "중도인출 자격 상태전이 / 상",
+      "유형": "중도인출 자격 상태전이",
+      "난이도": "상",
+      "테스트_질문": "무주택자일 때 주택구입 사유로 DC 중도인출을 받고 집을 산 뒤, 그 집을 팔지 않은 상태에서 전세보증금 사유로 다시 중도인출할 수 있나요?",
+      "기대_답변": "불가. 두 번째 신청 시점에는 본인 명의 주택을 보유하고 있어 무주택자 요건을 충족하지 못함.",
+      "family": "Legal",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law",
+          "product",
+          "calculation"
+        ],
+        "source_families": [
+          "enterprise_document",
+          "enterprise_rag",
+          "law",
+          "product",
+          "postgres"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 88",
+      "세트": "8차 심화",
+      "유형_난이도_원문": "IRP 담보제공 / 상",
+      "유형": "IRP 담보제공",
+      "난이도": "상",
+      "테스트_질문": "IRP 적립금이 8,000만 원이고 법령상 인정되는 긴급사유가 있다면 전액 8,000만 원을 담보로 잡을 수 있나요?",
+      "기대_답변": "불가. 제공 자료의 기준상 담보 제공 범위는 적립금 평가액의 최대 50%, 즉 이 사례에서는 최대 4,000만 원 상당 범위.",
+      "family": "Legal",
+      "expected_numbers_from_기대답변": [
+        "50",
+        "4,000"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law",
+          "product",
+          "calculation"
+        ],
+        "source_families": [
+          "enterprise_document",
+          "enterprise_rag",
+          "law",
+          "product",
+          "postgres"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 89",
+      "세트": "8차 심화",
+      "유형_난이도_원문": "퇴직급여 지연이자 / 최상",
+      "유형": "퇴직급여 지연이자",
+      "난이도": "최상",
+      "테스트_질문": "퇴직 후 14일이 지났다는 이유만으로 파산절차나 법적 분쟁 여부와 상관없이 항상 연 20% 지연이자를 적용해야 하나요?",
+      "기대_답변": "아님. 자료에 제시된 파산·회생·법적 다툼 등 정당한 예외사유가 인정되는 기간에는 연 20% 지연이자 적용의 예외가 존재함.",
+      "family": "Legal",
+      "expected_numbers_from_기대답변": [
+        "20"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": true,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "calculation",
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "calculation",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 90",
+      "세트": "8차 심화",
+      "유형_난이도_원문": "1,500만원 경계값 / 최상",
+      "유형": "1,500만원 경계값",
+      "난이도": "최상",
+      "테스트_질문": "사적연금을 정확히 연 1,500만 원 받는 경우와 1,500만 1원을 받는 경우 과세 선택지가 동일한가요?",
+      "기대_답변": "동일하지 않음. 자료 기준 1,500만 원 이하와 1,500만 원 초과를 구분해야 하며, 초과 시 종합과세와 16.5% 분리과세 선택 규칙을 적용해야 함.",
+      "family": "Calculation",
+      "expected_numbers_from_기대답변": [
+        "1,500",
+        "16.5"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": true,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "calculation",
+          "calculation+law",
+          "document+law"
+        ],
+        "source_families": [
+          "calculation",
+          "law",
+          "enterprise_document"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 91",
+      "세트": "8차 심화",
+      "유형_난이도_원문": "납입·공제·이월 복합 / 최상",
+      "유형": "납입·공제·이월 복합",
+      "난이도": "최상",
+      "테스트_질문": "연금저축에 1,000만 원을 납입했는데 당해 세액공제 한도는 600만 원만 사용했습니다. 남은 400만 원이 ‘납입 자체가 무효’가 되는 것인가요?",
+      "기대_답변": "아님. 납입 가능 한도와 세액공제 한도는 별개. 공제받지 못한 400만 원은 자료에 제시된 초과납입금 전환 신청을 통해 이후 연도의 세액공제 대상으로 전환할 수 있음.",
+      "family": "Other",
+      "expected_numbers_from_기대답변": [
+        "400"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": true,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "calculation",
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "calculation",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 92",
+      "세트": "8차 심화",
+      "유형_난이도_원문": "과세이연+연금수령 / 최상",
+      "유형": "과세이연+연금수령",
+      "난이도": "최상",
+      "테스트_질문": "퇴직금 2억 원을 IRP로 옮기면 퇴직 시 세금을 영원히 내지 않는 것인가요? 이후 1년 차부터 연금으로 받는 경우까지 연결해서 설명해 주세요.",
+      "기대_답변": "영구 면세가 아니라 과세이연. 퇴직 시 세금 납부가 연금수령 시점으로 미뤄지며, 자료 기준 연금수령 초기 연차에서는 이연퇴직소득에 대한 퇴직소득세 30% 감면 구조가 적용된다고 설명.",
+      "family": "Calculation",
+      "expected_numbers_from_기대답변": [
+        "30"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": true,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "calculation",
+          "calculation+law",
+          "document+law"
+        ],
+        "source_families": [
+          "calculation",
+          "law",
+          "enterprise_document"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 93",
+      "세트": "8차 심화",
+      "유형_난이도_원문": "TDF vs 일반 주식형 / 상",
+      "유형": "TDF vs 일반 주식형",
+      "난이도": "상",
+      "테스트_질문": "DC에서 적격 TDF는 100% 살 수 있으니 일반 주식형 펀드도 ‘실적배당형’이라는 점이 같아서 100% 살 수 있는 것 아닌가요? DB에서는 어떻습니까?",
+      "기대_답변": "아님. DC/IRP에서 적격 TDF는 100% 가능하지만 일반 위험자산 주식형 펀드는 70% 한도. 자료 기준 DB는 TDF라도 70% 한도.",
+      "family": "Product",
+      "expected_numbers_from_기대답변": [
+        "100",
+        "70"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": true,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "calculation",
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "calculation",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 94",
+      "세트": "8차 심화",
+      "유형_난이도_원문": "소비자관련주 정의·예외 / 상",
+      "유형": "소비자관련주 정의·예외",
+      "난이도": "상",
+      "테스트_질문": "소비자관련주 80% 의무 펀드가 어떤 주식을 편입한 뒤 그 기업이 사업재편으로 소비자관련주 정의에서 빠졌다면 즉시 매도하지 않으면 80% 규정을 위반하나요?",
+      "기대_답변": "아님. 편입 당시 소비자관련주였던 기매입 주식은 사후 범주에서 제외되더라도 소비자관련주로 간주할 수 있는 예외가 제시되어 있음.",
+      "family": "Other",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": true,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "calculation",
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "calculation",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 95",
+      "세트": "8차 심화",
+      "유형_난이도_원문": "모펀드·벤치마크 / 상",
+      "유형": "모펀드·벤치마크",
+      "난이도": "상",
+      "테스트_질문": "미래에셋아세안셀렉트Q 자펀드가 단순히 ‘아시아 전체’에 투자하는 상품이라고 설명하고 MSCI World를 벤치마크로 제시하면 맞나요?",
+      "기대_답변": "틀림. 제공 자료 기준 모펀드는 싱가포르·인도네시아·말레이시아·필리핀·태국 등 아세안 지역 상장주식에 투자하며 비교지수는 MSCI South East Asia Index.",
+      "family": "Product",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": true,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "product"
+        ],
+        "source_families": [
+          "product",
+          "postgres",
+          "enterprise_document"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 96",
+      "세트": "8차 심화",
+      "유형_난이도_원문": "파생상품 한도 대조 / 최상",
+      "유형": "파생상품 한도 대조",
+      "난이도": "최상",
+      "테스트_질문": "동일 채권형 투자신탁에서 장내 채권관련 파생상품과 장외파생상품 위험평가액의 제한을 둘 다 100%라고 답하면 맞나요? 사모펀드 편입한도도 함께 알려주세요.",
+      "기대_답변": "아님. 제공 자료 기준 장내 채권관련 파생상품은 순자산 상당액의 100% 한도, 장외파생상품은 10%, 사모집합투자증권은 자산총액의 5% 이내로 구분해야 함.",
+      "family": "Product",
+      "expected_numbers_from_기대답변": [
+        "100",
+        "10"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": true,
+        "require_postgres": true,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "calculation",
+          "document",
+          "document+law",
+          "law",
+          "product"
+        ],
+        "source_families": [
+          "calculation",
+          "enterprise_document",
+          "law",
+          "product",
+          "postgres"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 97",
+      "세트": "8차 심화",
+      "유형_난이도_원문": "VPC 네트워크 복합 / 상",
+      "유형": "VPC 네트워크 복합",
+      "난이도": "상",
+      "테스트_질문": "192.168.10.0/24 서브넷을 생성했습니다. RFC1918 대역이므로 256개 주소를 모두 VM에 할당할 수 있나요?",
+      "기대_답변": "아님. 192.168.0.0/16은 지원되는 RFC1918 범위지만 /24 서브넷에서는 자료 기준 처음 4개와 마지막 1개, 총 5개 주소가 예약되어 사용자 VM에 할당할 수 없음.",
+      "family": "Infrastructure",
+      "expected_numbers_from_기대답변": [
+        "192.168",
+        "0.0",
+        "16",
+        "1918",
+        "24"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": true,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "calculation",
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "calculation",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 98",
+      "세트": "8차 심화",
+      "유형_난이도_원문": "퇴직 후 조회권한 / 상",
+      "유형": "퇴직 후 조회권한",
+      "난이도": "상",
+      "테스트_질문": "과학기술인연금에서 퇴직한 뒤 다른 계좌로 중도이전까지 마쳤습니다. 기존 홈페이지에 로그인해 중도이전 전과 후 모든 거래내역을 조회할 수 있나요?",
+      "기대_답변": "자료 기준 퇴직 상태에서는 홈페이지 접근·조회가 원칙적으로 제한되고, 승계·중도이전 이력이 있는 경우에도 이전 이전 내역까지 자유롭게 조회할 수 있는 것은 아님.",
+      "family": "Other",
+      "expected_numbers_from_기대답변": [],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law",
+          "product",
+          "calculation"
+        ],
+        "source_families": [
+          "enterprise_document",
+          "enterprise_rag",
+          "law",
+          "product",
+          "postgres"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 99",
+      "세트": "8차 심화",
+      "유형_난이도_원문": "교체매매 정산 / 상",
+      "유형": "교체매매 정산",
+      "난이도": "상",
+      "테스트_질문": "오후에 교체매매를 등록하면 기존 펀드 매도와 새 상품 매수가 같은 순간 실시간 완료되나요? 과기공↔미래 자산 이동도 동일한가요?",
+      "기대_답변": "아님. 자료 기준 교체매매는 익일 오전 9시 20분 이후 일괄 주문 처리, 기관 간 스위칭은 D+1영업일 추가 시차가 발생. 과기공 자체 예금 매수에는 별도 예외가 제시됨.",
+      "family": "Other",
+      "expected_numbers_from_기대답변": [
+        "20"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": true,
+        "require_postgres": false,
+        "require_enterprise_document": false,
+        "require_calculation_route": false,
+        "require_law_or_document": false,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "calculation",
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "calculation",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    },
+    {
+      "test_id": "Test 100",
+      "세트": "8차 심화",
+      "유형_난이도_원문": "전산 오류·실무조치 / 최상",
+      "유형": "전산 오류·실무조치",
+      "난이도": "최상",
+      "테스트_질문": "운용방법 변경에서 모든 상품을 선택했는데 일부 투자비율 칸을 비워두고 등록했습니다. ‘위험자산비중 계산 중 에러’가 발생하면 서버 장애로 보고 다시 로그인만 하면 되나요?",
+      "기대_답변": "아님. 자료에서는 주된 원인을 투자비율 입력 누락 및 확인 절차 미완료로 설명. 각 비율을 입력해 총합 100%를 맞추고 투자성향 확인·약관 다운로드 등의 검증 절차를 거쳐 다시 등록해야 함.",
+      "family": "Infrastructure",
+      "expected_numbers_from_기대답변": [
+        "100"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": true,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      }
+    }
+  ],
+  "세트_요약": [
+    {
+      "세트": "1차 마스터",
+      "Test 범위": "Test 1~5",
+      "개수": 5,
+      "비고": "기본 제도·세제·추천·실물이전·상품 비교"
+    },
+    {
+      "세트": "2차 마스터",
+      "Test 범위": "Test 6~10",
+      "개수": 5,
+      "비고": "복합 Routing·실물이전 코드·디폴트옵션·세법"
+    },
+    {
+      "세트": "3차 마스터",
+      "Test 범위": "Test 11~15",
+      "개수": 5,
+      "비고": "합성보수·통지 예외·TDF·모호성·Policy"
+    },
+    {
+      "세트": "4차 마스터",
+      "Test 범위": "Test 16~20",
+      "개수": 5,
+      "비고": "초과납입·분리과세·과세이연·위험자산·상태전이"
+    },
+    {
+      "세트": "5차 마스터",
+      "Test 범위": "Test 21~30",
+      "개수": 10,
+      "비고": "기업 실무·규약·교육·DB 재정·상품·VPC"
+    },
+    {
+      "세트": "6차 마스터",
+      "Test 범위": "Test 31~50",
+      "개수": 20,
+      "비고": "ISA·디폴트옵션 세부 예외·포트폴리오·실무 전산"
+    },
+    {
+      "세트": "7차 마스터",
+      "Test 범위": "Test 51~70",
+      "개수": 20,
+      "비고": "옵트인·만기 연속성·법률 예외·재정·인프라 스트레스"
+    },
+    {
+      "세트": "8차 심화",
+      "Test 범위": "Test 71~100",
+      "개수": 30,
+      "비고": "기존 규칙 간 대조·경계값·상태전이·교차 검증"
+    },
+    {
+      "세트": "합계",
+      "Test 범위": "Test 1~100",
+      "개수": 100,
+      "비고": "전체 마스터 테스트셋"
+    }
+  ],
+  "notes": [
+    "Original Excel was not modified.",
+    "유형/난이도 split uses the existing combined column only.",
+    "adapter_eval_hints are scoring policy, not Excel Gold label columns.",
+    "No missing Gold fields were fabricated."
+  ]
+}

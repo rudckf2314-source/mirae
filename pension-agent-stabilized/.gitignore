@@ -1,0 +1,24 @@
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.streamlit/
+
+# Local caches / temp (large, regenerable)
+data/cache/
+data/preload/*.pdf
+data/demo/*.pdf
+cache/
+tmp/
+*.log
+
+_pdf_analysis/
+.DS_Store
+Thumbs.db

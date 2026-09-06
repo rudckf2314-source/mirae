@@ -1,0 +1,19 @@
+{
+  "recorded_at": "2026-09-05T21:34:38.486376+09:00",
+  "models": {
+    "answer": "HCX-005",
+    "supervisor": "HCX-007",
+    "normalizer": "HCX-DASH-002",
+    "extraction": "HCX-005"
+  },
+  "python": "3.12.2 embedded / workspace-local",
+  "output_directory": "C:\\mirae\\reports\\gold100_hyperclova_20260905",
+  "cases_file": "C:\\mirae\\reports\\gold100_hyperclova_20260905\\gold100_cases.json",
+  "evaluation_mode": "100 independent single-turn questions; repeat=1",
+  "sha256": {
+    "chatbot/model_policy.py": "3be952acecba749b1f7c105de3ca95f69cfc94aa502ad79961d3b93acac4d715",
+    "chatbot/hyperclova_client.py": "79c2305492581dfd2a5dc28527882110ad00a6a77184eaa35a5de74932620888",
+    "tests/gold100/run_gold100.py": "ce33eb4a353ab8760eddb1c4925db8633836d602ec7f0161b16d32669745d3fe",
+    "tests/gold100/gold100_evaluator.py": "8c3d2eaa5118c32a02a916ab5902185f1004543d567cdf204275b2cb2b47104f"
+  }
+}

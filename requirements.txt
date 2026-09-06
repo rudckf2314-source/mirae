@@ -29,6 +29,7 @@ uvicorn[standard]>=0.27.0
 requests>=2.31.0
 numpy>=1.26.0
 scikit-learn>=1.4.0
+pytest>=8.0.0
 
 # External APIs (configured in .env, not extra packages)
 # 법제처 국가법령정보  https://www.law.go.kr/DRF/          LAW_API_OC

@@ -1,0 +1,28 @@
+{
+  "models": {
+    "normalizer": "HCX-DASH-002",
+    "supervisor": "HCX-007",
+    "extraction": "HCX-005",
+    "answer": "HCX-005"
+  },
+  "python": "tmp/python312/python.exe",
+  "recorded_at_start": "2026-09-05T23:06:22.7751650+09:00",
+  "evaluation_mode": "gold100 after router/planner/calc improvements; repeat=1",
+  "note": "API keys omitted",
+  "llm_provider": "hyperclova",
+  "competition_mode": "1",
+  "output_directory": "c:\\mirae\\reports\\gold100_router_planner_20260905_2306",
+  "recorded_at_end": "2026-09-05T23:22:08.711043+09:00",
+  "summary_started_at": "2026-09-05T23:06:24+0900",
+  "summary_finished_at": "2026-09-05T23:21:44+0900",
+  "integrity": {
+    "total_rows": 100,
+    "unique_test_ids": 100,
+    "duplicates": [],
+    "missing": [],
+    "PASS": 60,
+    "FAIL": 40,
+    "SKIP": 0,
+    "sum_equals_100": true
+  }
+}

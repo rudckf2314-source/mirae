@@ -1,0 +1,16 @@
+{
+  "scope": "user-facing response_text only (not metadata)",
+  "pass_fail_not_modified": true,
+  "cases_with_exposure": 0,
+  "total_cases_scanned": 100,
+  "tokens_checked": [
+    "risk_tolerance",
+    "investment_horizon",
+    "holding_product_name",
+    "account_type",
+    "personal_legal_facts",
+    "product_reference",
+    "ENTERPRISE_DOCUMENT"
+  ],
+  "hits": []
+}

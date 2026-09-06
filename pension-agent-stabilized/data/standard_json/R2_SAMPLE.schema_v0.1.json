@@ -1,0 +1,239 @@
+{
+  "schema_version": "0.1",
+  "source_document": {
+    "document_id": "R2_SAMPLE",
+    "filename": "R2_SAMPLE.pdf",
+    "document_type": "INVESTMENT_PROSPECTUS",
+    "as_of_date": "2025-12-23",
+    "effective_date": "2025-12-30",
+    "revision_date": null,
+    "page_count": 3,
+    "file_hash": "47caff5614a1a328f8d416ea2a525dcb7d0f8b47555d3b29388b5e457a0fb1b4"
+  },
+  "product": {
+    "product_key": "NAMEHASH:093fe3fa6bdc922119cf",
+    "official_name": "미래에셋퇴직플랜증권자투자신탁1호(채권)",
+    "kofia_fund_code": null,
+    "manager_name": "미래에셋자산운용",
+    "legal_form": "투자신탁",
+    "asset_type": "채권형",
+    "is_open_end": null,
+    "is_additional": null,
+    "is_class_type": null,
+    "is_master_feeder": null,
+    "is_convertible": null,
+    "is_high_complexity_product": null,
+    "inception_date": null
+  },
+  "investment_profile": null,
+  "risk_ratings": [
+    {
+      "grade": 5,
+      "label": "낮은 위험",
+      "method": null,
+      "as_of_date": "2025-12-23",
+      "evidence_ids": [
+        "R2_SAMPLE_p001_product_c001__risk_ratings_0_grade"
+      ]
+    }
+  ],
+  "classes": [],
+  "sales_charges": [],
+  "fees": [],
+  "class_transition_rules": [],
+  "fund_conversion_rules": [],
+  "master_feeder_relations": [],
+  "hedging_policies": [],
+  "performance": [],
+  "capital_flows": [],
+  "financial_metrics": [],
+  "liquidity_rules": [],
+  "narratives": [
+    {
+      "narrative_type": "INVESTMENT_OBJECTIVE",
+      "subject": "current_fund",
+      "text": "이 투자신탁은 국내 채권에 주로 투자합니다.",
+      "evidence_ids": [
+        "R2_SAMPLE_p002_objective_c001__narratives_INVESTMENT_OBJECTIVE",
+        "R2_SAMPLE_p002_strategy_c001__narratives_INVESTMENT_OBJECTIVE"
+      ]
+    },
+    {
+      "narrative_type": "INVESTMENT_STRATEGY",
+      "subject": "current_fund",
+      "text": "2. 투자전략 모투자신탁에 투자하여 이자 소득을 추구합니다.",
+      "evidence_ids": [
+        "R2_SAMPLE_p002_objective_c001__narratives_INVESTMENT_STRATEGY",
+        "R2_SAMPLE_p002_strategy_c001__narratives_INVESTMENT_STRATEGY"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "R2_SAMPLE_p001_product_c001__risk_ratings_0_grade",
+      "field_path": "risk_ratings[0].grade",
+      "page": 1,
+      "section": "PRODUCT_INFO",
+      "source_text": "1. 집합투자기구 명칭\n미래에셋퇴직플랜증권자투자신탁1호(채권)\n2. 집합투자업자 명칭\n미래에셋자산운용\n투자위험등급 5등급[낮은 위험]\n작성 기준일 2025년 12월 23일\n증권신고서 효력발생일 2025년 12월 30일",
+      "table_markdown": null,
+      "source_hash": "2dad569bd8d275837301ee20f5ac9f30c9f417b21c442e626358db8bbc60505e",
+      "row_index": null,
+      "column_name": null,
+      "raw_cell_text": null,
+      "extraction_method": "TEXT",
+      "confidence": null
+    },
+    {
+      "evidence_id": "R2_SAMPLE_p002_objective_c001__narratives_INVESTMENT_OBJECTIVE",
+      "field_path": "narratives.INVESTMENT_OBJECTIVE",
+      "page": 2,
+      "section": "INVESTMENT_OBJECTIVE",
+      "source_text": "투자목적\n이 투자신탁은 국내 채권에 주로 투자합니다.\n2.",
+      "table_markdown": null,
+      "source_hash": "f919be9e21017aa88c630f7b71e031be720bb53a782c5925162e0e53538191f3",
+      "row_index": null,
+      "column_name": null,
+      "raw_cell_text": null,
+      "extraction_method": "LLM",
+      "confidence": null
+    },
+    {
+      "evidence_id": "R2_SAMPLE_p002_strategy_c001__narratives_INVESTMENT_OBJECTIVE",
+      "field_path": "narratives.INVESTMENT_OBJECTIVE",
+      "page": 2,
+      "section": "INVESTMENT_STRATEGY",
+      "source_text": "투자전략\n모투자신탁에 투자하여 이자 소득을 추구합니다.",
+      "table_markdown": null,
+      "source_hash": "9ce4b5517ccb67554b5635537dd0f1c45f974751f2cafeb26b573b336e933555",
+      "row_index": null,
+      "column_name": null,
+      "raw_cell_text": null,
+      "extraction_method": "LLM",
+      "confidence": null
+    },
+    {
+      "evidence_id": "R2_SAMPLE_p002_objective_c001__narratives_INVESTMENT_STRATEGY",
+      "field_path": "narratives.INVESTMENT_STRATEGY",
+      "page": 2,
+      "section": "INVESTMENT_OBJECTIVE",
+      "source_text": "투자목적\n이 투자신탁은 국내 채권에 주로 투자합니다.\n2.",
+      "table_markdown": null,
+      "source_hash": "f919be9e21017aa88c630f7b71e031be720bb53a782c5925162e0e53538191f3",
+      "row_index": null,
+      "column_name": null,
+      "raw_cell_text": null,
+      "extraction_method": "LLM",
+      "confidence": null
+    },
+    {
+      "evidence_id": "R2_SAMPLE_p002_strategy_c001__narratives_INVESTMENT_STRATEGY",
+      "field_path": "narratives.INVESTMENT_STRATEGY",
+      "page": 2,
+      "section": "INVESTMENT_STRATEGY",
+      "source_text": "투자전략\n모투자신탁에 투자하여 이자 소득을 추구합니다.",
+      "table_markdown": null,
+      "source_hash": "9ce4b5517ccb67554b5635537dd0f1c45f974751f2cafeb26b573b336e933555",
+      "row_index": null,
+      "column_name": null,
+      "raw_cell_text": null,
+      "extraction_method": "LLM",
+      "confidence": null
+    }
+  ],
+  "field_status": {
+    "source_document.as_of_date": "FOUND",
+    "source_document.effective_date": "FOUND",
+    "product.official_name": "FOUND",
+    "product.kofia_fund_code": "NOT_FOUND",
+    "product.manager_name": "FOUND",
+    "product.asset_type": "FOUND",
+    "risk_ratings": "FOUND",
+    "classes": "NOT_FOUND",
+    "sales_charges": "NOT_FOUND",
+    "fees": "NOT_FOUND",
+    "master_feeder_relations": "NOT_APPLICABLE",
+    "hedging_policies": "NOT_FOUND",
+    "performance": "NOT_FOUND",
+    "narratives.INVESTMENT_OBJECTIVE": "FOUND",
+    "narratives.INVESTMENT_STRATEGY": "FOUND",
+    "narratives.INVESTMENT_RISK": "NOT_FOUND"
+  },
+  "extraction_issues": [
+    {
+      "field_path": "performance",
+      "issue_type": "NOT_FOUND",
+      "severity": "WARNING",
+      "message": "Final canonical value is missing: performance",
+      "page": null
+    },
+    {
+      "field_path": "classes",
+      "issue_type": "NOT_FOUND",
+      "severity": "WARNING",
+      "message": "Final canonical value is missing: classes",
+      "page": null
+    },
+    {
+      "field_path": "fees",
+      "issue_type": "NOT_FOUND",
+      "severity": "WARNING",
+      "message": "Final canonical value is missing: fees",
+      "page": null
+    },
+    {
+      "field_path": "investment_risks",
+      "issue_type": "NOT_FOUND",
+      "severity": "WARNING",
+      "message": "Final canonical value is missing: investment_risks",
+      "page": null
+    },
+    {
+      "field_path": "extraction",
+      "issue_type": "AMBIGUOUS",
+      "severity": "WARNING",
+      "message": "수익률 표가 탐지되었으나 데이터 추출 결과가 없습니다.",
+      "page": null
+    },
+    {
+      "field_path": "classes",
+      "issue_type": "AMBIGUOUS",
+      "severity": "WARNING",
+      "message": "Class 종류C가 Source에서는 탐지되었지만 final classes에 존재하지 않습니다.",
+      "page": null
+    },
+    {
+      "field_path": "classes",
+      "issue_type": "AMBIGUOUS",
+      "severity": "WARNING",
+      "message": "OWNER_UNRESOLVED: classes source signal detected but final value is empty (owner=class_resolver, status=NOT_FOUND).",
+      "page": null
+    },
+    {
+      "field_path": "fees",
+      "issue_type": "AMBIGUOUS",
+      "severity": "WARNING",
+      "message": "OWNER_UNRESOLVED: fees source signal detected but final value is empty (owner=table, status=NOT_FOUND).",
+      "page": null
+    },
+    {
+      "field_path": "performance",
+      "issue_type": "AMBIGUOUS",
+      "severity": "WARNING",
+      "message": "OWNER_UNRESOLVED: performance source signal detected but final value is empty (owner=table, status=NOT_FOUND).",
+      "page": null
+    },
+    {
+      "field_path": "narratives.INVESTMENT_RISK",
+      "issue_type": "AMBIGUOUS",
+      "severity": "WARNING",
+      "message": "OWNER_UNRESOLVED: investment_risks source signal detected but final value is empty (owner=narrative, status=NOT_FOUND).",
+      "page": null
+    }
+  ],
+  "quality_control": {
+    "verification_status": "PASS",
+    "verification_fail_count": 0,
+    "contradicted_fields": [],
+    "review_required": true
+  }
+}

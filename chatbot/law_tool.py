@@ -4,7 +4,6 @@ import os
 from typing import Any
 
 from .law_api_client import LawAPIClient
-from .law_reference_resolver import LawReferenceResolver
 from .legal_retriever import LegalRetriever
 
 
@@ -18,7 +17,6 @@ class LawTool:
 
     def __init__(self):
         self.retriever = LegalRetriever()
-        self.resolver = LawReferenceResolver()
         self._api_client: LawAPIClient | None = None
         self.allow_api_fallback = os.getenv("LAW_QUERY_FALLBACK_API", "0") == "1"
 
@@ -59,6 +57,17 @@ class LawTool:
         }
 
     def _article_or_topic(self, topic: str, source_key: str, article_no: str) -> dict[str, Any]:
+        # The allow-list applies before both local and optional external lookup.
+        # A missing DB row must never broaden an external-law query.
+        if not self.retriever.guardrail.source_allowed(source_key, article_no):
+            return {
+                "success": False,
+                "topic": topic,
+                "message": "LEGAL_GUARDRAIL_DENY",
+                "primary_sources": [],
+                "references": [],
+                "retrieval_source": "legal_db",
+            }
         article = self.retriever.get_article(source_key, article_no)
         if article:
             return {
@@ -91,6 +100,17 @@ class LawTool:
         }
 
     def _irp_withdrawal(self) -> dict[str, Any]:
+        allowed_main = self.retriever.guardrail.source_allowed("RETIREMENT_BENEFIT_ACT", "제24조")
+        allowed_decree = self.retriever.guardrail.source_allowed("RETIREMENT_BENEFIT_DECREE", "제18조")
+        if not (allowed_main and allowed_decree):
+            return {
+                "success": False,
+                "topic": "IRP_WITHDRAWAL",
+                "message": "LEGAL_GUARDRAIL_DENY",
+                "primary_sources": [],
+                "references": [],
+                "retrieval_source": "legal_db",
+            }
         main = self.retriever.get_article("RETIREMENT_BENEFIT_ACT", "제24조")
         decree = self.retriever.get_article("RETIREMENT_BENEFIT_DECREE", "제18조")
         sources = [item for item in (main, decree) if item]

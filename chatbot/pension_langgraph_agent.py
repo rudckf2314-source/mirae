@@ -1037,11 +1037,10 @@ class PensionLangGraphAgent:
         result = next(iter(state.get("worker_results", {}).values()), {})
         if result.get("route") == "calculation" and result.get("calculation_status") in {"CLARIFY", "INVALID_INPUT"}:
             return "clarify_response"
-        if self._select_answer_path(state) == "answer":
+        if PensionLangGraphAgent._select_answer_path(state) == "answer":
             return "answer"
-        # Soft continue: documents/products already retrieved → generate partial answer.
-        if result.get("results") or result.get("product_results") or result.get("calculation_result"):
-            return "answer"
+        # A failed or ambiguous verification must never proceed to answer
+        # generation. Retrieved rows remain diagnostics, not sufficient proof.
         if state.get("retry_count", 0) >= 1:
             return "safe_stop"
         law_result = result.get("law_result") or {}

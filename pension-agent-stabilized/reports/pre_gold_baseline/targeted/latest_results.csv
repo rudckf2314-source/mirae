@@ -1,0 +1,54 @@
+﻿test_id,turn_no,user_query,pass_fail,total,detected_intent,actual_route,expected_routes,tools_called,source_types,postgres_used,enterprise_rag_used,external_api_used,evidence_status,latency_ms,exception,failure_reasons,response_text
+T003,1,IRP 상품 추천해줘,PASS,9,CLARIFY|PRODUCT_RECOMMENDATION,product,product,product,postgres,True,False,False,clarify,62.5,,,"요청을 정확히 처리하려면 추가 정보가 필요합니다. 필요한 정보: risk_tolerance, investment_horizon.
+- 감수 가능한 위험 수준(예: 원금 변동을 어느 정도 감수할 수 있는지)을 알려주세요.
+- 예상 투자기간 또는 연금 수령까지 남은 기간을 알려주세요."
+T003,2,"나는 위험은 중간 정도, 10년 정도 투자할 거야",PASS,10,PRODUCT_RECOMMENDATION|PRODUCT_RISK_LOOKUP|PRODUCT_RISK_FILTER,product,product,product,postgres|product,True,False,False,"{'missing': 86, 'matched': 113}",459.0,,,"다음 5개를 보여드리겠습니다.
+입력한 위험 선호 조건 기준으로 비교 가능한 후보입니다. 개인 투자 적합성이나 수익을 보장하는 추천은 아닙니다.
+1. 미래에셋AI퀀트미국투자등급회사채증권자투자신탁(채권) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 4(보통 위험) / 총보수 연 0.71% / 출처 R2_KR5153420318.pdf
+2. 미래에셋스마트롱숏70증권자투자신탁1호(주식) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 4(보통 위험) / 총보수 연 1.35% / 출처 R2_KR5153450268.pdf
+3. 미래에셋프리미엄크레딧초단기증권투자신탁(채권) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 5(낮은 위험) / 총보수 연 0.26% / 출처 R2_KR5153420339.pdf
+4. 미래에셋퇴직플랜단기증권자투자신탁1호(채권) / 클래스 수수료미징구-온라인-퇴직연금(C-P2e) / 위험등급 5(낮은 위험) / 총보수 연 0.28% / 출처 R2_KR518101002M.pdf
+5. 미래에셋퇴직플랜증권자투자신탁1호(채권) / 클래스 수수료미징구-온라인-퇴직연금(C-P2e) / 위험등급 5(낮은 위험) / 총보수 연 0.28% / 출처 R2_KR5153520012.pdf
+근거 출처: 투자설명서 / 상품 DB 기준."
+T004,1,IRP 상품 추천해줘,PASS,9,CLARIFY|PRODUCT_RECOMMENDATION,product,product,product,postgres,True,False,False,clarify,46.6,,,"요청을 정확히 처리하려면 추가 정보가 필요합니다. 필요한 정보: risk_tolerance, investment_horizon.
+- 감수 가능한 위험 수준(예: 원금 변동을 어느 정도 감수할 수 있는지)을 알려주세요.
+- 예상 투자기간 또는 연금 수령까지 남은 기간을 알려주세요."
+T004,2,"위험은 중간 정도, 10년",PASS,10,PRODUCT_RECOMMENDATION|PRODUCT_RISK_LOOKUP|PRODUCT_RISK_FILTER,product,product,product,postgres|product,True,False,False,"{'missing': 86, 'matched': 113}",431.1,,,"다음 5개를 보여드리겠습니다.
+입력한 위험 선호 조건 기준으로 비교 가능한 후보입니다. 개인 투자 적합성이나 수익을 보장하는 추천은 아닙니다.
+1. 미래에셋AI퀀트미국투자등급회사채증권자투자신탁(채권) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 4(보통 위험) / 총보수 연 0.71% / 출처 R2_KR5153420318.pdf
+2. 미래에셋스마트롱숏70증권자투자신탁1호(주식) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 4(보통 위험) / 총보수 연 1.35% / 출처 R2_KR5153450268.pdf
+3. 미래에셋프리미엄크레딧초단기증권투자신탁(채권) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 5(낮은 위험) / 총보수 연 0.26% / 출처 R2_KR5153420339.pdf
+4. 미래에셋퇴직플랜단기증권자투자신탁1호(채권) / 클래스 수수료미징구-온라인-퇴직연금(C-P2e) / 위험등급 5(낮은 위험) / 총보수 연 0.28% / 출처 R2_KR518101002M.pdf
+5. 미래에셋퇴직플랜증권자투자신탁1호(채권) / 클래스 수수료미징구-온라인-퇴직연금(C-P2e) / 위험등급 5(낮은 위험) / 총보수 연 0.28% / 출처 R2_KR5153520012.pdf
+근거 출처: 투자설명서 / 상품 DB 기준."
+T004,3,그중에서 보수가 가장 낮은 상품은?,FAIL,6,PRODUCT_RECOMMENDATION|PRODUCT_FEE_FILTER|PRODUCT_FEE_SORT,product,product,product,postgres,True,False,False,safe_stop,63.2,,D:requested_product_result_missing|D:safe_stop_for_required_answer|D:recommendation_candidates_missing,현재 확인된 기업 제공 자료만으로는 이 상품 관련 답을 안전하게 확정하기 어렵습니다. 상품명이나 비교 조건을 조금 더 구체적으로 알려주시면 다시 확인하겠습니다.
+T005,1,IRP 상품 추천해줘,PASS,9,CLARIFY|PRODUCT_RECOMMENDATION,product,product,product,postgres,True,False,False,clarify,49.2,,,"요청을 정확히 처리하려면 추가 정보가 필요합니다. 필요한 정보: risk_tolerance, investment_horizon.
+- 감수 가능한 위험 수준(예: 원금 변동을 어느 정도 감수할 수 있는지)을 알려주세요.
+- 예상 투자기간 또는 연금 수령까지 남은 기간을 알려주세요."
+T005,2,"위험은 중간 정도, 10년",PASS,10,PRODUCT_RECOMMENDATION|PRODUCT_RISK_LOOKUP|PRODUCT_RISK_FILTER,product,product,product,postgres|product,True,False,False,"{'missing': 86, 'matched': 113}",476.0,,,"다음 5개를 보여드리겠습니다.
+입력한 위험 선호 조건 기준으로 비교 가능한 후보입니다. 개인 투자 적합성이나 수익을 보장하는 추천은 아닙니다.
+1. 미래에셋AI퀀트미국투자등급회사채증권자투자신탁(채권) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 4(보통 위험) / 총보수 연 0.71% / 출처 R2_KR5153420318.pdf
+2. 미래에셋스마트롱숏70증권자투자신탁1호(주식) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 4(보통 위험) / 총보수 연 1.35% / 출처 R2_KR5153450268.pdf
+3. 미래에셋프리미엄크레딧초단기증권투자신탁(채권) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 5(낮은 위험) / 총보수 연 0.26% / 출처 R2_KR5153420339.pdf
+4. 미래에셋퇴직플랜단기증권자투자신탁1호(채권) / 클래스 수수료미징구-온라인-퇴직연금(C-P2e) / 위험등급 5(낮은 위험) / 총보수 연 0.28% / 출처 R2_KR518101002M.pdf
+5. 미래에셋퇴직플랜증권자투자신탁1호(채권) / 클래스 수수료미징구-온라인-퇴직연금(C-P2e) / 위험등급 5(낮은 위험) / 총보수 연 0.28% / 출처 R2_KR5153520012.pdf
+근거 출처: 투자설명서 / 상품 DB 기준."
+T005,3,그 상품 위험은?,FAIL,8,PRODUCT_RECOMMENDATION|PRODUCT_RISK_LOOKUP|PRODUCT_RISK_FILTER,product,product,product,postgres|product,True,False,False,{'matched': 47},151.5,,D:safe_stop_for_required_answer|D:recommendation_candidates_missing|D:product_risk_answer_missing,현재 확인된 기업 제공 자료만으로는 이 상품 관련 답을 안전하게 확정하기 어렵습니다. 상품명이나 비교 조건을 조금 더 구체적으로 알려주시면 다시 확인하겠습니다.
+T008,1,최근 1년 수익률이 높은 상품 5개 보여줘,PASS,10,PRODUCT_PERFORMANCE_LOOKUP,product,product,product,postgres|product,True,False,False,{'matched': 206},1293.6,,,"상품 DB에서 확인된 결과입니다.
+1. 삼성퇴직연금KOSPI200증권자투자신탁 제1호[주식] / 클래스 수수료미징구-오프라인-퇴직연금(C) / 위험등급 2(높은위험) / 총보수 연 0.59% / 1Y 수익률 99.84% / 출처 R2_KR5114450270.pdf
+2. 한국투자인덱스플러스증권투자신탁1호(주식-파생형) / 클래스 수수료미징구(C) / 위험등급 2(높은 위험) / 1Y 수익률 74% / 출처 R2_KR5113470030.pdf
+3. 미래에셋코어밸류연금저축증권전환형자투자신탁1호(주식) / 클래스 수수료미징구-온라인-개인연금(C-e) / 위험등급 2(높은 위험) / 총보수 연 1.065% / 1Y 수익률 68.88% / 출처 R2_KR510902777M.pdf
+4. 미래에셋코어밸류연금저축증권전환형자투자신탁1호(주식) / 클래스 수수료미징구-오프라인-개인연금(C) / 위험등급 2(높은 위험) / 총보수 연 1.54% / 1Y 수익률 68.12% / 출처 R2_KR510902777M.pdf
+5. 미래에셋고배당포커스연금저축증권전환형자투자신탁1호(주식) / 클래스 수수료미징구-온라인-개인연금(C-e) / 위험등급 3(다소 높은 위험) / 총보수 연 1.065% / 1Y 수익률 42.77% / 출처 R2_KR510902773M.pdf
+근거 출처: 투자설명서 / 상품 DB 기준."
+T010,1,TDF 상품 중 총보수가 낮은 순서대로 보여줘,PASS,10,PRODUCT_FEE_FILTER|PRODUCT_FEE_SORT,product,product,product,postgres|product,True,False,False,{'matched': 42},207.6,,,"다음 2개를 보여드리겠습니다.
+상품 DB의 총보수 값으로 정렬한 결과입니다.
+1. 미래에셋라이프사이클7090연금증권전환형자투자신탁1호(채권) / 클래스 종류C-0 / 위험등급 5(낮은 위험) / 총보수 연 0.15% / 출처 R2_KR5153420022.pdf
+2. 미래에셋라이프사이클2030연금증권전환형자투자신탁1호(주식) / 클래스 수수료미징구-온라인-개인연금(C-e) / 위험등급 2(높은 위험) / 총보수 연 1.06% / 출처 R2_KR5153450112.pdf
+근거 출처: 투자설명서 / 상품 DB 기준."
+T019,1,"솔로몬 국공채 단기·중장기·장기, 뭐가 달라요? 안정적인 걸 원해요.",FAIL,10,PRODUCT_LOOKUP,product,product,product,postgres|product,True,False,False,{'matched': 193},2611.0,,C:enterprise_source_not_used,"다음 3개를 보여드리겠습니다.
+솔로몬 국공채 계열에서 확인된 상품입니다. 일반 금리 민감도 설명은 기업 근거 없이 단정하지 않습니다.
+1. 미래에셋솔로몬단기국공채증권자투자신탁1호(채권) / 클래스 수수료미징구-오프라인-개인연금(C-P) / 위험등급 5(낮은 위험) / 총보수 연 0.47% / 출처 R2_KR5153420063.pdf
+2. 미래에셋솔로몬장기국공채증권자투자신탁1호(채권) / 클래스 수수료미징구-오프라인-개인연금(C-P) / 위험등급 5(낮은 위험) / 총보수 연 0.43% / 출처 R2_KR5153420105.pdf
+3. 미래에셋솔로몬중장기국공채증권자투자신탁1호(채권) / 클래스 수수료미징구-오프라인-개인연금(C-P) / 위험등급 5(낮은 위험) / 총보수 연 0.48% / 출처 R2_KR5153420079.pdf
+근거 출처: 투자설명서 / 상품 DB 기준."

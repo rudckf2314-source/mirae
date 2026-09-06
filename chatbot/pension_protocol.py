@@ -95,6 +95,15 @@ class ResponseGuard:
     @staticmethod
     def _sanitize_answer(value: Any) -> str:
         text = str(value or "")
+        # Redact before public-language substitutions can transform the key
+        # name while leaving its value behind.
+        text = re.sub(
+            r"(?i)\b(?:clova_studio_api_key|law_api_oc|api[_ -]?key|authorization|bearer)\b\s*[:=]?\s*\S+",
+            "[redacted]",
+            text,
+        )
+        text = re.sub(r"(?<!\w)[A-Za-z]:\\[^\s`\]\[\}\{]+", "[internal path]", text)
+        text = re.sub(r"(?<!\w)/(?:home|usr|var|tmp|app|workspace)(?:/[^\s`\]\[\}\{]+)+", "[internal path]", text)
         text = re.sub(r"<think>.*?</think>", "", text, flags=re.IGNORECASE | re.DOTALL)
         text = re.sub(r"```(?:analysis|reasoning)[\s\S]*?```", "", text, flags=re.IGNORECASE)
         kept = []
@@ -249,14 +258,12 @@ class ResponseGuard:
                 "evidence_policy": evidence_policy,
                 "context_updates": meta.get("context_updates", {}),
                 "final_answer": answer_text,
-                "raw_answer": result.get("raw_answer"),
                 "query_spec": meta.get("product_query_spec") or result.get("product_query_spec"),
                 "candidate_ids": [
                     item.get("product_id") for item in sources if item.get("product_id")
                 ],
                 "raw_units": meta.get("raw_units"),
                 "normalization_status": meta.get("normalization_status"),
-                "internal_sources": sources,
                 "source_type": "structured_product" if product_lookup_used else meta.get("source_type"),
                 "backend": product_backend if product_lookup_used else meta.get("backend"),
                 "product_lookup_used": product_lookup_used,

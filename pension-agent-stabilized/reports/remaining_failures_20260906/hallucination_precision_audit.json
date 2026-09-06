@@ -1,0 +1,17 @@
+{
+  "generic_noun_false_positives": [
+    "자투자신탁에서",
+    "자투자신탁이",
+    "자투자신탁뿐만"
+  ],
+  "remaining_unverified_names": [],
+  "original_scoring_unchanged": true,
+  "case": "Test 11",
+  "finding": "generic-noun entity false positive; not proof that all statements in the answer are correct",
+  "baseline_score_unchanged": 80,
+  "counterexamples": [
+    "가상초고수익증권자투자신탁",
+    "미래에셋가상상품펀드"
+  ],
+  "scope": "Entity precision diagnostic only. Gold evaluator and thresholds remain unchanged."
+}

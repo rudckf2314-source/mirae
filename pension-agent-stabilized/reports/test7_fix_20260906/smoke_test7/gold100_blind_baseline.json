@@ -1,0 +1,177 @@
+{
+  "summary": {
+    "label": "gold100_blind_baseline",
+    "cases": 1,
+    "pass": 1,
+    "fail": 0,
+    "skip": 0,
+    "overall_pass_rate": "100.0%",
+    "routing_accuracy": "100.0%",
+    "source_selection_accuracy": "100.0%",
+    "required_fact_coverage_avg": 1.0,
+    "grounding_citation_coverage": "100.0%",
+    "product_retrieval_accuracy": "n/a",
+    "legal_calculation_accuracy": "n/a",
+    "correct_abstention_rate": "n/a",
+    "hallucination_cases": 0,
+    "latency_ms_avg": 17564.5,
+    "latency_ms_p50": 17564.5,
+    "latency_ms_max": 17564.5,
+    "entrypoint": "PensionLangGraphAgent.respond",
+    "competition_mode": "1",
+    "llm_provider": "hyperclova",
+    "run_id": "4fb3e5d10d1b",
+    "started_at": "2026-09-06T15:13:47+0900",
+    "finished_at": "2026-09-06T15:15:26+0900",
+    "executed_count": 1
+  },
+  "case_verdicts": {
+    "Test 7": "PASS"
+  },
+  "category_stats": {
+    "실물이전 코드 매핑": {
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "pass_rate": "100.0%"
+    }
+  },
+  "difficulty_stats": {
+    "상": {
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "pass_rate": "100.0%"
+    }
+  },
+  "family_stats": {
+    "Procedure": {
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "pass_rate": "100.0%"
+    }
+  },
+  "set_stats": {
+    "2차 마스터": {
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "pass_rate": "100.0%"
+    }
+  },
+  "failure_counter": {},
+  "turns": [
+    {
+      "test_id": "Test 7",
+      "turn_no": 1,
+      "세트": "2차 마스터",
+      "유형": "실물이전 코드 매핑",
+      "난이도": "상",
+      "유형_난이도_원문": "실물이전 코드 매핑 / 상",
+      "family": "Procedure",
+      "user_query": "제가 보유하고 있는 퇴직연금 펀드를 다른 금융기관으로 실물이전 신청하려고 합니다. 그런데 이 펀드가 현재 잔고가 35억 원 정도 남은 소규모 펀드라고 하더라고요. 혹시 이 상태 그대로 실물이전이 가능한가요? 안 된다면 정확한 불가 사유 코드와 사유, 그리고 어떻게 처리해야 이전할 수 있는지 가이드를 주십시오.",
+      "기대_답변": "실물이전 불가능. 잔고 35억 원은 50억 원 미만 소규모 펀드 조건에 해당. 불가사유코드 01 ‘소규모 펀드 임의해지’. 펀드를 먼저 환매·현금화한 뒤 현금성 자산 상태로 이전 접수해야 함.",
+      "expected_numbers_from_기대답변": [
+        "35",
+        "50",
+        "01"
+      ],
+      "adapter_eval_hints": {
+        "source": "adapter_policy_from_excel_type_and_expected_answer",
+        "answer_required": true,
+        "require_clarify": false,
+        "require_abstention_or_clarify": false,
+        "require_correction": false,
+        "require_postgres": false,
+        "require_enterprise_document": true,
+        "require_calculation_route": false,
+        "require_law_or_document": true,
+        "safe_stop_forbidden": true,
+        "no_arbitrary_product": false,
+        "route_families": [
+          "document",
+          "document+law",
+          "law"
+        ],
+        "source_families": [
+          "enterprise_rag",
+          "enterprise_document",
+          "law"
+        ]
+      },
+      "adapter_route_families": [
+        "document",
+        "document+law",
+        "law"
+      ],
+      "response_text": "아닙니다. 현재 보유하고 계신 퇴직연금 펀드는 잔고가 35억 원으로, 소규모 펀드(잔고 50억 미만) 임의해지 대상에 해당합니다. 따라서 실물이전이 불가능합니다.\n\n**불가 사유 코드:** 01. 소규모 펀드 임의해지  \n**불가 사유:** 가입자가 보유한 펀드가 소규모 펀드(잔고 50억 미만) 임의해지 대상 펀드에 해당할 경우\n\n이를 해결하기 위해서는 먼저 펀드를 환매하거나 현금화한 후, 그 자금을 새로운 금융기관으로 이체하는 절차를 밟아야 합니다. 자세한 사항은 금융기관의 상담 창구나 모바일 앱을 통해 확인하시기 바랍니다.",
+      "response_status": "success",
+      "detected_intent": [
+        "ACCOUNT_PROCEDURE"
+      ],
+      "actual_route": "document",
+      "tools_called": [
+        "document"
+      ],
+      "source_types": [
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [],
+      "postgres_used": false,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "product_names": [],
+      "product_count": 0,
+      "latency_ms": 17564.5,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "evaluation": {
+        "pass_fail": "PASS",
+        "failure_reasons": [],
+        "failure_buckets": {
+          "leak": 0,
+          "routing": 0,
+          "source": 0,
+          "safe_stop": 0,
+          "hallucination": 0,
+          "fact_coverage": 0,
+          "abstention": 0,
+          "correction": 0,
+          "product": 0,
+          "legal_calc": 0,
+          "other": 0
+        },
+        "route_ok": true,
+        "fact_coverage": {
+          "required_count": 3,
+          "hit_count": 3,
+          "missed": [],
+          "coverage": 1.0
+        },
+        "citation": {
+          "has_source_objects": true,
+          "has_citation_text": false,
+          "enterprise_rag_used": true,
+          "postgres_used": false,
+          "covered": true
+        },
+        "status": "success",
+        "route": "document",
+        "source_types": [
+          "enterprise_rag",
+          "enterprise_document"
+        ],
+        "adapter_hints_used": true
+      }
+    }
+  ],
+  "source_manifest": {
+    "excel": "c:\\Users\\rudck\\Documents\\카카오톡 받은 파일\\연금_AI_Agent_100개_마스터테스트.xlsx",
+    "intermediate_json": "C:\\mirae\\reports\\gold100\\gold100_cases.json",
+    "excel_modified": false,
+    "regression_suite_modified": false
+  }
+}

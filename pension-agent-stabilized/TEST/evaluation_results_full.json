@@ -1,0 +1,871 @@
+{
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "fail": 0,
+    "error": 0
+  },
+  "results": [
+    {
+      "case_id": "EVAL_001",
+      "verdict": "PASS",
+      "checks": {
+        "route": true,
+        "tools": true
+      },
+      "actual_route": "calculation",
+      "actual_tools": [
+        "calculation"
+      ],
+      "actual_ambiguity_action": "SAFE_STOP",
+      "response_status": "safe_stop",
+      "verification_verdict": "FAIL",
+      "safe_stop_reason": "UNSUPPORTED_POLICY_VERSION",
+      "answer": "검증된 정책 근거가 없어 이 계산은 수행할 수 없습니다.",
+      "sources": [],
+      "known_current_gaps": [
+        "MULTI_CALCULATION_INTENT",
+        "TAX_CREDIT_POLICY_NOT_IMPLEMENTED"
+      ]
+    },
+    {
+      "case_id": "EVAL_002",
+      "verdict": "PASS",
+      "checks": {
+        "route": true,
+        "tools": true
+      },
+      "actual_route": "document",
+      "actual_tools": [
+        "document"
+      ],
+      "actual_ambiguity_action": "EXECUTE",
+      "response_status": "success",
+      "verification_verdict": "PASS",
+      "safe_stop_reason": null,
+      "answer": "퇴직금을 IRP 계좌로 이전하면 세금이 즉시 부과되지 않고 나중에 연금으로 받을 때까지 미뤄지는 제도를 **과세 이연**(세금 유예)이라고 부릅니다. 과세 이연의 원리는 퇴직소득세를 일시금으로 받을 때 100% 즉시 납부하는 것과 달리, IRP에 입금하면 퇴직소득세를 30%~50% 감면받고, 이 감면된 금액에 대한 세금은 연금 수령 시점(만 55세 이후)까지 납부가 미뤄집니다. 또한 IRP 안에서 발생하는 운용수익(이자·배당 등)은 연금을 받을 때까지 과세가 이연되어 별도의 금융소득 과세나 건강보험료 부과 대상이 되지 않으며, 연금으로 받는 사적연금소득은 건강보험료 산정에서도 제외됩니다. 즉, 세금 납부 시점을 늦추고 과세基礎를 줄여줌으로써 자금의 복리 효과를 세금 없이 더 크게 누릴 수 있는 구조입니다.  \n\n근거 출처: doc51.doc",
+      "sources": [
+        {
+          "domain": "document",
+          "source_file": "doc51.docx",
+          "source_page": 1,
+          "evidence_id": "1e46fdee2e809718c002"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc16.pdf",
+          "source_page": 2,
+          "evidence_id": "e01885e1380a2c6a70ea"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc16.pdf",
+          "source_page": 3,
+          "evidence_id": "d5b228791f09f3c90a31"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc11.pdf",
+          "source_page": 2,
+          "evidence_id": "6d1634d03b715ce7ee0d"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc55.docx",
+          "source_page": 1,
+          "evidence_id": "22182b50541b0b2d6fc1"
+        }
+      ],
+      "known_current_gaps": []
+    },
+    {
+      "case_id": "EVAL_003",
+      "verdict": "PASS",
+      "checks": {
+        "route": true,
+        "tools": true
+      },
+      "actual_route": "product+law",
+      "actual_tools": [
+        "product",
+        "law"
+      ],
+      "actual_ambiguity_action": "ASSUME_AND_EXPOSE",
+      "response_status": "safe_stop",
+      "verification_verdict": "FAIL",
+      "safe_stop_reason": "law_evidence",
+      "answer": "요청을 완료하기 전에 근거 검증을 통과하지 못했습니다 (FAIL). 확인이 필요한 항목: law_evidence. 근거가 보완되기 전에는 상품 또는 법적 결론을 생성하지 않습니다.",
+      "sources": [
+        {
+          "domain": "product",
+          "source_file": "R2_KR5131420025.pdf",
+          "source_page": 3,
+          "evidence_id": "R2_KR5131420025_p003_fees_t001__classes_1",
+          "product_id": "product:BE508|class:KOFIA:BE508:C|name:수수료미징구-오프라인(C)"
+        },
+        {
+          "domain": "product",
+          "source_file": "R2_KR5131420025.pdf",
+          "source_page": 4,
+          "evidence_id": "R2_KR5131420025_p004_performance_t002__classes_4",
+          "product_id": "product:BE508|class:KOFIA:BE508:C-F|name:수수료미징구-오프라인(C-F)"
+        },
+        {
+          "domain": "product",
+          "source_file": "R2_KR5131420025.pdf",
+          "source_page": 3,
+          "evidence_id": "R2_KR5131420025_p003_fees_t001__classes_3",
+          "product_id": "product:BE508|class:KOFIA:BE508:C-E|name:수수료미징구-온라인(C-E)"
+        },
+        {
+          "domain": "product",
+          "source_file": "R2_KR5131420025.pdf",
+          "source_page": 3,
+          "evidence_id": "R2_KR5131420025_p003_fees_t001__classes_0",
+          "product_id": "product:BE508|class:KOFIA:BE508:A|name:수수료선취-오프라인(A)"
+        },
+        {
+          "domain": "product",
+          "source_file": "R2_KR5131420025.pdf",
+          "source_page": 3,
+          "evidence_id": "R2_KR5131420025_p003_fees_t001__classes_2",
+          "product_id": "product:BE508|class:KOFIA:BE508:A-E|name:수수료선취-온라인(A-E)"
+        }
+      ],
+      "known_current_gaps": [
+        "ROUTER_MISSES_LAW_DOMAIN",
+        "LAW_TOOL_SCOPE_LIMITED"
+      ]
+    },
+    {
+      "case_id": "EVAL_004",
+      "verdict": "PASS",
+      "checks": {
+        "route": true,
+        "tools": true
+      },
+      "actual_route": "document",
+      "actual_tools": [
+        "document"
+      ],
+      "actual_ambiguity_action": "EXECUTE",
+      "response_status": "success",
+      "verification_verdict": "PASS",
+      "safe_stop_reason": null,
+      "answer": "만기된 정기예금에 별도의 운용지시를 하지 않으면, 만기일로부터 약 6주가 흐른 시점에 디폴트옵션 상품이 자동으로 매수됩니다. 진행 과정은 다음과 같습니다.\n\n1. **만기일** – 예금이 만료되는 날 (예: 6월 1일).  \n2. **만기일로부터 4주 뒤** – 만기일 + 약 28~29일에 디폴트옵션 적용 예정 통지가 발송됩니다. (근거: doc29.xlsx FAQ_100 항목 26)  \n3. **통지일로부터 2주 뒤** – 통지를 받은 날 + 약 14일에 별도의 운용지시가 없으면, 사전에 지정한 디폴트옵션 상품으로 자동 매수가 이루어집니다. (근거: 동일 항목)  \n4. **총 소요 기간** – 만기일로부터 약 6주(만기일 + 약 42일) 후에 디폴트옵션 상품이 자동으로 매수됩니다. (근거: doc31.pdf page 4, “6주의 유예기간이 지나면 미리 정해 둔 디폴트옵션 상품으로 운용됩니다”)\n\n따라서, 만기",
+      "sources": [
+        {
+          "domain": "document",
+          "source_file": "doc10.pdf",
+          "source_page": 1,
+          "evidence_id": "0770a277594195c120d4"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc31.pdf",
+          "source_page": 4,
+          "evidence_id": "960737398db8ccc7e98a"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc31.pdf",
+          "source_page": 7,
+          "evidence_id": "7610ab157882067f20e2"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc29.xlsx",
+          "source_page": "FAQ_100",
+          "evidence_id": "515ef4e20b0e6297dafb"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc31.pdf",
+          "source_page": 2,
+          "evidence_id": "cb4cbabef90e6fd9a619"
+        }
+      ],
+      "known_current_gaps": [
+        "PRODUCT_KEYWORD_OVERRIDES_DOCUMENT"
+      ]
+    },
+    {
+      "case_id": "EVAL_005",
+      "verdict": "PASS",
+      "checks": {
+        "route": true,
+        "tools": true
+      },
+      "actual_route": "calculation",
+      "actual_tools": [
+        "calculation"
+      ],
+      "actual_ambiguity_action": "SAFE_STOP",
+      "response_status": "safe_stop",
+      "verification_verdict": "FAIL",
+      "safe_stop_reason": "UNSUPPORTED_POLICY_VERSION",
+      "answer": "검증된 정책 근거가 없어 이 계산은 수행할 수 없습니다.",
+      "sources": [],
+      "known_current_gaps": [
+        "TAX_CREDIT_POLICY_NOT_IMPLEMENTED"
+      ]
+    },
+    {
+      "case_id": "EVAL_006",
+      "verdict": "PASS",
+      "checks": {
+        "route": true,
+        "tools": true
+      },
+      "actual_route": "document",
+      "actual_tools": [
+        "document"
+      ],
+      "actual_ambiguity_action": "EXECUTE",
+      "response_status": "success",
+      "verification_verdict": "PASS",
+      "safe_stop_reason": null,
+      "answer": "퇴직금을 IRP에 넣고 연금으로 받는다고 해서 기간에 관계없이 무조건 퇴직소득세의 50%를 감면받는 것은 아닙니다. 제공된 자료에 따르면 연금수령 시 적용되는 세율은 실제 연금 수령 연차에 따라 달라집니다. 실제 연금 수령 연차가 10년 이하일 때는 퇴직소득 세율의 70% (즉, 30% 감면), 11년 초과 20년 이하일 때는 60% (40% 감면), 20년을 초과하면 50% (50% 감면)가 적용됩니다【doc38.docx / document 1】. 따라서 올해 바로 연금 수령을 시작하면 실제 수령 연차가 1년차이므로 퇴직소득세의 30%만 감면받게 됩니다.\n\n세금 절감액을 구체적인 금액으로 말하기 위해서는 퇴직금 일시 수령 시 부과되는 퇴직소득세 기준이 필요하지만, 자료에는 그 exact tax rate가 명시되어 있지 않습니다. 다만, 상대적인 절감 효과를 기준으로 보면, 1억 원을 일시로 받아 퇴직소득세가 T라고 할 때, 연금으로 첫 해에",
+      "sources": [
+        {
+          "domain": "document",
+          "source_file": "doc51.docx",
+          "source_page": 1,
+          "evidence_id": "1e46fdee2e809718c002"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc40.docx",
+          "source_page": 1,
+          "evidence_id": "fa38aa63f3ef431975d3"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc38.docx",
+          "source_page": 1,
+          "evidence_id": "cf10cdcb1b05adc2fbe0"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc39.docx",
+          "source_page": 1,
+          "evidence_id": "f54b31ea45d142b7d1a5"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc16.pdf",
+          "source_page": 3,
+          "evidence_id": "d5b228791f09f3c90a31"
+        }
+      ],
+      "known_current_gaps": []
+    },
+    {
+      "case_id": "EVAL_007",
+      "verdict": "PASS",
+      "checks": {
+        "route": true,
+        "tools": true
+      },
+      "actual_route": "document",
+      "actual_tools": [
+        "document"
+      ],
+      "actual_ambiguity_action": "EXECUTE",
+      "response_status": "success",
+      "verification_verdict": "PASS",
+      "safe_stop_reason": null,
+      "answer": "연금저축계좌에 세액공제 한도를 초과하여 납입한 금액은 당해 연도에 세액공제를 받을 수 없으며, 이 초과분은 이월해서 향후 연도에 세액공제로 전환할 수 있는 제도는 없습니다. 초과 납입금은 세액공제를 받지 않은 원금으로 계좌에 남아 있으며, 이 금액은 인출 시 비과세로 처리되고, 세액공제받은 금액보다 먼저 인출됩니다. 따라서 초과분은 그대로 계좌에 두어 언제든지 세금 없이 인출할 수 있거나, 인출하여 다른 용도로 사용할 수 있지만, 인출한 금액을 같은 해에 다시 납입하는 것은 허용되지 않습니다.\n\n필요한 절차는 특별히 별도의 신청이 필요하지 않습니다. 계좌 내에서 세액공제를 받지 않은 납입금(초과분)을 출금 요청하면 비과세로 처리되어 지급됩니다. 출금 시 당해 연도 납입금액 안에서만 인출이 가능하며, 인출 후 같은 해에 재납입은 할 수 없습니다. 초과분을 계좌에 그대로 두고 두면, 향후 인출 시 세액공제받은 금액보다 먼저 비과세로 인출됩니다.\n\n근거 출처: doc24.docx / document 1, doc33.pptx / slide 5",
+      "sources": [
+        {
+          "domain": "document",
+          "source_file": "doc23.docx",
+          "source_page": 1,
+          "evidence_id": "e869407487c3322a9f14"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc44.docx",
+          "source_page": 1,
+          "evidence_id": "fc7ee09dd26d2ed1a7da"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc33.pptx",
+          "source_page": 5,
+          "evidence_id": "20ac2522493e22f964e3"
+        }
+      ],
+      "known_current_gaps": [
+        "ROUTER_OVERCLASSIFIES_POLICY_AS_CALCULATION",
+        "TAX_CREDIT_POLICY_NOT_IMPLEMENTED"
+      ]
+    },
+    {
+      "case_id": "EVAL_008",
+      "verdict": "PASS",
+      "checks": {
+        "route": true,
+        "tools": true
+      },
+      "actual_route": "document",
+      "actual_tools": [
+        "document"
+      ],
+      "actual_ambiguity_action": "EXECUTE",
+      "response_status": "success",
+      "verification_verdict": "PASS",
+      "safe_stop_reason": null,
+      "answer": "연 1,500만원을 초과해서 사적연금을 인출한다고 해서 무조건 다른 소득과 합산하여 종합과세되는 것은 아닙니다. 인출 금액이 1,500만원 이하이면 5.5%~3.3%의 저율 연금소득세가 적용되고, 1,500만원을 초과하면 두 가지 선택지가 있습니다. 하나는 종합과세(다른 소득과 합산하여 누진세율 적용)이고, 다른 하나는 전액에 대해 16.5%의 단일세율을 적용하는 것입니다. 다만 16.5% 세율을 선택할 때는 초과분에만 적용되는 것이 아니라 인출 전액에 16.5%가 적용된다는 점을 기억해야 합니다",
+      "sources": [
+        {
+          "domain": "document",
+          "source_file": "doc38.docx",
+          "source_page": 1,
+          "evidence_id": "cf10cdcb1b05adc2fbe0"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc36.docx",
+          "source_page": 1,
+          "evidence_id": "a53375520e34f7ff12d6"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc42.docx",
+          "source_page": 1,
+          "evidence_id": "a633b4219989fc0da107"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc41.docx",
+          "source_page": 1,
+          "evidence_id": "b4da79c2fe7f1eac160c"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc20.docx",
+          "source_page": 1,
+          "evidence_id": "2ae0783a31d692cdfb0e"
+        }
+      ],
+      "known_current_gaps": []
+    },
+    {
+      "case_id": "EVAL_009",
+      "verdict": "PASS",
+      "checks": {
+        "route": true,
+        "tools": true
+      },
+      "actual_route": "document+law",
+      "actual_tools": [
+        "document",
+        "law"
+      ],
+      "actual_ambiguity_action": "EXECUTE",
+      "response_status": "safe_stop",
+      "verification_verdict": "FAIL",
+      "safe_stop_reason": "law_evidence",
+      "answer": "요청을 완료하기 전에 근거 검증을 통과하지 못했습니다 (FAIL). 확인이 필요한 항목: law_evidence. 근거가 보완되기 전에는 상품 또는 법적 결론을 생성하지 않습니다.",
+      "sources": [
+        {
+          "domain": "document",
+          "source_file": "doc58.pdf",
+          "source_page": 3,
+          "evidence_id": "8eb0da2335fcb6a0758b"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc53.pdf",
+          "source_page": 2,
+          "evidence_id": "fffdf8849d70dab22b59"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc11.pdf",
+          "source_page": 1,
+          "evidence_id": "4a5024183fddeffa60b0"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc10.pdf",
+          "source_page": 1,
+          "evidence_id": "0770a277594195c120d4"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc47.pdf",
+          "source_page": 1,
+          "evidence_id": "798ae5382ffee28c9844"
+        },
+        {
+          "domain": "law",
+          "source_file": "근로자퇴직급여 보장법",
+          "source_page": null,
+          "evidence_id": "근로자퇴직급여 보장법:13",
+          "source_locator": "13"
+        }
+      ],
+      "known_current_gaps": [
+        "PRODUCT_KEYWORD_OVERRIDES_REGULATION_QUERY",
+        "LAW_TOOL_SCOPE_LIMITED"
+      ]
+    },
+    {
+      "case_id": "EVAL_010",
+      "verdict": "PASS",
+      "checks": {
+        "route": true,
+        "tools": true,
+        "ambiguity": true
+      },
+      "actual_route": "product",
+      "actual_tools": [
+        "product"
+      ],
+      "actual_ambiguity_action": "CLARIFY",
+      "response_status": "clarify",
+      "verification_verdict": null,
+      "safe_stop_reason": "clarify_required",
+      "answer": "요청을 정확히 처리하려면 추가 정보가 필요합니다. 필요한 정보: risk_tolerance, investment_horizon.\n- 감수 가능한 위험 수준(예: 원금 변동을 어느 정도 감수할 수 있는지)을 알려주세요.\n- 예상 투자기간 또는 연금 수령까지 남은 기간을 알려주세요.",
+      "sources": [],
+      "known_current_gaps": []
+    },
+    {
+      "case_id": "EVAL_011",
+      "verdict": "PASS",
+      "checks": {
+        "route": true,
+        "tools": true
+      },
+      "actual_route": "document",
+      "actual_tools": [
+        "document"
+      ],
+      "actual_ambiguity_action": "EXECUTE",
+      "response_status": "success",
+      "verification_verdict": "PASS",
+      "safe_stop_reason": null,
+      "answer": "제공된 자료만으로는 모자형 구조의 자펀드에 대한 자신탁의 총보수율(연 0.5%) 외에 추가로 발생할 수 있는 보수나 비용에 대한 구체적인 정보를 확인할 수 없습니다. 따라서 투자설명서 요약표에 기재된 총보수율만으로 실제 연간 총 비용을 완벽히 계산했다고 단정하기 어렵습니다. 추가 비용이 있는지 여부는 해당 펀드의 상세 투자설명서나 운용보고서 등을 직접 확인해야 합니다.  \n\n근거 출처: 제공된 문서에는 해당 내용이 포함되어 있지 않습니다.",
+      "sources": [
+        {
+          "domain": "document",
+          "source_file": "doc43.docx",
+          "source_page": 1,
+          "evidence_id": "5d6501d25226281127b0"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc29.xlsx",
+          "source_page": "FAQ_100",
+          "evidence_id": "9b1c94970833fafe125d"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc17.pdf",
+          "source_page": 1,
+          "evidence_id": "f45ed4fa932f3a35d89f"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc16.pdf",
+          "source_page": 1,
+          "evidence_id": "d1852dd42ca4930d7687"
+        }
+      ],
+      "known_current_gaps": [
+        "GENERIC_COST_EXPLANATION_ROUTED_TO_PRODUCT"
+      ]
+    },
+    {
+      "case_id": "EVAL_012",
+      "verdict": "PASS",
+      "checks": {
+        "route": true,
+        "tools": true
+      },
+      "actual_route": "document",
+      "actual_tools": [
+        "document"
+      ],
+      "actual_ambiguity_action": "EXECUTE",
+      "response_status": "success",
+      "verification_verdict": "PASS",
+      "safe_stop_reason": null,
+      "answer": "제공된 자료만으로는 퇴직연금 실물이전(다른 은행의 DC 계좌로 이전) 가능 여부나 그에 따른 제한 규정을 확인하기 어렵습니다. 따라서 현재 상태 그대로 다른 은행의 DC 계좌로 실물이전을 신청할 수 있는지 여부를 근거를 들어 단정할 수 없습니다.",
+      "sources": [
+        {
+          "domain": "document",
+          "source_file": "doc10.pdf",
+          "source_page": 1,
+          "evidence_id": "0770a277594195c120d4"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc29.xlsx",
+          "source_page": "FAQ_100",
+          "evidence_id": "fc7717a8d39c95ca1f65"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc31.pdf",
+          "source_page": 7,
+          "evidence_id": "7610ab157882067f20e2"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc31.pdf",
+          "source_page": 4,
+          "evidence_id": "960737398db8ccc7e98a"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc11.pdf",
+          "source_page": 1,
+          "evidence_id": "4a5024183fddeffa60b0"
+        }
+      ],
+      "known_current_gaps": [
+        "OPS_MANUAL_QUERY_ROUTED_TO_PRODUCT"
+      ]
+    },
+    {
+      "case_id": "EVAL_013",
+      "verdict": "PASS",
+      "checks": {
+        "route": true,
+        "tools": true
+      },
+      "actual_route": "document",
+      "actual_tools": [
+        "document"
+      ],
+      "actual_ambiguity_action": "EXECUTE",
+      "response_status": "success",
+      "verification_verdict": "PASS",
+      "safe_stop_reason": null,
+      "answer": "해당 펀드는 잔고가 35억 원인 소규모 펀드에 해당하므로 실물이전이 불가능합니다. 이는 “99.기타 : 불가사유” 항목 중 “01. 소규모 펀드 임의해지” 사유에 해당하며, 실물이전 불가 코드는",
+      "sources": [
+        {
+          "domain": "document",
+          "source_file": "doc34.xlsx",
+          "source_page": "Sheet1",
+          "evidence_id": "760561f6f536536063cd"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc55.docx",
+          "source_page": 1,
+          "evidence_id": "8301fd7b01e16872b192"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc33.pptx",
+          "source_page": 3,
+          "evidence_id": "0039074eececf935abe3"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc35.docx",
+          "source_page": 1,
+          "evidence_id": "b5f3e7bb1b50fa282b2a"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc20.docx",
+          "source_page": 1,
+          "evidence_id": "1f160f2b9dc12cf99282"
+        }
+      ],
+      "known_current_gaps": [
+        "OPS_MANUAL_QUERY_ROUTED_TO_PRODUCT"
+      ]
+    },
+    {
+      "case_id": "EVAL_014",
+      "verdict": "PASS",
+      "checks": {
+        "route": true,
+        "tools": true
+      },
+      "actual_route": "document",
+      "actual_tools": [
+        "document"
+      ],
+      "actual_ambiguity_action": "EXECUTE",
+      "response_status": "success",
+      "verification_verdict": "PASS",
+      "safe_stop_reason": null,
+      "answer": "We need to answer: When will the user receive the default option notification if they have pre-specified a default option product but have not yet given actual investment instruction. They ask for two cases: joined in Nov 2022 and May 2023. Need to explain precise notification date based on the provided sources.\n\nWe have sources: doc31.pdf page 7 includes:\n\n- \"운용상품의 만기가 도래한 AS: 만기일로부터 AX 후 익영업일에 디폴트옵션상품 적용에 대한 통지를 받게 됩니다.\" (some garbled)\n- \"2022년 12월 22! 이후, 신규 가입자의 AS: (2022년 12월 1일 이전, 기존 가입자의 경우엔 해당 없음 디폴트옵션상품은 선정해 두었으나 운용지시는 하지 않은 경우, 최초 부담금 납입 익영업일에 디폴트옵션상품 적용 통지를 받게 됩니다.\"\n\nInterpretation: For new joiners after Dec 22 2022, if they have selected default option but not given investment instruction, they receive notification on the business day after the first contribution payment (initial contribution) is made. For existing members before Dec 1 2022, not applicable? Actually says: (2022년 12월 1일 이전, 기존 가입자의 경우엔 해당 없음) meaning for existing members before Dec 1 2022, this rule does not apply? Or maybe they get notification upon product maturity? Let's parse.\n\nThe source: \"2022년 12월 22! 이후, 신규 가입자의 AS: (2022년 12월 1일 이전, 기존 가입자의 경우엔 해당 없음 디폴트옵션상품은 선정해 두었으나 운용지시는 하지 않은 경우, 최초 부담금 납입 익영업일에 디폴트옵션상품 적용 통지를 받게 됩니다.\"\n\nThus: For new joiners after Dec 22 2022, the notification is on the business day after the first contribution (initial contribution) is made. For existing members before Dec 1 2022, the rule does not apply (maybe they get notification upon product maturity? Not clear). However, we also have doc29.xlsx sheet FAQ_100 entry 26: \"기존 가입자의 경우 만기가 도래한 날부터 4주가 지난 시점에 디폴트옵션 적용 통지를 받게 됩니다.\" That's for existing members when a product matures. But the user hasn't given any investment instruction, so they have not purchased any product? They have a DC account with default option pre-specified but no actual investment instruction. So likely the first contribution triggers the notification.\n\nThus for a member who joined Nov 2022 (before Dec 1 2022), they are an existing member as of that date? Actually they joined before Dec 1 2022, so they are considered existing member for the rule. The rule for new joiners after Dec 22 2022 does not apply. So what applies? Possibly they will receive notification upon the first contribution after joining? The source does not explicitly say for existing members pre-Dec 1 2022. But maybe the default option notification occurs at the time of first contribution regardless of join date, but the source only mentions for new joiners after Dec 22 2022. However we have to answer using only given sources. We can say: For members who joined before Dec 1 2022 (including Nov 2022), the provided source does not specify a notification timing for the case of pre-specified default option without investment instruction; thus we cannot determine from given sources. But we can infer that they would receive notification upon the first contribution after joining? Not sure.\n\nWe need to answer using only the sources. If insufficient, we must say \"제공된 자료만으로는 충분히 확인하기 어렵습니다.\" But we can try to combine: The source says for new joiners after Dec 22 2022, notification is on the business day after the first contribution. For existing members before Dec 1 2022, the source says \"(2022년 12월 1일 이전, 기존 가입자의 경우엔 해당 없음\". That likely means the rule does not apply to them; i.e., they do not get that notification at first contribution. Perhaps they get notification upon product maturity (as per FAQ_100). But the user hasn't made any investment, so there is no product to mature. So maybe they never get notification until they make a contribution? The source does not cover that scenario.\n\nThus answer: For Nov 2022 joiner (existing member before Dec 1 2022), the provided sources do not specify a notification timing for the case of pre-specified default option without investment instruction; therefore we cannot determine exact notification date from given materials. For May 2023 joiner (after Dec 22 2022), they are a new joiner subject to the rule: they will receive the default option application notification on the business day after the first contribution (initial deposit) is made to the DC account.\n\nWe can also mention that if no contribution yet, they will not receive notification until a contribution occurs.\n\nThus answer accordingly.\n\nWe need to format: Korean plain text, no markdown, no bold, no tables. Provide core answer in first",
+      "sources": [
+        {
+          "domain": "document",
+          "source_file": "doc31.pdf",
+          "source_page": 7,
+          "evidence_id": "7610ab157882067f20e2"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc10.pdf",
+          "source_page": 1,
+          "evidence_id": "0770a277594195c120d4"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc31.pdf",
+          "source_page": 4,
+          "evidence_id": "960737398db8ccc7e98a"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc29.xlsx",
+          "source_page": "FAQ_100",
+          "evidence_id": "515ef4e20b0e6297dafb"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc31.pdf",
+          "source_page": 6,
+          "evidence_id": "d298b8954173b6e16352"
+        }
+      ],
+      "known_current_gaps": [
+        "OPS_MANUAL_QUERY_ROUTED_TO_PRODUCT",
+        "SOURCE_VERIFICATION_PENDING"
+      ]
+    },
+    {
+      "case_id": "EVAL_015",
+      "verdict": "PASS",
+      "checks": {
+        "route": true,
+        "tools": true
+      },
+      "actual_route": "document",
+      "actual_tools": [
+        "document"
+      ],
+      "actual_ambiguity_action": "EXECUTE",
+      "response_status": "success",
+      "verification_verdict": "PASS",
+      "safe_stop_reason": null,
+      "answer": "만기 후 5주 차에 직접 디폴트옵션이나 일반 펀드를 매수하면 해당 만기 자금은 이미 사용되어 더 이상 대기 중인 금액이 없습니다. 따라서 6주 대기 기간이 끝날 때 자동으로 디폴트옵션에 매수되는 절차는 실행되지 않으며, 사용자의 직접 매수(옵트인)는 자동 적용 절차와 별개로 이루어집니다.  \n근거 출처: doc29.xlsx sheet FAQ_100, doc31.pdf page 4",
+      "sources": [
+        {
+          "domain": "document",
+          "source_file": "doc31.pdf",
+          "source_page": 4,
+          "evidence_id": "960737398db8ccc7e98a"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc29.xlsx",
+          "source_page": "FAQ_100",
+          "evidence_id": "4be67fee1acbbfa6dfab"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc31.pdf",
+          "source_page": 7,
+          "evidence_id": "7610ab157882067f20e2"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc29.xlsx",
+          "source_page": "README",
+          "evidence_id": "d39c7dc929edd7b8480c"
+        },
+        {
+          "domain": "document",
+          "source_file": "doc31.pdf",
+          "source_page": 6,
+          "evidence_id": "d298b8954173b6e16352"
+        }
+      ],
+      "known_current_gaps": [
+        "OPS_MANUAL_QUERY_ROUTED_TO_PRODUCT"
+      ]
+    },
+    {
+      "case_id": "EVAL_016",
+      "verdict": "PASS",
+      "checks": {
+        "route": true,
+        "tools": true,
+        "ambiguity": true
+      },
+      "actual_route": "product",
+      "actual_tools": [
+        "product"
+      ],
+      "actual_ambiguity_action": "CLARIFY",
+      "response_status": "clarify",
+      "verification_verdict": null,
+      "safe_stop_reason": "clarify_required",
+      "answer": "요청을 정확히 처리하려면 추가 정보가 필요합니다. 필요한 정보: holding_product_name, account_type.\n- 현재 운용 중인 상품의 정확한 명칭을 알려주세요.\n- 비교할 연금 계좌 유형(DB/DC/IRP)을 알려주세요.",
+      "sources": [],
+      "known_current_gaps": [
+        "AMBIGUITY_POLICY_TOO_PERMISSIVE"
+      ]
+    },
+    {
+      "case_id": "EVAL_017",
+      "verdict": "PASS",
+      "checks": {
+        "route": true,
+        "tools": true
+      },
+      "actual_route": "product",
+      "actual_tools": [
+        "product"
+      ],
+      "actual_ambiguity_action": "ASSUME_AND_EXPOSE",
+      "response_status": "success",
+      "verification_verdict": "PASS",
+      "safe_stop_reason": null,
+      "answer": "적용한 기본값: product_limit=5 (상품 개수가 지정되지 않았습니다.)\n\n질문: 흥국멀티크레딧증권자투자신탁[채권] 펀드의 '종류 A' 클래스와 '종류 C-e' 클래스의 총보수율(Total Fee)은 각각 연 몇 %이며, 두 클래스의 최근 1년 수익률 성과는 어떻게 다른지 비교해 주세요. 그리고 이 펀드가 주로 투자하는 모펀드의 핵심 투자전략도 함께 설명해 주세요.\n\n제공된 근거를 분석해 보면, 질문에서 언급된 펀드명은 \"흥국멀티크레딧증권자투자신탁[채권]\"이지만, 제공된 모든 근거는 \"DB다같이장기채권증권투자신탁[채권]\"이라는 펀드에 관한 것입니다. 펀드명이 일치하지 않으며, 흥국멀티크레딧증권자투자신탁[채권]에 대한 구체적인 정보(총보수율, 수익률, 투자전략 등)는 제공된 근거에는 전혀 없습니다.\n\n구조화된 DB 증거에서는 DB다같이장기채권증권투자신탁[채권]의 다양한 클래스(A, C, C-E 등)에 대한 정보가 있지만, 이는 질문에서 묻는 흥국멀티크레딧 펀드와 무관합니다. PDF 증거에서도 흥국멀티크레딧 펀드에 대한 언급은 전혀 없으며, 모두 DB다같이장기채권 펀드에 관한 내용입니다.\n\n따라서 제공된 근거만으로는 흥국멀티크레딧증권자투자신탁[채권] 펀드의 종류 A와 종류 C-e 클래스의 총보수율, 최근 1년 수익률 비교, 또는 모펀드의 핵심 투자전략을 확인할 수 없습니다.\n\n근거 출처: 제공된 모든 근거는 흥국멀티크레딧증권자투자신탁[채권]과 무관한 DB다같이장기채권증권투자신탁[채권]에 관한 내용입니다.",
+      "sources": [
+        {
+          "domain": "product",
+          "source_file": "R2_KR5131420025.pdf",
+          "source_page": 3,
+          "evidence_id": "R2_KR5131420025_p003_fees_t001__classes_1",
+          "product_id": "product:BE508|class:KOFIA:BE508:C|name:수수료미징구-오프라인(C)"
+        },
+        {
+          "domain": "product",
+          "source_file": "R2_KR5131420025.pdf",
+          "source_page": 4,
+          "evidence_id": "R2_KR5131420025_p004_performance_t002__classes_4",
+          "product_id": "product:BE508|class:KOFIA:BE508:C-F|name:수수료미징구-오프라인(C-F)"
+        },
+        {
+          "domain": "product",
+          "source_file": "R2_KR5131420025.pdf",
+          "source_page": 3,
+          "evidence_id": "R2_KR5131420025_p003_fees_t001__classes_3",
+          "product_id": "product:BE508|class:KOFIA:BE508:C-E|name:수수료미징구-온라인(C-E)"
+        },
+        {
+          "domain": "product",
+          "source_file": "R2_KR5131420025.pdf",
+          "source_page": 3,
+          "evidence_id": "R2_KR5131420025_p003_fees_t001__classes_0",
+          "product_id": "product:BE508|class:KOFIA:BE508:A|name:수수료선취-오프라인(A)"
+        },
+        {
+          "domain": "product",
+          "source_file": "R2_KR5131420025.pdf",
+          "source_page": 3,
+          "evidence_id": "R2_KR5131420025_p003_fees_t001__classes_2",
+          "product_id": "product:BE508|class:KOFIA:BE508:A-E|name:수수료선취-온라인(A-E)"
+        }
+      ],
+      "known_current_gaps": [
+        "PRODUCT_QUERY_MISSING_ENTITY_CLASS_PERFORMANCE_FILTERS"
+      ]
+    },
+    {
+      "case_id": "EVAL_018",
+      "verdict": "PASS",
+      "checks": {
+        "route": true,
+        "tools": true
+      },
+      "actual_route": "product",
+      "actual_tools": [
+        "product"
+      ],
+      "actual_ambiguity_action": "ASSUME_AND_EXPOSE",
+      "response_status": "success",
+      "verification_verdict": "PASS",
+      "safe_stop_reason": null,
+      "answer": "적용한 기본값: product_limit=5 (상품 개수가 지정되지 않았습니다.)\n\n제공된 근거만으로는 흥국멀티크레딧증권자투자신탁[채권]의 C-e 클래스에 대한 합성 총보수·비용 비율을 확인하기 어렵습니다. 그 이유는 제공된 모든 근거가 'DB다같이장기채권증권투자신탁[채권]'이라는 상품에 관한 것이기 때문입니다. 질문에서 언급된 상품명과 제공된 근거상의 상품명이 일치하지 않아 해당 상품의 구체적인 합성 총보수·비용 비율 수치를 도출할 수 없습니다.\n\n다만, 제공된 근거에서 유사한 종류형 펀드의 합성 총보수·비용 비율(TER3)의 계산 원리와 예시를 확인할 수 있습니다. PDF_EVIDENCE의 페이지 25와 26에 따르면:\n- 합성 총보수·비용 비율은 \"이 투자신탁(자투자신탁)에서 지출되는 보수와 기타비용에 이 투자신탁(자투자신탁)이 모투자신탁에 투자한 비율을 안분한 모투자신탁의 보수와 기타비용을 합한 총액을 순자산 연평잔액으로 나누어 산출합니다.\"(주3)라고 명시되어 있습니다.\n- 예를 들어, DB다같이장기채권증권투자신탁[채권]의 수수료미징구-오프라인(C) 클래스의 경우 합성 총보수·비용 비율은 0.5603%로 기재되어 있습니다(페이지 25, 26 참조).\n\n따라서 흥국멀티크레딧증권자투자신탁[채권]의 C-e 클래스에 대한 합성 총보수·비용 비율을 확인하려면 해당 상품의 간이투자설명서에서 \"",
+      "sources": [
+        {
+          "domain": "product",
+          "source_file": "R2_KR5131420025.pdf",
+          "source_page": 3,
+          "evidence_id": "R2_KR5131420025_p003_fees_t001__classes_1",
+          "product_id": "product:BE508|class:KOFIA:BE508:C|name:수수료미징구-오프라인(C)"
+        },
+        {
+          "domain": "product",
+          "source_file": "R2_KR5131420025.pdf",
+          "source_page": 4,
+          "evidence_id": "R2_KR5131420025_p004_performance_t002__classes_4",
+          "product_id": "product:BE508|class:KOFIA:BE508:C-F|name:수수료미징구-오프라인(C-F)"
+        },
+        {
+          "domain": "product",
+          "source_file": "R2_KR5131420025.pdf",
+          "source_page": 3,
+          "evidence_id": "R2_KR5131420025_p003_fees_t001__classes_3",
+          "product_id": "product:BE508|class:KOFIA:BE508:C-E|name:수수료미징구-온라인(C-E)"
+        },
+        {
+          "domain": "product",
+          "source_file": "R2_KR5131420025.pdf",
+          "source_page": 3,
+          "evidence_id": "R2_KR5131420025_p003_fees_t001__classes_0",
+          "product_id": "product:BE508|class:KOFIA:BE508:A|name:수수료선취-오프라인(A)"
+        },
+        {
+          "domain": "product",
+          "source_file": "R2_KR5131420025.pdf",
+          "source_page": 3,
+          "evidence_id": "R2_KR5131420025_p003_fees_t001__classes_2",
+          "product_id": "product:BE508|class:KOFIA:BE508:A-E|name:수수료선취-온라인(A-E)"
+        }
+      ],
+      "known_current_gaps": [
+        "PRODUCT_QUERY_MISSING_ENTITY_CLASS_COMPOSITE_FEE_FILTERS"
+      ]
+    },
+    {
+      "case_id": "EVAL_019",
+      "verdict": "PASS",
+      "checks": {
+        "route": true,
+        "tools": true,
+        "ambiguity": true
+      },
+      "actual_route": "product",
+      "actual_tools": [
+        "product"
+      ],
+      "actual_ambiguity_action": "CLARIFY",
+      "response_status": "clarify",
+      "verification_verdict": null,
+      "safe_stop_reason": "clarify_required",
+      "answer": "요청을 정확히 처리하려면 추가 정보가 필요합니다. 필요한 정보: holding_product_name.\n- 현재 운용 중인 상품의 정확한 명칭을 알려주세요.",
+      "sources": [],
+      "known_current_gaps": [
+        "ACCOUNT_CONTEXT_MISSING",
+        "PRODUCT_QUERY_TOO_LIMITED_FOR_SIMILARITY_SEARCH"
+      ]
+    },
+    {
+      "case_id": "EVAL_020",
+      "verdict": "PASS",
+      "checks": {
+        "route": true,
+        "tools": true
+      },
+      "actual_route": "product",
+      "actual_tools": [
+        "product"
+      ],
+      "actual_ambiguity_action": "ASSUME_AND_EXPOSE",
+      "response_status": "safe_stop",
+      "verification_verdict": "FAIL",
+      "safe_stop_reason": "source_versions, product_count, product_evidence, product_evidence, product_pdf_link",
+      "answer": "요청을 완료하기 전에 근거 검증을 통과하지 못했습니다 (FAIL). 확인이 필요한 항목: source_versions, product_count, product_evidence, product_evidence, product_pdf_link. 근거가 보완되기 전에는 상품 또는 법적 결론을 생성하지 않습니다.",
+      "sources": [],
+      "known_current_gaps": [
+        "TRANSACTION_ACTION_GUARD_NOT_VISIBLE_IN_CURRENT_CONTRACT"
+      ]
+    }
+  ]
+}

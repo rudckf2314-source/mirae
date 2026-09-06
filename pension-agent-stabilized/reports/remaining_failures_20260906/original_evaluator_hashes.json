@@ -1,0 +1,5 @@
+{
+  "tests/agent_eval/evaluators.py": "75ea8b3330f0c38bdfc3d5f1f9ca8c1c72f16a89b70bb7c8fe3d90b6c296bc77",
+  "tests/gold100/gold100_evaluator.py": "8c3d2eaa5118c32a02a916ab5902185f1004543d567cdf204275b2cb2b47104f",
+  "tests/gold100/excel_adapter.py": "97b34a1336ba08d57ca57a1ab2460e308754a514afa271fb89427c4ef81678e5"
+}

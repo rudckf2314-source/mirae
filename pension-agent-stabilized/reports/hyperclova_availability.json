@@ -1,0 +1,23 @@
+[
+  {
+    "model": "HCX-007",
+    "http_status": 200,
+    "api_status": "20000",
+    "has_content": true,
+    "seconds": 0.47
+  },
+  {
+    "model": "HCX-005",
+    "http_status": 200,
+    "api_status": "20000",
+    "has_content": true,
+    "seconds": 3.81
+  },
+  {
+    "model": "HCX-DASH-002",
+    "http_status": 200,
+    "api_status": "20000",
+    "has_content": true,
+    "seconds": 0.35
+  }
+]

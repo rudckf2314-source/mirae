@@ -1,0 +1,548 @@
+{
+  "metadata": {
+    "name": "Pension Legal API Retrieval Guardrail",
+    "version": "0.1-mvp",
+    "as_of": "2026-09-01",
+    "purpose": "국가법령정보센터 API 조회 범위를 연금 관련 법령/조문으로 제한",
+    "default_policy": "DENY",
+    "routing_policy": "TOPIC_TO_ALLOWED_SOURCE_SCOPE",
+    "notes": [
+      "연금 전용 법령은 MVP에서 FULL 허용",
+      "범용 법령은 PARTIAL 허용",
+      "명시되지 않은 법령/조문은 기본 차단",
+      "다른 법령으로의 cross-reference는 conditional_references에 등록된 경우만 허용",
+      "이 파일은 법률 해석/계산 엔진이 아니라 API Retrieval Scope 제어용"
+    ]
+  },
+  "source_registry": {
+    "RETIREMENT_BENEFIT_ACT": {
+      "law_name": "근로자퇴직급여 보장법",
+      "law_type": "ACT",
+      "default_scope": "FULL"
+    },
+    "RETIREMENT_BENEFIT_DECREE": {
+      "law_name": "근로자퇴직급여 보장법 시행령",
+      "law_type": "ENFORCEMENT_DECREE",
+      "default_scope": "FULL"
+    },
+    "RETIREMENT_BENEFIT_RULE": {
+      "law_name": "근로자퇴직급여 보장법 시행규칙",
+      "law_type": "ENFORCEMENT_RULE",
+      "default_scope": "FULL"
+    },
+    "INCOME_TAX_ACT": {
+      "law_name": "소득세법",
+      "law_type": "ACT",
+      "default_scope": "PARTIAL",
+      "allowed_articles": [
+        "제14조",
+        "제20조의3",
+        "제21조",
+        "제22조",
+        "제47조의2",
+        "제59조의3",
+        "제64조의4",
+        "제127조",
+        "제129조",
+        "제146조"
+      ]
+    },
+    "INCOME_TAX_DECREE": {
+      "law_name": "소득세법 시행령",
+      "law_type": "ENFORCEMENT_DECREE",
+      "default_scope": "PARTIAL",
+      "allowed_articles": [
+        "제20조의2",
+        "제40조",
+        "제40조의2",
+        "제40조의3",
+        "제40조의4",
+        "제118조의2",
+        "제118조의3",
+        "제202조의2",
+        "제202조의3"
+      ]
+    },
+    "INCOME_TAX_RULE": {
+      "law_name": "소득세법 시행규칙",
+      "law_type": "ENFORCEMENT_RULE",
+      "default_scope": "PARTIAL",
+      "allowed_articles": [
+        "제11조의2",
+        "제11조의3"
+      ]
+    },
+    "SPECIAL_TAX_ACT": {
+      "law_name": "조세특례제한법",
+      "law_type": "ACT",
+      "default_scope": "PARTIAL",
+      "allowed_articles": [
+        "제91조의18"
+      ]
+    },
+    "SPECIAL_TAX_DECREE": {
+      "law_name": "조세특례제한법 시행령",
+      "law_type": "ENFORCEMENT_DECREE",
+      "default_scope": "PARTIAL",
+      "allowed_articles": [
+        "제93조의4"
+      ]
+    },
+    "NATIONAL_PENSION_ACT": {
+      "law_name": "국민연금법",
+      "law_type": "ACT",
+      "default_scope": "FULL"
+    },
+    "NATIONAL_PENSION_DECREE": {
+      "law_name": "국민연금법 시행령",
+      "law_type": "ENFORCEMENT_DECREE",
+      "default_scope": "FULL"
+    },
+    "NATIONAL_PENSION_RULE": {
+      "law_name": "국민연금법 시행규칙",
+      "law_type": "ENFORCEMENT_RULE",
+      "default_scope": "FULL"
+    },
+    "BASIC_PENSION_ACT": {
+      "law_name": "기초연금법",
+      "law_type": "ACT",
+      "default_scope": "FULL"
+    },
+    "BASIC_PENSION_DECREE": {
+      "law_name": "기초연금법 시행령",
+      "law_type": "ENFORCEMENT_DECREE",
+      "default_scope": "FULL"
+    },
+    "BASIC_PENSION_RULE": {
+      "law_name": "기초연금법 시행규칙",
+      "law_type": "ENFORCEMENT_RULE",
+      "default_scope": "FULL"
+    },
+    "PUBLIC_OFFICIAL_PENSION_ACT": {
+      "law_name": "공무원연금법",
+      "law_type": "ACT",
+      "default_scope": "FULL"
+    },
+    "PUBLIC_OFFICIAL_PENSION_DECREE": {
+      "law_name": "공무원연금법 시행령",
+      "law_type": "ENFORCEMENT_DECREE",
+      "default_scope": "FULL"
+    },
+    "PUBLIC_OFFICIAL_PENSION_RULE": {
+      "law_name": "공무원연금법 시행규칙",
+      "law_type": "ENFORCEMENT_RULE",
+      "default_scope": "FULL"
+    },
+    "MILITARY_PENSION_ACT": {
+      "law_name": "군인연금법",
+      "law_type": "ACT",
+      "default_scope": "FULL"
+    },
+    "MILITARY_PENSION_DECREE": {
+      "law_name": "군인연금법 시행령",
+      "law_type": "ENFORCEMENT_DECREE",
+      "default_scope": "FULL"
+    },
+    "MILITARY_PENSION_RULE": {
+      "law_name": "군인연금법 시행규칙",
+      "law_type": "ENFORCEMENT_RULE",
+      "default_scope": "FULL"
+    },
+    "PRIVATE_SCHOOL_PENSION_ACT": {
+      "law_name": "사립학교교직원 연금법",
+      "law_type": "ACT",
+      "default_scope": "FULL"
+    },
+    "PRIVATE_SCHOOL_PENSION_DECREE": {
+      "law_name": "사립학교교직원 연금법 시행령",
+      "law_type": "ENFORCEMENT_DECREE",
+      "default_scope": "FULL"
+    },
+    "PENSION_LINKAGE_ACT": {
+      "law_name": "국민연금과 직역연금의 연계에 관한 법률",
+      "law_type": "ACT",
+      "default_scope": "FULL"
+    },
+    "PENSION_LINKAGE_DECREE": {
+      "law_name": "국민연금과 직역연금의 연계에 관한 법률 시행령",
+      "law_type": "ENFORCEMENT_DECREE",
+      "default_scope": "FULL"
+    },
+    "PENSION_LINKAGE_RULE": {
+      "law_name": "국민연금과 직역연금의 연계에 관한 법률 시행규칙",
+      "law_type": "ENFORCEMENT_RULE",
+      "default_scope": "FULL"
+    }
+  },
+  "bundles": {
+    "RETIREMENT_PENSION_FAMILY": [
+      "RETIREMENT_BENEFIT_ACT",
+      "RETIREMENT_BENEFIT_DECREE",
+      "RETIREMENT_BENEFIT_RULE"
+    ],
+    "PENSION_TAX_CORE": [
+      "INCOME_TAX_ACT",
+      "INCOME_TAX_DECREE",
+      "INCOME_TAX_RULE"
+    ],
+    "NATIONAL_PENSION_FAMILY": [
+      "NATIONAL_PENSION_ACT",
+      "NATIONAL_PENSION_DECREE",
+      "NATIONAL_PENSION_RULE"
+    ],
+    "BASIC_PENSION_FAMILY": [
+      "BASIC_PENSION_ACT",
+      "BASIC_PENSION_DECREE",
+      "BASIC_PENSION_RULE"
+    ],
+    "PUBLIC_OFFICIAL_PENSION_FAMILY": [
+      "PUBLIC_OFFICIAL_PENSION_ACT",
+      "PUBLIC_OFFICIAL_PENSION_DECREE",
+      "PUBLIC_OFFICIAL_PENSION_RULE"
+    ],
+    "MILITARY_PENSION_FAMILY": [
+      "MILITARY_PENSION_ACT",
+      "MILITARY_PENSION_DECREE",
+      "MILITARY_PENSION_RULE"
+    ],
+    "PRIVATE_SCHOOL_PENSION_FAMILY": [
+      "PRIVATE_SCHOOL_PENSION_ACT",
+      "PRIVATE_SCHOOL_PENSION_DECREE"
+    ],
+    "PENSION_LINKAGE_FAMILY": [
+      "PENSION_LINKAGE_ACT",
+      "PENSION_LINKAGE_DECREE",
+      "PENSION_LINKAGE_RULE"
+    ],
+    "ISA_TO_PENSION_BUNDLE": [
+      "SPECIAL_TAX_ACT",
+      "SPECIAL_TAX_DECREE",
+      "INCOME_TAX_ACT",
+      "INCOME_TAX_DECREE"
+    ]
+  },
+  "routes": {
+    "RETIREMENT_PENSION_GENERAL": {
+      "bundles": [
+        "RETIREMENT_PENSION_FAMILY"
+      ]
+    },
+    "DB": {
+      "bundles": [
+        "RETIREMENT_PENSION_FAMILY"
+      ]
+    },
+    "DC": {
+      "bundles": [
+        "RETIREMENT_PENSION_FAMILY"
+      ]
+    },
+    "IRP": {
+      "bundles": [
+        "RETIREMENT_PENSION_FAMILY"
+      ]
+    },
+    "RETIREMENT_BENEFIT": {
+      "bundles": [
+        "RETIREMENT_PENSION_FAMILY"
+      ]
+    },
+    "CONTRIBUTION": {
+      "bundles": [
+        "RETIREMENT_PENSION_FAMILY"
+      ]
+    },
+    "EMPLOYER_CONTRIBUTION": {
+      "bundles": [
+        "RETIREMENT_PENSION_FAMILY"
+      ]
+    },
+    "EMPLOYEE_CONTRIBUTION": {
+      "bundles": [
+        "RETIREMENT_PENSION_FAMILY"
+      ]
+    },
+    "PENSION_PAYMENT": {
+      "bundles": [
+        "RETIREMENT_PENSION_FAMILY"
+      ]
+    },
+    "LUMP_SUM_PAYMENT": {
+      "bundles": [
+        "RETIREMENT_PENSION_FAMILY"
+      ]
+    },
+    "TRANSFER": {
+      "bundles": [
+        "RETIREMENT_PENSION_FAMILY"
+      ]
+    },
+    "ACCOUNT_TRANSFER": {
+      "bundles": [
+        "RETIREMENT_PENSION_FAMILY"
+      ]
+    },
+    "PENSION_COLLATERAL": {
+      "bundles": [
+        "RETIREMENT_PENSION_FAMILY"
+      ]
+    },
+    "RETIREMENT_PAY_INTERIM_SETTLEMENT": {
+      "bundles": [
+        "RETIREMENT_PENSION_FAMILY"
+      ]
+    },
+    "DC_EARLY_WITHDRAWAL": {
+      "bundles": [
+        "RETIREMENT_PENSION_FAMILY"
+      ]
+    },
+    "IRP_EARLY_WITHDRAWAL": {
+      "bundles": [
+        "RETIREMENT_PENSION_FAMILY"
+      ]
+    },
+    "DEFAULT_OPTION": {
+      "bundles": [
+        "RETIREMENT_PENSION_FAMILY"
+      ]
+    },
+    "ASSET_MANAGEMENT": {
+      "bundles": [
+        "RETIREMENT_PENSION_FAMILY"
+      ]
+    },
+    "INVESTMENT_LIMIT": {
+      "bundles": [
+        "RETIREMENT_PENSION_FAMILY"
+      ]
+    },
+    "PENSION_ACCOUNT": {
+      "bundles": [
+        "PENSION_TAX_CORE"
+      ]
+    },
+    "TAX_CREDIT": {
+      "bundles": [
+        "PENSION_TAX_CORE"
+      ]
+    },
+    "TAX_CREDIT_LIMIT": {
+      "bundles": [
+        "PENSION_TAX_CORE"
+      ]
+    },
+    "PENSION_INCOME": {
+      "bundles": [
+        "PENSION_TAX_CORE"
+      ]
+    },
+    "PENSION_INCOME_TAX": {
+      "bundles": [
+        "PENSION_TAX_CORE"
+      ]
+    },
+    "RETIREMENT_INCOME": {
+      "bundles": [
+        "PENSION_TAX_CORE"
+      ]
+    },
+    "RETIREMENT_INCOME_TAX": {
+      "bundles": [
+        "PENSION_TAX_CORE"
+      ]
+    },
+    "TAX_DEFERRAL": {
+      "bundles": [
+        "PENSION_TAX_CORE"
+      ]
+    },
+    "PENSION_WITHDRAWAL": {
+      "bundles": [
+        "PENSION_TAX_CORE"
+      ]
+    },
+    "NON_PENSION_WITHDRAWAL": {
+      "bundles": [
+        "PENSION_TAX_CORE"
+      ]
+    },
+    "OTHER_INCOME_TAX": {
+      "bundles": [
+        "PENSION_TAX_CORE"
+      ]
+    },
+    "TAXATION": {
+      "bundles": [
+        "PENSION_TAX_CORE"
+      ]
+    },
+    "NATIONAL_PUBLIC_PENSION": {
+      "bundles": [
+        "NATIONAL_PENSION_FAMILY"
+      ]
+    },
+    "NATIONAL_PENSION_ELIGIBILITY": {
+      "bundles": [
+        "NATIONAL_PENSION_FAMILY"
+      ]
+    },
+    "WORKPLACE_INSURED": {
+      "bundles": [
+        "NATIONAL_PENSION_FAMILY"
+      ]
+    },
+    "REGIONAL_INSURED": {
+      "bundles": [
+        "NATIONAL_PENSION_FAMILY"
+      ]
+    },
+    "VOLUNTARY_INSURED": {
+      "bundles": [
+        "NATIONAL_PENSION_FAMILY"
+      ]
+    },
+    "VOLUNTARY_CONTINUED_INSURED": {
+      "bundles": [
+        "NATIONAL_PENSION_FAMILY"
+      ]
+    },
+    "NATIONAL_PENSION_CONTRIBUTION": {
+      "bundles": [
+        "NATIONAL_PENSION_FAMILY"
+      ]
+    },
+    "CONTRIBUTION_EXCEPTION": {
+      "bundles": [
+        "NATIONAL_PENSION_FAMILY"
+      ]
+    },
+    "RETROACTIVE_CONTRIBUTION": {
+      "bundles": [
+        "NATIONAL_PENSION_FAMILY"
+      ]
+    },
+    "NATIONAL_PENSION_BENEFIT": {
+      "bundles": [
+        "NATIONAL_PENSION_FAMILY"
+      ]
+    },
+    "OLD_AGE_PENSION": {
+      "bundles": [
+        "NATIONAL_PENSION_FAMILY"
+      ]
+    },
+    "OLD_AGE_PENSION_AMOUNT": {
+      "bundles": [
+        "NATIONAL_PENSION_FAMILY"
+      ]
+    },
+    "DISABILITY_PENSION": {
+      "bundles": [
+        "NATIONAL_PENSION_FAMILY"
+      ]
+    },
+    "SURVIVOR_PENSION": {
+      "bundles": [
+        "NATIONAL_PENSION_FAMILY"
+      ]
+    },
+    "RETURN_LUMP_SUM": {
+      "bundles": [
+        "NATIONAL_PENSION_FAMILY"
+      ]
+    },
+    "ISA_TO_PENSION_TRANSFER": {
+      "bundles": [
+        "ISA_TO_PENSION_BUNDLE"
+      ]
+    },
+    "BASIC_PENSION": {
+      "bundles": [
+        "BASIC_PENSION_FAMILY"
+      ]
+    },
+    "PUBLIC_OFFICIAL_PENSION": {
+      "bundles": [
+        "PUBLIC_OFFICIAL_PENSION_FAMILY"
+      ]
+    },
+    "MILITARY_PENSION": {
+      "bundles": [
+        "MILITARY_PENSION_FAMILY"
+      ]
+    },
+    "PRIVATE_SCHOOL_PENSION": {
+      "bundles": [
+        "PRIVATE_SCHOOL_PENSION_FAMILY"
+      ]
+    },
+    "PENSION_LINKAGE": {
+      "bundles": [
+        "PENSION_LINKAGE_FAMILY"
+      ]
+    }
+  },
+  "conditional_references": [
+    {
+      "source_topic": "PRIVATE_SCHOOL_PENSION",
+      "trigger": "사립학교교직원 연금법 제42조의 준용 발생",
+      "target_law": "공무원연금법",
+      "scope": "ENUMERATED_ARTICLES_ONLY",
+      "default_follow": false
+    },
+    {
+      "source_topic": "PRIVATE_SCHOOL_PENSION",
+      "trigger": "사립학교교직원 연금법 제42조의 재해보상 준용 발생",
+      "target_law": "공무원 재해보상법",
+      "scope": "ENUMERATED_ARTICLES_ONLY",
+      "default_follow": false
+    },
+    {
+      "source_topic": "PENSION_LINKAGE",
+      "trigger": "연계법 본문이 개별 연금법을 명시적으로 참조",
+      "target_laws": [
+        "국민연금법",
+        "공무원연금법",
+        "군인연금법",
+        "사립학교교직원 연금법",
+        "별정우체국법"
+      ],
+      "scope": "EXPLICIT_REFERENCE_ONLY",
+      "default_follow": false
+    },
+    {
+      "source_topic": "BASIC_PENSION",
+      "trigger": "직역연금 수급자 제외 여부 확인에 필요한 경우",
+      "target_laws": [
+        "공무원연금법",
+        "군인연금법",
+        "사립학교교직원 연금법"
+      ],
+      "scope": "EXPLICIT_REFERENCE_ONLY",
+      "default_follow": false
+    }
+  ],
+  "review_or_future_extensions": [
+    "퇴직연금감독규정",
+    "퇴직연금감독규정시행세칙",
+    "금융소비자 보호에 관한 법률 Family",
+    "자본시장과 금융투자업에 관한 법률 Family",
+    "보험업법 Family",
+    "예금자보호법 Family",
+    "근로기준법 Family",
+    "채무자 회생 및 파산에 관한 법률",
+    "재난 및 안전관리 기본법",
+    "공무원 재해보상법 Family",
+    "군인 재해보상법 Family"
+  ],
+  "enforcement_rules": {
+    "unknown_topic": "DENY",
+    "unknown_law": "DENY",
+    "partial_law_unknown_article": "DENY",
+    "unregistered_cross_reference": "DENY",
+    "llm_may_generate_law_name": false,
+    "llm_may_generate_article_number": false,
+    "llm_may_generate_api_url": false
+  }
+}

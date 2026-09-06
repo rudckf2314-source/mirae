@@ -30,6 +30,24 @@ class ChatRequest(BaseModel):
     question_id: str | None = None
 
 
+def _respond(question: str, top_k: int = 5, session_context: dict | None = None, question_id: str | None = None) -> dict:
+    question = question.strip()
+    if not question:
+        raise HTTPException(status_code=400, detail="질문을 입력해 주세요.")
+    try:
+        if langgraph_agent is not None:
+            return langgraph_agent.respond(question, top_k=top_k, session_context=session_context, question_id=question_id)
+        response = agent.answer(question=question, top_k=max(1, min(top_k, 10)))
+        response["answer"] = public_text(response.get("answer"))
+        return response
+    except HTTPException:
+        raise
+    except Exception:
+        # Keep provider configuration, local paths, and internal exceptions in
+        # server-side diagnostics rather than the public HTTP response.
+        raise HTTPException(status_code=500, detail="요청을 안전하게 처리하지 못했습니다. 잠시 후 다시 시도해 주세요.") from None
+
+
 @app.get("/")
 def home():
     return FileResponse(STATIC_DIR / "index.html")
@@ -56,16 +74,10 @@ def ready():
 
 @app.post("/api/search")
 def search(request: ChatRequest):
-    question = request.question.strip()
+    return _respond(request.question, request.top_k, request.session_context, request.question_id)
 
-    if not question:
-        raise HTTPException(status_code=400, detail="질문을 입력해주세요.")
 
-    try:
-        if langgraph_agent is not None:
-            return langgraph_agent.respond(question, top_k=request.top_k, session_context=request.session_context, question_id=request.question_id)
-        response = agent.answer(question=question, top_k=max(1, min(request.top_k, 10)))
-        response["answer"] = public_text(response.get("answer"))
-        return response
-    except Exception as exc:
-        raise HTTPException(status_code=500, detail=str(exc)) from exc
+@app.get("/answer")
+def answer(question: str, question_id: str | None = None, top_k: int = 5):
+    """Official query-string contract; POST /api/search remains compatible."""
+    return _respond(question, top_k=top_k, question_id=question_id)
