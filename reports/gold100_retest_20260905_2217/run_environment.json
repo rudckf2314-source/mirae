@@ -1,0 +1,28 @@
+{
+  "models": {
+    "normalizer": "HCX-DASH-002",
+    "supervisor": "HCX-007",
+    "extraction": "HCX-005",
+    "answer": "HCX-005"
+  },
+  "recorded_at_start": "2026-09-05T22:17:46.9510700+09:00",
+  "evaluation_mode": "100 independent single-turn; repeat=1; retest after NL display polish",
+  "note": "API keys omitted intentionally",
+  "llm_provider": "hyperclova",
+  "python": "tmp/python312/python.exe 3.12.2",
+  "competition_mode": "1",
+  "output_directory": "c:\\mirae\\reports\\gold100_retest_20260905_2217",
+  "recorded_at_end": "2026-09-05T22:32:40.539607+09:00",
+  "summary_started_at": "2026-09-05T22:17:48+0900",
+  "summary_finished_at": "2026-09-05T22:30:31+0900",
+  "integrity": {
+    "total_rows": 100,
+    "unique_test_ids": 100,
+    "duplicates": [],
+    "missing": [],
+    "PASS": 46,
+    "FAIL": 54,
+    "SKIP": 0,
+    "sum_equals_100": true
+  }
+}

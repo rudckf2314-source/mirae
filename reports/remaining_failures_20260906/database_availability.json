@@ -1,0 +1,8 @@
+{
+  "configured_backend": "auto",
+  "host": "127.0.0.1",
+  "port": 5432,
+  "observed_adapter_backend": "standard_json",
+  "connected": false,
+  "error_type": "ConnectionTimeout"
+}

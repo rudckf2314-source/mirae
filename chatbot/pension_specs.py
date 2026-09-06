@@ -5,7 +5,7 @@ from typing import Literal
 from pydantic import BaseModel, ConfigDict, Field
 
 
-RouteName = Literal["document", "law", "document+law", "product", "product+law", "calculation"]
+RouteName = Literal["document", "law", "document+law", "product", "product+law", "both", "calculation", "document+calculation", "calculation+law"]
 DomainName = Literal["product", "document", "law", "calculation"]
 WorkerName = Literal["product", "document", "law", "calculation"]
 EvidenceStatus = Literal["matched", "missing", "unresolved", "conflict"]

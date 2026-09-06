@@ -1,0 +1,15 @@
+﻿const fs = require('fs');
+const vm = require('vm');
+const assert = require('assert');
+const context = {window: {}};
+vm.createContext(context);
+vm.runInContext(fs.readFileSync('static/response_normalizer.js','utf8'),context);
+const normalize = context.window.normalizeSearchResponse;
+const result = normalize({status:'safe_stop',answer:'IRP 13.2%',sources:[{domain:'calculation',evidence_id:'calculation:income_gap_v1',formula_version:'math-v1'},{domain:'document',label:'guide_2026.pdf',source_file:'guide_2026.pdf',source_page:3}],assumptions:[{field:'risk_tolerance',value:'moderate'}],limitations:['unknown_check'],next_action:''});
+assert.equal(result.sources[0].detail,'');
+assert(!/calculation|math-v1|income_gap/.test(result.sources[0].title));
+assert(result.sources[1].title.includes('guide_2026.pdf'));
+assert(!JSON.stringify(result.assumptions).includes('risk_tolerance'));
+assert(!result.limitations[0].includes('unknown_check'));
+assert.equal(result.answer,'IRP 13.2%');
+console.log('PASS: source labels, diagnostic hiding, fallback assumption/notice, fact preservation');

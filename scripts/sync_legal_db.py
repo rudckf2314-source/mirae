@@ -57,8 +57,10 @@ def refresh_tax_credit_policy(store: LegalStore, law_body: dict) -> bool:
         payload={
             "combined_credit_base_limit": 9000000,
             "pension_savings_credit_base_limit": 6000000,
+            "annual_contribution_limit": 18000000,
             "standard_rate": "0.12",
             "lower_income_rate": "0.15",
+            "local_tax_surcharge_ratio": "0.10",
             "gross_salary_threshold": gross,
             "comprehensive_income_threshold": comprehensive,
             "isa_extra_credit_base_limit": 3000000 if "300만원" in text else 0,

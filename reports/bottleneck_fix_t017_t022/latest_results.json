@@ -1,0 +1,274 @@
+{
+  "summary": {
+    "cases": 2,
+    "turns": 2,
+    "pass": 2,
+    "fail": 0,
+    "skip": 0,
+    "average_score": 9.0,
+    "entrypoint": "PensionLangGraphAgent.respond / POST /api/search",
+    "llm_judge": false,
+    "skip_reason": null
+  },
+  "case_verdicts": {
+    "T017": "PASS",
+    "T022": "PASS"
+  },
+  "category_stats": {
+    "official_p0": {
+      "pass": 1,
+      "total": 1,
+      "rate": "100.0%"
+    },
+    "official_compound": {
+      "pass": 1,
+      "total": 1,
+      "rate": "100.0%"
+    }
+  },
+  "turns": [
+    {
+      "test_id": "T017",
+      "turn_no": 1,
+      "user_query": "연금저축이랑 IRP에 넣으면 세액공제 얼마까지 되나요? 다 합쳐서요.",
+      "response_text": "연금저축과 IRP를 합한 연간 납입 한도는 18,000,000원입니다. 세액공제 대상 납입액 한도는 합산 연 9,000,000원이며, 이 중 연금저축 납입액은 연 6,000,000원까지 세액공제 대상에 포함됩니다. 합산 한도 9,000,000원을 채우려면 나머지 3,000,000원을 IRP에 납입해야 합니다. 지방소득세를 포함한 실효 공제율은 소득구간에 따라 약 16.5% 또는 약 13.2%가 적용됩니다. 실제 공제세액은 소득구간과 실제 납입액에 따라 달라집니다.",
+      "detected_intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT"
+      ],
+      "actual_route": "document+calculation",
+      "expected_routes": [
+        "calculation",
+        "document",
+        "document+law"
+      ],
+      "tools_called": [
+        "document",
+        "calculation"
+      ],
+      "source_types": [
+        "enterprise_rag",
+        "enterprise_document",
+        "law",
+        "external_api",
+        "calculation"
+      ],
+      "source_documents": [],
+      "postgres_used": false,
+      "enterprise_rag_used": true,
+      "external_api_used": true,
+      "evidence_status": {
+        "matched": 7
+      },
+      "latency_ms": 8858.6,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 1,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 9,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "success",
+      "session_id": "eval-T017-80662b90",
+      "confirmed_constraints": {},
+      "gold_metadata": {
+        "test_id": "T017",
+        "session_id": "eval-T017-80662b90",
+        "original_query": "연금저축이랑 IRP에 넣으면 세액공제 얼마까지 되나요? 다 합쳐서요.",
+        "resolved_query": "연금저축이랑 IRP에 넣으면 세액공제 얼마까지 되나요? 다 합쳐서요.",
+        "detected_intent": "document+calculation",
+        "actual_route": "document+calculation",
+        "retrieval_queries": [],
+        "required_evidence": {
+          "required_product_count": null,
+          "risk_grade_max": null,
+          "online_only": false,
+          "sort": null,
+          "require_product_evidence": false,
+          "require_pdf_evidence": false,
+          "require_law_evidence": false,
+          "require_source_version": true,
+          "allowed_evidence_statuses": []
+        },
+        "tools_called": [
+          "document",
+          "calculation"
+        ],
+        "source_types": [],
+        "product_ids": [],
+        "product_class_ids": [],
+        "candidate_count": 0,
+        "candidate_ids": [],
+        "selected_product_id": null,
+        "db_row_count": null,
+        "retrieval_top_k": 5,
+        "evidence_coverage": {
+          "domain": {
+            "calculation": 1,
+            "document": 5,
+            "law": 1
+          },
+          "status": {
+            "matched": 7
+          }
+        },
+        "claim_grounding": {
+          "verdict": "REVIEW",
+          "numeric_claims": [
+            "18,000,000원",
+            "9,000,000원",
+            "6,000,000원",
+            "3,000,000원",
+            "16.5%",
+            "13.2%"
+          ],
+          "unsupported_numeric_claims": [
+            "18,000,000원",
+            "9,000,000원",
+            "6,000,000원",
+            "3,000,000원"
+          ],
+          "citation_like_markers": [],
+          "reason": "answer_contains_numbers_not_seen_in_evidence"
+        },
+        "raw_value": null,
+        "display_value": null,
+        "raw_unit": null,
+        "normalized_unit": null,
+        "normalization_status": null,
+        "response_status": "success",
+        "latency_ms": 8858.6,
+        "query_spec": null,
+        "ranking_breakdown": []
+      }
+    },
+    {
+      "test_id": "T022",
+      "turn_no": 1,
+      "user_query": "연금저축이랑 IRP에 넣으면 세액공제 얼마까지 되나요? 다 합쳐서요. 그리고 한도를 넘기면 이월도 되나요?",
+      "response_text": "연금저축과 IRP를 합한 연간 납입 한도는 18,000,000원입니다. 세액공제 대상 납입액 한도는 합산 연 9,000,000원이며, 이 중 연금저축 납입액은 연 6,000,000원까지 세액공제 대상에 포함됩니다. 합산 한도 9,000,000원을 채우려면 나머지 3,000,000원을 IRP에 납입해야 합니다. 지방소득세를 포함한 실효 공제율은 소득구간에 따라 약 16.5% 또는 약 13.2%가 적용됩니다. 실제 공제세액은 소득구간과 실제 납입액에 따라 달라집니다.",
+      "detected_intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT"
+      ],
+      "actual_route": "document+calculation",
+      "expected_routes": [
+        "calculation",
+        "document",
+        "document+law",
+        "calculation+document"
+      ],
+      "tools_called": [
+        "document",
+        "calculation"
+      ],
+      "source_types": [
+        "enterprise_rag",
+        "enterprise_document",
+        "law",
+        "external_api",
+        "calculation"
+      ],
+      "source_documents": [],
+      "postgres_used": false,
+      "enterprise_rag_used": true,
+      "external_api_used": true,
+      "evidence_status": {
+        "matched": 7
+      },
+      "latency_ms": 10333.8,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 1,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 9,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "success",
+      "session_id": "eval-T022-389f310a",
+      "confirmed_constraints": {},
+      "gold_metadata": {
+        "test_id": "T022",
+        "session_id": "eval-T022-389f310a",
+        "original_query": "연금저축이랑 IRP에 넣으면 세액공제 얼마까지 되나요? 다 합쳐서요. 그리고 한도를 넘기면 이월도 되나요?",
+        "resolved_query": "연금저축이랑 IRP에 넣으면 세액공제 얼마까지 되나요? 다 합쳐서요. 그리고 한도를 넘기면 이월도 되나요?",
+        "detected_intent": "document+calculation",
+        "actual_route": "document+calculation",
+        "retrieval_queries": [],
+        "required_evidence": {
+          "required_product_count": null,
+          "risk_grade_max": null,
+          "online_only": false,
+          "sort": null,
+          "require_product_evidence": false,
+          "require_pdf_evidence": false,
+          "require_law_evidence": false,
+          "require_source_version": true,
+          "allowed_evidence_statuses": []
+        },
+        "tools_called": [
+          "document",
+          "calculation"
+        ],
+        "source_types": [],
+        "product_ids": [],
+        "product_class_ids": [],
+        "candidate_count": 0,
+        "candidate_ids": [],
+        "selected_product_id": null,
+        "db_row_count": null,
+        "retrieval_top_k": 5,
+        "evidence_coverage": {
+          "domain": {
+            "calculation": 1,
+            "document": 5,
+            "law": 1
+          },
+          "status": {
+            "matched": 7
+          }
+        },
+        "claim_grounding": {
+          "verdict": "REVIEW",
+          "numeric_claims": [
+            "18,000,000원",
+            "9,000,000원",
+            "6,000,000원",
+            "3,000,000원",
+            "16.5%",
+            "13.2%"
+          ],
+          "unsupported_numeric_claims": [
+            "18,000,000원",
+            "9,000,000원",
+            "6,000,000원",
+            "3,000,000원"
+          ],
+          "citation_like_markers": [],
+          "reason": "answer_contains_numbers_not_seen_in_evidence"
+        },
+        "raw_value": null,
+        "display_value": null,
+        "raw_unit": null,
+        "normalized_unit": null,
+        "normalization_status": null,
+        "response_status": "success",
+        "latency_ms": 10333.8,
+        "query_spec": null,
+        "ranking_breakdown": []
+      }
+    }
+  ]
+}

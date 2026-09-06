@@ -1,0 +1,33 @@
+{
+  "prev": "c:\\mirae\\reports\\gold100_router_planner_20260905_2306",
+  "baseline": "c:\\mirae\\reports\\gold100_hyperclova_20260905",
+  "pass": 67,
+  "fail": 33,
+  "fail_to_pass": [
+    "Test 1",
+    "Test 2",
+    "Test 6",
+    "Test 9",
+    "Test 10",
+    "Test 31",
+    "Test 53"
+  ],
+  "pass_to_fail": [],
+  "status_counts": {
+    "success": 81,
+    "clarify": 8,
+    "safe_stop": 10,
+    "system_error": 1
+  },
+  "fail_reason_counts": {
+    "D:required_fact_coverage_low": 6,
+    "D:safe_stop_for_required_answer": 11,
+    "D:safe_stop_forbidden": 10,
+    "R:route_family_mismatch": 8,
+    "X:exception": 1,
+    "C:postgres_not_used_for_product_fact": 5,
+    "G:hallucination_invented_product": 1,
+    "D:safe_stop_despite_matching_db_rows": 6,
+    "D:correction_missing": 9
+  }
+}

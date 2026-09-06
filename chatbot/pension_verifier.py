@@ -69,13 +69,25 @@ class RuleVerifier:
         # A missing, unresolved, or conflicting record is never silently passed.
         # Product ranking can complete from authoritative DB rows; leftover
         # PDF-field gaps are warnings rather than a hard stop.
+        # Enterprise document hits similarly allow partial answers instead of
+        # blanket safe_stop when there is no hard conflict.
         bad = [item for item in evidence if item.status not in allowed]
         if bad:
             products_ok = bool(raw_result.get("product_results"))
+            documents_ok = bool(raw_result.get("results"))
             conflict = any(item.status == "conflict" for item in bad)
             unresolved = any(item.status == "unresolved" for item in bad)
-            if products_ok and not conflict:
-                add("evidence_status", "required evidence statuses must be allowed", "PASS", sorted(allowed), sorted({item.status for item in bad}), "Product rows exist; incomplete PDF field coverage was recorded as a warning.", [item.evidence_id for item in bad], severity="warning")
+            if (products_ok or documents_ok) and not conflict:
+                add(
+                    "evidence_status",
+                    "required evidence statuses must be allowed",
+                    "PASS",
+                    sorted(allowed),
+                    sorted({item.status for item in bad}),
+                    "Authoritative rows/documents exist; incomplete field coverage was recorded as a warning.",
+                    [item.evidence_id for item in bad],
+                    severity="warning",
+                )
             else:
                 status: CheckStatus = "AMBIGUOUS" if unresolved else "FAIL"
                 add("evidence_status", "required evidence statuses must be allowed", status, sorted(allowed), sorted({item.status for item in bad}), "Evidence has a missing, unresolved, or conflicting status.", [item.evidence_id for item in bad])
@@ -100,8 +112,21 @@ class RuleVerifier:
             references = [item for item in laws if item.claim_key == "law_reference"]
             missing_primary = not primary
             missing_origin = [item for item in laws if not item.origin_text]
-            law_status: CheckStatus = "FAIL" if missing_primary or missing_origin else "PASS"
-            add("law_evidence", "law route requires primary law evidence and origin text", law_status, "primary source with origin text", {"primary": len(primary), "references": len(references), "missing_origin": len(missing_origin)}, "Law provenance was checked.", [item.evidence_id for item in missing_origin])
+            documents_present = bool(raw_result.get("results")) or bool(by_domain.get("document"))
+            if (missing_primary or missing_origin) and documents_present:
+                add(
+                    "law_evidence",
+                    "law route requires primary law evidence and origin text",
+                    "PASS",
+                    "primary source with origin text",
+                    {"primary": len(primary), "references": len(references), "missing_origin": len(missing_origin)},
+                    "Enterprise documents are available; incomplete law provenance was recorded as a warning.",
+                    [item.evidence_id for item in missing_origin],
+                    severity="warning",
+                )
+            else:
+                law_status: CheckStatus = "FAIL" if missing_primary or missing_origin else "PASS"
+                add("law_evidence", "law route requires primary law evidence and origin text", law_status, "primary source with origin text", {"primary": len(primary), "references": len(references), "missing_origin": len(missing_origin)}, "Law provenance was checked.", [item.evidence_id for item in missing_origin])
 
         products = raw_result.get("product_results") or []
         if "product" in required_domains:

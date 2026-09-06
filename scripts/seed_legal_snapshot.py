@@ -113,8 +113,10 @@ def main() -> None:
         payload={
             "combined_credit_base_limit": 9000000,
             "pension_savings_credit_base_limit": 6000000,
+            "annual_contribution_limit": 18000000,
             "standard_rate": "0.12",
             "lower_income_rate": "0.15",
+            "local_tax_surcharge_ratio": "0.10",
             "gross_salary_threshold": 55000000,
             "comprehensive_income_threshold": 45000000,
             "isa_extra_credit_base_limit": 3000000,

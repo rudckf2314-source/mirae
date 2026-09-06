@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>미래에셋 연금 Agent</title>
+  <title>미래에셋 연금 상담</title>
   <style>
     * { box-sizing: border-box; }
     body {
@@ -85,7 +85,7 @@
 <body>
   <main class="wrap">
     <div class="header">
-      <h1>미래에셋 연금 Agent</h1>
+      <h1>미래에셋 연금 상담</h1>
       <p>연금에 관한 궁금한 점부터 상품과 투자 계획까지, 편하게 이야기해 주세요.</p>
     </div>
 
@@ -209,9 +209,9 @@
       answer.textContent = viewModel.answer;
       sources.replaceChildren();
       appendSources(viewModel.sources);
-      appendListSection("Assumptions", viewModel.assumptions, formatAssumption);
-      appendListSection("Limitations", viewModel.limitations, formatText);
-      if (viewModel.nextAction) appendTextSection("Next Action", viewModel.nextAction);
+      appendListSection("답변에 적용한 조건", viewModel.assumptions, formatAssumption);
+      appendListSection("확인이 필요한 사항", viewModel.limitations, formatText);
+      if (viewModel.nextAction) appendTextSection("이어서 알려주세요", viewModel.nextAction);
 
       if (viewModel.status === "clarify") {
         status.textContent = "추가 정보가 필요합니다. 답변의 안내에 따라 조건을 알려주세요.";
@@ -226,7 +226,7 @@
 
     function appendSources(items) {
       if (!Array.isArray(items) || items.length === 0) return;
-      appendHeading("Sources / Evidence");
+      appendHeading("참고한 자료");
       items.forEach((item, index) => {
         const source = item && typeof item === "object" ? item : {};
         const el = document.createElement("div");
@@ -236,12 +236,6 @@
         const title = document.createElement("span");
         title.textContent = `${index + 1}. ${source.title || "근거"}`;
         head.appendChild(title);
-        if (source.score) {
-          const score = document.createElement("span");
-          score.className = "score";
-          score.textContent = `score ${source.score}`;
-          head.appendChild(score);
-        }
         el.appendChild(head);
         if (source.detail) {
           const detail = document.createElement("div");
@@ -281,11 +275,8 @@
     }
 
     function formatAssumption(item) {
-      if (!item || typeof item !== "object") return formatText(item);
-      const field = formatText(item.field);
-      const value = formatText(item.value);
-      const reason = formatText(item.reason);
-      return [field && `${field}=${value}`, reason && `(${reason})`].filter(Boolean).join(" ") || "적용한 기본값";
+      if (item && item.label) return item.label;
+      return "답변에 적용한 조건은 본문의 안내를 확인해 주세요.";
     }
 
     function formatText(value) {

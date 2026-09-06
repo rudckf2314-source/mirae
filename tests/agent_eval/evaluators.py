@@ -171,19 +171,25 @@ def _norm_product_name(name: str) -> str:
 
 
 def invented_products(answer: str, catalog: set[str]) -> list[str]:
+    # Precision-only filter: do not lower scoring thresholds. Generic fund-family
+    # nouns / particles / (주식|채권) class labels are not proprietary inventions.
+    from chatbot.product_entity_precision import is_generic_financial_noun
+
     invented = []
     known_folded = [_norm_product_name(known) for known in catalog if known]
     for name in extract_fund_names(answer):
         folded = _norm_product_name(name)
         if not folded:
             continue
-        if folded in GENERIC_FUND_FRAGMENTS or re.sub(r"(에|의|은|는|을|를)$", "", folded) in GENERIC_FUND_FRAGMENTS:
+        if is_generic_financial_noun(name) or is_generic_financial_noun(folded):
+            continue
+        if folded in GENERIC_FUND_FRAGMENTS or re.sub(r"(에|의|은|는|을|를|에서|으로|로)$", "", folded) in GENERIC_FUND_FRAGMENTS:
             continue
         if any(folded in known or known in folded for known in known_folded):
             continue
         if any(known.replace("미래에셋", "") in folded for known in known_folded if len(known.replace("미래에셋", "")) >= 8):
             continue
-        tokens = [token for token in re.findall(r"[가-힣A-Za-z0-9]{2,}", folded) if token not in {"증권", "투자신탁", "자투자신탁", "펀드", "채권", "주식"}]
+        tokens = [token for token in re.findall(r"[가-힣A-Za-z0-9]{2,}", folded) if token not in {"증권", "투자신탁", "자투자신탁", "모투자신탁", "펀드", "채권", "주식"}]
         if tokens and any(all(token in known for token in tokens) for known in known_folded):
             continue
         invented.append(name)

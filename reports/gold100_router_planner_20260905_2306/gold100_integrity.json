@@ -1,0 +1,10 @@
+{
+  "total_rows": 100,
+  "unique_test_ids": 100,
+  "duplicates": [],
+  "missing": [],
+  "PASS": 60,
+  "FAIL": 40,
+  "SKIP": 0,
+  "sum_equals_100": true
+}

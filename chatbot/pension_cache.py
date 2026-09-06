@@ -11,7 +11,7 @@ from typing import Any, Callable, Protocol
 
 
 CACHE_SCHEMA_VERSION = "pension-cache-v1"
-ROUTER_POLICY_VERSION = "query-router-v3-conversation"
+ROUTER_POLICY_VERSION = "query-router-v7-bottleneck-polish"
 FAQ_POLICY_VERSION = "faq-evidence-v1"
 
 

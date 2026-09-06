@@ -11,6 +11,7 @@ from pydantic import BaseModel, ConfigDict, Field, ValidationError
 
 from .display_units import INTERNAL_UNIT_ENUMS, PUBLIC_PRODUCT_SOURCE
 from .pension_ambiguity import SessionContext
+from .public_language import public_text, public_notice, public_assumption, source_label
 
 MAX_QUESTION_LENGTH = 2000
 MIN_TOP_K = 1
@@ -121,6 +122,7 @@ class ResponseGuard:
         )
         text = re.sub(r"(?P<num>\d+(?:\.\d+)?)PERCENT\b", r"\g<num>%", text)
         text = re.sub(r"(?P<num>\d+(?:\.\d+)?)BASIS_POINT", r"\g<num>bp", text)
+        text = public_text(text)
         for enum in INTERNAL_UNIT_ENUMS:
             text = text.replace(enum, "")
         text = re.sub(r"\n{3,}", "\n\n", text)
@@ -133,7 +135,7 @@ class ResponseGuard:
         ]
         if korean_paragraphs and len(korean_paragraphs) < len(paragraphs):
             text = "\n\n".join(korean_paragraphs)
-        return text.strip()
+        return public_text(text)
 
     @staticmethod
     def _assumptions_disclosed(answer: str, assumptions: list[dict[str, Any]]) -> bool:
@@ -147,7 +149,11 @@ class ResponseGuard:
             value = str(item.get("value") or "")
             if field and field in text:
                 return True
+            if field and public_text(field) in text:
+                return True
             if value and value in text:
+                return True
+            if value and public_text(value) in text:
                 return True
         return False
 
@@ -156,28 +162,48 @@ class ResponseGuard:
         route = result.get("route", "")
         verdict = meta.get("verification_verdict")
         clarify = bool(meta.get("clarify_used"))
-        safe_stop = bool(meta.get("safe_stop_reason")) and not clarify
+        reason_codes = list(meta.get("ambiguity_reason_codes") or [])
+        answer_text = self._sanitize_answer(result.get("final_answer") or result.get("answer"))
+        # Capability refusals are successful explanations, not evidence failures.
+        action_refused = "ACTION_NOT_ALLOWED" in reason_codes and bool(answer_text)
+        safe_stop = bool(meta.get("safe_stop_reason")) and not clarify and not action_refused
         sources = self._sources(result)
         assumptions = meta.get("assumptions", [])
         if clarify:
             status, next_action = "clarify", "필요한 정보를 제공한 뒤 다시 요청하세요."
-        elif safe_stop or verdict in {"FAIL", "AMBIGUOUS"}:
+        elif action_refused:
+            status, next_action = "success", "상품 정보나 제도 안내가 필요하면 이어서 질문해 주세요."
+        elif safe_stop:
+            status, next_action = "safe_stop", "근거 또는 조건을 확인한 뒤 다시 요청하세요."
+        elif verdict in {"FAIL", "AMBIGUOUS"} and answer_text and any(
+            item.get("domain") in {"document", "product", "calculation", "law"} for item in sources
+        ):
+            # Prefer grounded partial answers over wiping with system_error.
+            status, next_action = "success", "추가 조건이 있으면 알려주세요."
+        elif verdict in {"FAIL", "AMBIGUOUS"}:
             status, next_action = "safe_stop", "근거 또는 조건을 확인한 뒤 다시 요청하세요."
         else:
             status, next_action = "success", "추가 조건이 있으면 알려주세요."
         failure = None
         evidence_policy = str(meta.get("evidence_policy") or "REQUIRED")
-        answer_text = self._sanitize_answer(result.get("final_answer") or result.get("answer"))
-        if status == "success":
-            if verdict != "PASS" or not answer_text:
+        if status == "success" and not action_refused:
+            has_document = any(item.get("domain") == "document" for item in sources)
+            has_product = any(item.get("domain") == "product" for item in sources)
+            has_law = any(item.get("domain") == "law" for item in sources)
+            has_calc = any(item.get("domain") == "calculation" for item in sources)
+            if not answer_text:
+                failure = "verification_or_answer_missing"
+            elif verdict not in {"PASS", "AMBIGUOUS"} and not (has_document or has_product or has_calc):
                 failure = "verification_or_answer_missing"
             elif evidence_policy == "REQUIRED" and not sources:
                 failure = "sources_missing"
-            elif "product" in route and not any(item["domain"] == "product" for item in sources):
+            elif "product" in route and not has_product and not has_document:
                 failure = "product_source_missing"
-            elif "law" in route and not any(item["domain"] == "law" for item in sources):
+            elif "law" in route and not has_law and not has_document:
+                # Enterprise document hits can carry the institutional answer when
+                # formal law rows were incomplete; do not wipe the user answer.
                 failure = "law_source_missing"
-            elif "calculation" in route and not any(item["domain"] == "calculation" for item in sources):
+            elif "calculation" in route and not has_calc and "document" not in route:
                 failure = "calculation_source_missing"
             elif assumptions and not ResponseGuard._assumptions_disclosed(answer_text, assumptions):
                 failure = "assumption_not_disclosed"
@@ -185,10 +211,10 @@ class ResponseGuard:
                 failure = "llm_budget_exceeded"
         if failure:
             error = ErrorEnvelope(error_code=failure, category="guard", node="response_guard", retryable=False, safe_message="검증된 근거를 갖춘 응답을 만들지 못했습니다.", internal_reference=str(uuid.uuid4()))
-            return ResponseEnvelope(status="system_error", answer=error.safe_message, limitations=[failure], next_action="잠시 후 다시 요청하거나 조건을 구체적으로 알려주세요.", question_id=question_id, metadata={"response_guard_status": "blocked", "error": error.model_dump(mode="json")}).model_dump(mode="json")
+            return ResponseEnvelope(status="system_error", answer=error.safe_message, limitations=[public_notice(failure)], next_action="잠시 후 다시 요청하거나 조건을 구체적으로 알려주세요.", question_id=question_id, metadata={"response_guard_status": "blocked", "error": error.model_dump(mode="json")}).model_dump(mode="json")
         public_sources = [
             {
-                "label": PUBLIC_PRODUCT_SOURCE if item.get("domain") == "product" else (item.get("source_file") or item.get("domain")),
+                "label": source_label(item),
                 "source_file": item.get("source_file"),
                 "source_page": item.get("source_page"),
                 # Keep domain for evaluator/observability; UI uses label only.
@@ -197,17 +223,24 @@ class ResponseGuard:
             for item in sources
             if item.get("source_file") or item.get("domain")
         ]
+        product_lookup_used = bool(result.get("product_results")) or ("product" in (route or ""))
+        product_backend = meta.get("product_backend") or result.get("product_backend") or ("standard_json" if product_lookup_used else None)
         return ResponseEnvelope(
             status=status,
             answer=answer_text,
             sources=public_sources,
             evidence_summary={"domain": meta.get("evidence_count_by_domain", {}), "status": meta.get("evidence_count_by_status", {})},
-            assumptions=assumptions,
-            limitations=meta.get("verification_failures", []) + meta.get("verification_warnings", []),
+            assumptions=[public_assumption(item) for item in assumptions],
+            limitations=list(dict.fromkeys(public_notice(item) for item in meta.get("verification_failures", []) + meta.get("verification_warnings", []))),
             next_action=next_action,
             question_id=question_id,
             metadata={
+                "required_facts": meta.get("required_facts", {}),
+                "calculation_trace": meta.get("calculation_trace", {}),
+                "stop_reason_code": meta.get("stop_reason_code"),
                 "response_guard_status": "passed",
+                "verification_failures": meta.get("verification_failures", []),
+                "verification_warnings": meta.get("verification_warnings", []),
                 "route": route,
                 "cache_status": meta.get("cache_status"),
                 "llm_call_count": meta.get("llm_call_count", 0),
@@ -224,6 +257,10 @@ class ResponseGuard:
                 "raw_units": meta.get("raw_units"),
                 "normalization_status": meta.get("normalization_status"),
                 "internal_sources": sources,
+                "source_type": "structured_product" if product_lookup_used else meta.get("source_type"),
+                "backend": product_backend if product_lookup_used else meta.get("backend"),
+                "product_lookup_used": product_lookup_used,
+                "structured_product_source": "standard_json" if product_lookup_used else None,
             },
         ).model_dump(mode="json")
 

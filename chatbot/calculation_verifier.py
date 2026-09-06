@@ -40,10 +40,14 @@ class CalculationRuleVerifier:
         elif result.calculation_type == "tax_credit":
             try:
                 parsed_result = Decimal(result.result)
+            except (InvalidOperation, TypeError):
+                parsed_result = None
+            try:
                 combined_limit = Decimal(result.intermediate_values["combined_credit_base_limit"])
-            except (KeyError, InvalidOperation):
-                parsed_result = combined_limit = None
+            except (KeyError, InvalidOperation, TypeError):
+                combined_limit = None
             limit_mode = result.inputs.get("mode") == "limit_summary"
+            isa_mode = result.inputs.get("mode") == "isa_transfer"
             if limit_mode:
                 add("tax_credit_limit_result", "PASS" if parsed_result is not None and parsed_result == combined_limit else "FAIL", str(combined_limit), str(parsed_result), "Tax credit base limit was recomputed from policy.")
                 try:
@@ -51,12 +55,26 @@ class CalculationRuleVerifier:
                 except (KeyError, InvalidOperation):
                     pension_limit = None
                 add("tax_credit_sublimit", "PASS" if pension_limit is not None and combined_limit is not None and pension_limit <= combined_limit else "FAIL", "pension savings <= combined", str(pension_limit), "Pension-savings sublimit was checked.")
+            elif isa_mode:
+                try:
+                    transfer = Decimal(result.intermediate_values["isa_transfer_amount"])
+                    ratio = Decimal(result.intermediate_values["isa_transfer_credit_ratio"])
+                    cap = Decimal(result.intermediate_values["isa_extra_credit_base_limit"])
+                    recomputed = min(transfer * ratio, cap).quantize(Decimal("1"), rounding=ROUND_HALF_UP)
+                except (KeyError, InvalidOperation, TypeError):
+                    recomputed = None
+                add("tax_credit_isa_recompute", "PASS" if recomputed is not None and parsed_result == recomputed else "FAIL", str(recomputed), str(parsed_result), "ISA transfer extra credit was recomputed from policy.")
             else:
                 try:
                     base = Decimal(result.intermediate_values["credit_base"])
-                    rate = Decimal(result.intermediate_values["rate"])
+                    rate_raw = (
+                        result.intermediate_values.get("effective_rate")
+                        or result.intermediate_values.get("rate")
+                        or result.intermediate_values.get("national_rate")
+                    )
+                    rate = Decimal(str(rate_raw))
                     recomputed = (base * rate).quantize(Decimal("1"), rounding=ROUND_HALF_UP)
-                except (KeyError, InvalidOperation):
+                except (KeyError, InvalidOperation, TypeError):
                     recomputed = None
                 add("tax_credit_recompute", "PASS" if recomputed is not None and parsed_result == recomputed else "FAIL", str(recomputed), str(parsed_result), "Tax credit amount was recomputed from policy.")
             add("tax_credit_policy_identity", "PASS" if result.formula_id.startswith("pension_tax_credit_") else "FAIL", "pension_tax_credit_*", result.formula_id, "Policy formula identity was checked.")

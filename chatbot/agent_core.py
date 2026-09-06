@@ -18,6 +18,7 @@ from .chatbot_core import PensionChatbot
 from .llm_provider import HyperClovaProviderAdapter
 from .model_policy import llm_for_role
 from .paths import REPO_ROOT
+from .answer_contract import is_product_rule_question, composition_instruction
 from .risk_policy import label_for_grade
 
 
@@ -160,7 +161,12 @@ class PensionAgentCore:
         document_result["product_db_available"] = True
         return document_result
 
-    def collect_evidence_with_decision(
+    def collect_evidence_with_decision(self, question, decision, top_k=5, tool_cache=None):
+        from .answer_contract import enrich_collection
+        collection = self._collect_evidence_base(question, decision, top_k, tool_cache)
+        return enrich_collection(question, collection, self.document_chatbot.retriever, top_k)
+
+    def _collect_evidence_base(
         self,
         question: str,
         decision: RouteDecision,
@@ -183,7 +189,7 @@ class PensionAgentCore:
 
         if route == "document":
             contexts = self.document_chatbot.retriever.retrieve(
-                question, top_k=top_k, source_group="docs"
+                question, top_k=top_k, source_group=(None if is_product_rule_question(question) else "docs")
             )
             return {"result": {**base, "results": contexts, "used_tools": ["document"]},
                     "answer_kind": "document", "contexts": contexts, "evidence_text": ""}
@@ -197,7 +203,7 @@ class PensionAgentCore:
 
         if route == "document+law":
             contexts = self.document_chatbot.retriever.retrieve(
-                question, top_k=top_k, source_group="docs"
+                question, top_k=top_k, source_group=(None if is_product_rule_question(question) else "docs")
             )
             law_result = self._search_law_result(question, tool_cache=tool_cache)
             document_text = self._document_contexts_to_text(contexts)
@@ -253,10 +259,11 @@ class PensionAgentCore:
         self, question: str, collection: dict[str, Any]
     ) -> str | None:
         """Generate exactly one final answer from a verified evidence collection."""
+        prompt_question = composition_instruction(question, collection["required_facts"]) if collection.get("required_facts") else question
         kind = collection.get("answer_kind")
         if kind == "document":
             return self.answer_provider.answer_from_context(
-                question, collection.get("contexts") or []
+                prompt_question, collection.get("contexts") or []
             )
         if kind == "evidence":
             products = (collection.get("result") or {}).get("product_results") or []
@@ -264,7 +271,7 @@ class PensionAgentCore:
                 return self.compose_product_risk_answer(question, products)
             try:
                 return self.answer_provider.answer_from_evidence(
-                    question, collection.get("evidence_text") or ""
+                    prompt_question, collection.get("evidence_text") or ""
                 )
             except Exception:
                 if products:

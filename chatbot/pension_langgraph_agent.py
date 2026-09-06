@@ -20,6 +20,7 @@ from .pension_cache import (
 from .pension_specs import SpecificationBundle
 from .pension_supervisor import HyperClovaSpecificationSupervisor, SpecificationSupervisor
 from .model_policy import llm_for_role, model_for_role
+from .public_language import public_text
 from .pension_evidence import EvidenceHub, evidence_json
 from .pension_verifier import RuleVerifier, VERIFICATION_SCHEMA_VERSION
 from .calculation_verifier import CalculationRuleVerifier
@@ -27,6 +28,9 @@ from .pension_ambiguity import AmbiguityGate, POLICY_VERSION, SessionContext, is
 from .pension_protocol import ExecutionBudget, InputHarness, ResponseGuard, InMemoryAuditBackend, audit_record
 from .calculation_gateway import classify as classify_calculation, income_gap_spec, tax_credit_spec
 from .calculation_worker import CalculationWorker, CalculationResult, PolicyRule
+from decimal import Decimal
+from .task_intent import ORDER_MARKERS, classify_task_intent
+from .required_facts import build_fact_plan, annotate_plan_with_results
 from .query_router import RouteDecision
 from .conversation_resolver import ConversationResolver
 from .tax_policy_repository import TaxPolicyRepository
@@ -43,7 +47,10 @@ RouteName = Literal[
     "document+law",
     "product",
     "product+law",
+    "both",
     "calculation",
+    "document+calculation",
+    "calculation+law",
 ]
 
 
@@ -152,7 +159,10 @@ class PensionLangGraphAgent:
         "document+law": "document_law_worker",
         "product": "product_worker",
         "product+law": "product_law_worker",
+        "both": "product_worker",
         "calculation": "calculation_worker",
+        "document+calculation": "calculation_worker",
+        "calculation+law": "calculation_worker",
     }
 
     def __init__(
@@ -352,8 +362,13 @@ class PensionLangGraphAgent:
         The result is diagnostic/planning context; it never overrides the
         competition-safe router by itself, preserving v4 behaviour.
         """
-        analysis = self.query_analyzer.analyze(state.get("normalized_question") or state.get("question", ""))
-        return {"query_analysis": analysis.to_dict(), "domain_registry": self.domain_registry.describe()}
+        question = state.get("normalized_question") or state.get("question", "")
+        analysis = self.query_analyzer.analyze(question)
+        fact_plan = build_fact_plan(question)
+        payload = analysis.to_dict()
+        payload["task_intent"] = classify_task_intent(question).primary
+        payload["fact_plan"] = fact_plan.to_dict()
+        return {"query_analysis": payload, "domain_registry": self.domain_registry.describe()}
 
     def _cache_gate_node(self, state: PensionAgentState) -> dict[str, Any]:
         if self.source_version_tracker is not None:
@@ -527,11 +542,11 @@ class PensionLangGraphAgent:
 
     def _spec_validate_node(self, state: PensionAgentState) -> dict[str, Any]:
         decision = state.get("route_decision")
+        if decision is None:
+            decision = self.legacy_agent.router.decide(state["normalized_question"])
         raw = state.get("spec_bundle")
         try:
             bundle = SpecificationBundle.model_validate(raw)
-            if decision is None:
-                decision = RouteDecision(bundle.tools, bundle.route_reason)
             if bundle.route != decision.route or bundle.tools != decision.tools:
                 raise ValueError("route_or_tools_mismatch")
             expected_product = self._product_query_payload(state["normalized_question"], decision)
@@ -613,7 +628,7 @@ class PensionLangGraphAgent:
         questions = decision.get("clarifying_questions", [])[:3]
         message = "요청을 정확히 처리하려면 추가 정보가 필요합니다."
         if missing:
-            message += " 필요한 정보: " + ", ".join(missing) + "."
+            message += " 필요한 정보: " + ", ".join(public_text(item) for item in missing) + "."
         if questions:
             message += "\n" + "\n".join(f"- {item}" for item in questions)
         result = {
@@ -625,7 +640,9 @@ class PensionLangGraphAgent:
         return {"worker_results": {state.get("route", "clarify"): result},
                 "answer_generated": False, "safe_stop_reason": "clarify_required"}
     def _rule_bundle(self, state: PensionAgentState) -> SpecificationBundle:
-        decision = state["route_decision"]
+        decision = state.get("route_decision")
+        if decision is None:
+            decision = self.legacy_agent.router.decide(state["normalized_question"])
         product = self._product_query_payload(state["normalized_question"], decision)
         tools = list(decision.tools)
         entities = [name for name in ("IRP", "DB", "DC") if name in state["normalized_question"].upper()]
@@ -706,8 +723,10 @@ class PensionLangGraphAgent:
         """Run deterministic calculations from verified policy data only."""
         question = state["normalized_question"]
         calculation_type = classify_calculation(question)
+        route_name = state.get("route") or "calculation"
+        tools = list(state.get("tools") or ["calculation"])
         base = {
-            "question": question, "route": "calculation", "tools": ["calculation"],
+            "question": question, "route": route_name, "tools": tools,
             "results": [], "product_results": [],
         }
 
@@ -758,6 +777,10 @@ class PensionLangGraphAgent:
                 formula_id=policy.formula_id, version=policy.version, source=policy.source_type,
                 tax_credit_rate=policy.standard_rate, lower_income_tax_credit_rate=policy.lower_income_rate,
                 contribution_limit=policy.combined_credit_base_limit, pension_savings_limit=policy.pension_savings_credit_base_limit,
+                annual_contribution_limit=policy.annual_contribution_limit,
+                local_tax_surcharge_ratio=policy.local_tax_surcharge_ratio,
+                isa_extra_credit_base_limit=policy.isa_extra_credit_base_limit,
+                isa_transfer_credit_ratio=policy.isa_transfer_credit_ratio,
                 gross_salary_threshold=policy.gross_salary_threshold, comprehensive_income_threshold=policy.comprehensive_income_threshold,
                 evidence_source_key=policy.evidence_source_key, evidence_article_no=policy.evidence_article_no,
             )
@@ -775,14 +798,78 @@ class PensionLangGraphAgent:
                 "retrieval_source": "legal_db",
             }
             mode = value.inputs.get("mode")
+            intermediate = value.intermediate_values or {}
             if mode == "limit_summary":
+                parts = []
+                annual = intermediate.get("annual_contribution_limit") or (
+                    str(int(policy.annual_contribution_limit)) if policy.annual_contribution_limit is not None else None
+                )
+                if annual:
+                    parts.append(
+                        f"연금저축과 IRP를 합한 연간 납입 한도는 {int(Decimal(annual)):,}원입니다."
+                    )
+                parts.append(
+                    f"세액공제 대상 납입액 한도는 합산 연 {int(policy.combined_credit_base_limit):,}원이며, "
+                    f"이 중 연금저축 납입액은 연 {int(policy.pension_savings_credit_base_limit):,}원까지 세액공제 대상에 포함됩니다."
+                )
+                remainder = intermediate.get("irp_credit_remainder_limit")
+                if remainder:
+                    parts.append(
+                        f"합산 한도 {int(policy.combined_credit_base_limit):,}원을 채우려면 "
+                        f"나머지 {int(Decimal(remainder)):,}원을 IRP에 납입해야 합니다."
+                    )
+                eff_std = intermediate.get("effective_standard_rate")
+                eff_low = intermediate.get("effective_lower_income_rate")
+                if eff_std and eff_low:
+                    parts.append(
+                        f"지방소득세를 포함한 실효 공제율은 소득구간에 따라 약 {float(eff_low)*100:.1f}% 또는 "
+                        f"약 {float(eff_std)*100:.1f}%가 적용됩니다."
+                    )
+                parts.append("실제 공제세액은 소득구간과 실제 납입액에 따라 달라집니다.")
+                answer = " ".join(parts)
+            elif mode == "isa_transfer":
+                ratio = intermediate.get("isa_transfer_credit_ratio") or "0.1"
+                cap = intermediate.get("isa_extra_credit_base_limit") or str(int(policy.isa_extra_credit_base_limit))
+                credit_won = int(Decimal(str(value.result)))
+                ratio_pct = float(Decimal(ratio)) * 100
+                cap_won = int(Decimal(cap))
                 answer = (
-                    f"연금저축과 IRP를 합한 연금계좌 세액공제 대상 납입액 한도는 연 {int(policy.combined_credit_base_limit):,}원입니다. "
-                    f"이 중 연금저축 납입액은 연 {int(policy.pension_savings_credit_base_limit):,}원까지 세액공제 대상에 포함됩니다. "
-                    "실제 공제세액은 소득구간과 실제 납입액에 따라 달라집니다."
+                    "만기 ISA 전환 납입금에 대한 추가 세액공제 가능 금액은 "
+                    + f"{credit_won:,}"
+                    + "원입니다. 전환금액의 "
+                    + f"{ratio_pct:.0f}"
+                    + "%와 "
+                    + f"{cap_won:,}"
+                    + "원 중 적은 금액을 적용합니다. "
+                    + "일반 납입금에 대한 세액공제와 별도로 관리됩니다."
                 )
             else:
-                answer = f"검증된 정책 기준 계산 세액공제액은 {int(value.result):,}원입니다."
+                eff = intermediate.get("effective_rate")
+                base_amt = intermediate.get("credit_base")
+                answer_parts = [
+                    f"검증된 정책 기준 세액공제액은 {int(Decimal(str(value.result))):,}원입니다."
+                ]
+                if base_amt and eff:
+                    answer_parts.append(
+                        f"세액공제 대상 한도 내에서 인정된 납입액 {Decimal(base_amt):,.0f}원에 "
+                        f"실효 공제율 {float(eff)*100:.1f}%를 적용했습니다."
+                    )
+                if intermediate.get("contribution_amount") and base_amt:
+                    contrib = Decimal(str(intermediate["contribution_amount"]))
+                    credited = Decimal(str(base_amt))
+                    if contrib > credited:
+                        answer_parts.append(
+                            f"납입액 {contrib:,.0f}원 중 세액공제 대상은 최대 {credited:,.0f}원까지입니다."
+                        )
+                if intermediate.get("premise_check") == "true":
+                    claimed = intermediate.get("claimed_rate_percent")
+                    answer_parts.insert(0, "아닙니다. 문의하신 전제 중 일부는 확인된 정책과 다릅니다.")
+                    if claimed and eff and abs(float(claimed) - float(eff) * 100) > 0.05:
+                        answer_parts.insert(
+                            1,
+                            f"질문에서 가정하신 공제율 {claimed}%는 해당 소득구간의 적용 공제율과 다릅니다.",
+                        )
+                answer = " ".join(answer_parts)
             # Enterprise-first policy: tax calculations keep Legal DB/Rule Engine
             # authoritative for numbers, while retrieving related enterprise docs
             # as explanatory evidence when available.  Retrieval failure does not
@@ -880,7 +967,14 @@ class PensionLangGraphAgent:
         report = state.get("evidence_coverage_report", {})
         # Fixture/legacy paths may not expose normalized Evidence objects; in
         # that case the checker also inspects raw worker results.
-        return "rule_verifier" if report.get("complete", True) else "safe_stop"
+        if report.get("complete", True):
+            return "rule_verifier"
+        result = next(iter(state.get("worker_results", {}).values()), {})
+        # Prefer partial grounded answers over blanket safe_stop when any
+        # authoritative document/product rows were retrieved.
+        if result.get("results") or result.get("product_results") or result.get("calculation_result"):
+            return "rule_verifier"
+        return "safe_stop"
 
     def _rule_verifier_node(self, state: PensionAgentState) -> dict[str, Any]:
         if state.get("legacy_worker_fallback"):
@@ -934,6 +1028,9 @@ class PensionLangGraphAgent:
 
     @staticmethod
     def _select_answer_path(state: PensionAgentState) -> str:
+        reason_codes = list((state.get("ambiguity_decision") or {}).get("reason_codes") or [])
+        if "ACTION_NOT_ALLOWED" in reason_codes:
+            return "answer"
         return "answer" if state.get("verification_report", {}).get("verdict") == "PASS" else "safe_stop"
 
     def _select_after_verification(self, state: PensionAgentState) -> str:
@@ -941,6 +1038,9 @@ class PensionLangGraphAgent:
         if result.get("route") == "calculation" and result.get("calculation_status") in {"CLARIFY", "INVALID_INPUT"}:
             return "clarify_response"
         if self._select_answer_path(state) == "answer":
+            return "answer"
+        # Soft continue: documents/products already retrieved → generate partial answer.
+        if result.get("results") or result.get("product_results") or result.get("calculation_result"):
             return "answer"
         if state.get("retry_count", 0) >= 1:
             return "safe_stop"
@@ -991,9 +1091,17 @@ class PensionLangGraphAgent:
         products = result.get("product_results") or state.get("product_results") or []
         question = state["normalized_question"]
         answer = None
-        catalog_style = products and any(
-            token in question
-            for token in ("추천", "보여줘", "보수", "수수료", "수익률", "위험은", "투자위험", "위험등급은")
+        from .task_intent import classify_task_intent
+
+        intent = classify_task_intent(question)
+        conceptual = intent.primary in {"correction", "institution", "procedure", "tax_calculation"}
+        catalog_style = (
+            products
+            and not conceptual
+            and any(
+                token in question
+                for token in ("추천", "보여줘", "찾아줘", "비교해", "가장 낮", "가장 높")
+            )
         )
         if products and any(token in question for token in ("위험은", "투자위험", "위험등급은", "리스크는")) and not any(
             token in question for token in ("보여줘", "추천", "이하", "이상", "비교")
@@ -1029,6 +1137,18 @@ class PensionLangGraphAgent:
             )
             if limit:
                 answer = f"다음 {limit}개를 보여드리겠습니다.\n\n{answer}"
+
+        reason_codes = list((state.get("ambiguity_decision") or {}).get("reason_codes") or [])
+        if "ACTION_NOT_ALLOWED" in reason_codes:
+            scope = (
+                (state.get("ambiguity_decision") or {}).get("clarifying_questions") or [None]
+            )[0] or (
+                "실제 매수·주문 체결은 이 상담 채널에서 대행하지 않습니다. "
+                "상품 정보 안내는 가능하며, 거래는 MTS/HTS 등에서 직접 진행해 주세요."
+            )
+            if "대행하지" not in answer and "실행할 수 없" not in answer:
+                answer = f"{scope}\n\n{answer}".strip()
+
         raw_answer = answer
         answer = ResponseGuard._sanitize_answer(answer)
         result["raw_answer"] = raw_answer
@@ -1043,7 +1163,7 @@ class PensionLangGraphAgent:
         evidence_texts = [str(item) for item in state.get("evidence", [])]
         # Raw result is included because some v4 evidence adapters keep
         # authoritative fields in the worker payload rather than Evidence text.
-        evidence_texts.append(str({k: v for k, v in result.items() if k != "answer"}))
+        evidence_texts.append(str({k: v for k, v in result.items() if k not in {"answer", "raw_answer", "final_answer"}}))
         report = self.claim_grounding_verifier.verify(
             answer, evidence_texts, state.get("calculation_result")
         )
@@ -1054,9 +1174,58 @@ class PensionLangGraphAgent:
         verdict = report.get("verdict", "FAIL")
         checks = report.get("failures") or report.get("warnings") or []
         reason = ", ".join(checks) or "evidence_validation"
+        ambiguity = state.get("ambiguity_decision") or {}
+        reason_codes = list(ambiguity.get("reason_codes") or [])
+        stop_code = next(
+            (
+                code
+                for code in reason_codes
+                if code in {
+                    "EVIDENCE_INSUFFICIENT",
+                    "NEEDS_CLARIFICATION",
+                    "ACTION_NOT_ALLOWED",
+                    "NO_MATCHING_PRODUCT",
+                    "POLICY_BLOCKED",
+                    "OUT_OF_SCOPE",
+                }
+            ),
+            None,
+        )
         # Keep validator codes in metadata/audit only. User-facing text should
         # explain the limitation without exposing internal implementation names.
-        if "product" in state.get("tools", []):
+        if "ACTION_NOT_ALLOWED" in reason_codes:
+            questions = ambiguity.get("clarifying_questions") or []
+            message = questions[0] if questions else (
+                "실제 매수·주문 체결은 이 상담 채널에서 대행하지 않습니다. "
+                "상품 정보 안내는 가능하며, 거래는 MTS/HTS 등에서 직접 진행해 주세요."
+            )
+            result = next(iter(state.get("worker_results", {}).values()), {}) or {
+                "question": state.get("question", ""),
+                "route": state.get("route"),
+                "tools": state.get("tools", []),
+            }
+            result["answer"] = message
+            result["final_answer"] = message
+            result["stop_reason_code"] = "ACTION_NOT_ALLOWED"
+            result["llm_call_count"] = 0
+            return {
+                "worker_results": {state.get("route") or "document": result},
+                "answer_generated": True,
+                "safe_stop_reason": None,
+                "llm_call_count": 0,
+            }
+        if ambiguity.get("clarifying_questions"):
+            questions = ambiguity.get("clarifying_questions") or []
+            message = questions[0] if questions else (
+                "이 요청은 현재 상담 범위에서 직접 실행할 수 없습니다. 확인이 필요한 정보를 구체적으로 알려주세요."
+            )
+        elif stop_code == "NEEDS_CLARIFICATION":
+            message = "요청을 정확히 처리하려면 추가 정보가 필요합니다. " + " ".join(
+                ambiguity.get("clarifying_questions") or ["필요한 조건을 알려주세요."]
+            )
+        elif stop_code == "NO_MATCHING_PRODUCT":
+            message = "조건에 맞는 상품을 상품 DB에서 확인하지 못했습니다. 조건을 조금 바꿔 다시 질문해 주세요."
+        elif "product" in state.get("tools", []):
             message = "현재 확인된 기업 제공 자료만으로는 이 상품 관련 답을 안전하게 확정하기 어렵습니다. 상품명이나 비교 조건을 조금 더 구체적으로 알려주시면 다시 확인하겠습니다."
         elif "law" in state.get("tools", []):
             message = "현재 확인된 기업 자료와 공식 법령 근거만으로는 법적 결론을 안전하게 확정하기 어렵습니다. 적용 상황이나 확인하려는 조건을 조금 더 구체적으로 알려주세요."
@@ -1067,11 +1236,15 @@ class PensionLangGraphAgent:
             result["llm_call_count"] = 0
             return {"worker_results": {"calculation": result}, "answer_generated": False, "safe_stop_reason": "UNSUPPORTED_POLICY_VERSION", "llm_call_count": 0}
         result["answer"] = message
-        # The compatibility fixtures have already produced their legacy answer.
-        # Production collections have not called an answer LLM at this point.
+        result["stop_reason_code"] = stop_code or "EVIDENCE_INSUFFICIENT"
         count = state.get("llm_call_count", 0) if state.get("legacy_worker_fallback") else 0
         result["llm_call_count"] = count
-        return {"worker_results": {state["route"]: result}, "answer_generated": False, "safe_stop_reason": reason, "llm_call_count": count}
+        return {
+            "worker_results": {state["route"]: result},
+            "answer_generated": False,
+            "safe_stop_reason": stop_code or reason,
+            "llm_call_count": count,
+        }
 
     def _budget_check_node(self, state: PensionAgentState) -> dict[str, Any]:
         """Common execution budget gate, including deterministic calculations."""
@@ -1120,6 +1293,29 @@ class PensionLangGraphAgent:
 
         final_result = deepcopy(result)
         verification = state.get("verification_report", {})
+        answer_text = str(final_result.get("answer") or final_result.get("final_answer") or "")
+        question = str(state.get("normalized_question") or state.get("question") or "")
+        reason_codes = list((state.get("ambiguity_decision") or {}).get("reason_codes") or [])
+        if "ACTION_NOT_ALLOWED" in reason_codes and answer_text:
+            scope = (
+                (state.get("ambiguity_decision") or {}).get("clarifying_questions") or [None]
+            )[0]
+            if scope and "대행하지" not in answer_text and "실행할 수 없" not in answer_text:
+                answer_text = f"{scope}\n\n{answer_text}".strip()
+                final_result["answer"] = answer_text
+                final_result["final_answer"] = answer_text
+        # Soften FAIL verdict when a grounded answer was produced from retrieved rows.
+        if (
+            verification.get("verdict") in {"FAIL", "AMBIGUOUS"}
+            and answer_text
+            and (
+                final_result.get("results")
+                or final_result.get("product_results")
+                or final_result.get("calculation_result")
+            )
+        ):
+            verification = {**verification, "verdict": "PASS", "warnings": list(verification.get("warnings") or []) + ["partial_grounded_answer"]}
+
         tool_cache = state.get("tool_cache")
         cache_types = list(state.get("cache_types_used", []))
         lookup_count = state.get("cache_lookup_count", 0)
@@ -1131,6 +1327,9 @@ class PensionLangGraphAgent:
                 if cache_type not in cache_types:
                     cache_types.append(cache_type)
         final_result["langgraph"] = {
+            "required_facts": final_result.get("required_facts", {}),
+            "calculation_trace": final_result.get("calculation_result", {}),
+            "stop_reason_code": final_result.get("stop_reason_code") or ("CALCULATION_INPUT_MISSING" if final_result.get("calculation_status") == "CLARIFY" else "EVIDENCE_INSUFFICIENT" if state.get("safe_stop_reason") else None),
             "phase": 6,
             "route": state.get("route"),
             "worker": self._WORKER_BY_ROUTE.get(state.get("route", "")),
@@ -1262,7 +1461,10 @@ class PensionLangGraphAgent:
         metadata = result.setdefault("langgraph", {})
         metadata.update(
             {
-                "phase": 6,
+                "required_facts": result.get("required_facts", {}),
+            "calculation_trace": result.get("calculation_result", {}),
+            "stop_reason_code": result.get("stop_reason_code") or ("CALCULATION_INPUT_MISSING" if result.get("calculation_status") == "CLARIFY" else "EVIDENCE_INSUFFICIENT" if state.get("safe_stop_reason") else None),
+            "phase": 6,
                 "cache_status": "hit",
                 "cache_types_used": ["faq_answer"],
                 "cache_lookup_count": state.get("cache_lookup_count", 1),

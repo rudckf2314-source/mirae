@@ -92,7 +92,7 @@ def _source_preview(payload: dict) -> str:
 
 
 def render_chat() -> None:
-    st.title("연금 AI Agent")
+    st.title("연금 상담")
     st.caption("기업 제공 투자설명서·연금 안내자료를 최우선 근거로 답하고, 필요한 경우에만 공식 외부 근거를 보완합니다.")
 
 
@@ -174,7 +174,8 @@ def _render_chat_sources(sources: list) -> None:
     if sources:
         with st.expander("참고한 자료", expanded=False):
             for src in sources:
-                st.write(f"- {src.get('source_file') or src.get('domain')}" + (f" / p.{src.get('source_page')}" if src.get('source_page') else ""))
+                from chatbot.public_language import source_label
+                st.write(f"- {src.get('label') or source_label(src)}" + (f" / {src.get('source_page')}쪽" if src.get('source_page') else ""))
 
 
 def _load_inventory() -> dict:

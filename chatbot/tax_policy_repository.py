@@ -18,6 +18,8 @@ class PensionTaxCreditPolicy:
     comprehensive_income_threshold: Decimal
     isa_extra_credit_base_limit: Decimal
     isa_transfer_credit_ratio: Decimal
+    annual_contribution_limit: Decimal | None
+    local_tax_surcharge_ratio: Decimal
     formula_id: str
     version: str
     evidence_source_key: str
@@ -44,6 +46,12 @@ class TaxPolicyRepository:
             comprehensive_income_threshold=Decimal(str(p["comprehensive_income_threshold"])),
             isa_extra_credit_base_limit=Decimal(str(p.get("isa_extra_credit_base_limit", 0))),
             isa_transfer_credit_ratio=Decimal(str(p.get("isa_transfer_credit_ratio", 0))),
+            annual_contribution_limit=(
+                Decimal(str(p["annual_contribution_limit"]))
+                if p.get("annual_contribution_limit") is not None
+                else None
+            ),
+            local_tax_surcharge_ratio=Decimal(str(p.get("local_tax_surcharge_ratio", "0.10"))),
             formula_id=raw["formula_id"],
             version=raw["version"],
             evidence_source_key=raw["evidence_source_key"],

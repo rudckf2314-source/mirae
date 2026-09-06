@@ -10,6 +10,7 @@ from pydantic import BaseModel
 from .agent_core import PensionAgentCore
 from .paths import REPO_ROOT
 from .pension_langgraph_agent import PensionLangGraphAgent
+from .public_language import public_text
 
 STATIC_DIR = REPO_ROOT / "static"
 
@@ -63,6 +64,8 @@ def search(request: ChatRequest):
     try:
         if langgraph_agent is not None:
             return langgraph_agent.respond(question, top_k=request.top_k, session_context=request.session_context, question_id=request.question_id)
-        return agent.answer(question=question, top_k=max(1, min(request.top_k, 10)))
+        response = agent.answer(question=question, top_k=max(1, min(request.top_k, 10)))
+        response["answer"] = public_text(response.get("answer"))
+        return response
     except Exception as exc:
         raise HTTPException(status_code=500, detail=str(exc)) from exc

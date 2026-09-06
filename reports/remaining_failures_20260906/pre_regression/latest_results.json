@@ -1,0 +1,4574 @@
+{
+  "summary": {
+    "cases": 22,
+    "turns": 29,
+    "pass": 22,
+    "fail": 0,
+    "skip": 0,
+    "average_score": 9.72,
+    "entrypoint": "PensionLangGraphAgent.respond / POST /api/search",
+    "llm_judge": false,
+    "skip_reason": null
+  },
+  "case_verdicts": {
+    "T001": "PASS",
+    "T002": "PASS",
+    "T003": "PASS",
+    "T004": "PASS",
+    "T005": "PASS",
+    "T006": "PASS",
+    "T007": "PASS",
+    "T008": "PASS",
+    "T009": "PASS",
+    "T010": "PASS",
+    "T011": "PASS",
+    "T012": "PASS",
+    "T013": "PASS",
+    "T014": "PASS",
+    "T015": "PASS",
+    "T016": "PASS",
+    "T017": "PASS",
+    "T018": "PASS",
+    "T019": "PASS",
+    "T020": "PASS",
+    "T021": "PASS",
+    "T022": "PASS"
+  },
+  "category_stats": {
+    "general_concept": {
+      "pass": 2,
+      "total": 2,
+      "rate": "100.0%"
+    },
+    "recommendation": {
+      "pass": 4,
+      "total": 4,
+      "rate": "100.0%"
+    },
+    "procedure": {
+      "pass": 1,
+      "total": 1,
+      "rate": "100.0%"
+    },
+    "product_query": {
+      "pass": 4,
+      "total": 4,
+      "rate": "100.0%"
+    },
+    "legal_procedure": {
+      "pass": 1,
+      "total": 1,
+      "rate": "100.0%"
+    },
+    "hypothetical": {
+      "pass": 1,
+      "total": 1,
+      "rate": "100.0%"
+    },
+    "evidence_followup": {
+      "pass": 1,
+      "total": 1,
+      "rate": "100.0%"
+    },
+    "source_coverage": {
+      "pass": 1,
+      "total": 1,
+      "rate": "100.0%"
+    },
+    "official_p0": {
+      "pass": 5,
+      "total": 5,
+      "rate": "100.0%"
+    },
+    "official_multiturn": {
+      "pass": 1,
+      "total": 1,
+      "rate": "100.0%"
+    },
+    "official_compound": {
+      "pass": 1,
+      "total": 1,
+      "rate": "100.0%"
+    }
+  },
+  "turns": [
+    {
+      "test_id": "T001",
+      "turn_no": 1,
+      "user_query": "IRP 계좌가 뭐야?",
+      "response_text": "IRP 계좌는 개인형 퇴직연금제도(IRP)의 일환으로, 퇴직 시 수령한 퇴직급여 또는 가입자가 납입한 부담금을 적립하고 운용하여 노후자금으로 활용할 수 있는 퇴직급여 전용 통장입니다. 쉽게 말해, 퇴직금을 관리하고 노후를 대비하기 위한 특별한 계좌라고 할 수 있습니다.\n\nIRP 계좌는 다음과 같은 특징을 가지고 있습니다:\n\n1. **의무 이전**: 대부분의 경우, 퇴직 시 퇴직급여는 IRP 계좌로 의무적으로 이전됩니다. 다만, 일부 예외 사유(예: 퇴직급여 300만 원 이하, 55세 이후 퇴직 등)가 있을 수 있습니다.\n\n2. **압류 방지**: IRP 계좌에 있는 퇴직연금은 압류 대상에서 제외되어 안전하게 보호됩니다.\n\n3. **중도 인출 가능**: 원칙적으로는 만 55세 이전에 인출이 불가능하지만, 특정 사유(예: 의료비, 주택 구입 등)에 따라 중도 인출이 가능합니다. 단, 이 경우 세금이 다르게 적용될 수 있습니다.\n\n4. **세제 혜택**: IRP 계좌에 납입한 금액에 대해 세액공제 혜택을 받을 수 있으며, 운용 수익에 대해서는 과세가 이연됩니다.\n\n5. **분리된 계좌 구조**: 미래에셋증권의 경우, IRP 계좌와 가입자 부담금 입금 계좌, 퇴직금 입금 계좌가 각각 따로 구분되어 있어 주의가 필요합니다.\n\n이와 같은 특징들로 인해 IRP 계좌는 퇴직 후 안정적인 생활을 준비하는 데 매우 유용한 금융 상품입니다. 출처: doc11.pdf (page 2), doc55.docx (document 1), doc20.docx (document 1), doc16.pdf (page 2), doc11.pdf (page 1)",
+      "detected_intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT"
+      ],
+      "actual_route": "document",
+      "expected_routes": [
+        "document"
+      ],
+      "tools_called": [
+        "document"
+      ],
+      "source_types": [
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [],
+      "postgres_used": false,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "matched": 5
+      },
+      "latency_ms": 11621.7,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "success",
+      "session_id": "eval-T001-67bccc85",
+      "confirmed_constraints": {},
+      "gold_metadata": {
+        "test_id": "T001",
+        "session_id": "eval-T001-67bccc85",
+        "original_query": "IRP 계좌가 뭐야?",
+        "resolved_query": "IRP 계좌가 뭐야?",
+        "detected_intent": "document",
+        "actual_route": "document",
+        "retrieval_queries": [],
+        "required_evidence": {
+          "required_product_count": null,
+          "risk_grade_max": null,
+          "online_only": false,
+          "sort": null,
+          "require_product_evidence": false,
+          "require_pdf_evidence": false,
+          "require_law_evidence": false,
+          "require_source_version": true,
+          "allowed_evidence_statuses": [
+            "matched"
+          ]
+        },
+        "tools_called": [
+          "document"
+        ],
+        "source_types": [],
+        "product_ids": [],
+        "product_class_ids": [],
+        "candidate_count": 0,
+        "candidate_ids": [],
+        "selected_product_id": null,
+        "db_row_count": null,
+        "retrieval_top_k": 5,
+        "evidence_coverage": {
+          "domain": {
+            "document": 5
+          },
+          "status": {
+            "matched": 5
+          }
+        },
+        "claim_grounding": {
+          "verdict": "PASS",
+          "numeric_claims": [
+            "1",
+            "300",
+            "55세",
+            "2",
+            "3",
+            "4",
+            "5",
+            "0",
+            "6"
+          ],
+          "unsupported_numeric_claims": [],
+          "citation_like_markers": [
+            "출처"
+          ],
+          "reason": "numeric_claims_grounded"
+        },
+        "raw_value": null,
+        "display_value": null,
+        "raw_unit": null,
+        "normalized_unit": null,
+        "normalization_status": null,
+        "response_status": "success",
+        "latency_ms": 11621.7,
+        "query_spec": null,
+        "ranking_breakdown": []
+      }
+    },
+    {
+      "test_id": "T002",
+      "turn_no": 1,
+      "user_query": "IRP 상품 추천해줘",
+      "response_text": "요청을 정확히 처리하려면 추가 정보가 필요합니다. 필요한 정보: 감수할 수 있는 투자 위험 수준, 예상 투자기간.\n- 감수 가능한 위험 수준(예: 원금 변동을 어느 정도 감수할 수 있는지)을 알려주세요.\n- 예상 투자기간 또는 연금 수령까지 남은 기간을 알려주세요.",
+      "detected_intent": [
+        "CLARIFY",
+        "PRODUCT_RECOMMENDATION"
+      ],
+      "actual_route": "product",
+      "expected_routes": [
+        "product"
+      ],
+      "tools_called": [
+        "product"
+      ],
+      "source_types": [
+        "postgres"
+      ],
+      "source_documents": [],
+      "postgres_used": true,
+      "enterprise_rag_used": false,
+      "external_api_used": false,
+      "evidence_status": "clarify",
+      "latency_ms": 33.9,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 1,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 9,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "clarify",
+      "session_id": "eval-T002-2590e022",
+      "confirmed_constraints": {},
+      "gold_metadata": {
+        "test_id": "T002",
+        "session_id": "eval-T002-2590e022",
+        "original_query": "IRP 상품 추천해줘",
+        "resolved_query": "IRP 상품 추천해줘",
+        "detected_intent": "product",
+        "actual_route": "product",
+        "retrieval_queries": [],
+        "required_evidence": {
+          "required_product_count": null,
+          "risk_grade_max": null,
+          "online_only": false,
+          "sort": "product_name",
+          "require_product_evidence": true,
+          "require_pdf_evidence": false,
+          "require_law_evidence": false,
+          "require_source_version": true,
+          "allowed_evidence_statuses": [
+            "matched"
+          ]
+        },
+        "tools_called": [
+          "product"
+        ],
+        "source_types": [],
+        "product_ids": [],
+        "product_class_ids": [],
+        "candidate_count": 0,
+        "candidate_ids": [],
+        "selected_product_id": null,
+        "db_row_count": null,
+        "retrieval_top_k": 5,
+        "evidence_coverage": {
+          "domain": {},
+          "status": {}
+        },
+        "claim_grounding": null,
+        "raw_value": null,
+        "display_value": null,
+        "raw_unit": null,
+        "normalized_unit": null,
+        "normalization_status": null,
+        "response_status": "clarify",
+        "latency_ms": 33.9,
+        "query_spec": null,
+        "ranking_breakdown": []
+      }
+    },
+    {
+      "test_id": "T002",
+      "turn_no": 2,
+      "user_query": "예시 샘플을 줘봐",
+      "response_text": "이렇게 알려주시면 됩니다.\n예: '원금 변동은 어느 정도 감수할 수 있고, 은퇴까지 약 15년 남았습니다.'\n예: '손실 가능성을 최대한 낮추고 싶고, 5년 정도 운용할 예정입니다.'",
+      "detected_intent": [
+        "EXAMPLE_RESPONSE",
+        "CLARIFY_EXAMPLE",
+        "HYPOTHETICAL_EXAMPLE"
+      ],
+      "actual_route": "conversation",
+      "expected_routes": [
+        "conversation"
+      ],
+      "tools_called": [
+        "conversation"
+      ],
+      "source_types": [],
+      "source_documents": [],
+      "postgres_used": false,
+      "enterprise_rag_used": false,
+      "external_api_used": false,
+      "evidence_status": "success",
+      "latency_ms": 0.0,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "success",
+      "session_id": "eval-T002-2590e022",
+      "confirmed_constraints": {},
+      "gold_metadata": {
+        "test_id": "T002",
+        "session_id": "eval-T002-2590e022",
+        "original_query": "예시 샘플을 줘봐",
+        "resolved_query": "예시 샘플을 줘봐",
+        "detected_intent": null,
+        "actual_route": "conversation",
+        "retrieval_queries": [],
+        "required_evidence": null,
+        "tools_called": [],
+        "source_types": [],
+        "product_ids": [],
+        "product_class_ids": [],
+        "candidate_count": 0,
+        "candidate_ids": [],
+        "selected_product_id": null,
+        "db_row_count": null,
+        "retrieval_top_k": null,
+        "evidence_coverage": {},
+        "claim_grounding": null,
+        "raw_value": null,
+        "display_value": null,
+        "raw_unit": null,
+        "normalized_unit": null,
+        "normalization_status": null,
+        "response_status": "success",
+        "latency_ms": 0.0,
+        "query_spec": null,
+        "ranking_breakdown": []
+      }
+    },
+    {
+      "test_id": "T003",
+      "turn_no": 1,
+      "user_query": "IRP 상품 추천해줘",
+      "response_text": "요청을 정확히 처리하려면 추가 정보가 필요합니다. 필요한 정보: 감수할 수 있는 투자 위험 수준, 예상 투자기간.\n- 감수 가능한 위험 수준(예: 원금 변동을 어느 정도 감수할 수 있는지)을 알려주세요.\n- 예상 투자기간 또는 연금 수령까지 남은 기간을 알려주세요.",
+      "detected_intent": [
+        "CLARIFY",
+        "PRODUCT_RECOMMENDATION"
+      ],
+      "actual_route": "product",
+      "expected_routes": [
+        "product"
+      ],
+      "tools_called": [
+        "product"
+      ],
+      "source_types": [
+        "postgres"
+      ],
+      "source_documents": [],
+      "postgres_used": true,
+      "enterprise_rag_used": false,
+      "external_api_used": false,
+      "evidence_status": "clarify",
+      "latency_ms": 27.9,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 1,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 9,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "clarify",
+      "session_id": "eval-T003-80a139b4",
+      "confirmed_constraints": {},
+      "gold_metadata": {
+        "test_id": "T003",
+        "session_id": "eval-T003-80a139b4",
+        "original_query": "IRP 상품 추천해줘",
+        "resolved_query": "IRP 상품 추천해줘",
+        "detected_intent": "product",
+        "actual_route": "product",
+        "retrieval_queries": [],
+        "required_evidence": {
+          "required_product_count": null,
+          "risk_grade_max": null,
+          "online_only": false,
+          "sort": "product_name",
+          "require_product_evidence": true,
+          "require_pdf_evidence": false,
+          "require_law_evidence": false,
+          "require_source_version": true,
+          "allowed_evidence_statuses": [
+            "matched"
+          ]
+        },
+        "tools_called": [
+          "product"
+        ],
+        "source_types": [],
+        "product_ids": [],
+        "product_class_ids": [],
+        "candidate_count": 0,
+        "candidate_ids": [],
+        "selected_product_id": null,
+        "db_row_count": null,
+        "retrieval_top_k": 5,
+        "evidence_coverage": {
+          "domain": {},
+          "status": {}
+        },
+        "claim_grounding": null,
+        "raw_value": null,
+        "display_value": null,
+        "raw_unit": null,
+        "normalized_unit": null,
+        "normalization_status": null,
+        "response_status": "clarify",
+        "latency_ms": 27.9,
+        "query_spec": null,
+        "ranking_breakdown": []
+      }
+    },
+    {
+      "test_id": "T003",
+      "turn_no": 2,
+      "user_query": "나는 위험은 중간 정도, 10년 정도 투자할 거야",
+      "response_text": "다음 5개를 보여드리겠습니다.\n입력한 위험 선호 조건 기준으로 비교 가능한 후보입니다. 개인 투자 적합성이나 수익을 보장하는 추천은 아닙니다.\n1. 미래에셋AI퀀트미국투자등급회사채증권자투자신탁(채권) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 4(보통 위험) / 총보수 연 0.71% / 출처 R2_KR5153420318.pdf\n2. 미래에셋스마트롱숏70증권자투자신탁1호(주식) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 4(보통 위험) / 총보수 연 1.35% / 출처 R2_KR5153450268.pdf\n3. 미래에셋프리미엄크레딧초단기증권투자신탁(채권) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 5(낮은 위험) / 총보수 연 0.26% / 출처 R2_KR5153420339.pdf\n4. 미래에셋퇴직플랜단기증권자투자신탁1호(채권) / 클래스 수수료미징구-온라인-퇴직연금(C-P2e) / 위험등급 5(낮은 위험) / 총보수 연 0.28% / 출처 R2_KR518101002M.pdf\n5. 미래에셋퇴직플랜증권자투자신탁1호(채권) / 클래스 수수료미징구-온라인-퇴직연금(C-P2e) / 위험등급 5(낮은 위험) / 총보수 연 0.28% / 출처 R2_KR5153520012.pdf\n근거 출처: 투자설명서 / 상품 DB 기준.",
+      "detected_intent": [
+        "PRODUCT_RECOMMENDATION",
+        "PRODUCT_RISK_LOOKUP",
+        "PRODUCT_RISK_FILTER"
+      ],
+      "actual_route": "product",
+      "expected_routes": [
+        "product"
+      ],
+      "tools_called": [
+        "product"
+      ],
+      "source_types": [
+        "product",
+        "postgres",
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [
+        "R2_KR5153420318.pdf",
+        "R2_KR5153450268.pdf",
+        "R2_KR5153420339.pdf",
+        "R2_KR518101002M.pdf",
+        "R2_KR5153520012.pdf"
+      ],
+      "postgres_used": true,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "missing": 86,
+        "matched": 113
+      },
+      "latency_ms": 257.2,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [
+        "미래에셋AI퀀트미국투자등급회사채증권자투자신탁(채권)",
+        "미래에셋스마트롱숏70증권자투자신탁1호(주식)",
+        "미래에셋프리미엄크레딧초단기증권투자신탁(채권)",
+        "미래에셋퇴직플랜단기증권자투자신탁1호(채권)",
+        "미래에셋퇴직플랜증권자투자신탁1호(채권)"
+      ],
+      "response_status": "success",
+      "session_id": "eval-T003-80a139b4",
+      "confirmed_constraints": {
+        "risk_tolerance": "moderate",
+        "investment_horizon": "10년"
+      },
+      "gold_metadata": {
+        "test_id": "T003",
+        "session_id": "eval-T003-80a139b4",
+        "original_query": "나는 위험은 중간 정도, 10년 정도 투자할 거야",
+        "resolved_query": "IRP 상품 추천해줘. 추가 사용자 조건: 위험성향=moderate, 투자기간=10년",
+        "detected_intent": "product",
+        "actual_route": "product",
+        "retrieval_queries": [],
+        "required_evidence": {
+          "required_product_count": null,
+          "risk_grade_max": null,
+          "online_only": false,
+          "sort": "product_name",
+          "require_product_evidence": true,
+          "require_pdf_evidence": false,
+          "require_law_evidence": false,
+          "require_source_version": true,
+          "allowed_evidence_statuses": [
+            "matched"
+          ]
+        },
+        "tools_called": [
+          "product"
+        ],
+        "source_types": [],
+        "product_ids": [
+          "product:E4385|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+          "product:AR143|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+          "product:EH101|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+          "product:53619|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e)",
+          "product:54348|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e)"
+        ],
+        "product_class_ids": [
+          "C006",
+          "C006",
+          "C006",
+          "C002",
+          "C002"
+        ],
+        "candidate_count": 5,
+        "candidate_ids": [
+          "product:E4385|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+          "product:AR143|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+          "product:EH101|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+          "product:53619|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e)",
+          "product:54348|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e)"
+        ],
+        "selected_product_id": "product:E4385|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+        "db_row_count": 461,
+        "retrieval_top_k": 5,
+        "evidence_coverage": {
+          "domain": {
+            "product": 111,
+            "document": 88
+          },
+          "status": {
+            "missing": 86,
+            "matched": 113
+          }
+        },
+        "claim_grounding": {
+          "verdict": "PASS",
+          "numeric_claims": [
+            "5",
+            "1",
+            "4",
+            "0.71%",
+            "153420318",
+            "2",
+            "70",
+            "1.35%",
+            "153450268",
+            "3",
+            "0.26%",
+            "153420339",
+            "0.28%",
+            "18101002",
+            "153520012"
+          ],
+          "unsupported_numeric_claims": [],
+          "citation_like_markers": [
+            "출처",
+            "근거"
+          ],
+          "reason": "numeric_claims_grounded"
+        },
+        "raw_value": 0.71,
+        "display_value": null,
+        "raw_unit": "PERCENT_PER_YEAR",
+        "normalized_unit": "PERCENT_PER_YEAR",
+        "normalization_status": null,
+        "response_status": "success",
+        "latency_ms": 257.2,
+        "query_spec": {
+          "irp_only": true,
+          "risk_grade_max": null,
+          "risk_tolerance": "moderate",
+          "allowed_risk_buckets": [
+            "MODERATE",
+            "CONSERVATIVE",
+            "MODERATE_AGGRESSIVE"
+          ],
+          "excluded_risk_buckets": [
+            "VERY_AGGRESSIVE",
+            "AGGRESSIVE"
+          ],
+          "ranking_policy": [
+            "account_eligibility",
+            "risk_compatibility",
+            "user_requested_metric",
+            "fee",
+            "performance",
+            "evidence_completeness"
+          ],
+          "sort_by": "product_name",
+          "sort_order": "asc",
+          "limit": 5,
+          "name_tokens": [
+            "IRP",
+            "추천해줘",
+            "추가",
+            "사용자",
+            "조건",
+            "위험성향",
+            "moderate",
+            "투자기간",
+            "10년"
+          ],
+          "family_aliases": [],
+          "tenors": [],
+          "name_match_required": false,
+          "candidate_record_ids": []
+        },
+        "ranking_breakdown": [
+          {
+            "product_id": "product:E4385|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+            "eligibility_score": 1,
+            "risk_match": 2,
+            "fee_rank": 7,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "product_name"
+          },
+          {
+            "product_id": "product:AR143|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+            "eligibility_score": 1,
+            "risk_match": 2,
+            "fee_rank": 9,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "product_name"
+          },
+          {
+            "product_id": "product:EH101|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+            "eligibility_score": 1,
+            "risk_match": 1,
+            "fee_rank": 1,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "product_name"
+          },
+          {
+            "product_id": "product:53619|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e)",
+            "eligibility_score": 1,
+            "risk_match": 1,
+            "fee_rank": 2,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "product_name"
+          },
+          {
+            "product_id": "product:54348|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e)",
+            "eligibility_score": 1,
+            "risk_match": 1,
+            "fee_rank": 3,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "product_name"
+          }
+        ]
+      }
+    },
+    {
+      "test_id": "T004",
+      "turn_no": 1,
+      "user_query": "IRP 상품 추천해줘",
+      "response_text": "요청을 정확히 처리하려면 추가 정보가 필요합니다. 필요한 정보: 감수할 수 있는 투자 위험 수준, 예상 투자기간.\n- 감수 가능한 위험 수준(예: 원금 변동을 어느 정도 감수할 수 있는지)을 알려주세요.\n- 예상 투자기간 또는 연금 수령까지 남은 기간을 알려주세요.",
+      "detected_intent": [
+        "CLARIFY",
+        "PRODUCT_RECOMMENDATION"
+      ],
+      "actual_route": "product",
+      "expected_routes": [
+        "product"
+      ],
+      "tools_called": [
+        "product"
+      ],
+      "source_types": [
+        "postgres"
+      ],
+      "source_documents": [],
+      "postgres_used": true,
+      "enterprise_rag_used": false,
+      "external_api_used": false,
+      "evidence_status": "clarify",
+      "latency_ms": 30.8,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 1,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 9,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "clarify",
+      "session_id": "eval-T004-da941074",
+      "confirmed_constraints": {},
+      "gold_metadata": {
+        "test_id": "T004",
+        "session_id": "eval-T004-da941074",
+        "original_query": "IRP 상품 추천해줘",
+        "resolved_query": "IRP 상품 추천해줘",
+        "detected_intent": "product",
+        "actual_route": "product",
+        "retrieval_queries": [],
+        "required_evidence": {
+          "required_product_count": null,
+          "risk_grade_max": null,
+          "online_only": false,
+          "sort": "product_name",
+          "require_product_evidence": true,
+          "require_pdf_evidence": false,
+          "require_law_evidence": false,
+          "require_source_version": true,
+          "allowed_evidence_statuses": [
+            "matched"
+          ]
+        },
+        "tools_called": [
+          "product"
+        ],
+        "source_types": [],
+        "product_ids": [],
+        "product_class_ids": [],
+        "candidate_count": 0,
+        "candidate_ids": [],
+        "selected_product_id": null,
+        "db_row_count": 461,
+        "retrieval_top_k": 5,
+        "evidence_coverage": {
+          "domain": {},
+          "status": {}
+        },
+        "claim_grounding": null,
+        "raw_value": null,
+        "display_value": null,
+        "raw_unit": null,
+        "normalized_unit": null,
+        "normalization_status": null,
+        "response_status": "clarify",
+        "latency_ms": 30.8,
+        "query_spec": {
+          "irp_only": true,
+          "risk_grade_max": null,
+          "risk_tolerance": "moderate",
+          "allowed_risk_buckets": [
+            "MODERATE",
+            "CONSERVATIVE",
+            "MODERATE_AGGRESSIVE"
+          ],
+          "excluded_risk_buckets": [
+            "VERY_AGGRESSIVE",
+            "AGGRESSIVE"
+          ],
+          "ranking_policy": [
+            "account_eligibility",
+            "risk_compatibility",
+            "user_requested_metric",
+            "fee",
+            "performance",
+            "evidence_completeness"
+          ],
+          "sort_by": "product_name",
+          "sort_order": "asc",
+          "limit": 5,
+          "name_tokens": [
+            "IRP",
+            "추천해줘",
+            "추가",
+            "사용자",
+            "조건",
+            "위험성향",
+            "moderate",
+            "투자기간",
+            "10년"
+          ],
+          "family_aliases": [],
+          "tenors": [],
+          "name_match_required": false,
+          "candidate_record_ids": []
+        },
+        "ranking_breakdown": []
+      }
+    },
+    {
+      "test_id": "T004",
+      "turn_no": 2,
+      "user_query": "위험은 중간 정도, 10년",
+      "response_text": "다음 5개를 보여드리겠습니다.\n입력한 위험 선호 조건 기준으로 비교 가능한 후보입니다. 개인 투자 적합성이나 수익을 보장하는 추천은 아닙니다.\n1. 미래에셋AI퀀트미국투자등급회사채증권자투자신탁(채권) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 4(보통 위험) / 총보수 연 0.71% / 출처 R2_KR5153420318.pdf\n2. 미래에셋스마트롱숏70증권자투자신탁1호(주식) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 4(보통 위험) / 총보수 연 1.35% / 출처 R2_KR5153450268.pdf\n3. 미래에셋프리미엄크레딧초단기증권투자신탁(채권) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 5(낮은 위험) / 총보수 연 0.26% / 출처 R2_KR5153420339.pdf\n4. 미래에셋퇴직플랜단기증권자투자신탁1호(채권) / 클래스 수수료미징구-온라인-퇴직연금(C-P2e) / 위험등급 5(낮은 위험) / 총보수 연 0.28% / 출처 R2_KR518101002M.pdf\n5. 미래에셋퇴직플랜증권자투자신탁1호(채권) / 클래스 수수료미징구-온라인-퇴직연금(C-P2e) / 위험등급 5(낮은 위험) / 총보수 연 0.28% / 출처 R2_KR5153520012.pdf\n근거 출처: 투자설명서 / 상품 DB 기준.",
+      "detected_intent": [
+        "PRODUCT_RECOMMENDATION",
+        "PRODUCT_RISK_LOOKUP",
+        "PRODUCT_RISK_FILTER"
+      ],
+      "actual_route": "product",
+      "expected_routes": [
+        "product"
+      ],
+      "tools_called": [
+        "product"
+      ],
+      "source_types": [
+        "product",
+        "postgres",
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [
+        "R2_KR5153420318.pdf",
+        "R2_KR5153450268.pdf",
+        "R2_KR5153420339.pdf",
+        "R2_KR518101002M.pdf",
+        "R2_KR5153520012.pdf"
+      ],
+      "postgres_used": true,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "missing": 86,
+        "matched": 113
+      },
+      "latency_ms": 249.0,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [
+        "미래에셋AI퀀트미국투자등급회사채증권자투자신탁(채권)",
+        "미래에셋스마트롱숏70증권자투자신탁1호(주식)",
+        "미래에셋프리미엄크레딧초단기증권투자신탁(채권)",
+        "미래에셋퇴직플랜단기증권자투자신탁1호(채권)",
+        "미래에셋퇴직플랜증권자투자신탁1호(채권)"
+      ],
+      "response_status": "success",
+      "session_id": "eval-T004-da941074",
+      "confirmed_constraints": {
+        "risk_tolerance": "moderate",
+        "investment_horizon": "10년"
+      },
+      "gold_metadata": {
+        "test_id": "T004",
+        "session_id": "eval-T004-da941074",
+        "original_query": "위험은 중간 정도, 10년",
+        "resolved_query": "IRP 상품 추천해줘. 추가 사용자 조건: 위험성향=moderate, 투자기간=10년",
+        "detected_intent": "product",
+        "actual_route": "product",
+        "retrieval_queries": [],
+        "required_evidence": {
+          "required_product_count": null,
+          "risk_grade_max": null,
+          "online_only": false,
+          "sort": "product_name",
+          "require_product_evidence": true,
+          "require_pdf_evidence": false,
+          "require_law_evidence": false,
+          "require_source_version": true,
+          "allowed_evidence_statuses": [
+            "matched"
+          ]
+        },
+        "tools_called": [
+          "product"
+        ],
+        "source_types": [],
+        "product_ids": [
+          "product:E4385|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+          "product:AR143|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+          "product:EH101|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+          "product:53619|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e)",
+          "product:54348|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e)"
+        ],
+        "product_class_ids": [
+          "C006",
+          "C006",
+          "C006",
+          "C002",
+          "C002"
+        ],
+        "candidate_count": 5,
+        "candidate_ids": [
+          "product:E4385|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+          "product:AR143|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+          "product:EH101|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+          "product:53619|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e)",
+          "product:54348|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e)"
+        ],
+        "selected_product_id": "product:E4385|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+        "db_row_count": 461,
+        "retrieval_top_k": 5,
+        "evidence_coverage": {
+          "domain": {
+            "product": 111,
+            "document": 88
+          },
+          "status": {
+            "missing": 86,
+            "matched": 113
+          }
+        },
+        "claim_grounding": {
+          "verdict": "PASS",
+          "numeric_claims": [
+            "5",
+            "1",
+            "4",
+            "0.71%",
+            "153420318",
+            "2",
+            "70",
+            "1.35%",
+            "153450268",
+            "3",
+            "0.26%",
+            "153420339",
+            "0.28%",
+            "18101002",
+            "153520012"
+          ],
+          "unsupported_numeric_claims": [],
+          "citation_like_markers": [
+            "출처",
+            "근거"
+          ],
+          "reason": "numeric_claims_grounded"
+        },
+        "raw_value": 0.71,
+        "display_value": null,
+        "raw_unit": "PERCENT_PER_YEAR",
+        "normalized_unit": "PERCENT_PER_YEAR",
+        "normalization_status": null,
+        "response_status": "success",
+        "latency_ms": 249.0,
+        "query_spec": {
+          "irp_only": true,
+          "risk_grade_max": null,
+          "risk_tolerance": "moderate",
+          "allowed_risk_buckets": [
+            "MODERATE",
+            "CONSERVATIVE",
+            "MODERATE_AGGRESSIVE"
+          ],
+          "excluded_risk_buckets": [
+            "VERY_AGGRESSIVE",
+            "AGGRESSIVE"
+          ],
+          "ranking_policy": [
+            "account_eligibility",
+            "risk_compatibility",
+            "user_requested_metric",
+            "fee",
+            "performance",
+            "evidence_completeness"
+          ],
+          "sort_by": "product_name",
+          "sort_order": "asc",
+          "limit": 5,
+          "name_tokens": [
+            "IRP",
+            "추천해줘",
+            "추가",
+            "사용자",
+            "조건",
+            "위험성향",
+            "moderate",
+            "투자기간",
+            "10년"
+          ],
+          "family_aliases": [],
+          "tenors": [],
+          "name_match_required": false,
+          "candidate_record_ids": []
+        },
+        "ranking_breakdown": [
+          {
+            "product_id": "product:E4385|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+            "eligibility_score": 1,
+            "risk_match": 2,
+            "fee_rank": 7,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "product_name"
+          },
+          {
+            "product_id": "product:AR143|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+            "eligibility_score": 1,
+            "risk_match": 2,
+            "fee_rank": 9,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "product_name"
+          },
+          {
+            "product_id": "product:EH101|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+            "eligibility_score": 1,
+            "risk_match": 1,
+            "fee_rank": 1,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "product_name"
+          },
+          {
+            "product_id": "product:53619|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e)",
+            "eligibility_score": 1,
+            "risk_match": 1,
+            "fee_rank": 2,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "product_name"
+          },
+          {
+            "product_id": "product:54348|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e)",
+            "eligibility_score": 1,
+            "risk_match": 1,
+            "fee_rank": 3,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "product_name"
+          }
+        ]
+      }
+    },
+    {
+      "test_id": "T004",
+      "turn_no": 3,
+      "user_query": "그중에서 보수가 가장 낮은 상품은?",
+      "response_text": "다음 5개를 보여드리겠습니다.\n상품 DB의 총보수 값으로 정렬한 결과입니다.\n1. 미래에셋프리미엄크레딧초단기증권투자신탁(채권) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 5(낮은 위험) / 총보수 연 0.26% / 출처 R2_KR5153420339.pdf\n2. 미래에셋퇴직플랜단기증권자투자신탁1호(채권) / 클래스 수수료미징구-온라인-퇴직연금(C-P2e) / 위험등급 5(낮은 위험) / 총보수 연 0.28% / 출처 R2_KR518101002M.pdf\n3. 미래에셋퇴직플랜증권자투자신탁1호(채권) / 클래스 수수료미징구-온라인-퇴직연금(C-P2e) / 위험등급 5(낮은 위험) / 총보수 연 0.28% / 출처 R2_KR5153520012.pdf\n4. 미래에셋AI퀀트미국투자등급회사채증권자투자신탁(채권) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 4(보통 위험) / 총보수 연 0.71% / 출처 R2_KR5153420318.pdf\n5. 미래에셋스마트롱숏70증권자투자신탁1호(주식) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 4(보통 위험) / 총보수 연 1.35% / 출처 R2_KR5153450268.pdf\n근거 출처: 투자설명서 / 상품 DB 기준.",
+      "detected_intent": [
+        "PRODUCT_RECOMMENDATION",
+        "PRODUCT_FEE_FILTER",
+        "PRODUCT_FEE_SORT"
+      ],
+      "actual_route": "product",
+      "expected_routes": [
+        "product"
+      ],
+      "tools_called": [
+        "product"
+      ],
+      "source_types": [
+        "product",
+        "postgres",
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [
+        "R2_KR5153420339.pdf",
+        "R2_KR518101002M.pdf",
+        "R2_KR5153520012.pdf",
+        "R2_KR5153420318.pdf",
+        "R2_KR5153450268.pdf"
+      ],
+      "postgres_used": true,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "matched": 199
+      },
+      "latency_ms": 265.7,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [
+        "미래에셋프리미엄크레딧초단기증권투자신탁(채권)",
+        "미래에셋퇴직플랜단기증권자투자신탁1호(채권)",
+        "미래에셋퇴직플랜증권자투자신탁1호(채권)",
+        "미래에셋AI퀀트미국투자등급회사채증권자투자신탁(채권)",
+        "미래에셋스마트롱숏70증권자투자신탁1호(주식)"
+      ],
+      "response_status": "success",
+      "session_id": "eval-T004-da941074",
+      "confirmed_constraints": {
+        "risk_tolerance": "moderate",
+        "investment_horizon": "10년"
+      },
+      "gold_metadata": {
+        "test_id": "T004",
+        "session_id": "eval-T004-da941074",
+        "original_query": "그중에서 보수가 가장 낮은 상품은?",
+        "resolved_query": "그중에서 보수가 가장 낮은 상품은? [후보ID:product:E4385|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2);;product:AR143|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2);;product:EH101|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2);;product:53619|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e);;product:54348|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e)]",
+        "detected_intent": "product",
+        "actual_route": "product",
+        "retrieval_queries": [],
+        "required_evidence": {
+          "required_product_count": null,
+          "risk_grade_max": null,
+          "online_only": false,
+          "sort": "total_fee",
+          "require_product_evidence": true,
+          "require_pdf_evidence": false,
+          "require_law_evidence": false,
+          "require_source_version": true,
+          "allowed_evidence_statuses": [
+            "matched"
+          ]
+        },
+        "tools_called": [
+          "product"
+        ],
+        "source_types": [],
+        "product_ids": [
+          "product:EH101|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+          "product:53619|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e)",
+          "product:54348|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e)",
+          "product:E4385|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+          "product:AR143|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)"
+        ],
+        "product_class_ids": [
+          "C006",
+          "C002",
+          "C002",
+          "C006",
+          "C006"
+        ],
+        "candidate_count": 5,
+        "candidate_ids": [
+          "product:EH101|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+          "product:53619|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e)",
+          "product:54348|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e)",
+          "product:E4385|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+          "product:AR143|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)"
+        ],
+        "selected_product_id": "product:EH101|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+        "db_row_count": 461,
+        "retrieval_top_k": 5,
+        "evidence_coverage": {
+          "domain": {
+            "product": 111,
+            "document": 88
+          },
+          "status": {
+            "matched": 199
+          }
+        },
+        "claim_grounding": {
+          "verdict": "PASS",
+          "numeric_claims": [
+            "5",
+            "1",
+            "0.26%",
+            "153420339",
+            "2",
+            "0.28%",
+            "18101002",
+            "3",
+            "153520012",
+            "4",
+            "0.71%",
+            "153420318",
+            "70",
+            "1.35%",
+            "153450268"
+          ],
+          "unsupported_numeric_claims": [],
+          "citation_like_markers": [
+            "출처",
+            "근거"
+          ],
+          "reason": "numeric_claims_grounded"
+        },
+        "raw_value": 0.26,
+        "display_value": null,
+        "raw_unit": "PERCENT_PER_YEAR",
+        "normalized_unit": "PERCENT_PER_YEAR",
+        "normalization_status": null,
+        "response_status": "success",
+        "latency_ms": 265.7,
+        "query_spec": {
+          "irp_only": false,
+          "risk_grade_max": null,
+          "risk_tolerance": null,
+          "allowed_risk_buckets": [],
+          "excluded_risk_buckets": [],
+          "ranking_policy": [
+            "account_eligibility",
+            "risk_compatibility",
+            "user_requested_metric",
+            "fee",
+            "performance",
+            "evidence_completeness"
+          ],
+          "sort_by": "total_fee",
+          "sort_order": "asc",
+          "limit": 5,
+          "name_tokens": [
+            "보수가",
+            "가장",
+            "상품은"
+          ],
+          "family_aliases": [],
+          "tenors": [],
+          "name_match_required": false,
+          "candidate_record_ids": [
+            "product:E4385|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+            "product:AR143|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+            "product:EH101|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+            "product:53619|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e)",
+            "product:54348|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e)"
+          ]
+        },
+        "ranking_breakdown": [
+          {
+            "product_id": "product:EH101|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+            "eligibility_score": 1,
+            "risk_match": 0,
+            "fee_rank": 1,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "total_fee"
+          },
+          {
+            "product_id": "product:53619|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e)",
+            "eligibility_score": 1,
+            "risk_match": 0,
+            "fee_rank": 2,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "total_fee"
+          },
+          {
+            "product_id": "product:54348|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e)",
+            "eligibility_score": 1,
+            "risk_match": 0,
+            "fee_rank": 3,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "total_fee"
+          },
+          {
+            "product_id": "product:E4385|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+            "eligibility_score": 1,
+            "risk_match": 0,
+            "fee_rank": 4,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "total_fee"
+          },
+          {
+            "product_id": "product:AR143|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+            "eligibility_score": 1,
+            "risk_match": 0,
+            "fee_rank": 5,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "total_fee"
+          }
+        ]
+      }
+    },
+    {
+      "test_id": "T005",
+      "turn_no": 1,
+      "user_query": "IRP 상품 추천해줘",
+      "response_text": "요청을 정확히 처리하려면 추가 정보가 필요합니다. 필요한 정보: 감수할 수 있는 투자 위험 수준, 예상 투자기간.\n- 감수 가능한 위험 수준(예: 원금 변동을 어느 정도 감수할 수 있는지)을 알려주세요.\n- 예상 투자기간 또는 연금 수령까지 남은 기간을 알려주세요.",
+      "detected_intent": [
+        "CLARIFY",
+        "PRODUCT_RECOMMENDATION"
+      ],
+      "actual_route": "product",
+      "expected_routes": [
+        "product"
+      ],
+      "tools_called": [
+        "product"
+      ],
+      "source_types": [
+        "postgres"
+      ],
+      "source_documents": [],
+      "postgres_used": true,
+      "enterprise_rag_used": false,
+      "external_api_used": false,
+      "evidence_status": "clarify",
+      "latency_ms": 28.1,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 1,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 9,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "clarify",
+      "session_id": "eval-T005-57a87679",
+      "confirmed_constraints": {},
+      "gold_metadata": {
+        "test_id": "T005",
+        "session_id": "eval-T005-57a87679",
+        "original_query": "IRP 상품 추천해줘",
+        "resolved_query": "IRP 상품 추천해줘",
+        "detected_intent": "product",
+        "actual_route": "product",
+        "retrieval_queries": [],
+        "required_evidence": {
+          "required_product_count": null,
+          "risk_grade_max": null,
+          "online_only": false,
+          "sort": "product_name",
+          "require_product_evidence": true,
+          "require_pdf_evidence": false,
+          "require_law_evidence": false,
+          "require_source_version": true,
+          "allowed_evidence_statuses": [
+            "matched"
+          ]
+        },
+        "tools_called": [
+          "product"
+        ],
+        "source_types": [],
+        "product_ids": [],
+        "product_class_ids": [],
+        "candidate_count": 0,
+        "candidate_ids": [],
+        "selected_product_id": null,
+        "db_row_count": 461,
+        "retrieval_top_k": 5,
+        "evidence_coverage": {
+          "domain": {},
+          "status": {}
+        },
+        "claim_grounding": null,
+        "raw_value": null,
+        "display_value": null,
+        "raw_unit": null,
+        "normalized_unit": null,
+        "normalization_status": null,
+        "response_status": "clarify",
+        "latency_ms": 28.1,
+        "query_spec": {
+          "irp_only": false,
+          "risk_grade_max": null,
+          "risk_tolerance": null,
+          "allowed_risk_buckets": [],
+          "excluded_risk_buckets": [],
+          "ranking_policy": [
+            "account_eligibility",
+            "risk_compatibility",
+            "user_requested_metric",
+            "fee",
+            "performance",
+            "evidence_completeness"
+          ],
+          "sort_by": "total_fee",
+          "sort_order": "asc",
+          "limit": 5,
+          "name_tokens": [
+            "보수가",
+            "가장",
+            "상품은"
+          ],
+          "family_aliases": [],
+          "tenors": [],
+          "name_match_required": false,
+          "candidate_record_ids": [
+            "product:E4385|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+            "product:AR143|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+            "product:EH101|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+            "product:53619|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e)",
+            "product:54348|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e)"
+          ]
+        },
+        "ranking_breakdown": []
+      }
+    },
+    {
+      "test_id": "T005",
+      "turn_no": 2,
+      "user_query": "위험은 중간 정도, 10년",
+      "response_text": "다음 5개를 보여드리겠습니다.\n입력한 위험 선호 조건 기준으로 비교 가능한 후보입니다. 개인 투자 적합성이나 수익을 보장하는 추천은 아닙니다.\n1. 미래에셋AI퀀트미국투자등급회사채증권자투자신탁(채권) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 4(보통 위험) / 총보수 연 0.71% / 출처 R2_KR5153420318.pdf\n2. 미래에셋스마트롱숏70증권자투자신탁1호(주식) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 4(보통 위험) / 총보수 연 1.35% / 출처 R2_KR5153450268.pdf\n3. 미래에셋프리미엄크레딧초단기증권투자신탁(채권) / 클래스 수수료미징구-오프라인-퇴직연금(C-P2) / 위험등급 5(낮은 위험) / 총보수 연 0.26% / 출처 R2_KR5153420339.pdf\n4. 미래에셋퇴직플랜단기증권자투자신탁1호(채권) / 클래스 수수료미징구-온라인-퇴직연금(C-P2e) / 위험등급 5(낮은 위험) / 총보수 연 0.28% / 출처 R2_KR518101002M.pdf\n5. 미래에셋퇴직플랜증권자투자신탁1호(채권) / 클래스 수수료미징구-온라인-퇴직연금(C-P2e) / 위험등급 5(낮은 위험) / 총보수 연 0.28% / 출처 R2_KR5153520012.pdf\n근거 출처: 투자설명서 / 상품 DB 기준.",
+      "detected_intent": [
+        "PRODUCT_RECOMMENDATION",
+        "PRODUCT_RISK_LOOKUP",
+        "PRODUCT_RISK_FILTER"
+      ],
+      "actual_route": "product",
+      "expected_routes": [
+        "product"
+      ],
+      "tools_called": [
+        "product"
+      ],
+      "source_types": [
+        "product",
+        "postgres",
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [
+        "R2_KR5153420318.pdf",
+        "R2_KR5153450268.pdf",
+        "R2_KR5153420339.pdf",
+        "R2_KR518101002M.pdf",
+        "R2_KR5153520012.pdf"
+      ],
+      "postgres_used": true,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "missing": 86,
+        "matched": 113
+      },
+      "latency_ms": 244.1,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [
+        "미래에셋AI퀀트미국투자등급회사채증권자투자신탁(채권)",
+        "미래에셋스마트롱숏70증권자투자신탁1호(주식)",
+        "미래에셋프리미엄크레딧초단기증권투자신탁(채권)",
+        "미래에셋퇴직플랜단기증권자투자신탁1호(채권)",
+        "미래에셋퇴직플랜증권자투자신탁1호(채권)"
+      ],
+      "response_status": "success",
+      "session_id": "eval-T005-57a87679",
+      "confirmed_constraints": {
+        "risk_tolerance": "moderate",
+        "investment_horizon": "10년"
+      },
+      "gold_metadata": {
+        "test_id": "T005",
+        "session_id": "eval-T005-57a87679",
+        "original_query": "위험은 중간 정도, 10년",
+        "resolved_query": "IRP 상품 추천해줘. 추가 사용자 조건: 위험성향=moderate, 투자기간=10년",
+        "detected_intent": "product",
+        "actual_route": "product",
+        "retrieval_queries": [],
+        "required_evidence": {
+          "required_product_count": null,
+          "risk_grade_max": null,
+          "online_only": false,
+          "sort": "product_name",
+          "require_product_evidence": true,
+          "require_pdf_evidence": false,
+          "require_law_evidence": false,
+          "require_source_version": true,
+          "allowed_evidence_statuses": [
+            "matched"
+          ]
+        },
+        "tools_called": [
+          "product"
+        ],
+        "source_types": [],
+        "product_ids": [
+          "product:E4385|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+          "product:AR143|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+          "product:EH101|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+          "product:53619|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e)",
+          "product:54348|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e)"
+        ],
+        "product_class_ids": [
+          "C006",
+          "C006",
+          "C006",
+          "C002",
+          "C002"
+        ],
+        "candidate_count": 5,
+        "candidate_ids": [
+          "product:E4385|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+          "product:AR143|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+          "product:EH101|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+          "product:53619|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e)",
+          "product:54348|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e)"
+        ],
+        "selected_product_id": "product:E4385|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+        "db_row_count": 461,
+        "retrieval_top_k": 5,
+        "evidence_coverage": {
+          "domain": {
+            "product": 111,
+            "document": 88
+          },
+          "status": {
+            "missing": 86,
+            "matched": 113
+          }
+        },
+        "claim_grounding": {
+          "verdict": "PASS",
+          "numeric_claims": [
+            "5",
+            "1",
+            "4",
+            "0.71%",
+            "153420318",
+            "2",
+            "70",
+            "1.35%",
+            "153450268",
+            "3",
+            "0.26%",
+            "153420339",
+            "0.28%",
+            "18101002",
+            "153520012"
+          ],
+          "unsupported_numeric_claims": [],
+          "citation_like_markers": [
+            "출처",
+            "근거"
+          ],
+          "reason": "numeric_claims_grounded"
+        },
+        "raw_value": 0.71,
+        "display_value": null,
+        "raw_unit": "PERCENT_PER_YEAR",
+        "normalized_unit": "PERCENT_PER_YEAR",
+        "normalization_status": null,
+        "response_status": "success",
+        "latency_ms": 244.1,
+        "query_spec": {
+          "irp_only": false,
+          "risk_grade_max": null,
+          "risk_tolerance": null,
+          "allowed_risk_buckets": [],
+          "excluded_risk_buckets": [],
+          "ranking_policy": [
+            "account_eligibility",
+            "risk_compatibility",
+            "user_requested_metric",
+            "fee",
+            "performance",
+            "evidence_completeness"
+          ],
+          "sort_by": "total_fee",
+          "sort_order": "asc",
+          "limit": 5,
+          "name_tokens": [
+            "보수가",
+            "가장",
+            "상품은"
+          ],
+          "family_aliases": [],
+          "tenors": [],
+          "name_match_required": false,
+          "candidate_record_ids": [
+            "product:E4385|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+            "product:AR143|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+            "product:EH101|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+            "product:53619|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e)",
+            "product:54348|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e)"
+          ]
+        },
+        "ranking_breakdown": [
+          {
+            "product_id": "product:E4385|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+            "eligibility_score": 1,
+            "risk_match": 2,
+            "fee_rank": 7,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "product_name"
+          },
+          {
+            "product_id": "product:AR143|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+            "eligibility_score": 1,
+            "risk_match": 2,
+            "fee_rank": 9,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "product_name"
+          },
+          {
+            "product_id": "product:EH101|class:C006|name:수수료미징구-오프라인-퇴직연금(C-P2)",
+            "eligibility_score": 1,
+            "risk_match": 1,
+            "fee_rank": 1,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "product_name"
+          },
+          {
+            "product_id": "product:53619|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e)",
+            "eligibility_score": 1,
+            "risk_match": 1,
+            "fee_rank": 2,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "product_name"
+          },
+          {
+            "product_id": "product:54348|class:C002|name:수수료미징구-온라인-퇴직연금(C-P2e)",
+            "eligibility_score": 1,
+            "risk_match": 1,
+            "fee_rank": 3,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "product_name"
+          }
+        ]
+      }
+    },
+    {
+      "test_id": "T005",
+      "turn_no": 3,
+      "user_query": "그 상품 위험은?",
+      "response_text": "미래에셋AI퀀트미국투자등급회사채증권자투자신탁(채권)의 투자위험등급은 4등급(보통 위험)입니다.\n\n주요 위험:\n- 원본손실위험: 원본손실위험\n- 종목위험: 이 집합투자기구가 투자하는 투자대상종목의 가치는 해당종목 발행회사의 영업환경, 재무상황 및 신 용상태의 악화에 따라 급격히 변동될 수 있습니다. 따라서, 주식뿐만 아니라 채권 등 비교적 안전자산 이라 할지라도 해당 종목의 가격변동에 의해 원금손실을 입게 될 수도 있습니다.\n- 금리 변동위험: 채권의 가치는 이자율 등 여러 거시경제지표의 변화에 따른 가격변동 위험에 노출됩니다. 일반적으로 채권은 시장이자율이 상승하는 경우 채권가격을 결정하는 할인율이 함께 상승함에 따라 그 가치가 하 락하는 특징이 있으며, 이로 인해 채권투자 시에도 투자원금의 손실 가능성을 전혀 배제할 수는 없습 니다.\n- 환율변동 및 환헤지에 따른 위험: 이 투자신탁은 환헤지를 실시하지 않습니다. 그러나 이 투자신탁이 주로 투자하는 모투자신탁은 환율 변동위험 경감을 위한 환헤지 전략을 실행할 계획입니다. 다만, 이 모투자신탁의 환헤지 전략은 미국 달러(USD)와 원화()간의 환헤지 실행으로 미국달러 이외의 이종통화 표시 외화자산과 미국달러간 의 환율변동에 따른 손익 변동성에는 노출되어 있습니다. 즉, 외화자산인 투자자산의 가치가 원화 ()와 미국달러(USD)간 상대적 가치의 변화에 따라 변동되는 것을 방지하는 것을 목적으로 환헤지 를 실행하므로 투자자산이 미국달러 자산인 경우 원화와 미국 달러간 상대적 가치의 변화에 따라 변 동되는 것을 방지하는 수단이 될 수 있으나 투자자산이 미국달러 이외의 이종통화 표시 자산인 경우 이종통화와 미국달러간 상대적 가치의 변화에 따른 변동에 노출됩니다. 그러나 이러한 환헤지 계획에 도 불구하고 환헤지 거래상대방의 거래불능 상황 또는 해당 통화의 거래가 일시적 혹은 상당기간 시 장에서 거래되지 못하는 상황이 되는 등 환헤지 전략수행이 불가능한 상황에 직면할 수 있으며, 이 경 우 헤지 거래가 전액 실행되지 못하거나 환율변동 위험이 감소하지 않을 수 있습니다. 한편, 환헤지를 하는 경우에도 보유자산의 가치변동으로 인해 헤지비율이 달라질 수 있으며 집합투자업자는 순자산가 치의 변동, 유동성 비율 등 집합투자기구의 운용현황을 고려하여 환헤지 전략의 효과적인 수행이 어렵 다고 판단될 경우 환헤지를 수행하지 않을 수도 있습니다. 또한, 환헤지를 수행하는 과정에서 거래수 수료 등의 추가적인 비용이 발생합니다.\n- 국가위험: 이 집합투자기구는 해외에 투자할 수 있기 때문에 투자대상국가의 시장, 정치 및 경제상황 등에 따른 위험에 매우 많이 노출이 되어 있습니다. 일부 국가의 경우 외국인 투자 한도, 넓은 매매호가 차이, 거 래소의 제한된 개장시간과 거래량 부족 등으로 인해 유동성에 제약이 발생할 수도 있습니다. 또한, 해 당국가 정부정책 및 제도의 변화로 인해 예상치 못한 자산가치의 손실이 발생할 수 있으며, 외국인에 대한 투자제한, 조세제도 변화 등의 정책적 변화 및 사회전반적인 투명성 부족으로 인한 공시자료의 신뢰성 등의 위험도 있습니다.\n- 파생상품 위험: 파생상품은 작은 증거금으로 거액의 결제가 가능한 지렛대 효과(레버리지효과)로 인하여 기초자산에 직접 투자하는 경우에 비하여 훨씬 높은 위험에 노출될 수 있습니다.\n- 부도등의 위험: 이 집합투자기구가 투자하는 종목의 발행회사 신용상태가 급격히 악화되거나, 장외파생상품투자의 경우 거래상대방이 파산하거나 신용위기를 경험하는 경우에는 투자자금 전액의 회수가 불가능할 수도 있습니다.\n- 소규모펀드의 타펀드 자동전환 위험: 소규모펀드의 타펀드 자동전환 위험\n- 해외투자위험(자금송환위험): 해외투자위험(자금송환위험)\n- 신용등급 하락 위험: 발행자의 신용평가등급 하락 등으로 인해 투자신탁재산으로 보유하고 있는 채권 등 자산의 신용평가등급이 취득 시점 대비 하락하여 이 투자신탁에서 정한 신용평가등급에 미달될 수 있습니다. 이 경우 집합투자업자는 해당 자산 처분 등 투자자 보호를 위한 적절한 조치를 취하지만 즉각적인 처분이 어려운 경우 이 투자신탁에서 정한 신용평가등급에 미달하는 자산을 보유하게 되며 이는 투자신탁 순자산가치 하락을 일으켜 투자 손실이 발생할 수 있습니다.\n- 후순위채권 위험: 이 집합투자기구는 후순위 채권(투자신탁재산을 그 발행인이 파산하는 때에 다른 채무를 우선 변제하고 잔여재산이 있는 경우에 한하여 그 채무를 상환한다는 조건이 있는 채권)에 투자할 수 있기 때문에 투자신탁재산의 발행인의 파산시 투자원본손실이 발생할 수 있습니다.\n- 과세위험: 과세위험\n- 적극적매매위험: 이 집합투자기구는 투자목적 달성을 위해 적극적인 매매전략을 수행할 수 있으며, 통상 이러한 전략은 상대적으로 높은 매매비용을 수반하는 경향이 있습니다. 또한, 동 전략은 일반적으로 시장수익률과 괴리가 클 수 있으므로, 기대수준이 시장수익률 수준인 투자자에게는 적합하지 않습니다.\n- 투자자금 회수위험(유동성위험): 환매금지형 집합투자기구가 아님에도 불구하고, 투자대상 자산이 매각이 어려운 자산일 경우 환매에 대응하기 위한 자산의 중도매각이 어려워 환매에 제때 응하지 못할 수 있습니다. 또한 매각이 된다고 하더라도 중도매각에 따른 추가적인 손실이 발생할 수도 있습니다.\n- 환매청구시위험: 환매를 청구하는 날과 환매대금을 결정하는 기준가격 적용일이 다르기 때문에 환매시 환매청구일로부터 환매기준가격 적용일까지의 집합투자기구 재산의 가치변동에 따른 위험에 노출됩니다. 또한 환매수수료가 부과되는 기간 중에 환매한 경우에는 환매수수료의 부과로 인해 투자손실이 발생하거나 손실의 폭이 더욱 확대될 수 있습니다.\n\n근거 출처: 투자설명서 / 상품 DB 기준 (R2_KR5153420318.pdf), 4쪽.",
+      "detected_intent": [
+        "PRODUCT_RECOMMENDATION",
+        "PRODUCT_RISK_LOOKUP",
+        "PRODUCT_RISK_FILTER"
+      ],
+      "actual_route": "product",
+      "expected_routes": [
+        "product"
+      ],
+      "tools_called": [
+        "product"
+      ],
+      "source_types": [
+        "product",
+        "postgres",
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [
+        "R2_KR5153420318.pdf"
+      ],
+      "postgres_used": true,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "matched": 47
+      },
+      "latency_ms": 115.8,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [
+        "미래에셋AI퀀트미국투자등급회사채증권자투자신탁(채권)"
+      ],
+      "response_status": "success",
+      "session_id": "eval-T005-57a87679",
+      "confirmed_constraints": {
+        "risk_tolerance": "moderate",
+        "investment_horizon": "10년"
+      },
+      "gold_metadata": {
+        "test_id": "T005",
+        "session_id": "eval-T005-57a87679",
+        "original_query": "그 상품 위험은?",
+        "resolved_query": "미래에셋AI퀀트미국투자등급회사채증권자투자신탁(채권) 위험은?",
+        "detected_intent": "product",
+        "actual_route": "product",
+        "retrieval_queries": [],
+        "required_evidence": {
+          "required_product_count": null,
+          "risk_grade_max": null,
+          "online_only": false,
+          "sort": "product_name",
+          "require_product_evidence": true,
+          "require_pdf_evidence": false,
+          "require_law_evidence": false,
+          "require_source_version": true,
+          "allowed_evidence_statuses": [
+            "matched"
+          ]
+        },
+        "tools_called": [
+          "product"
+        ],
+        "source_types": [],
+        "product_ids": [
+          "product:E4385|class:C005|name:수수료미징구-오프라인-개인연금(C-P)"
+        ],
+        "product_class_ids": [
+          "C005"
+        ],
+        "candidate_count": 1,
+        "candidate_ids": [
+          "product:E4385|class:C005|name:수수료미징구-오프라인-개인연금(C-P)"
+        ],
+        "selected_product_id": "product:E4385|class:C005|name:수수료미징구-오프라인-개인연금(C-P)",
+        "db_row_count": 461,
+        "retrieval_top_k": 5,
+        "evidence_coverage": {
+          "domain": {
+            "product": 25,
+            "document": 22
+          },
+          "status": {
+            "matched": 47
+          }
+        },
+        "claim_grounding": {
+          "verdict": "PASS",
+          "numeric_claims": [
+            "4등급",
+            "153420318",
+            "4"
+          ],
+          "unsupported_numeric_claims": [],
+          "citation_like_markers": [
+            "근거",
+            "출처"
+          ],
+          "reason": "numeric_claims_grounded"
+        },
+        "raw_value": 0.76,
+        "display_value": null,
+        "raw_unit": "PERCENT_PER_YEAR",
+        "normalized_unit": "PERCENT_PER_YEAR",
+        "normalization_status": null,
+        "response_status": "success",
+        "latency_ms": 115.8,
+        "query_spec": {
+          "irp_only": false,
+          "risk_grade_max": null,
+          "risk_tolerance": null,
+          "allowed_risk_buckets": [],
+          "excluded_risk_buckets": [],
+          "ranking_policy": [
+            "account_eligibility",
+            "risk_compatibility",
+            "user_requested_metric",
+            "fee",
+            "performance",
+            "evidence_completeness"
+          ],
+          "sort_by": "product_name",
+          "sort_order": "asc",
+          "limit": 5,
+          "name_tokens": [
+            "미래에셋AI퀀트미국투자등급회사채증권자투자신탁",
+            "위험은"
+          ],
+          "family_aliases": [],
+          "tenors": [],
+          "name_match_required": false,
+          "candidate_record_ids": []
+        },
+        "ranking_breakdown": [
+          {
+            "product_id": "product:E4385|class:C005|name:수수료미징구-오프라인-개인연금(C-P)",
+            "eligibility_score": 0,
+            "risk_match": 0,
+            "fee_rank": 1,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "product_name"
+          }
+        ]
+      }
+    },
+    {
+      "test_id": "T006",
+      "turn_no": 1,
+      "user_query": "IRP에 가입하고 싶은데 어떻게 해?",
+      "response_text": "IRP에 가입하려면 다음과 같은 절차를 따르시면 됩니다:\n\n1. **가입 자격 확인**: 본인이 IRP 가입 대상인지 확인합니다. 예를 들어, 일부 직군은 별도의 법에 따라 퇴직급여를 받기 때문에 가입 가능 여부를 확인해야 합니다.\n\n2. **가입 방법 선택**: 개인사업자의 경우 일반 IRP를 통해 자영업자로서 가입할 수 있으며, 다른 법에 따라 퇴직급여를 받는 사람도 DB 또는 DC 퇴직연금에 가입할 수 있는지 확인이 필요합니다.\n\n3. **가입 신청**: 가입 조건이 충족된다면, 미래에셋증권 지점을 방문하거나 온라인을 통해 IRP 계좌를 개설할 수 있습니다. 필요한 서류를 준비하여 제출하면 됩니다.\n\n4. **납입 및 운용**: IRP 계좌에 납입한 금액은 다양한 금융상품에 투자하여 운용할 수 있습니다. 운용 방식은 본인의 투자 성향에 맞게 선택할 수 있습니다.\n\n5. **퇴직급여 수령**: 퇴직 시 IRP 계좌로 퇴직급여가 자동으로 이전되며, 이를 통해 노후 자금으로 활용할 수 있습니다.\n\n위의 절차를 참고하여 IRP에 가입하시면 됩니다. 자세한 사항은 미래에셋증권 홈페이지나 고객센터를 통해 문의하시기 바랍니다.",
+      "detected_intent": [
+        "ACCOUNT_PROCEDURE"
+      ],
+      "actual_route": "document",
+      "expected_routes": [
+        "document",
+        "document+law"
+      ],
+      "tools_called": [
+        "document"
+      ],
+      "source_types": [
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [],
+      "postgres_used": false,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "matched": 5
+      },
+      "latency_ms": 8913.1,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "success",
+      "session_id": "eval-T006-740ba9f3",
+      "confirmed_constraints": {},
+      "gold_metadata": {
+        "test_id": "T006",
+        "session_id": "eval-T006-740ba9f3",
+        "original_query": "IRP에 가입하고 싶은데 어떻게 해?",
+        "resolved_query": "IRP에 가입하고 싶은데 어떻게 해?",
+        "detected_intent": "document",
+        "actual_route": "document",
+        "retrieval_queries": [],
+        "required_evidence": {
+          "required_product_count": null,
+          "risk_grade_max": null,
+          "online_only": false,
+          "sort": null,
+          "require_product_evidence": false,
+          "require_pdf_evidence": false,
+          "require_law_evidence": false,
+          "require_source_version": true,
+          "allowed_evidence_statuses": [
+            "matched"
+          ]
+        },
+        "tools_called": [
+          "document"
+        ],
+        "source_types": [],
+        "product_ids": [],
+        "product_class_ids": [],
+        "candidate_count": 0,
+        "candidate_ids": [],
+        "selected_product_id": null,
+        "db_row_count": 461,
+        "retrieval_top_k": 5,
+        "evidence_coverage": {
+          "domain": {
+            "document": 5
+          },
+          "status": {
+            "matched": 5
+          }
+        },
+        "claim_grounding": {
+          "verdict": "PASS",
+          "numeric_claims": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "unsupported_numeric_claims": [],
+          "citation_like_markers": [],
+          "reason": "numeric_claims_grounded"
+        },
+        "raw_value": null,
+        "display_value": null,
+        "raw_unit": null,
+        "normalized_unit": null,
+        "normalization_status": null,
+        "response_status": "success",
+        "latency_ms": 8913.1,
+        "query_spec": {
+          "irp_only": false,
+          "risk_grade_max": null,
+          "risk_tolerance": null,
+          "allowed_risk_buckets": [],
+          "excluded_risk_buckets": [],
+          "ranking_policy": [
+            "account_eligibility",
+            "risk_compatibility",
+            "user_requested_metric",
+            "fee",
+            "performance",
+            "evidence_completeness"
+          ],
+          "sort_by": "product_name",
+          "sort_order": "asc",
+          "limit": 5,
+          "name_tokens": [
+            "미래에셋AI퀀트미국투자등급회사채증권자투자신탁",
+            "위험은"
+          ],
+          "family_aliases": [],
+          "tenors": [],
+          "name_match_required": false,
+          "candidate_record_ids": []
+        },
+        "ranking_breakdown": []
+      }
+    },
+    {
+      "test_id": "T007",
+      "turn_no": 1,
+      "user_query": "TDF가 뭐야?",
+      "response_text": "TDF(Target Date Fund)는 투자자의 은퇴 시점을 목표로 하여, 투자 기간 동안 자동으로 자산 배분을 조정하는 펀드입니다. 쉽게 말해, 투자자의 나이나 은퇴 시점까지 남은 기간에 따라 주식과 채권의 비율을 조정해 리스크를 관리하면서 장기적으로 안정적인 수익을 추구하는 방식입니다.\n\n예를 들어, '2040 TDF'라는 상품에 가입했다면, 2040년을 은퇴 시점으로 보고, 아직 은퇴까지 시간이 많이 남았을 때는 주식 비중을 높여 공격적으로 투자하다가, 은퇴 시점이 가까워지면 채권 비중을 늘려 리스크를 줄이는 식으로 운용됩니다.\n\n퇴직연금에서는 이러한 TDF가 금융감독원장이 정한 특정 조건을 충족할 경우, DC(확정기여형)와 IRP(개인형 퇴직연금) 계좌에서 100%까지 투자가 가능합니다. 다만, DB(확정급여형)는 70%까지만 투자가 허용됩니다.\n\n주요 조건으로는 다음과 같습니다.\n1. 투자 목표 시점을 집합투자기구 설정일로부터 최소 5년 이후로 설정해야 합니다.\n2. 집합투자증권 명칭에 이를 명시해야 합니다.\n3. 주식의 투자 한도는 자산 총액의 80% 이내로 제한하며, 은퇴 시점 이후에는 40% 이내로 줄여야 합니다.\n4. 투자 적격 등급 이외의 채무증권의 투자 한도는 자산 총액의 20% 이내, 그리고 채무증권 투자액의 50% 이내로 제한합니다.\n\n이러한 조건들은 TDF가 안정성을 유지하면서도 장기적인 성과를 낼 수 있도록 돕습니다.",
+      "detected_intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT"
+      ],
+      "actual_route": "document",
+      "expected_routes": [
+        "document"
+      ],
+      "tools_called": [
+        "document"
+      ],
+      "source_types": [
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [],
+      "postgres_used": false,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "matched": 5
+      },
+      "latency_ms": 9726.8,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "success",
+      "session_id": "eval-T007-f55a5877",
+      "confirmed_constraints": {},
+      "gold_metadata": {
+        "test_id": "T007",
+        "session_id": "eval-T007-f55a5877",
+        "original_query": "TDF가 뭐야?",
+        "resolved_query": "TDF가 뭐야?",
+        "detected_intent": "document",
+        "actual_route": "document",
+        "retrieval_queries": [],
+        "required_evidence": {
+          "required_product_count": null,
+          "risk_grade_max": null,
+          "online_only": false,
+          "sort": null,
+          "require_product_evidence": false,
+          "require_pdf_evidence": false,
+          "require_law_evidence": false,
+          "require_source_version": true,
+          "allowed_evidence_statuses": [
+            "matched"
+          ]
+        },
+        "tools_called": [
+          "document"
+        ],
+        "source_types": [],
+        "product_ids": [],
+        "product_class_ids": [],
+        "candidate_count": 0,
+        "candidate_ids": [],
+        "selected_product_id": null,
+        "db_row_count": 461,
+        "retrieval_top_k": 5,
+        "evidence_coverage": {
+          "domain": {
+            "document": 5
+          },
+          "status": {
+            "matched": 5
+          }
+        },
+        "claim_grounding": {
+          "verdict": "PASS",
+          "numeric_claims": [
+            "2040 ",
+            "2040년",
+            "100%",
+            "70%",
+            "1",
+            "5년",
+            "2",
+            "3",
+            "80%",
+            "40%",
+            "4",
+            "20%",
+            "50%"
+          ],
+          "unsupported_numeric_claims": [],
+          "citation_like_markers": [],
+          "reason": "numeric_claims_grounded"
+        },
+        "raw_value": null,
+        "display_value": null,
+        "raw_unit": null,
+        "normalized_unit": null,
+        "normalization_status": null,
+        "response_status": "success",
+        "latency_ms": 9726.8,
+        "query_spec": {
+          "irp_only": false,
+          "risk_grade_max": null,
+          "risk_tolerance": null,
+          "allowed_risk_buckets": [],
+          "excluded_risk_buckets": [],
+          "ranking_policy": [
+            "account_eligibility",
+            "risk_compatibility",
+            "user_requested_metric",
+            "fee",
+            "performance",
+            "evidence_completeness"
+          ],
+          "sort_by": "product_name",
+          "sort_order": "asc",
+          "limit": 5,
+          "name_tokens": [
+            "미래에셋AI퀀트미국투자등급회사채증권자투자신탁",
+            "위험은"
+          ],
+          "family_aliases": [],
+          "tenors": [],
+          "name_match_required": false,
+          "candidate_record_ids": []
+        },
+        "ranking_breakdown": []
+      }
+    },
+    {
+      "test_id": "T008",
+      "turn_no": 1,
+      "user_query": "최근 1년 수익률이 높은 상품 5개 보여줘",
+      "response_text": "상품 DB에서 확인된 결과입니다.\n1. 삼성퇴직연금KOSPI200증권자투자신탁 제1호[주식] / 클래스 수수료미징구-오프라인-퇴직연금(C) / 위험등급 2(높은위험) / 총보수 연 0.59% / 1Y 수익률 99.84% / 출처 R2_KR5114450270.pdf\n2. 한국투자인덱스플러스증권투자신탁1호(주식-파생형) / 클래스 수수료미징구(C) / 위험등급 2(높은 위험) / 1Y 수익률 74% / 출처 R2_KR5113470030.pdf\n3. 미래에셋코어밸류연금저축증권전환형자투자신탁1호(주식) / 클래스 수수료미징구-온라인-개인연금(C-e) / 위험등급 2(높은 위험) / 총보수 연 1.065% / 1Y 수익률 68.88% / 출처 R2_KR510902777M.pdf\n4. 미래에셋코어밸류연금저축증권전환형자투자신탁1호(주식) / 클래스 수수료미징구-오프라인-개인연금(C) / 위험등급 2(높은 위험) / 총보수 연 1.54% / 1Y 수익률 68.12% / 출처 R2_KR510902777M.pdf\n5. 미래에셋고배당포커스연금저축증권전환형자투자신탁1호(주식) / 클래스 수수료미징구-온라인-개인연금(C-e) / 위험등급 3(다소 높은 위험) / 총보수 연 1.065% / 1Y 수익률 42.77% / 출처 R2_KR510902773M.pdf\n근거 출처: 투자설명서 / 상품 DB 기준.",
+      "detected_intent": [
+        "PRODUCT_PERFORMANCE_LOOKUP"
+      ],
+      "actual_route": "product",
+      "expected_routes": [
+        "product"
+      ],
+      "tools_called": [
+        "product"
+      ],
+      "source_types": [
+        "product",
+        "postgres",
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [
+        "R2_KR5114450270.pdf",
+        "R2_KR5113470030.pdf",
+        "R2_KR510902777M.pdf",
+        "R2_KR510902777M.pdf",
+        "R2_KR510902773M.pdf"
+      ],
+      "postgres_used": true,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "matched": 206
+      },
+      "latency_ms": 572.5,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [
+        "삼성퇴직연금KOSPI200증권자투자신탁 제1호[주식]",
+        "한국투자인덱스플러스증권투자신탁1호(주식-파생형)",
+        "미래에셋코어밸류연금저축증권전환형자투자신탁1호(주식)",
+        "미래에셋코어밸류연금저축증권전환형자투자신탁1호(주식)",
+        "미래에셋고배당포커스연금저축증권전환형자투자신탁1호(주식)"
+      ],
+      "response_status": "success",
+      "session_id": "eval-T008-8d175b85",
+      "confirmed_constraints": {},
+      "gold_metadata": {
+        "test_id": "T008",
+        "session_id": "eval-T008-8d175b85",
+        "original_query": "최근 1년 수익률이 높은 상품 5개 보여줘",
+        "resolved_query": "최근 1년 수익률이 높은 상품 5개 보여줘",
+        "detected_intent": "product",
+        "actual_route": "product",
+        "retrieval_queries": [],
+        "required_evidence": {
+          "required_product_count": 5,
+          "risk_grade_max": null,
+          "online_only": false,
+          "sort": "performance",
+          "require_product_evidence": true,
+          "require_pdf_evidence": false,
+          "require_law_evidence": false,
+          "require_source_version": true,
+          "allowed_evidence_statuses": [
+            "matched"
+          ]
+        },
+        "tools_called": [
+          "product"
+        ],
+        "source_types": [],
+        "product_ids": [
+          "product:53400|class:C001|name:수수료미징구-오프라인-퇴직연금(C)",
+          "product:61288|class:C004|name:수수료미징구(C)",
+          "product:AL438|class:C002|name:수수료미징구-온라인-개인연금(C-e)",
+          "product:AL438|class:C001|name:수수료미징구-오프라인-개인연금(C)",
+          "product:AK623|class:C002|name:수수료미징구-온라인-개인연금(C-e)"
+        ],
+        "product_class_ids": [
+          "C001",
+          "C004",
+          "C002",
+          "C001",
+          "C002"
+        ],
+        "candidate_count": 5,
+        "candidate_ids": [
+          "product:53400|class:C001|name:수수료미징구-오프라인-퇴직연금(C)",
+          "product:61288|class:C004|name:수수료미징구(C)",
+          "product:AL438|class:C002|name:수수료미징구-온라인-개인연금(C-e)",
+          "product:AL438|class:C001|name:수수료미징구-오프라인-개인연금(C)",
+          "product:AK623|class:C002|name:수수료미징구-온라인-개인연금(C-e)"
+        ],
+        "selected_product_id": "product:53400|class:C001|name:수수료미징구-오프라인-퇴직연금(C)",
+        "db_row_count": 461,
+        "retrieval_top_k": 5,
+        "evidence_coverage": {
+          "domain": {
+            "product": 135,
+            "document": 71
+          },
+          "status": {
+            "matched": 206
+          }
+        },
+        "claim_grounding": {
+          "verdict": "PASS",
+          "numeric_claims": [
+            "1",
+            "00",
+            "2",
+            "0.59%",
+            "99.84%",
+            "114450270",
+            "74%",
+            "113470030",
+            "3",
+            "1.065%",
+            "68.88%",
+            "10902777",
+            "4",
+            "1.54%",
+            "68.12%",
+            "5",
+            "42.77%",
+            "10902773"
+          ],
+          "unsupported_numeric_claims": [],
+          "citation_like_markers": [
+            "[주식]",
+            "출처",
+            "근거"
+          ],
+          "reason": "numeric_claims_grounded"
+        },
+        "raw_value": 99.84,
+        "display_value": 99.84,
+        "raw_unit": "PERCENT",
+        "normalized_unit": "PERCENT",
+        "normalization_status": "VERIFIED",
+        "response_status": "success",
+        "latency_ms": 572.5,
+        "query_spec": {
+          "irp_only": false,
+          "risk_grade_max": null,
+          "risk_tolerance": null,
+          "allowed_risk_buckets": [],
+          "excluded_risk_buckets": [],
+          "ranking_policy": [
+            "account_eligibility",
+            "risk_compatibility",
+            "user_requested_metric",
+            "fee",
+            "performance",
+            "evidence_completeness"
+          ],
+          "sort_by": "performance",
+          "sort_order": "desc",
+          "limit": 5,
+          "name_tokens": [
+            "최근",
+            "1년",
+            "수익률이",
+            "5개"
+          ],
+          "family_aliases": [],
+          "tenors": [],
+          "name_match_required": false,
+          "candidate_record_ids": []
+        },
+        "ranking_breakdown": [
+          {
+            "product_id": "product:53400|class:C001|name:수수료미징구-오프라인-퇴직연금(C)",
+            "eligibility_score": 0,
+            "risk_match": 0,
+            "fee_rank": 62,
+            "performance_rank": 23,
+            "evidence_coverage": 5,
+            "user_requested_metric": "performance"
+          },
+          {
+            "product_id": "product:61288|class:C004|name:수수료미징구(C)",
+            "eligibility_score": 0,
+            "risk_match": 0,
+            "fee_rank": null,
+            "performance_rank": 26,
+            "evidence_coverage": 4,
+            "user_requested_metric": "performance"
+          },
+          {
+            "product_id": "product:AL438|class:C002|name:수수료미징구-온라인-개인연금(C-e)",
+            "eligibility_score": 0,
+            "risk_match": 0,
+            "fee_rank": 90,
+            "performance_rank": 27,
+            "evidence_coverage": 5,
+            "user_requested_metric": "performance"
+          },
+          {
+            "product_id": "product:AL438|class:C001|name:수수료미징구-오프라인-개인연금(C)",
+            "eligibility_score": 0,
+            "risk_match": 0,
+            "fee_rank": 120,
+            "performance_rank": 28,
+            "evidence_coverage": 5,
+            "user_requested_metric": "performance"
+          },
+          {
+            "product_id": "product:AK623|class:C002|name:수수료미징구-온라인-개인연금(C-e)",
+            "eligibility_score": 0,
+            "risk_match": 0,
+            "fee_rank": 91,
+            "performance_rank": 30,
+            "evidence_coverage": 5,
+            "user_requested_metric": "performance"
+          }
+        ]
+      }
+    },
+    {
+      "test_id": "T009",
+      "turn_no": 1,
+      "user_query": "위험등급 3등급 이하 상품만 보여줘",
+      "response_text": "다음 5개를 보여드리겠습니다.\n상품 DB에서 확인된 결과입니다.\n1. KB 그로스 포커스 증권 자투자신탁(주식) / 클래스 수수료미징구(C-E) / 위험등급 2(높은 위험) / 총보수 연 1.713% / 출처 R2_KR5127450117.pdf\n2. KB 그로스 포커스 증권 자투자신탁(주식) / 클래스 수수료미징구-오프라인(C) / 위험등급 2(높은 위험) / 총보수 연 2.223% / 출처 R2_KR5127450117.pdf\n3. KB 그로스 포커스 증권 자투자신탁(주식) / 클래스 수수료선취-오프라인(A) / 위험등급 2(높은 위험) / 총보수 연 1.306% / 출처 R2_KR5127450117.pdf\n4. KB 그로스 포커스 증권 자투자신탁(주식) / 클래스 수수료선취-온라인(A-E) / 위험등급 2(높은 위험) / 총보수 연 1.014% / 출처 R2_KR5127450117.pdf\n5. KB 코리아 밸류업 액티브 증권 자투자신탁(주식) / 클래스 수수료미징구-오프라인(C) / 위험등급 2(높은 위험) / 총보수 연 1.66% / 출처 R2_KR5127450473.pdf\n근거 출처: 투자설명서 / 상품 DB 기준.",
+      "detected_intent": [
+        "PRODUCT_RISK_LOOKUP",
+        "PRODUCT_RISK_FILTER"
+      ],
+      "actual_route": "product",
+      "expected_routes": [
+        "product"
+      ],
+      "tools_called": [
+        "product"
+      ],
+      "source_types": [
+        "product",
+        "postgres",
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [
+        "R2_KR5127450117.pdf",
+        "R2_KR5127450117.pdf",
+        "R2_KR5127450117.pdf",
+        "R2_KR5127450117.pdf",
+        "R2_KR5127450473.pdf"
+      ],
+      "postgres_used": true,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "matched": 56
+      },
+      "latency_ms": 194.2,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [
+        "KB 그로스 포커스 증권 자투자신탁(주식)",
+        "KB 그로스 포커스 증권 자투자신탁(주식)",
+        "KB 그로스 포커스 증권 자투자신탁(주식)",
+        "KB 그로스 포커스 증권 자투자신탁(주식)",
+        "KB 코리아 밸류업 액티브 증권 자투자신탁(주식)"
+      ],
+      "response_status": "success",
+      "session_id": "eval-T009-642a5e58",
+      "confirmed_constraints": {},
+      "gold_metadata": {
+        "test_id": "T009",
+        "session_id": "eval-T009-642a5e58",
+        "original_query": "위험등급 3등급 이하 상품만 보여줘",
+        "resolved_query": "위험등급 3등급 이하 상품만 보여줘",
+        "detected_intent": "product",
+        "actual_route": "product",
+        "retrieval_queries": [],
+        "required_evidence": {
+          "required_product_count": null,
+          "risk_grade_max": 3,
+          "online_only": false,
+          "sort": "product_name",
+          "require_product_evidence": true,
+          "require_pdf_evidence": false,
+          "require_law_evidence": false,
+          "require_source_version": true,
+          "allowed_evidence_statuses": [
+            "matched"
+          ]
+        },
+        "tools_called": [
+          "product"
+        ],
+        "source_types": [],
+        "product_ids": [
+          "product:35432|class:C004|name:수수료미징구(C-E)",
+          "product:35432|class:C002|name:수수료미징구-오프라인(C)",
+          "product:35432|class:C001|name:수수료선취-오프라인(A)",
+          "product:35432|class:C003|name:수수료선취-온라인(A-E)",
+          "product:EG176|class:C002|name:수수료미징구-오프라인(C)"
+        ],
+        "product_class_ids": [
+          "C004",
+          "C002",
+          "C001",
+          "C003",
+          "C002"
+        ],
+        "candidate_count": 5,
+        "candidate_ids": [
+          "product:35432|class:C004|name:수수료미징구(C-E)",
+          "product:35432|class:C002|name:수수료미징구-오프라인(C)",
+          "product:35432|class:C001|name:수수료선취-오프라인(A)",
+          "product:35432|class:C003|name:수수료선취-온라인(A-E)",
+          "product:EG176|class:C002|name:수수료미징구-오프라인(C)"
+        ],
+        "selected_product_id": "product:35432|class:C004|name:수수료미징구(C-E)",
+        "db_row_count": 461,
+        "retrieval_top_k": 5,
+        "evidence_coverage": {
+          "domain": {
+            "product": 42,
+            "document": 14
+          },
+          "status": {
+            "matched": 56
+          }
+        },
+        "claim_grounding": {
+          "verdict": "PASS",
+          "numeric_claims": [
+            "5",
+            "1",
+            "2",
+            "1.713%",
+            "127450117",
+            "2.223%",
+            "3",
+            "1.306%",
+            "4",
+            "1.014%",
+            "1.66%",
+            "127450473"
+          ],
+          "unsupported_numeric_claims": [],
+          "citation_like_markers": [
+            "출처",
+            "근거"
+          ],
+          "reason": "numeric_claims_grounded"
+        },
+        "raw_value": 1.713,
+        "display_value": null,
+        "raw_unit": "PERCENT_PER_YEAR",
+        "normalized_unit": "PERCENT_PER_YEAR",
+        "normalization_status": null,
+        "response_status": "success",
+        "latency_ms": 194.2,
+        "query_spec": {
+          "irp_only": false,
+          "risk_grade_max": 3,
+          "risk_tolerance": null,
+          "allowed_risk_buckets": [],
+          "excluded_risk_buckets": [],
+          "ranking_policy": [
+            "account_eligibility",
+            "risk_compatibility",
+            "user_requested_metric",
+            "fee",
+            "performance",
+            "evidence_completeness"
+          ],
+          "sort_by": "product_name",
+          "sort_order": "asc",
+          "limit": 5,
+          "name_tokens": [
+            "위험등급",
+            "3등급",
+            "이하",
+            "상품만"
+          ],
+          "family_aliases": [],
+          "tenors": [],
+          "name_match_required": false,
+          "candidate_record_ids": []
+        },
+        "ranking_breakdown": [
+          {
+            "product_id": "product:35432|class:C004|name:수수료미징구(C-E)",
+            "eligibility_score": 0,
+            "risk_match": 0,
+            "fee_rank": 129,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "product_name"
+          },
+          {
+            "product_id": "product:35432|class:C002|name:수수료미징구-오프라인(C)",
+            "eligibility_score": 0,
+            "risk_match": 0,
+            "fee_rank": 141,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "product_name"
+          },
+          {
+            "product_id": "product:35432|class:C001|name:수수료선취-오프라인(A)",
+            "eligibility_score": 0,
+            "risk_match": 0,
+            "fee_rank": 95,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "product_name"
+          },
+          {
+            "product_id": "product:35432|class:C003|name:수수료선취-온라인(A-E)",
+            "eligibility_score": 0,
+            "risk_match": 0,
+            "fee_rank": 57,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "product_name"
+          },
+          {
+            "product_id": "product:EG176|class:C002|name:수수료미징구-오프라인(C)",
+            "eligibility_score": 0,
+            "risk_match": 0,
+            "fee_rank": 126,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "product_name"
+          }
+        ]
+      }
+    },
+    {
+      "test_id": "T010",
+      "turn_no": 1,
+      "user_query": "TDF 상품 중 총보수가 낮은 순서대로 보여줘",
+      "response_text": "다음 2개를 보여드리겠습니다.\n상품 DB의 총보수 값으로 정렬한 결과입니다.\n1. 미래에셋라이프사이클7090연금증권전환형자투자신탁1호(채권) / 클래스 종류C-0 / 위험등급 5(낮은 위험) / 총보수 연 0.15% / 출처 R2_KR5153420022.pdf\n2. 미래에셋라이프사이클2030연금증권전환형자투자신탁1호(주식) / 클래스 수수료미징구-온라인-개인연금(C-e) / 위험등급 2(높은 위험) / 총보수 연 1.06% / 출처 R2_KR5153450112.pdf\n근거 출처: 투자설명서 / 상품 DB 기준.",
+      "detected_intent": [
+        "PRODUCT_FEE_FILTER",
+        "PRODUCT_FEE_SORT"
+      ],
+      "actual_route": "product",
+      "expected_routes": [
+        "product"
+      ],
+      "tools_called": [
+        "product"
+      ],
+      "source_types": [
+        "product",
+        "postgres",
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [
+        "R2_KR5153420022.pdf",
+        "R2_KR5153450112.pdf"
+      ],
+      "postgres_used": true,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "matched": 42
+      },
+      "latency_ms": 130.9,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [
+        "미래에셋라이프사이클7090연금증권전환형자투자신탁1호(채권)",
+        "미래에셋라이프사이클2030연금증권전환형자투자신탁1호(주식)"
+      ],
+      "response_status": "success",
+      "session_id": "eval-T010-12f638f2",
+      "confirmed_constraints": {},
+      "gold_metadata": {
+        "test_id": "T010",
+        "session_id": "eval-T010-12f638f2",
+        "original_query": "TDF 상품 중 총보수가 낮은 순서대로 보여줘",
+        "resolved_query": "TDF 상품 중 총보수가 낮은 순서대로 보여줘",
+        "detected_intent": "product",
+        "actual_route": "product",
+        "retrieval_queries": [],
+        "required_evidence": {
+          "required_product_count": null,
+          "risk_grade_max": null,
+          "online_only": false,
+          "sort": "total_fee",
+          "require_product_evidence": true,
+          "require_pdf_evidence": false,
+          "require_law_evidence": false,
+          "require_source_version": true,
+          "allowed_evidence_statuses": [
+            "matched"
+          ]
+        },
+        "tools_called": [
+          "product"
+        ],
+        "source_types": [],
+        "product_ids": [
+          "product:51998|class:C001|name:종류C-0",
+          "product:51915|class:C002|name:수수료미징구-온라인-개인연금(C-e)"
+        ],
+        "product_class_ids": [
+          "C001",
+          "C002"
+        ],
+        "candidate_count": 2,
+        "candidate_ids": [
+          "product:51998|class:C001|name:종류C-0",
+          "product:51915|class:C002|name:수수료미징구-온라인-개인연금(C-e)"
+        ],
+        "selected_product_id": "product:51998|class:C001|name:종류C-0",
+        "db_row_count": 461,
+        "retrieval_top_k": 5,
+        "evidence_coverage": {
+          "domain": {
+            "product": 26,
+            "document": 16
+          },
+          "status": {
+            "matched": 42
+          }
+        },
+        "claim_grounding": {
+          "verdict": "PASS",
+          "numeric_claims": [
+            "2",
+            "1",
+            "7090",
+            "0 ",
+            "5",
+            "0.15%",
+            "153420022",
+            "2030",
+            "1.06%",
+            "153450112"
+          ],
+          "unsupported_numeric_claims": [],
+          "citation_like_markers": [
+            "출처",
+            "근거"
+          ],
+          "reason": "numeric_claims_grounded"
+        },
+        "raw_value": 0.15,
+        "display_value": null,
+        "raw_unit": "PERCENT_PER_YEAR",
+        "normalized_unit": "PERCENT_PER_YEAR",
+        "normalization_status": null,
+        "response_status": "success",
+        "latency_ms": 130.9,
+        "query_spec": {
+          "irp_only": false,
+          "risk_grade_max": null,
+          "risk_tolerance": null,
+          "allowed_risk_buckets": [],
+          "excluded_risk_buckets": [],
+          "ranking_policy": [
+            "account_eligibility",
+            "risk_compatibility",
+            "user_requested_metric",
+            "fee",
+            "performance",
+            "evidence_completeness"
+          ],
+          "sort_by": "total_fee",
+          "sort_order": "asc",
+          "limit": 5,
+          "name_tokens": [],
+          "family_aliases": [
+            "tdf",
+            "라이프사이클"
+          ],
+          "tenors": [],
+          "name_match_required": true,
+          "candidate_record_ids": []
+        },
+        "ranking_breakdown": [
+          {
+            "product_id": "product:51998|class:C001|name:종류C-0",
+            "eligibility_score": 0,
+            "risk_match": 0,
+            "fee_rank": 1,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "total_fee"
+          },
+          {
+            "product_id": "product:51915|class:C002|name:수수료미징구-온라인-개인연금(C-e)",
+            "eligibility_score": 0,
+            "risk_match": 0,
+            "fee_rank": 2,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "total_fee"
+          }
+        ]
+      }
+    },
+    {
+      "test_id": "T011",
+      "turn_no": 1,
+      "user_query": "이 상품의 1년, 3년, 5년 수익률을 보여줘",
+      "response_text": "요청을 정확히 처리하려면 추가 정보가 필요합니다. 필요한 정보: 확인하려는 상품명.\n- 어떤 상품을 말씀하시는지 상품명을 알려주세요.",
+      "detected_intent": [
+        "CLARIFY",
+        "PRODUCT_PERFORMANCE_LOOKUP"
+      ],
+      "actual_route": "product",
+      "expected_routes": [],
+      "tools_called": [
+        "product"
+      ],
+      "source_types": [
+        "postgres"
+      ],
+      "source_documents": [],
+      "postgres_used": true,
+      "enterprise_rag_used": false,
+      "external_api_used": false,
+      "evidence_status": "clarify",
+      "latency_ms": 38.5,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "clarify",
+      "session_id": "eval-T011-c349fc7e",
+      "confirmed_constraints": {},
+      "gold_metadata": {
+        "test_id": "T011",
+        "session_id": "eval-T011-c349fc7e",
+        "original_query": "이 상품의 1년, 3년, 5년 수익률을 보여줘",
+        "resolved_query": "이 상품의 1년, 3년, 5년 수익률을 보여줘",
+        "detected_intent": "product",
+        "actual_route": "product",
+        "retrieval_queries": [],
+        "required_evidence": {
+          "required_product_count": null,
+          "risk_grade_max": null,
+          "online_only": false,
+          "sort": "product_name",
+          "require_product_evidence": true,
+          "require_pdf_evidence": false,
+          "require_law_evidence": false,
+          "require_source_version": true,
+          "allowed_evidence_statuses": [
+            "matched"
+          ]
+        },
+        "tools_called": [
+          "product"
+        ],
+        "source_types": [],
+        "product_ids": [],
+        "product_class_ids": [],
+        "candidate_count": 0,
+        "candidate_ids": [],
+        "selected_product_id": null,
+        "db_row_count": 461,
+        "retrieval_top_k": 5,
+        "evidence_coverage": {
+          "domain": {},
+          "status": {}
+        },
+        "claim_grounding": null,
+        "raw_value": null,
+        "display_value": null,
+        "raw_unit": null,
+        "normalized_unit": null,
+        "normalization_status": null,
+        "response_status": "clarify",
+        "latency_ms": 38.5,
+        "query_spec": {
+          "irp_only": false,
+          "risk_grade_max": null,
+          "risk_tolerance": null,
+          "allowed_risk_buckets": [],
+          "excluded_risk_buckets": [],
+          "ranking_policy": [
+            "account_eligibility",
+            "risk_compatibility",
+            "user_requested_metric",
+            "fee",
+            "performance",
+            "evidence_completeness"
+          ],
+          "sort_by": "total_fee",
+          "sort_order": "asc",
+          "limit": 5,
+          "name_tokens": [],
+          "family_aliases": [
+            "tdf",
+            "라이프사이클"
+          ],
+          "tenors": [],
+          "name_match_required": true,
+          "candidate_record_ids": []
+        },
+        "ranking_breakdown": []
+      }
+    },
+    {
+      "test_id": "T012",
+      "turn_no": 1,
+      "user_query": "IRP에서 중도인출은 언제 가능해?",
+      "response_text": "IRP에서 중도인출은 원칙적으로 만 55세 이전에 불가능하지만, 특정한 사유에 해당할 경우 가능합니다. 이러한 사유는 근로자퇴직급여 보장법 시행령 제18조에 의해 규정되어 있으며, 다음과 같은 경우가 포함됩니다:\n\n1. **무주택자의 주택 구입**\n2. **가입자가 「채무자 회생 및 파산에 관한 법률」에 따라 개인회생절차개시결정 또는 파산선고를 받은 경우**\n\n또한, 중도인출을 고려할 때는 세법상 '부득이한 사유'에 해당하는지 확인해야 합니다. 부득이한 사유에 해당하면 중도 인출 시 5.5%~3.3%의 저율의 연금소득세가 적용되지만, 그렇지 않으면 16.5%의 기타소득세가 과세됩니다.\n\n따라서, IRP 중도인출을 원할 경우 위 사유에 해당하는지 확인하고 필요한 서류를 준비하여 가까운 지점에 내점하여 신청해야 합니다. 자세한 사항은 연금자산관리센터(1588-5577) 또는 고객센터(1588-6800)로 문의하시기 바랍니다.",
+      "detected_intent": [
+        "ACCOUNT_PROCEDURE",
+        "LEGAL_CONDITION"
+      ],
+      "actual_route": "document+law",
+      "expected_routes": [
+        "document",
+        "document+law",
+        "law"
+      ],
+      "tools_called": [
+        "document",
+        "law"
+      ],
+      "source_types": [
+        "enterprise_rag",
+        "enterprise_document",
+        "law",
+        "external_api"
+      ],
+      "source_documents": [],
+      "postgres_used": false,
+      "enterprise_rag_used": true,
+      "external_api_used": true,
+      "evidence_status": {
+        "matched": 7
+      },
+      "latency_ms": 16632.1,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "success",
+      "session_id": "eval-T012-80217249",
+      "confirmed_constraints": {},
+      "gold_metadata": {
+        "test_id": "T012",
+        "session_id": "eval-T012-80217249",
+        "original_query": "IRP에서 중도인출은 언제 가능해?",
+        "resolved_query": "IRP에서 중도인출은 언제 가능해?",
+        "detected_intent": "document+law",
+        "actual_route": "document+law",
+        "retrieval_queries": [],
+        "required_evidence": {
+          "required_product_count": null,
+          "risk_grade_max": null,
+          "online_only": false,
+          "sort": null,
+          "require_product_evidence": false,
+          "require_pdf_evidence": true,
+          "require_law_evidence": true,
+          "require_source_version": true,
+          "allowed_evidence_statuses": [
+            "matched",
+            "missing",
+            "conflict"
+          ]
+        },
+        "tools_called": [
+          "document",
+          "law"
+        ],
+        "source_types": [],
+        "product_ids": [],
+        "product_class_ids": [],
+        "candidate_count": 0,
+        "candidate_ids": [],
+        "selected_product_id": null,
+        "db_row_count": 461,
+        "retrieval_top_k": 5,
+        "evidence_coverage": {
+          "domain": {
+            "document": 5,
+            "law": 2
+          },
+          "status": {
+            "matched": 7
+          }
+        },
+        "claim_grounding": {
+          "verdict": "PASS",
+          "numeric_claims": [
+            "55세",
+            "18",
+            "1",
+            "2",
+            "5.5%",
+            "3.3%",
+            "16.5%",
+            "1588",
+            "5577",
+            "6800"
+          ],
+          "unsupported_numeric_claims": [],
+          "citation_like_markers": [
+            "제18조"
+          ],
+          "reason": "numeric_claims_grounded"
+        },
+        "raw_value": null,
+        "display_value": null,
+        "raw_unit": null,
+        "normalized_unit": null,
+        "normalization_status": null,
+        "response_status": "success",
+        "latency_ms": 16632.1,
+        "query_spec": {
+          "irp_only": false,
+          "risk_grade_max": null,
+          "risk_tolerance": null,
+          "allowed_risk_buckets": [],
+          "excluded_risk_buckets": [],
+          "ranking_policy": [
+            "account_eligibility",
+            "risk_compatibility",
+            "user_requested_metric",
+            "fee",
+            "performance",
+            "evidence_completeness"
+          ],
+          "sort_by": "total_fee",
+          "sort_order": "asc",
+          "limit": 5,
+          "name_tokens": [],
+          "family_aliases": [
+            "tdf",
+            "라이프사이클"
+          ],
+          "tenors": [],
+          "name_match_required": true,
+          "candidate_record_ids": []
+        },
+        "ranking_breakdown": []
+      }
+    },
+    {
+      "test_id": "T013",
+      "turn_no": 1,
+      "user_query": "그냥 예시로 안정형 투자자라면 어떻게 추천해?",
+      "response_text": "예시로 안정형 투자자라면 원금 변동을 낮추는 방향에서 위험등급이 낮고 채권 비중이 높은 후보를 먼저 비교할 수 있습니다. 이는 실제 상품 추천이 아니라 예시 시나리오입니다. 실제 추천에는 투자기간과 감내 위험을 확인합니다.",
+      "detected_intent": [
+        "EXAMPLE_RESPONSE",
+        "CLARIFY_EXAMPLE",
+        "HYPOTHETICAL_EXAMPLE"
+      ],
+      "actual_route": "conversation",
+      "expected_routes": [],
+      "tools_called": [
+        "conversation"
+      ],
+      "source_types": [],
+      "source_documents": [],
+      "postgres_used": false,
+      "enterprise_rag_used": false,
+      "external_api_used": false,
+      "evidence_status": "success",
+      "latency_ms": 0.0,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "success",
+      "session_id": "eval-T013-18151fac",
+      "confirmed_constraints": {},
+      "gold_metadata": {
+        "test_id": "T013",
+        "session_id": "eval-T013-18151fac",
+        "original_query": "그냥 예시로 안정형 투자자라면 어떻게 추천해?",
+        "resolved_query": "그냥 예시로 안정형 투자자라면 어떻게 추천해?",
+        "detected_intent": null,
+        "actual_route": "conversation",
+        "retrieval_queries": [],
+        "required_evidence": null,
+        "tools_called": [],
+        "source_types": [],
+        "product_ids": [],
+        "product_class_ids": [],
+        "candidate_count": 0,
+        "candidate_ids": [],
+        "selected_product_id": null,
+        "db_row_count": 461,
+        "retrieval_top_k": null,
+        "evidence_coverage": {},
+        "claim_grounding": null,
+        "raw_value": null,
+        "display_value": null,
+        "raw_unit": null,
+        "normalized_unit": null,
+        "normalization_status": null,
+        "response_status": "success",
+        "latency_ms": 0.0,
+        "query_spec": {
+          "irp_only": false,
+          "risk_grade_max": null,
+          "risk_tolerance": null,
+          "allowed_risk_buckets": [],
+          "excluded_risk_buckets": [],
+          "ranking_policy": [
+            "account_eligibility",
+            "risk_compatibility",
+            "user_requested_metric",
+            "fee",
+            "performance",
+            "evidence_completeness"
+          ],
+          "sort_by": "total_fee",
+          "sort_order": "asc",
+          "limit": 5,
+          "name_tokens": [],
+          "family_aliases": [
+            "tdf",
+            "라이프사이클"
+          ],
+          "tenors": [],
+          "name_match_required": true,
+          "candidate_record_ids": []
+        },
+        "ranking_breakdown": []
+      }
+    },
+    {
+      "test_id": "T014",
+      "turn_no": 1,
+      "user_query": "근거 문장을 보여줘",
+      "response_text": "다음 5개를 보여드리겠습니다.\n상품 DB에서 확인된 결과입니다.\n1. DB다같이장기채권증권투자신탁[채권] / 클래스 수수료미징구-오프라인(C) / 위험등급 5(낮은 위험) / 총보수 연 0.55% / 출처 R2_KR5131420025.pdf\n2. DB다같이장기채권증권투자신탁[채권] / 클래스 수수료미징구-오프라인(C-F) / 위험등급 5(낮은 위험) / 출처 R2_KR5131420025.pdf\n3. DB다같이장기채권증권투자신탁[채권] / 클래스 수수료미징구-온라인(C-E) / 위험등급 5(낮은 위험) / 총보수 연 0.3% / 출처 R2_KR5131420025.pdf\n4. DB다같이장기채권증권투자신탁[채권] / 클래스 수수료선취-오프라인(A) / 위험등급 5(낮은 위험) / 총보수 연 0.25% / 출처 R2_KR5131420025.pdf\n5. DB다같이장기채권증권투자신탁[채권] / 클래스 수수료선취-온라인(A-E) / 위험등급 5(낮은 위험) / 총보수 연 0.175% / 출처 R2_KR5131420025.pdf\n근거 출처: 투자설명서 / 상품 DB 기준.",
+      "detected_intent": [
+        "PRODUCT_LOOKUP",
+        "EVIDENCE_REQUEST"
+      ],
+      "actual_route": "product",
+      "expected_routes": [],
+      "tools_called": [
+        "product"
+      ],
+      "source_types": [
+        "product",
+        "postgres",
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [
+        "R2_KR5131420025.pdf",
+        "R2_KR5131420025.pdf",
+        "R2_KR5131420025.pdf",
+        "R2_KR5131420025.pdf",
+        "R2_KR5131420025.pdf"
+      ],
+      "postgres_used": true,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "matched": 151
+      },
+      "latency_ms": 544.2,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [
+        "DB다같이장기채권증권투자신탁[채권]",
+        "DB다같이장기채권증권투자신탁[채권]",
+        "DB다같이장기채권증권투자신탁[채권]",
+        "DB다같이장기채권증권투자신탁[채권]",
+        "DB다같이장기채권증권투자신탁[채권]"
+      ],
+      "response_status": "success",
+      "session_id": "eval-T014-de342314",
+      "confirmed_constraints": {},
+      "gold_metadata": {
+        "test_id": "T014",
+        "session_id": "eval-T014-de342314",
+        "original_query": "근거 문장을 보여줘",
+        "resolved_query": "근거 문장을 보여줘",
+        "detected_intent": "product",
+        "actual_route": "product",
+        "retrieval_queries": [],
+        "required_evidence": {
+          "required_product_count": null,
+          "risk_grade_max": null,
+          "online_only": false,
+          "sort": "product_name",
+          "require_product_evidence": true,
+          "require_pdf_evidence": false,
+          "require_law_evidence": false,
+          "require_source_version": true,
+          "allowed_evidence_statuses": [
+            "matched"
+          ]
+        },
+        "tools_called": [
+          "product"
+        ],
+        "source_types": [],
+        "product_ids": [
+          "product:BE508|class:C002|name:수수료미징구-오프라인(C)",
+          "product:BE508|class:C005|name:수수료미징구-오프라인(C-F)",
+          "product:BE508|class:C004|name:수수료미징구-온라인(C-E)",
+          "product:BE508|class:C001|name:수수료선취-오프라인(A)",
+          "product:BE508|class:C003|name:수수료선취-온라인(A-E)"
+        ],
+        "product_class_ids": [
+          "C002",
+          "C005",
+          "C004",
+          "C001",
+          "C003"
+        ],
+        "candidate_count": 5,
+        "candidate_ids": [
+          "product:BE508|class:C002|name:수수료미징구-오프라인(C)",
+          "product:BE508|class:C005|name:수수료미징구-오프라인(C-F)",
+          "product:BE508|class:C004|name:수수료미징구-온라인(C-E)",
+          "product:BE508|class:C001|name:수수료선취-오프라인(A)",
+          "product:BE508|class:C003|name:수수료선취-온라인(A-E)"
+        ],
+        "selected_product_id": "product:BE508|class:C002|name:수수료미징구-오프라인(C)",
+        "db_row_count": 461,
+        "retrieval_top_k": 5,
+        "evidence_coverage": {
+          "domain": {
+            "product": 119,
+            "document": 32
+          },
+          "status": {
+            "matched": 151
+          }
+        },
+        "claim_grounding": {
+          "verdict": "PASS",
+          "numeric_claims": [
+            "5",
+            "1",
+            "0.55%",
+            "131420025",
+            "2",
+            "3",
+            "0.3%",
+            "4",
+            "0.25%",
+            "0.175%"
+          ],
+          "unsupported_numeric_claims": [],
+          "citation_like_markers": [
+            "[채권]",
+            "출처",
+            "근거"
+          ],
+          "reason": "numeric_claims_grounded"
+        },
+        "raw_value": 0.55,
+        "display_value": null,
+        "raw_unit": "PERCENT_PER_YEAR",
+        "normalized_unit": "PERCENT_PER_YEAR",
+        "normalization_status": null,
+        "response_status": "success",
+        "latency_ms": 544.2,
+        "query_spec": {
+          "irp_only": false,
+          "risk_grade_max": null,
+          "risk_tolerance": null,
+          "allowed_risk_buckets": [],
+          "excluded_risk_buckets": [],
+          "ranking_policy": [
+            "account_eligibility",
+            "risk_compatibility",
+            "user_requested_metric",
+            "fee",
+            "performance",
+            "evidence_completeness"
+          ],
+          "sort_by": "product_name",
+          "sort_order": "asc",
+          "limit": 5,
+          "name_tokens": [
+            "근거",
+            "문장을"
+          ],
+          "family_aliases": [],
+          "tenors": [],
+          "name_match_required": false,
+          "candidate_record_ids": []
+        },
+        "ranking_breakdown": [
+          {
+            "product_id": "product:BE508|class:C002|name:수수료미징구-오프라인(C)",
+            "eligibility_score": 0,
+            "risk_match": 0,
+            "fee_rank": 189,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "product_name"
+          },
+          {
+            "product_id": "product:BE508|class:C005|name:수수료미징구-오프라인(C-F)",
+            "eligibility_score": 0,
+            "risk_match": 0,
+            "fee_rank": null,
+            "performance_rank": null,
+            "evidence_coverage": 3,
+            "user_requested_metric": "product_name"
+          },
+          {
+            "product_id": "product:BE508|class:C004|name:수수료미징구-온라인(C-E)",
+            "eligibility_score": 0,
+            "risk_match": 0,
+            "fee_rank": 94,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "product_name"
+          },
+          {
+            "product_id": "product:BE508|class:C001|name:수수료선취-오프라인(A)",
+            "eligibility_score": 0,
+            "risk_match": 0,
+            "fee_rank": 60,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "product_name"
+          },
+          {
+            "product_id": "product:BE508|class:C003|name:수수료선취-온라인(A-E)",
+            "eligibility_score": 0,
+            "risk_match": 0,
+            "fee_rank": 24,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "product_name"
+          }
+        ]
+      }
+    },
+    {
+      "test_id": "T015",
+      "turn_no": 1,
+      "user_query": "기업이 준 자료에 없는 내용이면 알려줘",
+      "response_text": "기업이 제공한 자료에 없는 내용은 다음과 같습니다.\n\n1. 특정 상품의 구체적인 수익률이나 성과 지표\n2. 개별 고객의 투자 사례나 포트폴리오\n3. 실시간 시장 데이터나 금융 뉴스 업데이트\n4. 특정 기업의 재무 상태나 경영 전략\n5. 퇴직연금 관련 최신 법령 개정 사항 (단, 제공된 자료 내 명시된 법령 기준)\n\n이러한 정보는 기업 제공 자료에 포함되어 있지 않으므로, 추가적인 조사나 전문가 상담을 통해 확인하는 것이 좋습니다.\n\n출처:\n- doc56.pdf / page 1\n- doc29.xlsx / sheet 자주 묻는 질문\n- doc10.pdf / page 1",
+      "detected_intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT",
+        "SOURCE_COVERAGE"
+      ],
+      "actual_route": "document",
+      "expected_routes": [],
+      "tools_called": [
+        "document"
+      ],
+      "source_types": [
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [],
+      "postgres_used": false,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "matched": 3
+      },
+      "latency_ms": 5092.0,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "success",
+      "session_id": "eval-T015-ca42a363",
+      "confirmed_constraints": {},
+      "gold_metadata": {
+        "test_id": "T015",
+        "session_id": "eval-T015-ca42a363",
+        "original_query": "기업이 준 자료에 없는 내용이면 알려줘",
+        "resolved_query": "기업이 준 자료에 없는 내용이면 알려줘",
+        "detected_intent": "document",
+        "actual_route": "document",
+        "retrieval_queries": [],
+        "required_evidence": {
+          "required_product_count": null,
+          "risk_grade_max": null,
+          "online_only": false,
+          "sort": null,
+          "require_product_evidence": false,
+          "require_pdf_evidence": false,
+          "require_law_evidence": false,
+          "require_source_version": true,
+          "allowed_evidence_statuses": [
+            "matched"
+          ]
+        },
+        "tools_called": [
+          "document"
+        ],
+        "source_types": [],
+        "product_ids": [],
+        "product_class_ids": [],
+        "candidate_count": 0,
+        "candidate_ids": [],
+        "selected_product_id": null,
+        "db_row_count": 461,
+        "retrieval_top_k": 5,
+        "evidence_coverage": {
+          "domain": {
+            "document": 3
+          },
+          "status": {
+            "matched": 3
+          }
+        },
+        "claim_grounding": {
+          "verdict": "PASS",
+          "numeric_claims": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "1\n",
+            "9",
+            "0"
+          ],
+          "unsupported_numeric_claims": [],
+          "citation_like_markers": [
+            "법령",
+            "출처"
+          ],
+          "reason": "numeric_claims_grounded"
+        },
+        "raw_value": null,
+        "display_value": null,
+        "raw_unit": null,
+        "normalized_unit": null,
+        "normalization_status": null,
+        "response_status": "success",
+        "latency_ms": 5092.0,
+        "query_spec": {
+          "irp_only": false,
+          "risk_grade_max": null,
+          "risk_tolerance": null,
+          "allowed_risk_buckets": [],
+          "excluded_risk_buckets": [],
+          "ranking_policy": [
+            "account_eligibility",
+            "risk_compatibility",
+            "user_requested_metric",
+            "fee",
+            "performance",
+            "evidence_completeness"
+          ],
+          "sort_by": "product_name",
+          "sort_order": "asc",
+          "limit": 5,
+          "name_tokens": [
+            "근거",
+            "문장을"
+          ],
+          "family_aliases": [],
+          "tenors": [],
+          "name_match_required": false,
+          "candidate_record_ids": []
+        },
+        "ranking_breakdown": []
+      }
+    },
+    {
+      "test_id": "T016",
+      "turn_no": 1,
+      "user_query": "DC와 DB, 퇴직금이 정해지는 방식이랑 운용 주체가 어떻게 다른가요?",
+      "response_text": "DC와 DB, 퇴직금이 정해지는 방식과 운용 주체는 다음과 같이 다릅니다.\n\n1. **DB 제도 (확정급여형)**\n   - **운용 주체**: 회사가 퇴직급여 재원을 금융기관에 적립하고 운용합니다.\n   - **퇴직급여 산정 방식**: 퇴직급여는 평균임금 × 계속근로기간(근속연수)으로 계산됩니다.\n   - **적립금 보관 및 운용**: 회사가 금융기관에 적립금을 보관하고 운용합니다.\n\n2. **DC 제도 (확정기여형)**\n   - **운용 주체**: 근로자가 직접 적립금을 운용합니다.\n   - **부담금 산정**: 연간 임금총액의 1/12로 계산됩니다.\n   - **퇴직급여 산정 방식**: 기여금(부담금) 누계액 + 운용손익으로 결정됩니다.\n   - **적립금 보관**: 금융기관에 보관됩니다.\n\n**차이점 요약**:\n- DB 제도는 회사가 퇴직급여를 보장하고 운용하며, 퇴직급여는 근속연수와 평균임금을 기준으로 산정됩니다.\n- DC 제도는 회사가 부담금을 적립해주고, 이후 근로자가 이를 운용하여 퇴직급여를 받습니다.",
+      "detected_intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT"
+      ],
+      "actual_route": "document",
+      "expected_routes": [
+        "document"
+      ],
+      "tools_called": [
+        "document"
+      ],
+      "source_types": [
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [],
+      "postgres_used": false,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "matched": 5
+      },
+      "latency_ms": 9744.7,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "success",
+      "session_id": "eval-T016-3013e082",
+      "confirmed_constraints": {},
+      "gold_metadata": {
+        "test_id": "T016",
+        "session_id": "eval-T016-3013e082",
+        "original_query": "DC와 DB, 퇴직금이 정해지는 방식이랑 운용 주체가 어떻게 다른가요?",
+        "resolved_query": "DC와 DB, 퇴직금이 정해지는 방식이랑 운용 주체가 어떻게 다른가요?",
+        "detected_intent": "document",
+        "actual_route": "document",
+        "retrieval_queries": [],
+        "required_evidence": {
+          "required_product_count": null,
+          "risk_grade_max": null,
+          "online_only": false,
+          "sort": null,
+          "require_product_evidence": false,
+          "require_pdf_evidence": false,
+          "require_law_evidence": false,
+          "require_source_version": true,
+          "allowed_evidence_statuses": [
+            "matched"
+          ]
+        },
+        "tools_called": [
+          "document"
+        ],
+        "source_types": [],
+        "product_ids": [],
+        "product_class_ids": [],
+        "candidate_count": 0,
+        "candidate_ids": [],
+        "selected_product_id": null,
+        "db_row_count": 461,
+        "retrieval_top_k": 5,
+        "evidence_coverage": {
+          "domain": {
+            "document": 5
+          },
+          "status": {
+            "matched": 5
+          }
+        },
+        "claim_grounding": {
+          "verdict": "PASS",
+          "numeric_claims": [
+            "1",
+            "2",
+            "12"
+          ],
+          "unsupported_numeric_claims": [],
+          "citation_like_markers": [],
+          "reason": "numeric_claims_grounded"
+        },
+        "raw_value": null,
+        "display_value": null,
+        "raw_unit": null,
+        "normalized_unit": null,
+        "normalization_status": null,
+        "response_status": "success",
+        "latency_ms": 9744.7,
+        "query_spec": {
+          "irp_only": false,
+          "risk_grade_max": null,
+          "risk_tolerance": null,
+          "allowed_risk_buckets": [],
+          "excluded_risk_buckets": [],
+          "ranking_policy": [
+            "account_eligibility",
+            "risk_compatibility",
+            "user_requested_metric",
+            "fee",
+            "performance",
+            "evidence_completeness"
+          ],
+          "sort_by": "product_name",
+          "sort_order": "asc",
+          "limit": 5,
+          "name_tokens": [
+            "근거",
+            "문장을"
+          ],
+          "family_aliases": [],
+          "tenors": [],
+          "name_match_required": false,
+          "candidate_record_ids": []
+        },
+        "ranking_breakdown": []
+      }
+    },
+    {
+      "test_id": "T017",
+      "turn_no": 1,
+      "user_query": "연금저축이랑 IRP에 넣으면 세액공제 얼마까지 되나요? 다 합쳐서요.",
+      "response_text": "연금저축과 IRP를 합한 연간 납입 한도는 18,000,000원입니다. 세액공제 대상 납입액 한도는 합산 연 9,000,000원이며, 이 중 연금저축 납입액은 연 6,000,000원까지 세액공제 대상에 포함됩니다. 합산 한도 9,000,000원을 채우려면 나머지 3,000,000원을 IRP에 납입해야 합니다. 지방소득세를 포함한 실효 공제율은 소득구간에 따라 약 16.5% 또는 약 13.2%가 적용됩니다. 실제 공제세액은 소득구간과 실제 납입액에 따라 달라집니다.",
+      "detected_intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT"
+      ],
+      "actual_route": "document+calculation",
+      "expected_routes": [
+        "calculation",
+        "document",
+        "document+law"
+      ],
+      "tools_called": [
+        "document",
+        "calculation"
+      ],
+      "source_types": [
+        "enterprise_rag",
+        "enterprise_document",
+        "law",
+        "external_api",
+        "calculation"
+      ],
+      "source_documents": [],
+      "postgres_used": false,
+      "enterprise_rag_used": true,
+      "external_api_used": true,
+      "evidence_status": {
+        "matched": 7
+      },
+      "latency_ms": 9587.0,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 1,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 9,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "success",
+      "session_id": "eval-T017-bc3c3684",
+      "confirmed_constraints": {},
+      "gold_metadata": {
+        "test_id": "T017",
+        "session_id": "eval-T017-bc3c3684",
+        "original_query": "연금저축이랑 IRP에 넣으면 세액공제 얼마까지 되나요? 다 합쳐서요.",
+        "resolved_query": "연금저축이랑 IRP에 넣으면 세액공제 얼마까지 되나요? 다 합쳐서요.",
+        "detected_intent": "document+calculation",
+        "actual_route": "document+calculation",
+        "retrieval_queries": [],
+        "required_evidence": {
+          "required_product_count": null,
+          "risk_grade_max": null,
+          "online_only": false,
+          "sort": null,
+          "require_product_evidence": false,
+          "require_pdf_evidence": false,
+          "require_law_evidence": false,
+          "require_source_version": true,
+          "allowed_evidence_statuses": []
+        },
+        "tools_called": [
+          "document",
+          "calculation"
+        ],
+        "source_types": [],
+        "product_ids": [],
+        "product_class_ids": [],
+        "candidate_count": 0,
+        "candidate_ids": [],
+        "selected_product_id": null,
+        "db_row_count": 461,
+        "retrieval_top_k": 5,
+        "evidence_coverage": {
+          "domain": {
+            "calculation": 1,
+            "document": 5,
+            "law": 1
+          },
+          "status": {
+            "matched": 7
+          }
+        },
+        "claim_grounding": {
+          "verdict": "REVIEW",
+          "numeric_claims": [
+            "18,000,000원",
+            "9,000,000원",
+            "6,000,000원",
+            "3,000,000원",
+            "16.5%",
+            "13.2%"
+          ],
+          "unsupported_numeric_claims": [
+            "18,000,000원",
+            "9,000,000원",
+            "6,000,000원",
+            "3,000,000원"
+          ],
+          "citation_like_markers": [],
+          "reason": "answer_contains_numbers_not_seen_in_evidence"
+        },
+        "raw_value": null,
+        "display_value": null,
+        "raw_unit": null,
+        "normalized_unit": null,
+        "normalization_status": null,
+        "response_status": "success",
+        "latency_ms": 9587.0,
+        "query_spec": {
+          "irp_only": false,
+          "risk_grade_max": null,
+          "risk_tolerance": null,
+          "allowed_risk_buckets": [],
+          "excluded_risk_buckets": [],
+          "ranking_policy": [
+            "account_eligibility",
+            "risk_compatibility",
+            "user_requested_metric",
+            "fee",
+            "performance",
+            "evidence_completeness"
+          ],
+          "sort_by": "product_name",
+          "sort_order": "asc",
+          "limit": 5,
+          "name_tokens": [
+            "근거",
+            "문장을"
+          ],
+          "family_aliases": [],
+          "tenors": [],
+          "name_match_required": false,
+          "candidate_record_ids": []
+        },
+        "ranking_breakdown": []
+      }
+    },
+    {
+      "test_id": "T018",
+      "turn_no": 1,
+      "user_query": "명퇴하는 교사예요. 퇴직금을 어떻게 받으면 좋은지 절세법만 알려주세요.",
+      "response_text": "명퇴하는 교사의 퇴직금 절세법에 대해 다음과 같이 정리할 수 있습니다:\n\n1. **연금계좌 활용**:\n   - 퇴직금을 IRP나 연금저축펀드 같은 연금계좌로 이전하여 연금 형태로 수령하면 퇴직소득세를 30%~50% 감면받을 수 있습니다.\n   - 연금 수령 시 나이에 따라 3.3%~5.5%의 낮은 연금소득세가 적용됩니다. 나이가 많을수록 세율이 낮아지므로 늦게 인출할수록 유리합니다.\n   - 연금수령한도를 초과하지 않도록 주의하며, 이를 초과할 경우 16.5%의 기타소득세가 부과됩니다.\n\n2. **근속연수 고려**:\n   - 퇴직소득세는 근속연수가 길수록 공제액이 커져 세금이 줄어듭니다. 따라서 퇴직 시점에 맞춰 연금을 수령하는 것이 유리할 수 있습니다.\n\n3. **IRP 계좌의 안전성**:\n   - IRP 계좌로 이전한 퇴직금은 전액 압류가 금지되어 안전하게 보호됩니다.\n\n4. **연금 계좌 연속성 유지**:\n   - 퇴직 시점부터 기존 연금 계좌의 수령 연차가 계속 이어지므로, 퇴직금을 받은 뒤 새로 계좌를 개설하기보다는 기존 계좌를 활용하는 것이 좋습니다.\n\n이러한 방법들을 통해 퇴직금을 절세하면서 효과적으로 관리할 수 있습니다. 각 개인의 상황에 따라 다를 수 있으므로, 구체적인 계획은 전문가와 상담하는 것이 좋습니다.",
+      "detected_intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT"
+      ],
+      "actual_route": "document",
+      "expected_routes": [
+        "document",
+        "document+law",
+        "law"
+      ],
+      "tools_called": [
+        "document"
+      ],
+      "source_types": [
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [],
+      "postgres_used": false,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "matched": 5
+      },
+      "latency_ms": 11725.2,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 1,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 9,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "success",
+      "session_id": "eval-T018-6293e48f",
+      "confirmed_constraints": {},
+      "gold_metadata": {
+        "test_id": "T018",
+        "session_id": "eval-T018-6293e48f",
+        "original_query": "명퇴하는 교사예요. 퇴직금을 어떻게 받으면 좋은지 절세법만 알려주세요.",
+        "resolved_query": "명퇴하는 교사예요. 퇴직금을 어떻게 받으면 좋은지 절세법만 알려주세요.",
+        "detected_intent": "document",
+        "actual_route": "document",
+        "retrieval_queries": [],
+        "required_evidence": {
+          "required_product_count": null,
+          "risk_grade_max": null,
+          "online_only": false,
+          "sort": null,
+          "require_product_evidence": false,
+          "require_pdf_evidence": false,
+          "require_law_evidence": false,
+          "require_source_version": true,
+          "allowed_evidence_statuses": [
+            "matched"
+          ]
+        },
+        "tools_called": [
+          "document"
+        ],
+        "source_types": [],
+        "product_ids": [],
+        "product_class_ids": [],
+        "candidate_count": 0,
+        "candidate_ids": [],
+        "selected_product_id": null,
+        "db_row_count": 461,
+        "retrieval_top_k": 5,
+        "evidence_coverage": {
+          "domain": {
+            "document": 5
+          },
+          "status": {
+            "matched": 5
+          }
+        },
+        "claim_grounding": {
+          "verdict": "PASS",
+          "numeric_claims": [
+            "1",
+            "30%",
+            "50%",
+            "3.3%",
+            "5.5%",
+            "16.5%",
+            "2",
+            "3",
+            "4"
+          ],
+          "unsupported_numeric_claims": [],
+          "citation_like_markers": [],
+          "reason": "numeric_claims_grounded"
+        },
+        "raw_value": null,
+        "display_value": null,
+        "raw_unit": null,
+        "normalized_unit": null,
+        "normalization_status": null,
+        "response_status": "success",
+        "latency_ms": 11725.2,
+        "query_spec": {
+          "irp_only": false,
+          "risk_grade_max": null,
+          "risk_tolerance": null,
+          "allowed_risk_buckets": [],
+          "excluded_risk_buckets": [],
+          "ranking_policy": [
+            "account_eligibility",
+            "risk_compatibility",
+            "user_requested_metric",
+            "fee",
+            "performance",
+            "evidence_completeness"
+          ],
+          "sort_by": "product_name",
+          "sort_order": "asc",
+          "limit": 5,
+          "name_tokens": [
+            "근거",
+            "문장을"
+          ],
+          "family_aliases": [],
+          "tenors": [],
+          "name_match_required": false,
+          "candidate_record_ids": []
+        },
+        "ranking_breakdown": []
+      }
+    },
+    {
+      "test_id": "T019",
+      "turn_no": 1,
+      "user_query": "솔로몬 국공채 단기·중장기·장기, 뭐가 달라요? 안정적인 걸 원해요.",
+      "response_text": "다음 3개를 보여드리겠습니다.\n솔로몬 국공채 계열에서 확인된 상품입니다. 일반 금리 민감도 설명은 기업 근거 없이 단정하지 않습니다.\n1. 미래에셋솔로몬단기국공채증권자투자신탁1호(채권) / 클래스 수수료미징구-오프라인-개인연금(C-P) / 위험등급 5(낮은 위험) / 총보수 연 0.47% / 출처 R2_KR5153420063.pdf\n2. 미래에셋솔로몬장기국공채증권자투자신탁1호(채권) / 클래스 수수료미징구-오프라인-개인연금(C-P) / 위험등급 5(낮은 위험) / 총보수 연 0.43% / 출처 R2_KR5153420105.pdf\n3. 미래에셋솔로몬중장기국공채증권자투자신탁1호(채권) / 클래스 수수료미징구-오프라인-개인연금(C-P) / 위험등급 5(낮은 위험) / 총보수 연 0.48% / 출처 R2_KR5153420079.pdf\n근거 출처: 투자설명서 / 상품 DB 기준.",
+      "detected_intent": [
+        "PRODUCT_LOOKUP"
+      ],
+      "actual_route": "product",
+      "expected_routes": [
+        "product"
+      ],
+      "tools_called": [
+        "product"
+      ],
+      "source_types": [
+        "product",
+        "postgres",
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [
+        "R2_KR5153420063.pdf",
+        "R2_KR5153420105.pdf",
+        "R2_KR5153420079.pdf"
+      ],
+      "postgres_used": true,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "matched": 193
+      },
+      "latency_ms": 1667.8,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [
+        "미래에셋솔로몬단기국공채증권자투자신탁1호(채권)",
+        "미래에셋솔로몬장기국공채증권자투자신탁1호(채권)",
+        "미래에셋솔로몬중장기국공채증권자투자신탁1호(채권)"
+      ],
+      "response_status": "success",
+      "session_id": "eval-T019-6f871f0a",
+      "confirmed_constraints": {},
+      "gold_metadata": {
+        "test_id": "T019",
+        "session_id": "eval-T019-6f871f0a",
+        "original_query": "솔로몬 국공채 단기·중장기·장기, 뭐가 달라요? 안정적인 걸 원해요.",
+        "resolved_query": "솔로몬 국공채 단기·중장기·장기, 뭐가 달라요? 안정적인 걸 원해요.",
+        "detected_intent": "product",
+        "actual_route": "product",
+        "retrieval_queries": [],
+        "required_evidence": {
+          "required_product_count": null,
+          "risk_grade_max": null,
+          "online_only": false,
+          "sort": "product_name",
+          "require_product_evidence": true,
+          "require_pdf_evidence": false,
+          "require_law_evidence": false,
+          "require_source_version": true,
+          "allowed_evidence_statuses": [
+            "matched"
+          ]
+        },
+        "tools_called": [
+          "product"
+        ],
+        "source_types": [],
+        "product_ids": [
+          "product:41091|class:C002|name:수수료미징구-오프라인-개인연금(C-P)",
+          "product:88824|class:C005|name:수수료미징구-오프라인-개인연금(C-P)",
+          "product:94377|class:C005|name:수수료미징구-오프라인-개인연금(C-P)"
+        ],
+        "product_class_ids": [
+          "C002",
+          "C005",
+          "C005"
+        ],
+        "candidate_count": 3,
+        "candidate_ids": [
+          "product:41091|class:C002|name:수수료미징구-오프라인-개인연금(C-P)",
+          "product:88824|class:C005|name:수수료미징구-오프라인-개인연금(C-P)",
+          "product:94377|class:C005|name:수수료미징구-오프라인-개인연금(C-P)"
+        ],
+        "selected_product_id": "product:41091|class:C002|name:수수료미징구-오프라인-개인연금(C-P)",
+        "db_row_count": 461,
+        "retrieval_top_k": 5,
+        "evidence_coverage": {
+          "domain": {
+            "product": 108,
+            "document": 85
+          },
+          "status": {
+            "matched": 193
+          }
+        },
+        "claim_grounding": {
+          "verdict": "PASS",
+          "numeric_claims": [
+            "3",
+            "1",
+            "5",
+            "0.47%",
+            "153420063",
+            "2",
+            "0.43%",
+            "153420105",
+            "0.48%",
+            "153420079"
+          ],
+          "unsupported_numeric_claims": [],
+          "citation_like_markers": [
+            "근거",
+            "출처"
+          ],
+          "reason": "numeric_claims_grounded"
+        },
+        "raw_value": 0.47,
+        "display_value": null,
+        "raw_unit": "PERCENT_PER_YEAR",
+        "normalized_unit": "PERCENT_PER_YEAR",
+        "normalization_status": null,
+        "response_status": "success",
+        "latency_ms": 1667.8,
+        "query_spec": {
+          "irp_only": false,
+          "risk_grade_max": null,
+          "risk_tolerance": null,
+          "allowed_risk_buckets": [],
+          "excluded_risk_buckets": [],
+          "ranking_policy": [
+            "account_eligibility",
+            "risk_compatibility",
+            "user_requested_metric",
+            "fee",
+            "performance",
+            "evidence_completeness"
+          ],
+          "sort_by": "product_name",
+          "sort_order": "asc",
+          "limit": 5,
+          "name_tokens": [
+            "솔로몬",
+            "국공채"
+          ],
+          "family_aliases": [],
+          "tenors": [
+            "단기",
+            "중장기",
+            "장기"
+          ],
+          "name_match_required": true,
+          "candidate_record_ids": []
+        },
+        "ranking_breakdown": [
+          {
+            "product_id": "product:41091|class:C002|name:수수료미징구-오프라인-개인연금(C-P)",
+            "eligibility_score": 0,
+            "risk_match": 0,
+            "fee_rank": 2,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "product_name"
+          },
+          {
+            "product_id": "product:88824|class:C005|name:수수료미징구-오프라인-개인연금(C-P)",
+            "eligibility_score": 0,
+            "risk_match": 0,
+            "fee_rank": 1,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "product_name"
+          },
+          {
+            "product_id": "product:94377|class:C005|name:수수료미징구-오프라인-개인연금(C-P)",
+            "eligibility_score": 0,
+            "risk_match": 0,
+            "fee_rank": 3,
+            "performance_rank": null,
+            "evidence_coverage": 4,
+            "user_requested_metric": "product_name"
+          }
+        ]
+      }
+    },
+    {
+      "test_id": "T020",
+      "turn_no": 1,
+      "user_query": "좋은 연금 상품 하나 추천해 주세요.",
+      "response_text": "요청을 정확히 처리하려면 추가 정보가 필요합니다. 필요한 정보: 감수할 수 있는 투자 위험 수준, 예상 투자기간.\n- 감수 가능한 위험 수준(예: 원금 변동을 어느 정도 감수할 수 있는지)을 알려주세요.\n- 예상 투자기간 또는 연금 수령까지 남은 기간을 알려주세요.",
+      "detected_intent": [
+        "CLARIFY",
+        "PRODUCT_RECOMMENDATION"
+      ],
+      "actual_route": "product",
+      "expected_routes": [
+        "product"
+      ],
+      "tools_called": [
+        "product"
+      ],
+      "source_types": [
+        "postgres"
+      ],
+      "source_documents": [],
+      "postgres_used": true,
+      "enterprise_rag_used": false,
+      "external_api_used": false,
+      "evidence_status": "clarify",
+      "latency_ms": 27.2,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 1,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 9,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "clarify",
+      "session_id": "eval-T020-2b17c4a1",
+      "confirmed_constraints": {},
+      "gold_metadata": {
+        "test_id": "T020",
+        "session_id": "eval-T020-2b17c4a1",
+        "original_query": "좋은 연금 상품 하나 추천해 주세요.",
+        "resolved_query": "좋은 연금 상품 하나 추천해 주세요.",
+        "detected_intent": "product",
+        "actual_route": "product",
+        "retrieval_queries": [],
+        "required_evidence": {
+          "required_product_count": null,
+          "risk_grade_max": null,
+          "online_only": false,
+          "sort": "product_name",
+          "require_product_evidence": true,
+          "require_pdf_evidence": false,
+          "require_law_evidence": false,
+          "require_source_version": true,
+          "allowed_evidence_statuses": [
+            "matched"
+          ]
+        },
+        "tools_called": [
+          "product"
+        ],
+        "source_types": [],
+        "product_ids": [],
+        "product_class_ids": [],
+        "candidate_count": 0,
+        "candidate_ids": [],
+        "selected_product_id": null,
+        "db_row_count": 461,
+        "retrieval_top_k": 5,
+        "evidence_coverage": {
+          "domain": {},
+          "status": {}
+        },
+        "claim_grounding": null,
+        "raw_value": null,
+        "display_value": null,
+        "raw_unit": null,
+        "normalized_unit": null,
+        "normalization_status": null,
+        "response_status": "clarify",
+        "latency_ms": 27.2,
+        "query_spec": {
+          "irp_only": false,
+          "risk_grade_max": null,
+          "risk_tolerance": null,
+          "allowed_risk_buckets": [],
+          "excluded_risk_buckets": [],
+          "ranking_policy": [
+            "account_eligibility",
+            "risk_compatibility",
+            "user_requested_metric",
+            "fee",
+            "performance",
+            "evidence_completeness"
+          ],
+          "sort_by": "product_name",
+          "sort_order": "asc",
+          "limit": 5,
+          "name_tokens": [
+            "솔로몬",
+            "국공채"
+          ],
+          "family_aliases": [],
+          "tenors": [
+            "단기",
+            "중장기",
+            "장기"
+          ],
+          "name_match_required": true,
+          "candidate_record_ids": []
+        },
+        "ranking_breakdown": []
+      }
+    },
+    {
+      "test_id": "T021",
+      "turn_no": 1,
+      "user_query": "DC와 DB, 퇴직금이 정해지는 방식이랑 운용 주체가 어떻게 다른가요?",
+      "response_text": "DC와 DB, 퇴직금이 정해지는 방식과 운용 주체는 다음과 같이 다릅니다.\n\n1. **DB 제도 (확정급여형)**\n   - **운용 주체**: 회사가 퇴직급여 재원을 금융기관에 적립하고 운용합니다.\n   - **퇴직급여 산정 방식**: 퇴직급여는 평균임금 × 계속근로기간(근속연수)으로 계산됩니다.\n   - **적립금 보관 및 운용**: 회사가 금융기관에 적립금을 보관하고 운용합니다.\n\n2. **DC 제도 (확정기여형)**\n   - **운용 주체**: 근로자가 직접 적립금을 운용합니다.\n   - **부담금 산정**: 연간 임금총액의 1/12로 계산됩니다.\n   - **퇴직급여 산정 방식**: 기여금(부담금) 누계액 + 운용손익으로 결정됩니다.\n   - **적립금 보관**: 금융기관에 보관됩니다.\n\n**차이점 요약**:\n- DB 제도는 회사가 퇴직급여를 보장하고 운용하며, 퇴직급여는 근속연수와 평균임금을 기준으로 산정됩니다.\n- DC 제도는 회사가 부담금을 적립해주고, 이후 근로자가 이를 운용하여 퇴직급여를 받습니다.",
+      "detected_intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT"
+      ],
+      "actual_route": "document",
+      "expected_routes": [
+        "document"
+      ],
+      "tools_called": [
+        "document"
+      ],
+      "source_types": [
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [],
+      "postgres_used": false,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "matched": 5
+      },
+      "latency_ms": 22.5,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "success",
+      "session_id": "eval-T021-d513dcae",
+      "confirmed_constraints": {},
+      "gold_metadata": {
+        "test_id": "T021",
+        "session_id": "eval-T021-d513dcae",
+        "original_query": "DC와 DB, 퇴직금이 정해지는 방식이랑 운용 주체가 어떻게 다른가요?",
+        "resolved_query": "DC와 DB, 퇴직금이 정해지는 방식이랑 운용 주체가 어떻게 다른가요?",
+        "detected_intent": null,
+        "actual_route": "document",
+        "retrieval_queries": [],
+        "required_evidence": null,
+        "tools_called": [],
+        "source_types": [],
+        "product_ids": [],
+        "product_class_ids": [],
+        "candidate_count": 0,
+        "candidate_ids": [],
+        "selected_product_id": null,
+        "db_row_count": 461,
+        "retrieval_top_k": 5,
+        "evidence_coverage": {
+          "domain": {
+            "document": 5
+          },
+          "status": {
+            "matched": 5
+          }
+        },
+        "claim_grounding": null,
+        "raw_value": null,
+        "display_value": null,
+        "raw_unit": null,
+        "normalized_unit": null,
+        "normalization_status": null,
+        "response_status": "success",
+        "latency_ms": 22.5,
+        "query_spec": {
+          "irp_only": false,
+          "risk_grade_max": null,
+          "risk_tolerance": null,
+          "allowed_risk_buckets": [],
+          "excluded_risk_buckets": [],
+          "ranking_policy": [
+            "account_eligibility",
+            "risk_compatibility",
+            "user_requested_metric",
+            "fee",
+            "performance",
+            "evidence_completeness"
+          ],
+          "sort_by": "product_name",
+          "sort_order": "asc",
+          "limit": 5,
+          "name_tokens": [
+            "솔로몬",
+            "국공채"
+          ],
+          "family_aliases": [],
+          "tenors": [
+            "단기",
+            "중장기",
+            "장기"
+          ],
+          "name_match_required": true,
+          "candidate_record_ids": []
+        },
+        "ranking_breakdown": []
+      }
+    },
+    {
+      "test_id": "T021",
+      "turn_no": 2,
+      "user_query": "그럼 IRP는 운용 주체가 어느 쪽에 가깝나요?",
+      "response_text": "IRP(Individual Retirement Pension)는 개인형 퇴직연금제도로, 퇴직 시 수령한 퇴직급여 또는 가입자가 납입한 부담금을 적립·운용하여 노후자금으로 활용할 수 있는 퇴직급여 전용 통장입니다. IRP의 운용 주체는 근로자 본인입니다. 즉, 확정기여형 퇴직연금제도(DC제도)와 마찬가지로 근로자가 직접 자신의 퇴직급여 자산을 운용하게 됩니다.\n\n따라서 IRP는 근로자가 스스로 자산을 관리하고 운용하는 방식이므로, 운용 주체가 '근로자' 쪽에 가깝다고 할 수 있습니다.",
+      "detected_intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT"
+      ],
+      "actual_route": "document",
+      "expected_routes": [
+        "document"
+      ],
+      "tools_called": [
+        "document"
+      ],
+      "source_types": [
+        "enterprise_rag",
+        "enterprise_document"
+      ],
+      "source_documents": [],
+      "postgres_used": false,
+      "enterprise_rag_used": true,
+      "external_api_used": false,
+      "evidence_status": {
+        "matched": 5
+      },
+      "latency_ms": 5307.5,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 2,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 10,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "success",
+      "session_id": "eval-T021-d513dcae",
+      "confirmed_constraints": {},
+      "gold_metadata": {
+        "test_id": "T021",
+        "session_id": "eval-T021-d513dcae",
+        "original_query": "그럼 IRP는 운용 주체가 어느 쪽에 가깝나요?",
+        "resolved_query": "그럼 IRP는 운용 주체가 어느 쪽에 가깝나요?",
+        "detected_intent": "document",
+        "actual_route": "document",
+        "retrieval_queries": [],
+        "required_evidence": {
+          "required_product_count": null,
+          "risk_grade_max": null,
+          "online_only": false,
+          "sort": null,
+          "require_product_evidence": false,
+          "require_pdf_evidence": false,
+          "require_law_evidence": false,
+          "require_source_version": true,
+          "allowed_evidence_statuses": [
+            "matched"
+          ]
+        },
+        "tools_called": [
+          "document"
+        ],
+        "source_types": [],
+        "product_ids": [],
+        "product_class_ids": [],
+        "candidate_count": 0,
+        "candidate_ids": [],
+        "selected_product_id": null,
+        "db_row_count": 461,
+        "retrieval_top_k": 5,
+        "evidence_coverage": {
+          "domain": {
+            "document": 5
+          },
+          "status": {
+            "matched": 5
+          }
+        },
+        "claim_grounding": {
+          "verdict": "PASS",
+          "numeric_claims": [],
+          "unsupported_numeric_claims": [],
+          "citation_like_markers": [],
+          "reason": "numeric_claims_grounded"
+        },
+        "raw_value": null,
+        "display_value": null,
+        "raw_unit": null,
+        "normalized_unit": null,
+        "normalization_status": null,
+        "response_status": "success",
+        "latency_ms": 5307.5,
+        "query_spec": {
+          "irp_only": false,
+          "risk_grade_max": null,
+          "risk_tolerance": null,
+          "allowed_risk_buckets": [],
+          "excluded_risk_buckets": [],
+          "ranking_policy": [
+            "account_eligibility",
+            "risk_compatibility",
+            "user_requested_metric",
+            "fee",
+            "performance",
+            "evidence_completeness"
+          ],
+          "sort_by": "product_name",
+          "sort_order": "asc",
+          "limit": 5,
+          "name_tokens": [
+            "솔로몬",
+            "국공채"
+          ],
+          "family_aliases": [],
+          "tenors": [
+            "단기",
+            "중장기",
+            "장기"
+          ],
+          "name_match_required": true,
+          "candidate_record_ids": []
+        },
+        "ranking_breakdown": []
+      }
+    },
+    {
+      "test_id": "T022",
+      "turn_no": 1,
+      "user_query": "연금저축이랑 IRP에 넣으면 세액공제 얼마까지 되나요? 다 합쳐서요. 그리고 한도를 넘기면 이월도 되나요?",
+      "response_text": "연금저축과 IRP를 합한 연간 납입 한도는 18,000,000원입니다. 세액공제 대상 납입액 한도는 합산 연 9,000,000원이며, 이 중 연금저축 납입액은 연 6,000,000원까지 세액공제 대상에 포함됩니다. 합산 한도 9,000,000원을 채우려면 나머지 3,000,000원을 IRP에 납입해야 합니다. 지방소득세를 포함한 실효 공제율은 소득구간에 따라 약 16.5% 또는 약 13.2%가 적용됩니다. 실제 공제세액은 소득구간과 실제 납입액에 따라 달라집니다.",
+      "detected_intent": [
+        "GENERAL_EDUCATION",
+        "GENERAL_CONCEPT"
+      ],
+      "actual_route": "document+calculation",
+      "expected_routes": [
+        "calculation",
+        "document",
+        "document+law",
+        "calculation+document"
+      ],
+      "tools_called": [
+        "document",
+        "calculation"
+      ],
+      "source_types": [
+        "enterprise_rag",
+        "enterprise_document",
+        "law",
+        "external_api",
+        "calculation"
+      ],
+      "source_documents": [],
+      "postgres_used": false,
+      "enterprise_rag_used": true,
+      "external_api_used": true,
+      "evidence_status": {
+        "matched": 7
+      },
+      "latency_ms": 10470.8,
+      "exception": null,
+      "pass_fail": "PASS",
+      "failure_reasons": [],
+      "scores": {
+        "routing": 1,
+        "context_retention": 2,
+        "source_selection": 2,
+        "grounding": 2,
+        "answer_usefulness": 2
+      },
+      "total": 9,
+      "context_lost": false,
+      "product_names": [],
+      "response_status": "success",
+      "session_id": "eval-T022-c05841cd",
+      "confirmed_constraints": {},
+      "gold_metadata": {
+        "test_id": "T022",
+        "session_id": "eval-T022-c05841cd",
+        "original_query": "연금저축이랑 IRP에 넣으면 세액공제 얼마까지 되나요? 다 합쳐서요. 그리고 한도를 넘기면 이월도 되나요?",
+        "resolved_query": "연금저축이랑 IRP에 넣으면 세액공제 얼마까지 되나요? 다 합쳐서요. 그리고 한도를 넘기면 이월도 되나요?",
+        "detected_intent": "document+calculation",
+        "actual_route": "document+calculation",
+        "retrieval_queries": [],
+        "required_evidence": {
+          "required_product_count": null,
+          "risk_grade_max": null,
+          "online_only": false,
+          "sort": null,
+          "require_product_evidence": false,
+          "require_pdf_evidence": false,
+          "require_law_evidence": false,
+          "require_source_version": true,
+          "allowed_evidence_statuses": []
+        },
+        "tools_called": [
+          "document",
+          "calculation"
+        ],
+        "source_types": [],
+        "product_ids": [],
+        "product_class_ids": [],
+        "candidate_count": 0,
+        "candidate_ids": [],
+        "selected_product_id": null,
+        "db_row_count": 461,
+        "retrieval_top_k": 5,
+        "evidence_coverage": {
+          "domain": {
+            "calculation": 1,
+            "document": 5,
+            "law": 1
+          },
+          "status": {
+            "matched": 7
+          }
+        },
+        "claim_grounding": {
+          "verdict": "REVIEW",
+          "numeric_claims": [
+            "18,000,000원",
+            "9,000,000원",
+            "6,000,000원",
+            "3,000,000원",
+            "16.5%",
+            "13.2%"
+          ],
+          "unsupported_numeric_claims": [
+            "18,000,000원",
+            "9,000,000원",
+            "6,000,000원",
+            "3,000,000원"
+          ],
+          "citation_like_markers": [],
+          "reason": "answer_contains_numbers_not_seen_in_evidence"
+        },
+        "raw_value": null,
+        "display_value": null,
+        "raw_unit": null,
+        "normalized_unit": null,
+        "normalization_status": null,
+        "response_status": "success",
+        "latency_ms": 10470.8,
+        "query_spec": {
+          "irp_only": false,
+          "risk_grade_max": null,
+          "risk_tolerance": null,
+          "allowed_risk_buckets": [],
+          "excluded_risk_buckets": [],
+          "ranking_policy": [
+            "account_eligibility",
+            "risk_compatibility",
+            "user_requested_metric",
+            "fee",
+            "performance",
+            "evidence_completeness"
+          ],
+          "sort_by": "product_name",
+          "sort_order": "asc",
+          "limit": 5,
+          "name_tokens": [
+            "솔로몬",
+            "국공채"
+          ],
+          "family_aliases": [],
+          "tenors": [
+            "단기",
+            "중장기",
+            "장기"
+          ],
+          "name_match_required": true,
+          "candidate_record_ids": []
+        },
+        "ranking_breakdown": []
+      }
+    }
+  ]
+}

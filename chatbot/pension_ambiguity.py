@@ -90,9 +90,34 @@ class AmbiguityGate:
         *,
         named_product: bool = False,
     ) -> AmbiguityDecision:
+        from .task_intent import ORDER_MARKERS, classify_task_intent
+
         q = question.lower()
         confirmed = session.confirmed_constraints if session else {}
         named = named_product or has_specific_fund_name(question)
+        intent = classify_task_intent(question)
+
+        if intent.primary == "action_request" or any(marker in question for marker in ORDER_MARKERS):
+            # Continue retrieval so product facts can still be explained; finalize
+            # answers with an execution-scope notice under status=success (not safe_stop).
+            return AmbiguityDecision(
+                action="EXECUTE",
+                reason_codes=["ACTION_NOT_ALLOWED"],
+                missing_fields=[],
+                clarifying_questions=[
+                    "실제 매수·주문 체결은 이 상담 채널에서 대행하지 않습니다. "
+                    "상품 위험등급·특징 안내는 가능하며, 거래는 MTS/HTS 등에서 직접 진행해 주세요."
+                ],
+            )
+
+        if intent.primary == "compound_holding" and not named and not confirmed.get("holding_product_name"):
+            return AmbiguityDecision(
+                action="CLARIFY",
+                reason_codes=["NEEDS_CLARIFICATION"],
+                missing_fields=["holding_product_name"],
+                clarifying_questions=["보유 중이신 상품의 정확한 명칭을 알려주시면 수익률·보수 비교를 이어가겠습니다."],
+            )
+
         is_personal = "product" in tools and any(marker in q for marker in self.PERSONAL_MARKERS)
         explicit_filter = bool(re.search(r"\d+\s*등급|온라인|총보수|\d+\s*(개|가지|종)", q))
         if is_personal and not explicit_filter:

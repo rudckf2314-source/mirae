@@ -44,6 +44,10 @@ class PolicyRule(BaseModel):
     lower_income_tax_credit_rate: Decimal | None = None
     contribution_limit: Decimal | None = None
     pension_savings_limit: Decimal | None = None
+    annual_contribution_limit: Decimal | None = None
+    local_tax_surcharge_ratio: Decimal | None = None
+    isa_extra_credit_base_limit: Decimal | None = None
+    isa_transfer_credit_ratio: Decimal | None = None
     gross_salary_threshold: Decimal | None = None
     comprehensive_income_threshold: Decimal | None = None
     evidence_source_key: str | None = None
@@ -84,22 +88,65 @@ class CalculationWorker:
             evidence = []
             if rule.evidence_source_key and rule.evidence_article_no:
                 evidence.append({"source_key": rule.evidence_source_key, "article_no": rule.evidence_article_no})
+            surcharge = rule.local_tax_surcharge_ratio or Decimal("0")
+
+            def _effective(rate: Decimal | None) -> Decimal | None:
+                if rate is None:
+                    return None
+                return (rate * (Decimal("1") + surcharge)).quantize(Decimal("0.0001"))
 
             # Official reference question: how much can be credited in total?
             if mode == "limit_summary" and "contribution_amount" not in spec.provided_inputs:
+                std = _effective(rule.tax_credit_rate)
+                low = _effective(rule.lower_income_tax_credit_rate)
+                intermediate = {
+                    "combined_credit_base_limit": str(rule.contribution_limit),
+                    "pension_savings_credit_base_limit": str(rule.pension_savings_limit),
+                    "standard_rate": str(rule.tax_credit_rate or ""),
+                    "lower_income_rate": str(rule.lower_income_tax_credit_rate or ""),
+                    "effective_standard_rate": str(std or ""),
+                    "effective_lower_income_rate": str(low or ""),
+                    "gross_salary_threshold": str(rule.gross_salary_threshold or ""),
+                    "comprehensive_income_threshold": str(rule.comprehensive_income_threshold or ""),
+                    "local_tax_surcharge_ratio": str(surcharge),
+                }
+                if rule.annual_contribution_limit is not None:
+                    intermediate["annual_contribution_limit"] = str(rule.annual_contribution_limit)
+                if rule.contribution_limit is not None and rule.pension_savings_limit is not None:
+                    intermediate["irp_credit_remainder_limit"] = str(
+                        rule.contribution_limit - rule.pension_savings_limit
+                    )
                 return self._result(
                     spec,
                     rule.formula_id,
                     rule.version,
-                    {
-                        "combined_credit_base_limit": str(rule.contribution_limit),
-                        "pension_savings_credit_base_limit": str(rule.pension_savings_limit),
-                        "standard_rate": str(rule.tax_credit_rate or ""),
-                        "lower_income_rate": str(rule.lower_income_tax_credit_rate or ""),
-                        "gross_salary_threshold": str(rule.gross_salary_threshold or ""),
-                        "comprehensive_income_threshold": str(rule.comprehensive_income_threshold or ""),
-                    },
+                    intermediate,
                     rule.contribution_limit,
+                    rule.source,
+                    policy_evidence=evidence,
+                )
+
+            if mode == "isa_transfer":
+                if rule.isa_extra_credit_base_limit is None or rule.isa_transfer_credit_ratio is None:
+                    return {"status": "UNSUPPORTED_POLICY_VERSION", "policy_year": spec.policy_year}
+                transfer = Decimal(str(spec.provided_inputs.get("isa_transfer_amount", 0)))
+                if transfer < 0:
+                    return {"status": "INVALID_INPUT", "field": "isa_transfer_amount"}
+                ratio = rule.isa_transfer_credit_ratio
+                cap = rule.isa_extra_credit_base_limit
+                extra = min(transfer * ratio, cap).quantize(Decimal("1"), rounding=ROUND_HALF_UP)
+                intermediate = {
+                    "isa_transfer_amount": str(transfer),
+                    "isa_transfer_credit_ratio": str(ratio),
+                    "isa_extra_credit_base_limit": str(cap),
+                    "isa_extra_credit_amount": str(extra),
+                }
+                return self._result(
+                    spec,
+                    rule.formula_id,
+                    rule.version,
+                    intermediate,
+                    extra,
                     rule.source,
                     policy_evidence=evidence,
                 )
@@ -113,16 +160,38 @@ class CalculationWorker:
                 return {"status": "UNSUPPORTED_POLICY_VERSION", "policy_year": spec.policy_year}
             salary = spec.provided_inputs.get("gross_salary")
             comprehensive = spec.provided_inputs.get("comprehensive_income")
+            band = "standard"
             if salary is not None and rule.gross_salary_threshold is not None and Decimal(str(salary)) <= rule.gross_salary_threshold:
                 rate = rule.lower_income_tax_credit_rate or rate
+                band = "lower_income"
             elif comprehensive is not None and rule.comprehensive_income_threshold is not None and Decimal(str(comprehensive)) <= rule.comprehensive_income_threshold:
                 rate = rule.lower_income_tax_credit_rate or rate
+                band = "lower_income"
+            effective = _effective(rate) or rate
+            credit = (base * effective).quantize(Decimal("1"), rounding=ROUND_HALF_UP)
+            intermediate = {
+                "credit_base": str(base),
+                "national_rate": str(rate),
+                "effective_rate": str(effective),
+                "income_band": band,
+                "combined_credit_base_limit": str(rule.contribution_limit),
+                "local_tax_surcharge_ratio": str(surcharge),
+                "contribution_amount": str(contribution),
+            }
+            if salary is not None:
+                intermediate["gross_salary"] = str(salary)
+            if spec.provided_inputs.get("premise_check") == "true":
+                intermediate["premise_check"] = "true"
+                if spec.provided_inputs.get("claimed_rate_percent"):
+                    intermediate["claimed_rate_percent"] = str(spec.provided_inputs["claimed_rate_percent"])
+                if spec.provided_inputs.get("claimed_credit_amount"):
+                    intermediate["claimed_credit_amount"] = str(spec.provided_inputs["claimed_credit_amount"])
             return self._result(
                 spec,
                 rule.formula_id,
                 rule.version,
-                {"credit_base": str(base), "rate": str(rate), "combined_credit_base_limit": str(rule.contribution_limit)},
-                base * rate,
+                intermediate,
+                credit,
                 rule.source,
                 policy_evidence=evidence,
             )
